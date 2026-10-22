@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import com.cropster.roastingintelligence.ui.components.FormComponent?>
+<?import com.cropster.roastingintelligence.ui.components.LineBreak?>
+<?import com.cropster.roastingintelligence.ui.components.MessageBox?>
+
+<fx:root type="BorderPane" minWidth="560" maxWidth="560" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Insets fx:id="BOTTOM_MARGIN" bottom="16"/>
+        <Insets fx:id="MARGIN" top="16" right="16" bottom="16" left="16"/>
+        <Insets fx:id="SCROLL_PANE_EQUIVALENT_MARGIN" topRightBottomLeft="1"/>
+        <Insets fx:id="WEIGHT_MARGIN" bottom="-4"/>
+        <SVGImage fx:id="ICON_ADD_ALL" icon="LOGIN" styleClass="icon--muted" scale="0.75"/>
+        <SVGImage fx:id="ICON_INFO" icon="INFO" styleClass="icon--info"/>
+        <SVGImage fx:id="ICON_WARNING" icon="WARNING" styleClass="icon--warning"/>
+    </fx:define>
+    <top>
+        <VBox fx:id="headerPanel" managed="${headerPanel.visible}" BorderPane.margin="$MARGIN">
+            <MessageBox fx:id="infoMessageBox" text="%Fetching and verifying data from server…" graphic="$ICON_INFO" managed="${infoMessageBox.visible}"/>
+            <MessageBox fx:id="warningMessageBox" text="%The data from server cannot not be fetched or verified." graphic="$ICON_WARNING" styleClass="info-message--warning" managed="${warningMessageBox.visible}" visible="false">
+                <Button text="%Try again" onAction="#onTryAgain" styleClass="button--small" minWidth="-Infinity" HBox.hgrow="NEVER"/>
+            </MessageBox>
+        </VBox>
+    </top>
+    <center>
+        <VBox fx:id="contentPanel" spacing="16" managed="${contentPanel.visible}" maxHeight="Infinity" BorderPane.margin="$MARGIN">
+            <FormComponent title="%Instructions for blending post-roast manually">
+                <description>
+                    <Text text="%Type a name for the blend and select how much of each roast (PR) to blend. At least two blend components are required."/>
+                    <LineBreak styleClass="text--tiny"/>
+                    <LineBreak styleClass="text--tiny"/>
+                    <Text text="%Double-check the information. Blends can only be edited or deleted in the web platform."/>
+                </description>
+            </FormComponent>
+
+            <FormComponent title="%Name" required="true">
+                <decorations>
+                    <Label fx:id="availableNameChars" text="200" styleClass="comment-under-limit"/>
+                </decorations>
+                <TextField fx:id="nameEditor" promptText="%Type something…" styleClass="text-input"/>
+            </FormComponent>
+
+            <VBox spacing="16">
+                <ScrollPane fitToWidth="true" fitToHeight="true" hbarPolicy="NEVER" maxHeight="Infinity" styleClass="separator-bottom-border" VBox.vgrow="ALWAYS">
+                    <GridPane fx:id="blendTable" hgap="16.0" vgap="8" padding="$BOTTOM_MARGIN">
+                        <columnConstraints>
+                            <ColumnConstraints fx:id="c0" halignment="LEFT" hgrow="SOMETIMES"/>
+                            <ColumnConstraints fx:id="c1" halignment="RIGHT" hgrow="NEVER" minWidth="-Infinity"/>
+                            <ColumnConstraints fx:id="c2" halignment="RIGHT" hgrow="NEVER" minWidth="-Infinity"/>
+                            <ColumnConstraints fx:id="c3" halignment="CENTER" hgrow="NEVER" minWidth="24" maxWidth="24"/>
+                            <ColumnConstraints fx:id="c4" halignment="LEFT" hgrow="NEVER" minWidth="120" maxWidth="120"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints valignment="CENTER" vgrow="NEVER"/>
+                            <RowConstraints valignment="CENTER" vgrow="NEVER"/>
+                        </rowConstraints>
+
+                        <Label text="%Profile and roast" styleClass="form-label" GridPane.columnIndex="0"/>
+                        <Label text="%Ratio" styleClass="form-label" GridPane.columnIndex="1"/>
+                        <Label text="%Available" styleClass="form-label" GridPane.columnIndex="2"/>
+                        <Label text="%To blend" styleClass="form-label" maxWidth="Infinity" GridPane.columnIndex="4"/>
+                        <!-- Roasts go here: they will be added later by code -->
+                    </GridPane>
+                </ScrollPane>
+
+                <GridPane hgap="16.0" padding="$SCROLL_PANE_EQUIVALENT_MARGIN">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" prefWidth="${c0.prefWidth}"/>
+                        <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="-Infinity" prefWidth="${c1.prefWidth}"/>
+                        <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="-Infinity" prefWidth="${c2.prefWidth}"/>
+                        <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="24" maxWidth="24" prefWidth="${c3.prefWidth}"/>
+                        <ColumnConstraints halignment="LEFT" hgrow="NEVER" minWidth="120" maxWidth="120" prefWidth="${c4.prefWidth}"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="NEVER"/>
+                    </rowConstraints>
+
+                    <Label text="%Total blend weight" styleClass="form-label" GridPane.columnIndex="0" GridPane.columnSpan="3"/>
+                    <Button fx:id="addAllAvailableWeightButton" contentDisplay="GRAPHIC_ONLY" graphic="$ICON_ADD_ALL" styleClass="button-icon" onAction="#addAllAvailableWeight" GridPane.columnIndex="3"/>
+                    <Label fx:id="totalWeightLabel" text="–" styleClass="form-label" maxWidth="Infinity" GridPane.columnIndex="4"/>
+                </GridPane>
+            </VBox>
+
+            <FormComponent title="%Notes" minHeight="80" prefHeight="80" maxWidth="Infinity" maxHeight="Infinity" VBox.vgrow="ALWAYS">
+                <decorations>
+                    <Label fx:id="availableNoteChars" text="200" styleClass="comment-under-limit"/>
+                </decorations>
+                <TextArea fx:id="noteEditor" wrapText="true" promptText="%Type something…" styleClass="text-input"/>
+            </FormComponent>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="8.0" BorderPane.margin="$MARGIN">
+            <Button fx:id="openDifferentBlendDialog" text="%Blend with profile" onAction="#onBlendWithProfile" visible="false"/>
+            <Label maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+            <Button text="%Cancel" styleClass="button--plain" cancelButton="true" onAction="#onCancel"/>
+            <Button fx:id="createButton" text="%Create blend" disable="true" styleClass="button--primary" defaultButton="true" onAction="#onCreate"/>
+        </HBox>
+    </bottom>
+</fx:root>
+        

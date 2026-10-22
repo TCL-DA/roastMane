@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import com.cropster.roastingintelligence.ui.components.MessageBox?>
+<?import com.cropster.roastingintelligence.ui.util.AutoIncIndex?>
+
+<BorderPane minWidth="420" maxWidth="600" xmlns:fx="http://javafx.com/fxml"
+        fx:controller="com.cropster.roastingintelligence.ui.layout.LoginWindowController">
+    <fx:define>
+        <AutoIncIndex fx:id="row"/>
+        <SVGImage fx:id="CROPSTER_LOGO" path="/images/cropster-logo.svg"/>
+        <GridPane fx:id="REMAINING" fx:constant="REMAINING" />
+    </fx:define>
+    <styleClass>
+        <String fx:value="root"/>
+        <String fx:value="padding-default"/>
+    </styleClass>
+
+    <top>
+        <HBox alignment="CENTER" styleClass="padding-default">
+            <Label contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" graphic="$CROPSTER_LOGO" />
+        </HBox>
+    </top>
+
+    <bottom>
+        <StackPane>
+        <GridPane fx:id="oAuth2LoginPanel">
+            <styleClass>
+                <String fx:value="grid-pane"/>
+            </styleClass>
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+            <Label fx:id="oAuth2loginInfoLabel" wrapText="true" text="?" />
+            <CheckBox fx:id="rememberMeCheckbox" graphicTextGap="8" text="%Remember me on this device" GridPane.rowIndex="$row.inc" GridPane.halignment="LEFT" />
+            <MessageBox fx:id="statusLabel" maxWidth="Infinity" managed="${statusLabel.visible}" visible="false" GridPane.rowIndex="$row.inc" GridPane.columnSpan="$REMAINING">
+                <Label fx:id="statusSpacer" minWidth="16" maxWidth="Infinity" managed="${statusSpacer.visible}" visible="${resolveButton.visible}" HBox.hgrow="ALWAYS"/>
+                <Button fx:id="resolveButton" minWidth="-Infinity" text="%Resolve" onAction="#handleResolve" styleClass="button--small" managed="${resolveButton.visible}" visible="false" HBox.hgrow="NEVER"/>
+            </MessageBox>
+            <ButtonBar fx:id="buttonBar" buttonMinWidth="45" styleClass="padding-top" GridPane.columnSpan="$REMAINING" GridPane.rowIndex="$row.inc">
+                <buttons>
+                    <Button fx:id="continueOAuth2OfflineButton"  text="%Continue offline" onAction="#continueOffline" focusTraversable="false" ButtonBar.buttonData="LEFT" ButtonBar.buttonUniformSize="false" />
+                    <Button fx:id="cancelOAuth2Button" text="%Cancel" onAction="#cancelLogin" cancelButton="true" styleClass="button--plain" disable="true" ButtonBar.buttonData="CANCEL_CLOSE" ButtonBar.buttonUniformSize="false"/>
+                    <Button fx:id="loginOAuth2Button" text="%Login with browser" onAction="#handleLogin" defaultButton="true" styleClass="button--primary" ButtonBar.buttonData="OK_DONE" ButtonBar.buttonUniformSize="false"/>
+                </buttons>
+            </ButtonBar>
+        </GridPane>
+        </StackPane>
+    </bottom>
+</BorderPane>

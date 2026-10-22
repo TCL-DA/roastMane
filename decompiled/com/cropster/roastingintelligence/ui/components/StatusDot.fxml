@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+
+<fx:root fx:id="statusIcon" type="javafx.scene.shape.SVGPath" content="M 10, 10 m -7.5, 0 a 7.5,7.5 0 1,0 15,0 a 7.5,7.5 0 1,0 -15,0" fillRule="EVEN_ODD" strokeMiterLimit="1.0" xmlns:fx="http://javafx.com/fxml">
+	<styleClass>
+    	<String fx:value="status-icon" />
+        <String fx:value="status-icon--warning" />
+	</styleClass>
+</fx:root>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+
+<fx:root type="javafx.scene.layout.BorderPane" maxWidth="300" xmlns:fx="http://javafx.com/fxml">
+    <styleClass>
+        <String fx:value="production-label" />
+        <String fx:value="production-label--error" />
+    </styleClass>
+    <center>
+	    <Label fx:id="messageLabel" styleClass="title-left" />
+    </center>
+</fx:root>

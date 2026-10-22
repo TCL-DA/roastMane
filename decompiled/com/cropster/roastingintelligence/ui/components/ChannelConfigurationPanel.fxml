@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import com.cropster.roastingintelligence.ui.components.FormComponent?>
+<?import com.cropster.roastingintelligence.ui.components.MeasureEditor?>
+<?import com.cropster.roastingintelligence.ui.components.MessageBox?>
+<?import com.cropster.roastingintelligence.ui.components.TitledPaneRight?>
+<?import com.cropster.roastingintelligence.ui.components.ToggleSwitch?>
+<?import com.cropster.roastingintelligence.ui.components.Tooltip?>
+
+<fx:root type="javafx.scene.layout.GridPane" styleClass="channel-configuration-panel" prefWidth="500" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <SVGImage fx:id="ICON_SETTINGS" icon="SETTINGS"/>
+        <SVGImage fx:id="ICON_DRAG_AND_DROP" icon="DRAG_AND_DROP"/>
+        <Insets fx:id="SWITCH_MARGIN" right="80.0"/>
+    </fx:define>
+    <columnConstraints>
+        <ColumnConstraints halignment="LEFT" hgrow="NEVER" minWidth="24.0"/>
+        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints valignment="CENTER" minHeight="24.0" vgrow="NEVER" />
+        <RowConstraints vgrow="ALWAYS" />
+    </rowConstraints>
+
+    <!-- Note: title pane's text must be set to " " otherwise the graphics is not pushed to the right. -->
+    <TitledPaneRight fx:id="titledPanel" text=" " contentDisplay="RIGHT" managed="${enableSwitch.on}" visible="${enableSwitch.on}" maxHeight="Infinity" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.rowSpan="2">
+        <styleClass>
+            <!-- CR: The following style is added to remove the default top gray line -->
+            <String fx:value="titled-pane__header"/>
+        </styleClass>
+        <graphic>
+            <HBox prefHeight="24.0" prefWidth="28.0">
+                <ColorPicker fx:id="colorPicker" BorderPane.alignment="CENTER_RIGHT">
+                    <styleClass>
+                        <String fx:value="button"/>
+                        <String fx:value="button--color-picker"/>
+                    </styleClass>
+                    <tooltip>
+                        <Tooltip text="%Select color"/>
+                    </tooltip>
+                </ColorPicker>
+            </HBox>
+        </graphic>
+        <content>
+            <BorderPane>
+                <top>
+                    <ComboBox fx:id="sourceComboBox" prefHeight="24" minWidth="450" maxWidth="Infinity" BorderPane.alignment="CENTER_LEFT">
+                        <BorderPane.margin>
+                            <Insets bottom="8.0"/>
+                        </BorderPane.margin>
+                    </ComboBox>
+                </top>
+                <center>
+                    <VBox spacing="16" fillWidth="true">
+                        <MessageBox fx:id="infoMessage">
+                            <VBox.margin>
+                                <Insets right="7"/>
+                            </VBox.margin>
+                        </MessageBox>
+                        <GridPane fx:id="configurationPanel" styleClass="channel-configuration-panel__content"  managed="${configurationPanel.visible}">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="NEVER"/>
+                                <ColumnConstraints hgrow="NEVER"/>
+                                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="NEVER"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="NEVER"/>
+                                <RowConstraints vgrow="NEVER"/>
+                            </rowConstraints>
+
+                            <CheckBox fx:id="chartVisibleCheckbox" text="%Curve" prefHeight="24" managed="${chartVisibleCheckbox.visible}" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                            <CheckBox fx:id="statusVisibleCheckbox" text="%Value" prefHeight="24" managed="${statusVisibleCheckbox.visible}" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                            <HBox spacing="8" managed="${statusVisibleCheckbox.visible}" visible="${statusVisibleCheckbox.visible}" GridPane.rowIndex="0" GridPane.columnIndex="2">
+                                <fx:define>
+                                    <ToggleGroup fx:id="primaryToggleGroup"/>
+                                </fx:define>
+                                <RadioButton fx:id="primarySmallRadio" text="%Small" toggleGroup="$primaryToggleGroup" disable="${!statusVisibleCheckbox.selected}"/>
+                                <RadioButton fx:id="primaryLargeRadio" text="%Large" toggleGroup="$primaryToggleGroup" disable="${!statusVisibleCheckbox.selected}"/>
+                            </HBox>
+                            <CheckBox fx:id="rorCheckbox" text="%Rate of Rise" prefHeight="24" managed="${rorCheckbox.visible}" GridPane.rowIndex="0" GridPane.columnIndex="3" GridPane.halignment="RIGHT"/>
+
+                            <GridPane fx:id="formContainer" hgap="16.0" managed="${formContainer.visible}" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="4">
+                                <columnConstraints>
+                                    <ColumnConstraints percentWidth="33.33"/>
+                                    <ColumnConstraints percentWidth="33.33"/>
+                                    <ColumnConstraints percentWidth="33.33"/>
+                                </columnConstraints>
+                                <FormComponent fx:id="indexLabel" title="%Channel" GridPane.columnIndex="0">
+                                    <ComboBox fx:id="indexComboBox" prefHeight="24"/>
+                                </FormComponent>
+                                <FormComponent title="%Type" GridPane.columnIndex="1">
+                                    <ComboBox fx:id="typeComboBox" prefHeight="24"/>
+                                </FormComponent>
+                                <FormComponent title="%Offset" GridPane.columnIndex="2">
+                                    <MeasureEditor fx:id="offsetEditor" prefHeight="24"/>
+                                </FormComponent>
+                            </GridPane>
+                        </GridPane>
+                    </VBox>
+                </center>
+            </BorderPane>
+        </content>
+    </TitledPaneRight>
+
+    <!-- All the following will overlay above the title pane. -->
+    <Label fx:id="dragRegion" graphic="$ICON_DRAG_AND_DROP" styleClass="dragable" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <ToggleSwitch fx:id="enableSwitch" text="${controller.channelName}" captionPosition="RIGHT" alignment="CENTER_LEFT" styleClass="toggle-switch--small" GridPane.margin="$SWITCH_MARGIN" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+</fx:root>

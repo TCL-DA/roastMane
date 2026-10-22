@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<fx:root type="javafx.scene.layout.StackPane" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <SVGImage fx:id="ICON_EDIT" icon="EDIT"/>
+        <SVGImage fx:id="ICON_CHECK_MARK" icon="CHECK_MARK"/>
+    </fx:define>
+    <HBox fx:id="comboHBox" alignment="CENTER" visible="false" styleClass="spacing--default" managed="${comboHBox.visible}">
+        <ComboBox fx:id="workerSelect" HBox.hgrow="ALWAYS"/>
+        <Button onAction="#toggleUserPane" styleClass="button--transparent" graphic="$ICON_CHECK_MARK"/>
+    </HBox>
+    <HBox fx:id="labelHBox" alignment="CENTER" styleClass="spacing--default" managed="${labelHBox.visible}">
+        <Label text="%Roasted by" styleClass="label--for">
+            <padding>
+                <Insets right="-4"/>
+            </padding>
+        </Label>
+        <Label fx:id="userName" styleClass="input-label--muted" HBox.hgrow="ALWAYS"/>
+        <Button fx:id="toggleButton" onAction="#toggleUserPane" styleClass="button--transparent"
+                graphic="$ICON_EDIT" managed="${toggleButton.visible}"/>
+    </HBox>
+</fx:root>

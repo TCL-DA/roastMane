@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+<?import com.cropster.roastingintelligence.ui.components.FormComponent?>
+<?import com.cropster.roastingintelligence.ui.util.AutoIncIndex?>
+
+<fx:root type="GridPane" styleClass="grid-pane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <AutoIncIndex fx:id="row"/>
+        <AutoIncIndex fx:id="machineControlsRow"/>
+        <ToggleGroup fx:id="timerToggleGroup"/>
+        <ToggleGroup fx:id="buttonsPositionToggleGroup"/>
+    </fx:define>
+    <columnConstraints>
+        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" fillWidth="true"/>
+    </columnConstraints>
+
+    <FormComponent fx:id="replacementLotsSelectionForm" title="%Replacement lots selection" GridPane.rowIndex="$row.idx">
+        <description>
+            <Text text="%Green lot weights may be outdated or out of sync when roasting offline."/>
+            <Text text=" "/>
+            <Text text="%By default, roasting into negative values is allowed."/>
+            <Text text=" "/>
+            <Text text="%Enable this option to automatically use the profile's replacement lots when a green lot has insufficient weight."/>
+        </description>
+        <CheckBox fx:id="automaticallyReplaceLotCheckbox" text="%Automatically use the profile's replacement lots when available"/>
+    </FormComponent>
+
+    <Separator styleClass="preferences-separator" GridPane.rowIndex="$row.inc"/>
+
+    <FormComponent title="%Between batch protocol" note="%Enabled measurement curves and the between batch timer will be displayed when a roast is finished and before a new roast starts." GridPane.rowIndex="$row.inc">
+        <CheckBox fx:id="betweenBatchProtocolCheckbox" text="%Display “Between batch” curves and timer during pre- and post-roast"/>
+    </FormComponent>
+
+    <Separator styleClass="preferences-separator" GridPane.rowIndex="$row.inc"/>
+
+    <FormComponent title="%Additional roast timers and phases" GridPane.rowIndex="$row.inc">
+        <GridPane hgap="16.0" styleClass="">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="33.33"/>
+                <ColumnConstraints percentWidth="33.33"/>
+                <ColumnConstraints percentWidth="33.33"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints fillHeight="false" valignment="TOP"/>
+            </rowConstraints>
+            <FormComponent note="%Drying, Maillard, Development time" maxWidth="Infinity" GridPane.columnIndex="0">
+                <RadioButton text="%Modulation" userData="MODULATION" toggleGroup="$timerToggleGroup"/>
+            </FormComponent>
+            <FormComponent maxWidth="Infinity" GridPane.columnIndex="1">
+                <RadioButton text="%Development" userData="DEVELOPMENT" toggleGroup="$timerToggleGroup"/>
+            </FormComponent>
+            <FormComponent maxWidth="Infinity" GridPane.columnIndex="2">
+                <RadioButton text="%None" userData="NONE" toggleGroup="$timerToggleGroup"/>
+            </FormComponent>
+        </GridPane>
+    </FormComponent>
+
+    <Separator styleClass="preferences-separator" GridPane.rowIndex="$row.inc"/>
+
+    <FormComponent title="%Confirm end of roast" GridPane.rowIndex="$row.inc">
+        <CheckBox fx:id="stopRoastingConfirmationCheckbox" text="%Stop roasting requires a second click for confirmation"/>
+    </FormComponent>
+
+    <Separator styleClass="preferences-separator" GridPane.rowIndex="$row.inc"/>
+
+    <FormComponent title="%Machine controls" GridPane.rowIndex="$row.inc">
+        <GridPane hgap="16.0" styleClass="">
+            <styleClass>
+                <String fx:value="grid-pane--compact"/>
+                <String fx:value="padding-top"/>
+            </styleClass>
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" fillWidth="true"/>
+            </columnConstraints>
+            <FormComponent fx:id="sliderControlsForm" title="%Slider controls" maxWidth="Infinity" GridPane.rowIndex="$machineControlsRow.idx">
+                <HBox alignment="CENTER_LEFT" spacing="8" styleClass="padding-bottom--small">
+                    <Label text="%Position of - and + slider buttons:"/>
+                    <RadioButton text="%Top" userData="TOP" selected="true" toggleGroup="$buttonsPositionToggleGroup"/>
+                    <RadioButton text="%Bottom" userData="BOTTOM" toggleGroup="$buttonsPositionToggleGroup"/>
+                </HBox>
+            </FormComponent>
+        </GridPane>
+    </FormComponent>
+
+    <Separator styleClass="preferences-separator" GridPane.rowIndex="$row.inc"/>
+
+    <FormComponent title="%Measurement readouts" GridPane.rowIndex="$row.inc">
+        <CheckBox fx:id="condensedCheckbox" text="%Condense measurement readouts layout space"/>
+    </FormComponent>
+</fx:root>

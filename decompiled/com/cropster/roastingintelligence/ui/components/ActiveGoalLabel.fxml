@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import com.cropster.roastingintelligence.ui.components.ProgressDot?>
+
+<fx:root type="VBox" styleClass="basic-list-cell" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Insets fx:id="TOP_MARGIN" top="12" right="12" left="12"/>
+        <Insets fx:id="CENTER_MARGIN" right="12" left="12" top="4"/>
+        <Insets fx:id="BOTTOM_MARGIN" right="12" bottom="12" left="12"/>
+        <Insets fx:id="SEPARATION_MARGIN" top="6"/>
+        <Insets fx:id="RANGE_MARGIN" top="4"/>
+        <SVGImage fx:id="ICON_ARROW_LEFT" icon="ARROW_LEFT" styleClass="icon--error"/>
+        <SVGImage fx:id="ICON_ARROW_RIGHT" icon="ARROW_RIGHT" styleClass="icon--error"/>
+    </fx:define>
+
+    <HBox fx:id="nameContainer" styleClass="basic-list-cell--header" maxHeight="Infinity" VBox.margin="$TOP_MARGIN" VBox.vgrow="NEVER">
+        <VBox VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS">
+            <HBox styleClass="name-container">
+                <Label fx:id="nameLabel" styleClass="goal-name" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="displayModeIcon" managed="${displayModeIcon.visible}" minHeight="12"/>
+            </HBox>
+        </VBox>
+    </HBox>
+
+    <HBox fx:id="referenceContainer" styleClass="basic-list-cell--header" alignment="CENTER_LEFT" managed="${referenceContainer.visible}" maxWidth="Infinity" maxHeight="Infinity" VBox.margin="$CENTER_MARGIN" VBox.vgrow="NEVER">
+        <HBox styleClass="reference-container" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+            <Label fx:id="checkedValueLabel" text="–" styleClass="checked-value" managed="${checkedValueLabel.visible}"/>
+            <Label fx:id="unitLabel" styleClass="goal-reference-unit"/>
+            <Label fx:id="referenceLabel" styleClass="goal-reference" managed="${referenceLabel.visible}" HBox.hgrow="ALWAYS"/>
+        </HBox>
+    </HBox>
+
+    <VBox VBox.margin="$BOTTOM_MARGIN" alignment="BOTTOM_LEFT" VBox.vgrow="ALWAYS">
+        <VBox fx:id="progressContainer" managed="${progressContainer.visible}" VBox.margin="$SEPARATION_MARGIN">
+            <HBox spacing="4" alignment="CENTER_LEFT" maxWidth="Infinity">
+                <ProgressDot fx:id="goalProgressBar" managed="${goalProgressBar.visible}" styleClass="goal-progress-missing" progress="0" maxWidth="Infinity" maxHeight="3.0" minHeight="3.0" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="statusIcon" managed="${statusIcon.visible}" minHeight="12" maxWidth="Infinity" minWidth="12" HBox.hgrow="NEVER"/>
+            </HBox>
+            <HBox fx:id="rangeContainer" managed="${rangeContainer.visible}" visible="${lowerBoundLabel.visible || upperBoundLabel.visible}" styleClass="basic-list-cell--header" VBox.margin="$RANGE_MARGIN">
+                <Label fx:id="missingLowerBoundLabel" graphic="$ICON_ARROW_LEFT" minWidth="16" HBox.hgrow="NEVER"/>
+                <Label maxWidth="Infinity" minWidth="0" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="lowerBoundLabel" managed="${lowerBoundLabel.visible}" styleClass="bound-label" minWidth="-Infinity" HBox.hgrow="NEVER"/>
+                <Label text="-" styleClass="bound-label" minWidth="4" HBox.hgrow="NEVER"/>
+                <Label fx:id="upperBoundLabel" managed="${upperBoundLabel.visible}" styleClass="bound-label" minWidth="-Infinity" HBox.hgrow="NEVER"/>
+                <Label maxWidth="Infinity" minWidth="0" HBox.hgrow="ALWAYS"/>
+                <Label fx:id="missingUpperBoundLabel" graphic="$ICON_ARROW_RIGHT" minWidth="16" HBox.hgrow="NEVER"/>
+            </HBox>
+        </VBox>
+    </VBox>
+</fx:root>

@@ -1,0 +1,18 @@
+@import "toast-notification.css";
+
+.popover .button {
+  -fx-font-family: 'sans-serif';
+}
+
+.popover .label {
+  -fx-font-family: 'sans-serif';
+}
+
+.popover > .content {
+  -fx-font-family: 'sans-serif';
+}
+
+#popoverContentTextFlow {
+  -fx-font-family: 'sans-serif';
+}
+

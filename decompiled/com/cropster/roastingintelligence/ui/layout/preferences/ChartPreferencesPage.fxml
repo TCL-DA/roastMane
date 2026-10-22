@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+<?import com.cropster.roastingintelligence.ui.components.FormComponent?>
+<?import com.cropster.roastingintelligence.ui.components.MeasureEditor?>
+<?import com.cropster.roastingintelligence.ui.components.TimeEditor?>
+<?import com.cropster.roastingintelligence.ui.components.WebLink?>
+<?import com.cropster.roastingintelligence.ui.layout.CommentsCustomizationTable?>
+<?import com.cropster.roastingintelligence.ui.util.AutoIncIndex?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+
+<fx:root type="GridPane" styleClass="grid-pane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <AutoIncIndex fx:id="row"/>
+        <SVGImage fx:id="ICON_RESET" icon="RESET"/>
+        <SVGImage fx:id="ICON_WARNING" icon="WARNING" styleClass="icon--warning" />
+        <ToggleGroup fx:id="markEventsToggleGroup"/>
+    </fx:define>
+
+    <columnConstraints>
+        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" fillWidth="true"/>
+    </columnConstraints>
+
+    <FormComponent title="%Charts axes" GridPane.rowIndex="$row.idx">
+        <description>
+            <Text text="%You can read our manual to learn more about the Rate of Rise:"/>
+            <WebLink text="%Preferences > Chart axes" url="https://help.cropster.com/en/knowledge/roasting-intelligence-ri-preferences#chart"/>
+        </description>
+        <GridPane hgap="8.0" vgap="8.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES"/>
+                <ColumnConstraints hgrow="NEVER" maxWidth="32" minWidth="32"/>
+                <ColumnConstraints hgrow="SOMETIMES"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="112" minWidth="112"/>
+                <ColumnConstraints hgrow="NEVER" maxWidth="32" minWidth="32"/>
+                <ColumnConstraints hgrow="SOMETIMES"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="112" minWidth="112"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="NEVER" minHeight="0"/>
+            </rowConstraints>
+
+            <Label fx:id="xAxisLabel" text="%X-axis" styleClass="always-enabled" GridPane.rowIndex="1" GridPane.columnIndex="0">
+                <styleClass>
+                    <String fx:value="always-enabled"/>
+                    <String fx:value="form-label"/>
+                </styleClass>
+            </Label>
+            <Label text="%Time" styleClass="always-enabled" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TimeEditor fx:id="chartXAxisField" styleClass="always-enabled" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+
+            <Label fx:id="yAxisLabel" text="%Y-axis" styleClass="always-enabled" GridPane.rowIndex="4" GridPane.columnIndex="0">
+                <styleClass>
+                    <String fx:value="always-enabled"/>
+                    <String fx:value="form-label"/>
+                </styleClass>
+            </Label>
+            <Label text="%Temperature" styleClass="always-enabled" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <Label text="%Min" styleClass="always-enabled" GridPane.rowIndex="5" GridPane.columnIndex="2"/>
+            <MeasureEditor fx:id="chartYAxisMinField" styleClass="always-enabled" GridPane.rowIndex="5" GridPane.columnIndex="3"/>
+            <Label text="%Max" styleClass="always-enabled" GridPane.rowIndex="5" GridPane.columnIndex="5"/>
+            <MeasureEditor fx:id="chartYAxisMaxField" styleClass="always-enabled" GridPane.rowIndex="5" GridPane.columnIndex="6"/>
+            <Label text="%Rate of Rise (RoR)" styleClass="always-enabled" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+            <Label text="%Min" styleClass="always-enabled" GridPane.rowIndex="6" GridPane.columnIndex="2"/>
+            <MeasureEditor fx:id="chartRorMinField" styleClass="always-enabled" GridPane.rowIndex="6" GridPane.columnIndex="3"/>
+            <Label text="%Max" styleClass="always-enabled" GridPane.rowIndex="6" GridPane.columnIndex="5"/>
+            <MeasureEditor fx:id="chartRorMaxField" styleClass="always-enabled" GridPane.rowIndex="6" GridPane.columnIndex="6"/>
+            <Label text="%Remember: the minimum and maximum values of the RoR will be affected by the “Time expression” setting found under “Rate of Rise (RoR)”." wrapText="true" styleClass="hint" GridPane.rowIndex="7" GridPane.columnIndex="0" GridPane.columnSpan="8"/>
+            <Button fx:id="chartAxesResetButton" graphic="$ICON_RESET" text="%Reset chart axes" onAction="#resetChartAxes" styleClass="always-enabled" maxWidth="Infinity" GridPane.rowIndex="9" GridPane.columnIndex="0" GridPane.columnSpan="8"/>
+            <Label fx:id="chartAxesChangedLabel" text="%Changes to this setting only take effect after saving." managed="${chartAxesChangedLabel.visible}" visible="false" graphic="$ICON_WARNING" maxWidth="Infinity" GridPane.rowIndex="10" GridPane.columnIndex="0" GridPane.columnSpan="8">
+                <styleClass>
+                    <String fx:value="info-message"/>
+                    <String fx:value="info-message--warning"/>
+                    <String fx:value="always-enabled"/>
+                </styleClass>
+            </Label>
+        </GridPane>
+    </FormComponent>
+
+    <Separator styleClass="preferences-separator" GridPane.rowIndex="$row.inc"/>
+
+    <FormComponent title="%Events and comments" spacing="16" GridPane.rowIndex="$row.inc">
+        <Label fx:id="markEventsPrefixLabel" styleClass="always-enabled"/>
+        <RadioButton fx:id="markEventsByTempRadio" text="%Bean temp." userData="TEMP" toggleGroup="$markEventsToggleGroup"/>
+        <RadioButton fx:id="markEventsByTimeRadio" text="%Time" userData="TIME" toggleGroup="$markEventsToggleGroup"/>
+    </FormComponent>
+
+    <FormComponent fx:id="eventsForm" title="%Events" note="%Marks Color change, First crack and Second crack based on your roasting profile’s bean temperature." GridPane.rowIndex="$row.inc">
+        <CheckBox fx:id="eventAutoMarkingCheckbox" text="%Auto-mark development events (only based on bean temperature available)"/>
+    </FormComponent>
+
+    <FormComponent fx:id="commentsForm" title="%Comments" GridPane.rowIndex="$row.inc">
+        <GridPane vgap="8.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" fillWidth="true"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints valignment="TOP" vgrow="NEVER" fillHeight="true"/>
+            </rowConstraints>
+            <FormComponent note="%Except Turning point, First/Second crack, Color change. The option cleans the chart as the roast progresses." maxWidth="Infinity" GridPane.rowIndex="0">
+                <CheckBox fx:id="referenceCommentHistoryHiddenCheckbox" text="%Hide past reference curve comments"/>
+            </FormComponent>
+            <FormComponent note="%Useful to see the gas curve as comments, without overcrowding the roast chart." spacing="8" maxWidth="Infinity" GridPane.rowIndex="1">
+                <CheckBox fx:id="gasCurveAsCommentsCheckbox" text="Show gas curve as comments when there are no more than:"/>
+                <MeasureEditor fx:id="gasCurveAsCommentsEditor" fractionEnabled="false" prefHeight="24" styleClass="weight-input--no-unit" disable="${!gasCurveAsCommentsCheckbox.selected}"/>
+                <Label fx:id="gasCurveAsCommentsSuffixLabel"/>
+            </FormComponent>
+        </GridPane>
+    </FormComponent>
+
+    <Separator styleClass="preferences-separator" GridPane.rowIndex="$row.inc"/>
+
+    <FormComponent title="%Comments to show and to be added (by reference and current roast)" GridPane.rowIndex="$row.inc">
+        <CommentsCustomizationTable fx:id="commentsCustomizationTable"/>
+    </FormComponent>
+
+</fx:root>

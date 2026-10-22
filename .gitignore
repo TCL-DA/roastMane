@@ -1,0 +1,14 @@
+# Tệp phát sinh và dữ liệu cục bộ
+*.class
+*.log
+*.tmp
+*.exe
+runtime/
+outbox/
+archive/
+.env
+.env.*
+!.env.example
+__pycache__/
+.DS_Store
+Thumbs.db

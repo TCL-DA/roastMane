@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+
+<fx:root type="javafx.scene.layout.GridPane" styleClass="keyboard-shortcut-label" xmlns:fx="http://javafx.com/fxml">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" fillWidth="true" minWidth="0"/>
+        <ColumnConstraints halignment="CENTER" minWidth="100"/>
+    </columnConstraints>
+    <Label fx:id="titleLabel" text="${controller.text}" styleClass="keyboard-shortcut-label__title" managed="${titleLabel.visible}"/>
+    <HBox fx:id="keyList" styleClass="keyboard-shortcut-label__list" GridPane.columnIndex="1" GridPane.valignment="CENTER" />
+</fx:root>

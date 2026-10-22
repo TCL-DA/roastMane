@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Integer?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import com.cropster.roastingintelligence.ui.layout.preferences.ChartPreferencesPage?>
+<?import com.cropster.roastingintelligence.ui.layout.preferences.ConfigurationPreferencesPage?>
+<?import com.cropster.roastingintelligence.ui.layout.preferences.ControlSliderPreferencesPage?>
+<?import com.cropster.roastingintelligence.ui.layout.preferences.ControlSwitchPreferencesPage?>
+<?import com.cropster.roastingintelligence.ui.layout.preferences.GeneralPreferencesPage?>
+<?import com.cropster.roastingintelligence.ui.layout.preferences.InterfacePreferencesPage?>
+<?import com.cropster.roastingintelligence.ui.layout.preferences.MeasurementPreferencesPage?>
+<?import com.cropster.roastingintelligence.ui.layout.preferences.PrintPreferencesPage?>
+<?import com.cropster.roastingintelligence.ui.layout.preferences.RorPreferencesPage?>
+<?import com.cropster.roastingintelligence.ui.layout.preferences.SmartPreferencesPage?>
+<?import com.cropster.roastingintelligence.ui.layout.preferences.UnitPreferencesPage?>
+
+<!--
+  The root panel of the Preferences dialog.
+  - The Preferences dialog is composed by a menu-like navigator panel on the left, and a page-based
+    views in its center.
+  - Each menu item is actually a ToggleButton element whose "id" (note: id, not the fx:id) is the
+    simple name of the class implementing the preference page associated with the menu ite.
+  - Labels and Separators are used to group menu items in categories (System, Roasting, Machine).
+  - The page view is a StackPane with a ScrollPane for each page. Each scrollpane contains the
+    actual page implementation.
+  - The visibility of each ScrollPane is determined by the selected status of the corresponding
+    ToggleButton menu item.
+  - Except for possible custom and over-complex pages, a preference page is a GridPane whose
+    styleClass is set to "grid-pane".
+      + The GridPane page has a single colum.
+      + Rows are referenced by an AutoIncIndex object by each main element in the page.
+      + FormComponent are used for each preference, sometimes with other ones embedded inside.
+        A FormComponent contains:
+          - an optional title string,
+          - an optional, multi-line, formattable description text,
+          - one or more components,
+          - an optional hint string.
+        When a single componed is contained, then it ALWAYS grwos horizontally to take all the
+        available space. If multiple components are contained in a form, then they will NEVER grow
+        horizontally beyond their preferred (or computed) width. So, when complex scructures are to
+        be realized, a SINGLE gridPane (or other type of container) can be embedded inside a form
+        componet. It then will include and layout other (form) components.  See as examples:
+          - UnitPreferencesPage.fxml for a GridPane containing 2 FormComponent elements occupying
+            half of the available horizontal space each;
+          - InterfacePreferencesPage.fxml for a main FormComponent (for the preference title and
+            description), embedding a GridPane with other 3 FormComponent elements in different,
+            equally spaced columns.
+-->
+<fx:root type="VBox" fx:id="mainContainer" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Insets fx:id="WAIT_MARGIN" right="4.0"/>
+        <Integer fx:id="MAX_INT" fx:constant="MAX_VALUE"/>
+        <ToggleGroup fx:id="menuToggleGroup"/>
+    </fx:define>
+    <BorderPane styleClass="preferences" VBox.vgrow="ALWAYS">
+        <left>
+            <VBox fx:id="menuContainer" styleClass="preferences-categories" BorderPane.alignment="CENTER">
+                <Label text="%System"/>
+                <Separator/>
+                <ToggleButton fx:id="generalItem" id="GeneralPreferencesPage" alignment="CENTER_LEFT" maxWidth="Infinity" selected="true" text="%General" toggleGroup="$menuToggleGroup"/>
+                <ToggleButton fx:id="unitItem" id="UnitPreferencesPage" alignment="CENTER_LEFT" maxWidth="Infinity" text="%Units" toggleGroup="$menuToggleGroup"/>
+                <Label text="%Roasting" styleClass="padding-top"/>
+                <Separator styleClass="preferences-separator"/>
+                <ToggleButton fx:id="interfaceItem" id="InterfacePreferencesPage" alignment="CENTER_LEFT" maxWidth="Infinity" text="%Interface" toggleGroup="$menuToggleGroup"/>
+                <ToggleButton fx:id="rorItem" id="RorPreferencesPage" alignment="CENTER_LEFT" maxWidth="Infinity" text="%Rate of Rise (RoR)" toggleGroup="$menuToggleGroup"/>
+                <ToggleButton fx:id="smartItem" id="SmartPreferencesPage" alignment="CENTER_LEFT" maxWidth="Infinity" text="%Smart features" toggleGroup="$menuToggleGroup"/>
+                <ToggleButton fx:id="chartItem" id="ChartPreferencesPage" alignment="CENTER_LEFT" maxWidth="Infinity" text="%Chart and comments" toggleGroup="$menuToggleGroup"/>
+                <ToggleButton fx:id="printItem" id="PrintPreferencesPage" alignment="CENTER_LEFT" maxWidth="Infinity" text="%Customize roast labels" toggleGroup="$menuToggleGroup"/>
+                <Label text="%Machine" styleClass="padding-top"/>
+                <Separator styleClass="preferences-separator"/>
+                <StackPane>
+                    <ToggleButton fx:id="configurationItem" id="ConfigurationPreferencesPage" alignment="CENTER_LEFT" maxWidth="Infinity" text="%Configuration" toggleGroup="$menuToggleGroup"/>
+                    <Label fx:id="configurationItemWaitLabel" StackPane.alignment="CENTER_RIGHT" managed="${configurationItemWaitLabel.visible}" visible="${configurationItem.disabled}" StackPane.margin="$WAIT_MARGIN"/>
+                </StackPane>
+                <ToggleButton fx:id="measurementItem" id="MeasurementPreferencesPage" alignment="CENTER_LEFT" maxWidth="Infinity" text="%Measurements" toggleGroup="$menuToggleGroup"/>
+                <ToggleButton fx:id="controlSliderItem" id="ControlSliderPreferencesPage" alignment="CENTER_LEFT" maxWidth="Infinity" text="%Slider controls" toggleGroup="$menuToggleGroup"/>
+                <ToggleButton fx:id="controlSwitchItem" id="ControlSwitchPreferencesPage" alignment="CENTER_LEFT" maxWidth="Infinity" text="%Switch controls" toggleGroup="$menuToggleGroup"/>
+            </VBox>
+        </left>
+        <center>
+            <StackPane fx:id="centralContainer" styleClass="preferences-stack" BorderPane.alignment="CENTER">
+                <ScrollPane fx:id="generalPane" fitToWidth="true" managed="${generalPane.visible}" visible="${generalItem.selected}">
+                    <GeneralPreferencesPage fx:id="generalPreferencesPage" styleClass="preferences-content"/>
+                </ScrollPane>
+                <ScrollPane fx:id="unitPane" fitToWidth="true" managed="${unitPane.visible}" visible="${unitItem.selected}">
+                    <UnitPreferencesPage fx:id="unitPreferencesPage" styleClass="preferences-content"/>
+                </ScrollPane>
+                <ScrollPane fx:id="interfacePane" fitToWidth="true" managed="${interfacePane.visible}" visible="${interfaceItem.selected}">
+                    <InterfacePreferencesPage fx:id="interfacePreferencesPage" styleClass="preferences-content"/>
+                </ScrollPane>
+                <ScrollPane fx:id="rorPane" fitToWidth="true" managed="${rorPane.visible}" visible="${rorItem.selected}">
+                    <RorPreferencesPage fx:id="rorPreferencesPage" styleClass="preferences-content"/>
+                </ScrollPane>
+                <ScrollPane fx:id="smartPane" fitToWidth="true" managed="${smartPane.visible}" visible="${smartItem.selected}">
+                    <SmartPreferencesPage fx:id="smartPreferencesPage" styleClass="preferences-content"/>
+                </ScrollPane>
+                <ScrollPane fx:id="chartPane" fitToWidth="true" managed="${chartPane.visible}" visible="${chartItem.selected}">
+                    <ChartPreferencesPage fx:id="chartPreferencesPage" styleClass="preferences-content"/>
+                </ScrollPane>
+                <ScrollPane fx:id="printPane" fitToWidth="true" managed="${printPane.visible}" visible="${printItem.selected}">
+                    <PrintPreferencesPage fx:id="printPreferencesPage" styleClass="preferences-content"/>
+                </ScrollPane>
+                <ConfigurationPreferencesPage fx:id="configurationPreferencesPage" managed="${configurationPreferencesPage.visible}" visible="${configurationItem.selected}" disable="${configurationItem.disabled}" styleClass="preferences-content"/>
+                <MeasurementPreferencesPage fx:id="measurementPreferencesPage" managed="${measurementPreferencesPage.visible}" visible="${measurementItem.selected}" styleClass="preferences-content-no-scroll-pane"/>
+                <ControlSliderPreferencesPage fx:id="controlSliderPreferencesPage" managed="${controlSliderPreferencesPage.visible}" visible="${controlSliderItem.selected}" styleClass="preferences-content-no-scroll-pane"/>
+                <ControlSwitchPreferencesPage fx:id="controlSwitchPreferencesPage" managed="${controlSwitchPreferencesPage.visible}" visible="${controlSwitchItem.selected}" styleClass="preferences-content-no-scroll-pane"/>
+            </StackPane>
+        </center>
+    </BorderPane>
+    <Separator/>
+    <HBox fx:id="buttonBar" styleClass="hbox-button-bar" minHeight="-1" VBox.vgrow="NEVER">
+        <Button fx:id="cancelButton" text="%Cancel" styleClass="button--plain" cancelButton="true"/>
+        <Button fx:id="saveButton" text="%Save" styleClass="button--primary" defaultButton="true"/>
+    </HBox>
+</fx:root>

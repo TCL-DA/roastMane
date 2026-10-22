@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import com.cropster.roastingintelligence.ui.components.Tooltip?>
+
+<fx:root type="VBox" minHeight="50" minWidth="100" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <GridPane fx:id="REMAINING" fx:constant="REMAINING"/>
+        <Insets fx:id="BODY_MARGIN" top="8" right="12" bottom="8" left="12"/>
+        <Insets fx:id="HEADER_MARGIN" top="12" right="12" bottom="12" left="12"/>
+        <Insets fx:id="NOTE_MARGIN" bottom="4"/>
+        <Region fx:id="USE_PREF_SIZE" fx:constant="USE_PREF_SIZE"/>
+        <SVGImage fx:id="ICON_OPEN_OUT" icon="OPEN_OUT"/>
+        <SVGImage fx:id="ICON_PRINT" icon="PRINT"/>
+    </fx:define>
+    <styleClass>
+        <String fx:value="basic-list-cell"/>
+        <String fx:value="darker"/>
+    </styleClass>
+
+    <HBox styleClass="basic-list-cell--header" VBox.margin="$HEADER_MARGIN">
+        <VBox styleClass="vertical-header-container" HBox.hgrow="ALWAYS">
+            <HBox fx:id="headerTopArea" styleClass="horizontal-header-container" managed="${headerTopArea.visible}">
+                <Label fx:id="manualBadge" text="%MANUAL BLEND" managed="${manualBadge.visible}">
+                    <styleClass>
+                        <String fx:value="tag"/>
+                        <String fx:value="tag--badge"/>
+                        <String fx:value="tag--transparent"/>
+                    </styleClass>
+                </Label>
+                <Label fx:id="profileBadge" text="%POST-ROAST PROFILE BLEND" managed="${profileBadge.visible}" visible="${!manualBadge.visible}">
+                    <styleClass>
+                        <String fx:value="tag"/>
+                        <String fx:value="tag--badge"/>
+                        <String fx:value="tag--transparent"/>
+                    </styleClass>
+                </Label>
+                <Label minWidth="0" maxWidth="Infinity" HBox.hgrow="ALWAYS"/> <!-- pusher -->
+                <HBox fx:id="buttonsBar" managed="${buttonsBar.visible}" spacing="4" alignment="CENTER_RIGHT" HBox.hgrow="NEVER">
+                    <Button fx:id="printButton" onAction="#print" styleClass="button--transparent" graphic="$ICON_PRINT" HBox.hgrow="NEVER">
+                        <tooltip>
+                            <Tooltip text="%Print blend label"/>
+                        </tooltip>
+                    </Button>
+                    <Button fx:id="openInBrowserButton" onAction="#openInBrowser" styleClass="button--transparent" graphic="$ICON_OPEN_OUT" HBox.hgrow="NEVER">
+                        <tooltip>
+                            <Tooltip text="%Open in browser"/>
+                        </tooltip>
+                    </Button>
+                </HBox>
+            </HBox>
+            <VBox spacing="0">
+                <Label fx:id="profileLabel" managed="${profileLabel.visible}" minWidth="$USE_PREF_SIZE" maxWidth="Infinity" alignment="CENTER_LEFT"/>
+                <HBox spacing="8" maxWidth="Infinity" alignment="CENTER_LEFT">
+                    <Label fx:id="titleLabel" styleClass="header-title--bold" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                        <tooltip>
+                            <Tooltip text="${titleLabel.text}"/>
+                        </tooltip>
+                    </Label>
+                    <Label fx:id="totalWeightLabel" minWidth="$USE_PREF_SIZE" styleClass="header-title--bold" HBox.hgrow="NEVER"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </HBox>
+
+    <Separator fx:id="headerSeparator"/>
+
+    <HBox styleClass="basic-list-cell--body" spacing="8">
+        <VBox styleClass="vertical-header-container" HBox.hgrow="ALWAYS" HBox.margin="$BODY_MARGIN">
+            <Label fx:id="notesLabel" wrapText="true" contentDisplay="TEXT_ONLY" styleClass="label--italic" managed="${notesLabel.visible}" VBox.margin="$NOTE_MARGIN"/>
+            <GridPane fx:id="subSection" hgap="5" styleClass="subsection" GridPane.rowIndex="2" GridPane.columnSpan="$REMAINING">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="ALWAYS" maxWidth="Infinity"/>
+                    <ColumnConstraints hgrow="NEVER" halignment="RIGHT" minWidth="$USE_PREF_SIZE"/>
+                    <ColumnConstraints hgrow="NEVER" halignment="RIGHT" minWidth="$USE_PREF_SIZE"/>
+                </columnConstraints>
+            </GridPane>
+        </VBox>
+    </HBox>
+</fx:root>

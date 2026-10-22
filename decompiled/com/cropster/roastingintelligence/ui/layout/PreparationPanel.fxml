@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import com.cropster.roastingintelligence.ui.components.ComboBoxHighlight?>
+<?import com.cropster.roastingintelligence.ui.components.MeasureEditor?>
+<?import com.cropster.roastingintelligence.ui.components.Spacer?>
+<?import com.cropster.roastingintelligence.ui.components.UserPanel?>
+
+<fx:root type="javafx.scene.layout.GridPane" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <GridPane fx:id="REMAINING" fx:constant="REMAINING" />
+    </fx:define>
+    <styleClass>
+        <String fx:value="grid-pane--compact" />
+        <String fx:value="padding--small" />
+    </styleClass>
+    <columnConstraints>
+        <!-- Re-created programatically -->
+        <ColumnConstraints hgrow="ALWAYS" />
+        <ColumnConstraints hgrow="NEVER" />
+        <ColumnConstraints hgrow="NEVER" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints fillHeight="false" />
+        <RowConstraints fillHeight="false" />
+        <RowConstraints fillHeight="false" />
+    </rowConstraints>
+    <HBox alignment="CENTER_LEFT" styleClass="spacing--large" minWidth="190" GridPane.columnSpan="$REMAINING" GridPane.hgrow="ALWAYS">
+        <Label text="%Next roast" styleClass="heading" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+        <UserPanel fx:id="userPanel" minWidth="-Infinity" HBox.hgrow="NEVER"/>
+    </HBox>
+    <Spacer GridPane.rowIndex="1" />
+    <Label labelFor="$profileSelect" text="%Profile" styleClass="input-label" GridPane.rowIndex="2" GridPane.columnSpan="2"/>
+    <Label text="%Start weight" styleClass="input-label" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.columnSpan="$REMAINING" />
+    <ComboBoxHighlight fx:id="profileSelect" minWidth="120" maxWidth="Infinity" GridPane.rowIndex="3" GridPane.columnSpan="2"/>
+    <MeasureEditor fx:id="totalWeightField" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+    <Spacer GridPane.rowIndex="4" />
+    <Label text="%Green inventory" styleClass="input-label" GridPane.rowIndex="5" GridPane.columnSpan="2" />
+    <ComboBox maxWidth="Infinity" GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="3"/>
+</fx:root>

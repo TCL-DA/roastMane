@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import com.cropster.roastingintelligence.ui.components.MeasureEditor?>
+<?import com.cropster.roastingintelligence.ui.components.ToggleSwitch?>
+<?import com.cropster.roastingintelligence.ui.components.Tooltip?>
+
+<fx:root type="javafx.scene.layout.VBox" styleClass="control-slider" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Insets fx:id="WRAPPER_PADDING" top="-1.5" bottom="-2"/>
+    </fx:define>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label fx:id="titleLabel" styleClass="control-slider__title" text="Control" />
+        <BorderPane fx:id="filler" managed="${filler.visible}" visible="${autoModeToggle.visible}" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+        <ToggleSwitch fx:id="autoModeToggle" text="%Auto" styleClass="toggle-switch--small" managed="${autoModeToggle.visible}">
+            <tooltip>
+                <Tooltip text="%Auto mode"/>
+            </tooltip>
+        </ToggleSwitch>
+    </HBox>
+
+    <VBox fx:id="controlPanel" styleClass="control-slider__control-panel" VBox.vgrow="ALWAYS">
+        <MeasureEditor fx:id="valueEditor" fractionEnabled="false">
+            <left>
+                <Label fx:id="icon" BorderPane.alignment="CENTER"/>
+            </left>
+        </MeasureEditor>
+        <HBox fx:id="buttonContainer" styleClass="control-slider__plus-minus-wrapper">
+            <Button fx:id="minusButton" mnemonicParsing="false" HBox.hgrow="ALWAYS"/>
+            <Button fx:id="plusButton" mnemonicParsing="false" HBox.hgrow="ALWAYS"/>
+        </HBox>
+        <StackPane fx:id="stackPanel" styleClass="control-slider__stack-panel" VBox.vgrow="ALWAYS">
+            <BorderPane fx:id="sliderContainer" styleClass="control-slider__slider-wrapper">
+                <center>
+                    <Slider fx:id="slider" orientation="VERTICAL" styleClass="control-slider__slider" value="60.0"/>
+                </center>
+                <left>
+                    <VBox fx:id="sliderButtonWrapperLeft" viewOrder="1" styleClass="control-slider__btns-wrapper" BorderPane.margin="$WRAPPER_PADDING"/>
+                </left>
+                <right>
+                    <VBox fx:id="sliderButtonWrapperRight" viewOrder="1" styleClass="control-slider__btns-wrapper" BorderPane.margin="$WRAPPER_PADDING"/>
+                </right>
+            </BorderPane>
+            <Label fx:id="thumbValue" styleClass="control-slider__slider-value" mouseTransparent="true" managed="${thumbValue.visible}" StackPane.alignment="TOP_LEFT"/>
+        </StackPane>
+    </VBox>
+</fx:root>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.print.PageOrientation?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import com.cropster.roastingintelligence.ui.components.MeasureEditor?>
+<?import com.cropster.roastingintelligence.ui.util.AutoIncIndex?>
+
+<VBox fx:id="content" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns:fx="http://javafx.com/fxml"
+        fx:controller="com.cropster.roastingintelligence.ui.layout.PrintWindowController">
+    <fx:define>
+        <AutoIncIndex fx:id="ri1" />
+        <ToggleGroup fx:id="orientationToggleGroup" />
+        <GridPane fx:id="REMAINING" fx:constant="REMAINING" />
+        <PageOrientation fx:id="PORTRAIT" fx:constant="PORTRAIT" />
+        <PageOrientation fx:id="LANDSCAPE" fx:constant="LANDSCAPE" />
+        <PageOrientation fx:id="REVERSE_LANDSCAPE" fx:constant="REVERSE_LANDSCAPE" />
+    </fx:define>
+    <padding>
+        <Insets topRightBottomLeft="10" />
+    </padding>
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" />
+        </columnConstraints>
+        <Label text="%Printer" GridPane.rowIndex="$ri1.inc" />
+        <ComboBox fx:id="printerComboBox" items="${controller.availablePrinters}" GridPane.rowIndex="$ri1.idx" GridPane.columnIndex="1" GridPane.columnSpan="$REMAINING" />
+        <Label text="%Width" GridPane.rowIndex="$ri1.inc" />
+        <MeasureEditor fx:id="widthEditor" unit="$controller.unit" GridPane.rowIndex="$ri1.idx" GridPane.columnIndex="1" GridPane.columnSpan="$REMAINING" />
+        <Label text="%Height" GridPane.rowIndex="$ri1.inc" />
+        <MeasureEditor fx:id="heightEditor" unit="$controller.unit" GridPane.rowIndex="$ri1.idx" GridPane.columnIndex="1" GridPane.columnSpan="$REMAINING" />
+        <Label text="%Orientation" GridPane.rowIndex="$ri1.inc" /> 
+        <RadioButton text="%Portrait" userData="$PORTRAIT" selected="true" toggleGroup="$orientationToggleGroup" GridPane.rowIndex="$ri1.idx" GridPane.columnIndex="1" />
+        <RadioButton text="%Landscape" userData="$LANDSCAPE" toggleGroup="$orientationToggleGroup" GridPane.rowIndex="$ri1.idx" GridPane.columnIndex="2" />
+        <RadioButton text="%Reverse landscape" userData="$REVERSE_LANDSCAPE" toggleGroup="$orientationToggleGroup" GridPane.rowIndex="$ri1.idx" GridPane.columnIndex="3" />
+    </GridPane>
+    <HBox fx:id="buttonBar" spacing="10" alignment="CENTER_RIGHT">
+        <padding>
+            <Insets top="10" />
+        </padding>
+        <Label maxWidth="Infinity" HBox.hgrow="ALWAYS" />
+        <Button onAction="#close" text="%Cancel" styleClass="button--plain" cancelButton="true" />
+        <Button fx:id="previewButton" text="%Preview" />
+        <Button fx:id="printButton" text="%Print" styleClass="button--primary" />
+    </HBox>
+</VBox>

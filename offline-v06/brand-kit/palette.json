@@ -1,0 +1,16 @@
+{
+  "name": "roastMane v06",
+  "colors": {
+    "xanh": "#254C3B",
+    "be": "#EAE2D2",
+    "den": "#191D19",
+    "nau": "#785440",
+    "trang": "#FFFFFF",
+    "xam": "#737A70"
+  },
+  "usage": {
+    "app_icon_background": "#254C3B",
+    "app_icon_symbol": "#EAE2D2",
+    "ui_wordmark": "#254C3B"
+  }
+}

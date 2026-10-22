@@ -1,0 +1,22 @@
+@import "whatsnewdialog.css";
+
+.popover .button {
+  -fx-font-family: 'sans-serif';
+}
+
+.popover .label {
+  -fx-font-family: 'sans-serif';
+}
+
+.popover > .content {
+  -fx-font-family: 'sans-serif';
+}
+
+#whatsNewPane{
+  -fx-font-family: 'sans-serif';
+}
+
+#contentFlow {
+  -fx-font-family: 'sans-serif';
+}
+

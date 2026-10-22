@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import com.cropster.roastingintelligence.ui.components.FormComponent?>
+<?import com.cropster.roastingintelligence.ui.components.MeasureEditor?>
+<?import com.cropster.roastingintelligence.ui.components.TimeEditor?>
+
+<fx:root type="javafx.scene.layout.GridPane" hgap="10" vgap="10" styleClass="padding-default" xmlns:fx="http://javafx.com/fxml">
+    <columnConstraints>
+        <ColumnConstraints percentWidth="35" />
+        <ColumnConstraints percentWidth="35" />
+        <ColumnConstraints />
+    </columnConstraints>
+    <Label text="%Save roast" styleClass="heading" GridPane.columnSpan="3" />
+    <Label text="%Start time" styleClass="input-label" GridPane.rowIndex="1" />
+    <Label text="%End time" styleClass="input-label" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+    <TimeEditor fx:id="startTimeEditor" GridPane.rowIndex="2"/>
+    <TimeEditor fx:id="endTimeEditor" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+    <Label text="%Negative values allowed! All times are recalculated in relation to this value." styleClass="hint" GridPane.rowIndex="3" GridPane.columnSpan="3" />
+    <Label text="%Start weight" styleClass="input-label" GridPane.rowIndex="4" />
+    <Label text="%End weight" styleClass="input-label" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+    <Label text="%Weight loss" styleClass="input-label" GridPane.rowIndex="4" GridPane.columnIndex="2" GridPane.halignment="RIGHT" />
+    <MeasureEditor fx:id="startWeightEditor" unit="${controller.unit}" GridPane.rowIndex="5" />
+    <MeasureEditor fx:id="endWeightEditor" unit="${controller.unit}" GridPane.rowIndex="5" GridPane.columnIndex="1" />
+    <Label fx:id="weightLossLabel" GridPane.rowIndex="5" GridPane.columnIndex="2" GridPane.halignment="RIGHT" />
+    <Label text="%Roast value 1" styleClass="input-label" GridPane.rowIndex="6" />
+    <Label text="%Roast value 2" styleClass="input-label" GridPane.rowIndex="6" GridPane.columnIndex="1" />
+    <MeasureEditor fx:id="roastValue1Editor" nullable="true" GridPane.rowIndex="7" />
+    <MeasureEditor fx:id="roastValue2Editor" nullable="true" GridPane.rowIndex="7" GridPane.columnIndex="1" />
+    <FormComponent title="%Roast notes" maxWidth="Infinity" GridPane.rowIndex="8" GridPane.columnSpan="3" GridPane.rowSpan="2">
+        <decorations>
+            <Label fx:id="availableChars" text="250" styleClass="comment-under-limit"/>
+        </decorations>
+        <TextArea fx:id="notesArea" prefWidth="200" wrapText="true" promptText="%Type something…"/>
+    </FormComponent>
+</fx:root>

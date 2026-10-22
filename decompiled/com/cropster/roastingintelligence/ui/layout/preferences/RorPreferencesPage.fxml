@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+<?import com.cropster.roastingintelligence.ui.components.FormComponent?>
+<?import com.cropster.roastingintelligence.ui.components.LineBreak?>
+<?import com.cropster.roastingintelligence.ui.components.WebLink?>
+<?import com.cropster.roastingintelligence.ui.util.AutoIncIndex?>
+
+<fx:root type="GridPane" styleClass="grid-pane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <AutoIncIndex fx:id="row"/>
+        <ToggleGroup fx:id="rorSmoothingToggleGroup"/>
+    </fx:define>
+    <columnConstraints>
+        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" fillWidth="true"/>
+    </columnConstraints>
+
+    <FormComponent title="%Rate of Rise (RoR) settings" GridPane.rowIndex="$row.idx">
+        <description>
+            <Text text="%You can read our manual to learn more about the Rate of Rise:"/>
+            <WebLink text="%About Rate of Rise (RoR)" url="https://help.cropster.com/en/knowledge/about-rate-of-rise-ror"/>
+        </description>
+        <GridPane hgap="16.0">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="33.33"/>
+                <ColumnConstraints percentWidth="33.33"/>
+                <ColumnConstraints percentWidth="33.33"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints fillHeight="false" valignment="TOP"/>
+            </rowConstraints>
+            <FormComponent maxWidth="Infinity" GridPane.columnIndex="0">
+                <RadioButton text="%Recommended" userData="STANDARD" toggleGroup="$rorSmoothingToggleGroup"/>
+                <notes>
+                    <Text text="%We suggest using the recommended (standard) RoR curve setting. If you are experiencing too much interference/noise, check the link below for troubleshooting related issues, like isolating the probes. Otherwise, the “Noise smoothing” RoR setting can be used." styleClass="hint"/>
+                    <Text text=" " styleClass="hint"/>
+                    <WebLink text="%Read the article “Isolating probes”." url="https://help.cropster.com/en/knowledge/kb-search-results?term=isolating+probes+interference" styleClass="web-hint"/>
+                </notes>
+            </FormComponent>
+            <FormComponent maxWidth="Infinity" GridPane.columnIndex="1">
+                <RadioButton text="%Sensitive" userData="LOW" toggleGroup="$rorSmoothingToggleGroup"/>
+                <notes>
+                    <Text text="%For RoR experts, a “raw” setting to work with very sensitive RoR curves." styleClass="hint"/>
+                </notes>
+            </FormComponent>
+            <FormComponent maxWidth="Infinity" GridPane.columnIndex="2">
+                <RadioButton text="%Noise smoothing" userData="HIGH" toggleGroup="$rorSmoothingToggleGroup"/>
+                <notes>
+                    <Text text="%If you need to reduce the RoR curve noise, you can use this setting to apply a smoothing filter. But first we recommend checking the link below for troubleshooting related issues, like isolating the probes." styleClass="hint"/>
+                    <Text text=" " styleClass="hint"/>
+                    <WebLink text="%Read the article “Isolating probes”." url="https://help.cropster.com/en/knowledge/kb-search-results?term=isolating+probes+interference" styleClass="web-hint"/>
+                </notes>
+            </FormComponent>
+        </GridPane>
+    </FormComponent>
+
+    <FormComponent fx:id="timeExpressionForm" title="%Time expression" GridPane.rowIndex="$row.inc">
+        <notes>
+            <Text text="%The time expression doesn’t affect the RoR calculation but only shows your preferred measurement unit for temperature increments. E.g. 10 °C per 5 s or 20°C per 10 s. Default value: 60 s." styleClass="hint"/>
+            <Text text=" " styleClass="hint"/>
+            <Text text="See “Chart and comments > Y-axis” preference." styleClass="hint"/>
+        </notes>
+        <ComboBox fx:id="rorComboBox" GridPane.rowIndex="$row.idx" GridPane.columnIndex="1"/>
+    </FormComponent>
+</fx:root>

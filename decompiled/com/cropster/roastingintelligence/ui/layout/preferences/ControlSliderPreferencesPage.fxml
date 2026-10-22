@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import com.cropster.roastingintelligence.ui.components.FormComponent?>
+<?import com.cropster.roastingintelligence.ui.components.MessageBox?>
+<?import com.cropster.roastingintelligence.ui.list.EmptyStateList?>
+<?import com.cropster.roastingintelligence.ui.util.AutoIncIndex?>
+
+<fx:root type="GridPane" styleClass="grid-pane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <AutoIncIndex fx:id="row"/>
+        <SVGImage fx:id="ICON_WARNING" icon="WARNING" styleClass="icon--warning"/>
+    </fx:define>
+    <columnConstraints>
+        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" fillWidth="true"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints vgrow="NEVER" fillHeight="true"/>
+        <RowConstraints vgrow="ALWAYS" fillHeight="true"/>
+    </rowConstraints>
+
+    <FormComponent title="%Slider control setup" GridPane.rowIndex="$row.idx">
+        <description>
+            <Text text="%Once slider controls are added, enable, configure, and rearrange them to your preferred order by dragging and dropping. If set to display “as value” they will follow the same order as their corresponding measurements under “Machine &gt; Measurements”, appearing directly below them."/>
+        </description>
+    </FormComponent>
+
+    <VBox styleClass="measurements-panel" GridPane.rowIndex="$row.inc">
+
+        <VBox fx:id="sliderControlWarningPanel" styleClass="padding-right" fillWidth="true" managed="${sliderControlWarningPanel.visible}" visible="false">
+            <MessageBox text="%Some slider controls below cannot be set up because there are no defined connectors matching their units (under “Configuration”)." graphic="$ICON_WARNING" styleClass="info-message--warning"/>
+        </VBox>
+
+        <EmptyStateList fx:id="sliderControlChannelView" emptyStateMessage="%No slider control to be displayed." showRandomShortcuts="false" maxHeight="Infinity" VBox.vgrow="ALWAYS">
+            <styleClass>
+                <String fx:value="transparent-list"/>
+                <String fx:value="toggle-switch__bold"/>
+            </styleClass>
+        </EmptyStateList>
+
+    </VBox>
+
+</fx:root>

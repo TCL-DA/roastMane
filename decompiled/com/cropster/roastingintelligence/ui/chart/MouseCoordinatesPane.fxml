@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<fx:root styleClass="mouse-coordinates-pane" type="GridPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+   <columnConstraints>
+      <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="40.0"/>  <!-- 0: 08:42-->
+      <ColumnConstraints hgrow="NEVER" minWidth="8.0" maxWidth="8.0"/>
+      <ColumnConstraints halignment="RIGHT" hgrow="NEVER"/>                   <!-- 2: BT: -->
+      <ColumnConstraints hgrow="NEVER" minWidth="4.0" maxWidth="4.0"/>
+      <ColumnConstraints halignment="LEFT" hgrow="NEVER" minWidth="48.0"/>    <!-- 4: 205.8ºC -->
+      <ColumnConstraints hgrow="NEVER" minWidth="8.0" maxWidth="8.0"/>
+      <ColumnConstraints halignment="RIGHT" hgrow="NEVER"/>                   <!-- 6: RoR: -->
+      <ColumnConstraints hgrow="NEVER" minWidth="4.0" maxWidth="4.0"/>
+      <ColumnConstraints halignment="LEFT" hgrow="NEVER" minWidth="53.0"/>    <!-- 8: 24.8ºC -->
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="ALWAYS"/>
+   </rowConstraints>
+   <Label fx:id="time" text="08:42" styleClass="mouse-coordinates-pane_coordinate-label" GridPane.columnIndex="0"/>
+   <Label text="BT:" styleClass="label--for" GridPane.columnIndex="2"/>
+   <Label fx:id="temperature" text="205.8 ºC" styleClass="mouse-coordinates-pane_coordinate-label" GridPane.columnIndex="4"/>
+   <Label fx:id="rorCaption" text="RoR:" styleClass="label--for" GridPane.columnIndex="6"/>
+   <Label fx:id="ror" text="24.8 ºC" styleClass="mouse-coordinates-pane_coordinate-label" GridPane.columnIndex="8"/>
+</fx:root>

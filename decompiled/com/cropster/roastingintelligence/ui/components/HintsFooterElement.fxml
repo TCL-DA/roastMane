@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+
+<fx:root type="GridPane" hgap="8" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <columnConstraints>
+        <ColumnConstraints fillWidth="true" hgrow="ALWAYS" minWidth="50"/>
+        <ColumnConstraints fillWidth="true" hgrow="NEVER" minWidth="0"/>
+    </columnConstraints>
+    <!-- Using id for styling because classes doesn't work well for text styling inside popup windows. -->
+    <Label fx:id="descriptionLabel" managed="${descriptionLabel.visible}" styleClass="hints-footer-element__description" alignment="CENTER_LEFT" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <Label fx:id="elementLabel" managed="${elementLabel.visible}" styleClass="hints-footer-element__element" alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+</fx:root>

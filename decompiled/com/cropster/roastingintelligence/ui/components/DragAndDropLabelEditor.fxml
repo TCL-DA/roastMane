@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import java.lang.Integer?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import com.cropster.roastingintelligence.ui.components.DragSourceLabel?>
+<?import com.cropster.roastingintelligence.ui.components.DragTargetLabel?>
+<?import com.cropster.roastingintelligence.ui.components.RoastLabel?>
+<?import com.cropster.roastingintelligence.ui.components.RoastLabelSeparator?>
+<?import com.cropster.roastingintelligence.ui.util.AutoIncIndex?>
+
+<fx:root type="javafx.scene.layout.BorderPane" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <AutoIncIndex fx:id="ri" />
+        <AutoIncIndex fx:id="rii" />
+        <Double fx:id="MAX_DOUBLE" fx:constant="MAX_VALUE" />
+        <Integer fx:id="MAX_INT" fx:constant="MAX_VALUE" />
+        <GridPane fx:id="REMAINING" fx:constant="REMAINING" />
+        <RoastLabel fx:id="COMPONENT_PROFILE" fx:constant="PROFILE" />
+        <RoastLabel fx:id="COMPONENT_IDTAG_NAME" fx:constant="IDTAG_NAME" />
+        <RoastLabel fx:id="COMPONENT_DATE" fx:constant="DATE" />
+        <RoastLabel fx:id="COMPONENT_MACHINE" fx:constant="MACHINE" />
+        <RoastLabel fx:id="COMPONENT_WORKER" fx:constant="WORKER" />
+        <RoastLabel fx:id="COMPONENT_DURATION" fx:constant="DURATION" />
+        <RoastLabel fx:id="COMPONENT_WEIGHTS" fx:constant="WEIGHTS" />
+        <RoastLabel fx:id="COMPONENT_ROAST_VALUE_1" fx:constant="ROAST_VALUE_1" />
+        <RoastLabel fx:id="COMPONENT_ROAST_VALUE_12" fx:constant="ROAST_VALUE_12" />
+        <RoastLabel fx:id="COMPONENT_NOTES" fx:constant="NOTES" />
+    </fx:define>
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="dragtarget-scroller">
+            <GridPane fx:id="dragTargetPanel" styleClass="dragtarget-pane">
+                <padding>
+                    <Insets topRightBottomLeft="10" />
+                </padding>
+                <columnConstraints>
+                    <ColumnConstraints hgrow="ALWAYS" />
+                </columnConstraints>
+                <HBox fillHeight="true" maxWidth="$MAX_DOUBLE" GridPane.columnIndex="0" GridPane.columnSpan="$REMAINING">
+                    <DragTargetLabel name="A" styleClass="dragtarget-label--h1" HBox.hgrow="ALWAYS" />
+                    <ImageView fx:id="qrCodeTop" managed="${qrCodeTop.visible}" />
+                </HBox>
+                <RoastLabelSeparator GridPane.rowIndex="$ri.inc" />
+                <GridPane hgap="10" GridPane.rowIndex="$ri.inc" GridPane.columnSpan="$REMAINING">
+                    <styleClass>
+                        <String fx:value="dragtarget-group" />
+                    </styleClass>
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="33" hgrow="ALWAYS" />
+                        <ColumnConstraints percentWidth="33" hgrow="ALWAYS" />
+                        <ColumnConstraints percentWidth="33" hgrow="ALWAYS" />
+                    </columnConstraints>
+                    <DragTargetLabel name="B.1" prefWidth="100" maxWidth="Infinity" GridPane.columnIndex="0" />
+                    <DragTargetLabel name="B.2" prefWidth="100" maxWidth="Infinity" GridPane.columnIndex="1" />
+                    <DragTargetLabel name="B.3" prefWidth="100" maxWidth="Infinity" GridPane.columnIndex="2" />
+                </GridPane>
+                <StackPane GridPane.rowIndex="$ri.inc" GridPane.hgrow="ALWAYS" GridPane.columnSpan="$REMAINING">
+                    <ImageView fx:id="optionalPanelSnapshot" />
+                    <GridPane fx:id="optionalPanel" hgap="10">
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="50" hgrow="ALWAYS" /> 
+                            <ColumnConstraints percentWidth="50" hgrow="ALWAYS" />
+                        </columnConstraints>
+                        <RoastLabelSeparator />
+                        <DragTargetLabel name="C" styleClass="dragtarget-label--h2" GridPane.rowIndex="$rii.inc" GridPane.columnSpan="$REMAINING" />
+                        <RoastLabelSeparator GridPane.rowIndex="$rii.inc" />
+                        <VBox GridPane.rowIndex="$rii.inc">
+                            <styleClass>
+                                <String fx:value="dragtarget-group" />
+                            </styleClass>
+                            <DragTargetLabel name="D.1" />
+                            <DragTargetLabel name="D.2" />
+                            <DragTargetLabel name="D.3" />
+                        </VBox>
+                        <VBox GridPane.rowIndex="$rii.idx" GridPane.columnIndex="1">
+                            <styleClass>
+                                <String fx:value="dragtarget-group" />
+                            </styleClass>
+                            <DragTargetLabel name="E.1" />
+                            <DragTargetLabel name="E.2" />
+                            <DragTargetLabel name="E.3" />
+                        </VBox>
+                    </GridPane>
+                </StackPane>
+                <RoastLabelSeparator GridPane.rowIndex="$ri.inc" />
+                <HBox fillHeight="true" GridPane.rowIndex="$ri.inc" GridPane.columnSpan="$REMAINING">
+                    <DragTargetLabel name="F" styleClass="dragtarget-label--h1" HBox.hgrow="ALWAYS" />
+                    <ImageView fx:id="qrCodeBottom" managed="${qrCodeBottom.visible}" />
+                </HBox>
+            </GridPane>
+        </ScrollPane>
+    </center>
+    <right>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER">
+            <VBox fx:id="dragSourcePanel" spacing="10" styleClass="dragsource-pane">
+                <DragSourceLabel component="$COMPONENT_PROFILE" />
+                <DragSourceLabel component="$COMPONENT_IDTAG_NAME" />
+                <DragSourceLabel component="$COMPONENT_DATE" />
+                <DragSourceLabel component="$COMPONENT_MACHINE" />
+                <DragSourceLabel component="$COMPONENT_WORKER" />
+                <DragSourceLabel component="$COMPONENT_DURATION" />
+                <DragSourceLabel component="$COMPONENT_WEIGHTS" />
+                <DragSourceLabel component="$COMPONENT_ROAST_VALUE_1" />
+                <DragSourceLabel component="$COMPONENT_ROAST_VALUE_12" />
+                <DragSourceLabel component="$COMPONENT_NOTES" />
+            </VBox>
+        </ScrollPane>
+    </right>
+    <bottom>
+        <HBox fx:id="buttonBar" alignment="CENTER">
+            <styleClass>
+                <String fx:value="button-bar" />
+                <String fx:value="padding-top-right-left"/>
+            </styleClass>
+        </HBox>            
+    </bottom>
+</fx:root>

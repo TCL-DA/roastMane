@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import com.cropster.roastingintelligence.ui.components.FormComponent?>
+
+<fx:root type="javafx.scene.layout.GridPane" styleClass="comment-editor" xmlns:fx="http://javafx.com/fxml">
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="50.0"/>
+        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="50.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints valignment="CENTER" vgrow="ALWAYS"/>
+        <RowConstraints valignment="CENTER" vgrow="ALWAYS"/>
+        <RowConstraints valignment="CENTER" vgrow="ALWAYS"/>
+    </rowConstraints>
+
+    <HBox spacing="8.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+        <FormComponent title="%Type" minWidth="30" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+            <Label fx:id="typeLabel" HBox.hgrow="ALWAYS"/>
+        </FormComponent>
+        <FormComponent title="%Time" HBox.hgrow="NEVER">
+            <TextField fx:id="timeEditor" prefWidth="53.0" minWidth="53.0" promptText="--:--"/>
+        </FormComponent>
+        <FormComponent title="%Temp." HBox.hgrow="NEVER">
+            <TextField fx:id="tempEditor" prefWidth="53.0" minWidth="53.0" promptText="--"/>
+        </FormComponent>
+        <FormComponent title="%Value" managed="${valueEditor.visible}" visible="${valueEditor.visible}" HBox.hgrow="SOMETIMES">
+            <TextField fx:id="valueEditor" prefWidth="53.0" minWidth="53.0" promptText="--"/>
+        </FormComponent>
+    </HBox>
+    <FormComponent title="%Comment" managed="${commentEditor.visible}" visible="${commentEditor.visible}" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+        <TextField fx:id="commentEditor"/>
+    </FormComponent>
+    <Button fx:id="cancelButton" text="%Cancel" maxWidth="Infinity" styleClass="button--plain" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <Button fx:id="updateButton" text="%Save" maxWidth="Infinity" styleClass="button--primary" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+</fx:root>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import com.cropster.roastingintelligence.ui.components.ToggleSwitch?>
+<?import com.cropster.roastingintelligence.ui.components.Tooltip?>
+
+<fx:root type="AnchorPane" styleClass="control-slider-button" minHeight="40.0" maxHeight="40.0" prefHeight="40.0" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Insets fx:id="GRID_EXTRA_MARGIN" right="2.0"/>
+    </fx:define>
+
+    <ToggleButton fx:id="toggleButton" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" AnchorPane.topAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0"/>
+    <GridPane fx:id="contentPane" hgap="2.0" prefHeight="384.0" prefWidth="245.0" mouseTransparent="true" AnchorPane.topAnchor="8" AnchorPane.rightAnchor="8" AnchorPane.bottomAnchor="8" AnchorPane.leftAnchor="8">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="16.0" minWidth="16.0"/>
+            <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="30.0" minWidth="30.0"/>
+            <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="20.0" minWidth="20.0"/>
+            <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="50.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints valignment="CENTER" vgrow="NEVER" maxHeight="24.0" minHeight="24.0"/>
+        </rowConstraints>
+        <Label fx:id="iconLabel" contentDisplay="GRAPHIC_ONLY" GridPane.columnIndex="0"/>
+        <Label fx:id="valueLabel" contentDisplay="TEXT_ONLY" textAlignment="RIGHT" GridPane.margin="$GRID_EXTRA_MARGIN" GridPane.columnIndex="1"/>
+        <Label fx:id="unitLabel" contentDisplay="TEXT_ONLY" styleClass="control-slider-button__unit" GridPane.margin="$GRID_EXTRA_MARGIN" GridPane.columnIndex="2"/>
+        <Label fx:id="nameLabel" contentDisplay="TEXT_ONLY" GridPane.columnIndex="3"/>
+    </GridPane>
+    <ToggleSwitch fx:id="autoModeToggle" alignment="CENTER_LEFT" styleClass="toggle-switch--small" managed="${autoModeToggle.visible}" visible="false" AnchorPane.topAnchor="8" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="8">
+        <tooltip>
+            <Tooltip text="%Auto mode"/>
+        </tooltip>
+    </ToggleSwitch>
+</fx:root>

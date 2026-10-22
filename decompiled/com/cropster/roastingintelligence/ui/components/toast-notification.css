@@ -1,0 +1,91 @@
+.error {
+    -ri-notifications-color: -fx-color-error-60;
+}
+
+.info {
+    -ri-notifications-color: -fx-color-info-60;
+}
+
+.success {
+    -ri-notifications-color: -fx-color-success-60;
+}
+
+.warning {
+    -ri-notifications-color: -fx-color-warning-60;
+}
+
+.root {
+    -ri-notifications-color: darkgrey;
+}
+
+.root.popup {
+    -fx-background-radius: 8 8 8 8;
+}
+
+.notification-bar > .skin {
+    -fx-alignment: top-left;
+    -fx-background-color: -fx-color-neutral-white;
+    -fx-background-insets: 0;
+    -fx-background-radius: 8 8 8 8;
+    -fx-border-color: -ri-notifications-color;
+    -fx-border-radius: 7 7 7 7;
+    -fx-border-width: 2.4;
+    -fx-fill-height: true;
+    -fx-padding: 0 0 0 0;
+    -fx-spacing: 0;
+    /*
+     * Changes to the drop-shadow effect must be reflected also in changes to the constants
+     * definitions inside Notification.jave (Notification.NotificationPopupHandler.Top_BORDER...).
+     */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,.25), 18.0, 0.0, 0.0, 6.0);
+}
+
+.notification-bar > .skin .pane {
+    -fx-alignment: top-left;
+    -fx-background-color: transparent;
+    -fx-padding: 16 16 16 16;
+    -fx-spacing: 16;
+}
+
+.notification-bar > .skin .pane .icon {
+    -fx-content-display: graphic-only;
+    -fx-pref-width: 24;
+    -fx-pref-height: 24;
+}
+
+.notification-bar > .skin .pane .central-pane {
+    -fx-alignment: top-left;
+    -fx-fill-width: true;
+    -fx-spacing: 8;
+}
+
+.notification-bar > .skin .pane .title {
+    -fx-alignment: top-left;
+    -fx-content-display: text-only;
+    -fx-font-size: 1em;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-color-text;
+    -fx-wrap-text: true;
+}
+
+.notification-bar > .skin .pane .message {
+    -fx-alignment: top-left;
+    -fx-content-display: text-only;
+    -fx-font-size: 1em;
+    -fx-font-style: normal;
+    -fx-text-fill: -fx-color-text;
+    -fx-wrap-text: true;
+}
+
+.notification-bar > .skin .pane .progress > .bar {
+    -fx-background-color: -ri-notifications-color;
+    -fx-background-radius: 3;
+}
+
+.notification-bar > .skin .pane .progress > .track {
+    -fx-background-color: -fx-color-neutral-30;
+}
+
+#close-button {
+    -fx-alignment: top-right;
+}

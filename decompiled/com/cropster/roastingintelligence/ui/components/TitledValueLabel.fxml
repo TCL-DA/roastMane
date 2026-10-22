@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+
+<fx:root type="javafx.scene.layout.BorderPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+   <top>
+      <Label fx:id="titleLabel" text="&lt;title&gt;" styleClass="status-message" BorderPane.alignment="CENTER_LEFT"/>
+   </top>
+   <center>
+      <Label fx:id="valueLabel" text="&lt;value&gt;" styleClass="form-label" BorderPane.alignment="CENTER_LEFT"/>
+   </center>
+</fx:root>

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import com.cropster.roastingintelligence.ui.components.*?>
+<?import com.cropster.roastingintelligence.ui.layout.*?>
+<?import com.cropster.roastingintelligence.ui.list.EmptyStateGrid?>
+<?import com.cropster.roastingintelligence.ui.util.VeilSupport?>
+
+<AnchorPane fx:id="mainContainer" prefWidth="1200" prefHeight="820" xmlns:fx="http://javafx.com/fxml" fx:controller="com.cropster.roastingintelligence.ui.layout.MainPanelController">
+    <fx:define>
+        <GridPane fx:id="REMAINING" fx:constant="REMAINING" />
+        <SVGImage fx:id="ICON_ALERT" icon="ALERT"/>
+        <SVGImage fx:id="ICON_COMMENT" icon="COMMENT" />
+        <SVGImage fx:id="ICON_COMMENT_BBP" icon="COMMENT" />
+        <SVGImage fx:id="ICON_EMPTY" icon="EMPTY" styleClass="icon--transparent"/>
+        <SVGImage fx:id="ICON_GOALS_CUSTOMIZE" icon="CUSTOMIZE"/>
+        <SVGImage fx:id="ICON_INFORMATION_SETTINGS" icon="SETTINGS" />
+        <SVGImage fx:id="ICON_HELP" icon="HELP" />
+        <SVGImage fx:id="ICON_LAYOUT" icon="LAYOUT"/>
+        <SVGImage fx:id="ICON_LIST" icon="LIST" />
+        <SVGImage fx:id="ICON_LOGO" icon="LOGO_CROPSTER_COLOR" />
+        <SVGImage fx:id="ICON_SCHEDULE" icon="SCHEDULE" />
+        <SVGImage fx:id="ICON_SETTINGS" icon="SETTINGS" />
+        <SVGImage fx:id="ICON_SETTINGS_COMMENTS" icon="SETTINGS" />
+        <SVGImage fx:id="ICON_SYNC" icon="SYNC" />
+        <SVGImage fx:id="ICON_WARNING" icon="WARNING" styleClass="icon--warning"/>
+        <Insets fx:id="NO_MACHINE_MESSAGE_MARGIN" top="16" right="8.0" bottom="16.0" left="8.0"/>
+        <Insets fx:id="NO_MACHINE_BUTTON_MARGIN" top="1" right="8.0" bottom="8.0" left="8.0"/>
+    </fx:define>
+
+    <!--
+        The AnchorPane contains only 2 objects:
+        - the application's content anchored to the top,
+        - the player bar anchored to the bottom.
+        In this way when the outer pane is made too small vertically,
+        the player bar will stay visible in the foreground, while the
+        content panel will slide below it.
+     -->
+
+    <!-- Bottom anchor is set inside the controller to the actual height of the playerbar -->
+    <BorderPane fx:id="contentPanel" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <center>
+            <AnchorPane styleClass="padding-top-bottom--small">
+                <StackPane AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                    <SplitPane fx:id="centerToRightSplitter" orientation="HORIZONTAL" PopOverTour.id="onboarding" PopOverTour.page="dividers">
+                        <BorderPane fx:id="centerPanel">
+                            <top>
+                                <VBox fx:id="messagePanel" spacing="10"/>
+                            </top>
+                            <center>
+                                <SplitPane fx:id="startPanel" dividerPositions="0.5" PopOverTour.id="onboarding" PopOverTour.page="pre-roast, next-batch-split">
+                                    <BorderPane fx:id="leftStartPanel">
+                                        <center>
+                                            <BetweenBatchPanel fx:id="betweenBatchPanel"/>
+                                        </center>
+                                    </BorderPane>
+                                    <ScrollPane fitToWidth="true" fitToHeight="true">
+                                        <BorderPane fx:id="rightStartPanel" PopOverTour.id="onboarding" PopOverTour.page="next-batch" VeilSupport.holePadding="4">
+                                            <top>
+                                                <PreparationPanel fx:id="preparationPanel"/>
+                                            </top>
+                                            <center>
+                                                <ScrollPane fx:id="profilePanel" fitToWidth="true" styleClass="padding-right--small">
+                                                    <BorderPane.margin>
+                                                        <Insets top="12.0" right="8.0" bottom="6.0" left="8.0"/>
+                                                    </BorderPane.margin>
+                                                    <VBox>
+                                                        <Label text="%Reference overview" maxWidth="Infinity" styleClass="subheading" HBox.hgrow="ALWAYS"/>
+                                                        <StatisticsPanel fx:id="statisticsPanel" maxWidth="Infinity" managed="${statisticsPanel.visible}"/>
+                                                        <CommentsGrid fx:id="commentsPreviewPanel" maxWidth="Infinity" managed="${commentsPreviewPanel.visible}"/>
+                                                        <QualityPanel fx:id="qualityPanel" maxWidth="Infinity" managed="${qualityPanel.visible}"/>
+                                                    </VBox>
+                                                </ScrollPane>
+                                            </center>
+                                        </BorderPane>
+                                    </ScrollPane>
+                                </SplitPane>
+                            </center>
+                        </BorderPane>
+                        <SplitPane fx:id="referencesToChannelsSplitter" orientation="VERTICAL" SplitPane.resizableWithParent="false" StackPane.alignment="BOTTOM_RIGHT">
+                            <styleClass>
+                                <String fx:value="padding-right--small"/>
+                                <String fx:value="pane--elevated"/>
+                            </styleClass>
+                            <StackPane fx:id="referencesContainer">
+                                <SplitPane fx:id="valuesToCommentsSplitter" orientation="VERTICAL" managed="${valuesToCommentsSplitter.visible}">
+                                    <TitledPaneRight fx:id="referencePanel" text="%Parameters and goals" contentDisplay="RIGHT" managed="${referencePanel.visible}" collapsible="false" maxHeight="Infinity">
+                                        <graphic>
+                                            <HBox spacing="4" alignment="CENTER">
+                                                <HintsButton fx:id="liveGoalHintsButton" arrowLocation="LEFT_TOP" title="%About this feature">
+                                                    <styleClass>
+                                                        <String fx:value="button--plain"/>
+                                                        <String fx:value="button--transparent"/>
+                                                    </styleClass>
+                                                </HintsButton>
+                                                <Button fx:id="liveGoalLayoutButton" pickOnBounds="true" graphic="$ICON_LAYOUT" HBox.hgrow="ALWAYS">
+                                                    <tooltip>
+                                                        <Tooltip text="%Toggle layout"/>
+                                                    </tooltip>
+                                                    <styleClass>
+                                                        <String fx:value="button--plain"/>
+                                                        <String fx:value="button--transparent"/>
+                                                    </styleClass>
+                                                </Button>
+                                                <Button fx:id="liveGoalConfigurationButton" pickOnBounds="true" graphic="$ICON_GOALS_CUSTOMIZE" HBox.hgrow="ALWAYS">
+                                                    <tooltip>
+                                                        <Tooltip text="%Customize"/>
+                                                    </tooltip>
+                                                    <styleClass>
+                                                        <String fx:value="button--plain"/>
+                                                        <String fx:value="button--transparent"/>
+                                                    </styleClass>
+                                                </Button>
+                                            </HBox>
+                                        </graphic>
+                                        <content>
+                                            <EmptyStateGrid fx:id="activeGoalEmptyStateGrid" showRandomShortcuts="false"
+                                                    emptyStateMessage="%No parameters or smart goals to display."
+                                                    emptyStateNote="%Reference parameters are only shown if the selected profile has a reference and there is value for the parameter.\n\nSmart goals are only shown if the selected profile is affected by them or if they apply to all profiles."
+                                                maxHeight="Infinity"/>
+                                        </content>
+                                    </TitledPaneRight>
+                                    <TitledPaneRight fx:id="commentsPanel" text="%Reference comments" contentDisplay="RIGHT" managed="${commentsPanel.visible}" collapsible="false" maxHeight="Infinity">
+                                        <graphic>
+                                            <!-- The following is currently an empty, do-nothing button used to set the height of the -->
+                                            <!-- title area to be equal to the previous one, which have the customize  button on it.  -->
+                                            <!-- <Button fx:id="commentConfigurationButton" pickOnBounds="true" graphic="$ICON_EMPTY" HBox.hgrow="ALWAYS"> -->
+                                            <Button graphic="$ICON_EMPTY" HBox.hgrow="ALWAYS">
+                                                <styleClass>
+                                                    <String fx:value="button-icon"/>
+                                                    <String fx:value="button- -transparent"/>
+                                                </styleClass>
+                                            </Button>
+                                        </graphic>
+                                        <content>
+                                            <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED" minViewportHeight="99" VBox.vgrow="ALWAYS">
+                                                <VBox fx:id="upcomingCommentsPanel" fillWidth="true">
+                                                    <CommentLabel/>
+                                                    <CommentLabel>
+                                                        <styleClass>
+                                                            <String fx:value="comment-label--current"/>
+                                                        </styleClass>
+                                                    </CommentLabel>
+                                                    <CommentLabel/>
+                                                </VBox>
+                                            </ScrollPane>
+                                        </content>
+                                    </TitledPaneRight>
+                                </SplitPane>
+                            </StackPane>
+                            <StackPane fx:id="channelContainer" styleClass="pane--transparent" maxWidth="Infinity" PopOverTour.id="onboarding" PopOverTour.page="readouts">
+                                <VBox fx:id="channelGroupContainer" managed="${channelGroupContainer.visible}" visible="false">
+                                    <styleClass>
+                                        <String fx:value="channel-group-container"/>
+                                        <String fx:value="padding-top--small"/>
+                                    </styleClass>
+                                    <Group fx:id="scalableContent">
+                                        <VBox fx:id="statusPanel" styleClass="channel-group-status-panel">
+                                            <ChannelStatusLabel name="Bean temperature"/>
+                                            <ChannelStatusLabel valueColor="#dc3912" name="Exhaust temperature"/>
+                                        </VBox>
+                                    </Group>
+                                    <HBox fx:id="replayStatusContainer" styleClass="channel-group-replay-status" managed="${replayStatusContainer.visible}">
+                                        <StatusDot fx:id="replayStatusDot" status="OFF"/>
+                                        <Label fx:id="replayStatusLabel" text="%Replay off"/>
+                                    </HBox>
+                                </VBox>
+                                <BorderPane fx:id="noMachineMessageContainer" managed="${!channelGroupContainer.visible}" visible="${!channelGroupContainer.visible}" styleClass="pane--elevated">
+                                    <center>
+                                        <MessageBox text="%Before you can start roasting, you must select a machine and the measurements you want to be displayed." graphic="$ICON_WARNING" styleClass="info-message--warning" minWidth="200" BorderPane.margin="$NO_MACHINE_MESSAGE_MARGIN"/>
+                                    </center>
+                                    <bottom>
+                                        <Button fx:id="selectMachineButton" maxWidth="Infinity" BorderPane.margin="$NO_MACHINE_BUTTON_MARGIN"/>
+                                    </bottom>
+                                </BorderPane>
+                            </StackPane>
+                        </SplitPane>
+                    </SplitPane>
+                </StackPane>
+                <SlidingPanel fx:id="slidingPanel" prefWidth="300" translateX="-300" styleClass="sidebar" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+                    <ProductionSidebar fx:id="productionPanel" title="%Today's production"/>
+                    <CommentsSidebar fx:id="commentsSlidingPanel" title="%Comments" visible="false"/>
+                    <TasksSidebar fx:id="tasksSlidingPanel" title="%Tasks" visible="false"/>
+                    <AlarmsSidebar fx:id="alarmsSlidingPanel" title="%Alerts" visible="false"/>
+                    <SystemSidebar fx:id="systemSidebar" title="%System" visible="false" />
+                    <SupportSidebar fx:id="supportSlidingPanel" />
+                </SlidingPanel>
+                <SlidingPanel fx:id="rightSlidingPanel" styleClass="sidebar" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <MachineControlSidebar fx:id="machineControlSlidingPanel" title="%Controls" visible="false">
+                        <styleClass>
+                            <String fx:value="pane--elevated"/>
+                            <String fx:value="pane--cutoff-right"/>
+                        </styleClass>
+                        <StackPane.margin>
+                            <Insets left="-8.0"/>
+                        </StackPane.margin>
+                        <GridPane fx:id="controlPanel" vgap="16" styleClass="padding--small" VBox.vgrow="ALWAYS">
+                            <rowConstraints>
+                                <RowConstraints vgrow="ALWAYS"/>
+                            </rowConstraints>
+                            <ControlSliderToggleBar fx:id="sliderContainer" styleClass="control-slider-toggle-bar" managed="${sliderContainer.visible}" VBox.vgrow="ALWAYS" GridPane.columnIndex="0">
+                                <!-- Sliders' and toggles' visibility is handled inside ControlSliderToggleBar and AbstractControlHandler and its subclasses -->
+                                <ControlSlider fx:id="gasControl" managed="${gasControl.visible}" displayable="${gasToggle.selected}" VBox.vgrow="ALWAYS"/>
+                                <ControlSlider fx:id="setTemperatureControl" managed="${setTemperatureControl.visible}" displayable="${setTemperatureToggle.selected}" VBox.vgrow="ALWAYS"/>
+                                <ControlSlider fx:id="airflowControl" managed="${airflowControl.visible}" displayable="${airflowToggle.selected}" VBox.vgrow="ALWAYS"/>
+                                <ControlSlider fx:id="speedControl" managed="${speedControl.visible}" displayable="${speedToggle.selected}" VBox.vgrow="ALWAYS"/>
+                                <toggles>
+                                    <ControlSliderToggleButton fx:id="gasToggle" slider="$gasControl" selected="true" managed="${gasToggle.visible}"/>
+                                    <ControlSliderToggleButton fx:id="setTemperatureToggle" slider="$setTemperatureControl" managed="${setTemperatureToggle.visible}"/>
+                                    <ControlSliderToggleButton fx:id="airflowToggle" slider="$airflowControl" managed="${airflowToggle.visible}"/>
+                                    <ControlSliderToggleButton fx:id="speedToggle" slider="$speedControl" managed="${speedToggle.visible}"/>
+                                </toggles>
+                            </ControlSliderToggleBar>
+                            <Separator fx:id="machineControlSeparator" orientation="VERTICAL" styleClass="machine-control-separator" managed="${machineControlSeparator.visible}" GridPane.columnIndex="1"/>
+                            <ControlStateBar fx:id="controlStateContainer" styleClass="control-state-bar" VBox.vgrow="ALWAYS" minWidth="172" maxWidth="172" prefWidth="172" maxHeight="Infinity" managed="${controlStateContainer.visible}" GridPane.columnIndex="2"/>
+                        </GridPane>
+                    </MachineControlSidebar>
+                </SlidingPanel>
+            </AnchorPane>
+        </center>
+
+        <left>
+            <BorderPane styleClass="padding-top-bottom--small">
+                <center>
+                    <AnchorPane fx:id="sidebarMenu" PopOverTour.id="onboarding" PopOverTour.page="sidebars">
+                        <styleClass>
+                            <String fx:value="sidebar-menu"/>
+                            <String fx:value="pane--elevated"/>
+                        </styleClass>
+                        <VBox alignment="TOP_CENTER" AnchorPane.topAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0">
+                            <StackPane PopOverTour.id="onboarding" PopOverTour.page="system-sidebar">
+                                <SidebarButton fx:id="systemSidebarButton" text="%System" graphic="$ICON_LOGO" targetPane="$systemSidebar" pickOnBounds="true">
+                                    <styleClass>
+                                        <!-- "button" style class is removed in SystemNotificationController.NotificationHandler.init -->
+                                        <String fx:value="system-sidebar-button" />
+                                        <String fx:value="sidebar-menu--first" />
+                                    </styleClass>
+                                </SidebarButton>
+                                <Label fx:id="systemNorificationTag" visible="false" styleClass="todo-marker" StackPane.alignment="TOP_RIGHT" mouseTransparent="true"/>
+                            </StackPane>
+                            <SidebarButton fx:id="supportButton" text="%Support" graphic="$ICON_HELP" targetPane="$supportSlidingPanel" pickOnBounds="true"/>
+                            <SidebarButton fx:id="productionSidebarButton" text="%Production" graphic="$ICON_SCHEDULE" targetPane="$productionPanel" pickOnBounds="true"/>
+                            <StackPane visible="${tasksSidebarButton.visible}" managed="${tasksSidebarButton.visible}">
+                                <SidebarButton fx:id="tasksSidebarButton" text="%Tasks" graphic="$ICON_LIST" targetPane="$tasksSlidingPanel" pickOnBounds="true" StackPane.alignment="CENTER_LEFT"/>
+                                <Label fx:id="tasksTodoTag" visible="false" styleClass="todo-marker" StackPane.alignment="TOP_RIGHT" mouseTransparent="true"/>
+                            </StackPane>
+                            <StackPane visible="${alarmsSidebarButton.visible}" managed="${alarmsSidebarButton.visible}">
+                                <SidebarButton fx:id="alarmsSidebarButton" text="%Alerts" graphic="$ICON_ALERT" targetPane="$alarmsSlidingPanel" pickOnBounds="true" visible="false" StackPane.alignment="CENTER_LEFT"/>
+                                <Label fx:id="unacknowledgedTriggeredAlarmsTag" visible="true" styleClass="todo-marker" StackPane.alignment="TOP_RIGHT" mouseTransparent="true"/>
+                            </StackPane>
+                            <SidebarButton fx:id="commentsSidebarButton" text="%Comments" graphic="$ICON_COMMENT" targetPane="$commentsSlidingPanel" pickOnBounds="true"/>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0">
+                            <Button fx:id="syncButton" text="%Synchronize" graphic="$ICON_SYNC" pickOnBounds="true">
+                                <tooltip>
+                                    <Tooltip text="%Synchronize" shortcut="CTRL_S"/>
+                                </tooltip>
+                            </Button>
+                            <Button fx:id="preferencesButton" text="%Preferences" graphic="$ICON_SETTINGS" pickOnBounds="true" styleClass="sidebar-menu--last">
+                                <tooltip>
+                                    <Tooltip text="%Preferences" shortcut="CTRL_COMMA"/>
+                                </tooltip>
+                            </Button>
+                        </VBox>
+                    </AnchorPane>
+                </center>
+            </BorderPane>
+        </left>
+    </BorderPane>
+
+    <BorderPane fx:id="playerbarContainer" PopOverTour.id="onboarding" PopOverTour.page="playerbar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <center>
+            <GridPane fx:id="bottomPanel" styleClass="bottom-panel, player-bar">
+                <columnConstraints>
+                    <ColumnConstraints prefWidth="300" hgrow="ALWAYS"/>
+                    <ColumnConstraints hgrow="NEVER"/>
+                    <ColumnConstraints hgrow="NEVER"/>
+                    <ColumnConstraints prefWidth="200" hgrow="ALWAYS"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints fillHeight="true" vgrow="ALWAYS" percentHeight="100"/>
+                </rowConstraints>
+                <HBox alignment="CENTER_LEFT" GridPane.columnIndex="0">
+                    <VBox alignment="CENTER_LEFT" styleClass="padding-right--small">
+                        <Region VBox.vgrow="SOMETIMES"/>
+                        <Label fx:id="autoStartReadyIcon"/>
+                        <Region VBox.vgrow="SOMETIMES"/>
+                    </VBox>
+                    <VBox maxWidth="Infinity" alignment="CENTER_LEFT" styleClass="vbox" HBox.hgrow="ALWAYS">
+                        <Region VBox.vgrow="SOMETIMES"/>
+                        <HBox fx:id="switchProfilePanel" fillHeight="false" visible="false" managed="${switchProfilePanel.visible}" styleClass="hbox">
+                            <Button fx:id="switchProfileButton" styleClass="button--small"/>
+                            <Label fx:id="profileLabel" styleClass="heading"/>
+                        </HBox>
+                        <TextFlow fx:id="statusLabel">
+                            <Text text="%To start your roast, please select a profile" styleClass="heading"/>
+                        </TextFlow>
+                        <Region VBox.vgrow="SOMETIMES"/>
+                    </VBox>
+                    <Button fx:id="secondaryButton" text="%Abort" maxHeight="Infinity" mnemonicParsing="false" disable="true">
+                        <styleClass>
+                            <String fx:value="button--player"/>
+                        </styleClass>
+                        <tooltip>
+                            <Tooltip text="%Abort" shortcut="CTRL_ESC"/>
+                        </tooltip>
+                    </Button>
+                </HBox>
+                <Button fx:id="primaryButton" text="%Start" maxHeight="Infinity" mnemonicParsing="false" disable="true" GridPane.columnIndex="1">
+                    <styleClass>
+                        <String fx:value="button"/>
+                        <String fx:value="button--primary"/>
+                        <String fx:value="button--player"/>
+                        <String fx:value="button--player-last"/>
+                    </styleClass>
+                    <tooltip>
+                        <Tooltip text="%Start" shortcut="CTRL_ENTER"/>
+                    </tooltip>
+                </Button>
+                <ToggleSwitch fx:id="replaySwitch" text="%Replay off" styleClass="toggle-switch--small" GridPane.columnIndex="2">
+                    <tooltip>
+                        <Tooltip text="%Toggle assistant on/off" shortcut="SHIFT_CTRL_A"/>
+                    </tooltip>
+                </ToggleSwitch>
+                <HBox styleClass="hbox-right" GridPane.columnIndex="3">
+                    <HBox fx:id="timerPanel" styleClass="hbox-right">
+                        <PercentageLabel fx:id="percentageLabel" minWidth="100" visible="false"/>
+                        <TimerLabel fx:id="secondaryTimerLabel" minWidth="100" visible="false"/>
+                        <TimerLabel fx:id="timerLabel" text="%Duration" minWidth="100"/>
+                    </HBox>
+                    <TimerLabel fx:id="betweenBatchTimerLabel" text="%Between batch timer" visible="false" managed="false"/>
+                </HBox>
+            </GridPane>
+        </center>
+        <right>
+            <ControlToggleBar fx:id="controlToggleBar" styleClass="control-toggle-bar" managed="${controlToggleBar.visible}"/>
+        </right>
+    </BorderPane>
+</AnchorPane>

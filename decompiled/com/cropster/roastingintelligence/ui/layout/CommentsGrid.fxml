@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root type="javafx.scene.layout.VBox" styleClass="statistics-panel" xmlns:fx="http://javafx.com/fxml">
+    <Label text="%Comments" maxWidth="Infinity" styleClass="statistics-title" />
+    <GridPane fx:id="gridPane">
+        <columnConstraints>
+            <ColumnConstraints minWidth="50" />
+            <ColumnConstraints hgrow="ALWAYS" />
+        </columnConstraints>
+        <Label text="%Time" maxWidth="Infinity" styleClass="statistics-header" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+        <Label text="%Comment" maxWidth="Infinity" styleClass="statistics-header" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+        <Label text="00:06" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+        <Label text="Gas: 0 @ 177.5" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+        <Label text="02:30" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+        <Label text="Airflow: 90 @ 175.3" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+    </GridPane>
+</fx:root>

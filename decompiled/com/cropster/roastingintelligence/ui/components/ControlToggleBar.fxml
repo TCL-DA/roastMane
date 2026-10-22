@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root type="VBox" alignment="CENTER_RIGHT" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <ToggleGroup fx:id="controlToggleGroup"/>
+    </fx:define>
+
+    <StackPane>
+        <HBox fx:id="toggleContainer" fillHeight="false" styleClass="control-toggle-bar__container" alignment="CENTER_RIGHT" managed="${toggleContainer.visible}">
+            <ToggleButton fx:id="slidersToggleButton" maxHeight="Infinity" toggleGroup="$controlToggleGroup" focusTraversable="false" styleClass="button-push" managed="${slidersToggleButton.visible}"/>
+            <ToggleButton fx:id="buttonsToggleButton" maxHeight="Infinity" toggleGroup="$controlToggleGroup" focusTraversable="false" styleClass="button-push" managed="${buttonsToggleButton.visible}"/>
+            <ToggleButton fx:id="controlsToggleButton" maxHeight="Infinity" toggleGroup="$controlToggleGroup" focusTraversable="false" styleClass="button-push" managed="${controlsToggleButton.visible}"/>
+        </HBox>
+        <HBox fx:id="buttonsContainer" fillHeight="false" styleClass="control-toggle-bar__container" alignment="CENTER_RIGHT" managed="${buttonsContainer.visible}" visible="${!toggleContainer.visible}">
+            <Button fx:id="slidersButton" maxHeight="Infinity" focusTraversable="false" styleClass="button-push" managed="${slidersButton.visible}" visible="${slidersToggleButton.visible}" disable="${controlsToggleButton.visible}" onAction="#bringDetachedWindowOnTop"/>
+            <Button fx:id="buttonsButton" maxHeight="Infinity" focusTraversable="false" styleClass="button-push" managed="${buttonsButton.visible}" visible="${buttonsToggleButton.visible}" disable="${controlsToggleButton.visible}" onAction="#bringDetachedWindowOnTop"/>
+            <Button fx:id="controlsButton" maxHeight="Infinity" focusTraversable="false" styleClass="button-push" managed="${controlsButton.visible}" visible="${controlsToggleButton.visible}" onAction="#bringDetachedWindowOnTop"/>
+        </HBox>
+    </StackPane>
+</fx:root>

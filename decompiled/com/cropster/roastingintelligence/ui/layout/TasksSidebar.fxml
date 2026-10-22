@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import com.cropster.roastingintelligence.ui.components.HintsButton?>
+<?import com.cropster.roastingintelligence.ui.components.HintsFooterElement?>
+<?import com.cropster.roastingintelligence.ui.components.KeyCodeCombinationLabel?>
+<?import com.cropster.roastingintelligence.ui.components.LineBreak?>
+<?import com.cropster.roastingintelligence.ui.components.RadioToggleButton?>
+<?import com.cropster.roastingintelligence.ui.components.Tooltip?>
+<?import com.cropster.roastingintelligence.ui.list.EmptyStateList?>
+
+<fx:root type="BorderPane" styleClass="pane--elevated" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Insets fx:id="FILTER_MARGIN" right="9.5" left="9.5"/>
+        <SVGImage fx:id="ICON_FOOTER_CLEAN" icon="CLEAN"/>
+        <SVGImage fx:id="ICON_HINT_SEE_MORE" icon="SEE_MORE"/>
+        <SVGImage fx:id="ICON_SIDEBAR" icon="SIDEBAR"/>
+        <SVGImage fx:id="ICON_SIDEBAR_DETACHED" icon="SIDEBAR_DETACHED"/>
+        <ToggleGroup fx:id="tasksToggleGroup"/>
+    </fx:define>
+    <top>
+        <VBox fx:id="headerBox">
+            <styleClass>
+                <String fx:value="padding-sides--small"/>
+                <String fx:value="spacing--default"/>
+            </styleClass>
+            <HBox alignment="CENTER_LEFT" styleClass="spacing--small">
+                <Label text="${controller.title}" maxWidth="Infinity" styleClass="heading" HBox.hgrow="ALWAYS">
+                    <tooltip>
+                        <Tooltip text="${controller.title}"/>
+                    </tooltip>
+                </Label>
+                <HintsButton arrowLocation="LEFT_TOP" small="true" title="%About this sidebar">
+                    <Text text="%Be notified when production, maintenance, safety, and other tasks are due."/>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Text text="%Mark pending or overdue tasks as Done or Won’t Do, depending on whether they can be completed. Add extra context using the 'Mark with a comment' option, if needed."/>
+                    <footer>
+                        <Label styleClass="hints-footer-title" text="%Actions, usage and keyboard shortcuts"/>
+                        <HintsFooterElement description="%More options" elementGraphic="$ICON_HINT_SEE_MORE"/>
+                        <KeyCodeCombinationLabel fx:id="doubleClickKeyCodeCombinationLabel" text="%Edit an entry"/>
+                        <KeyCodeCombinationLabel fx:id="clickKeyCodeCombinationLabel" text="%Select/deselect a single entry"/>
+                    </footer>
+                </HintsButton>
+                <Button fx:id="attachButton" graphic="$ICON_SIDEBAR" onAction="#attach" visible="false" managed="${attachButton.visible}">
+                    <styleClass>
+                        <String fx:value="button--transparent"/>
+                        <String fx:value="button--sidebar"/>
+                    </styleClass>
+                </Button>
+                <Button fx:id="detachButton" graphic="$ICON_SIDEBAR_DETACHED" onAction="#detach" managed="${detachButton.visible}">
+                    <styleClass>
+                        <String fx:value="button--transparent"/>
+                        <String fx:value="button--sidebar"/>
+                    </styleClass>
+                </Button>
+            </HBox>
+            <Region maxHeight="0"/> <!-- Spacer -->
+            <Separator fx:id="statusSeparator">
+                <styleClass>
+                    <String fx:value="sidebar-group-separator"/>
+                    <String fx:value="padding--horizontally-extended"/>
+                </styleClass>
+            </Separator>
+        </VBox>
+    </top>
+    <center>
+        <VBox maxHeight="Infinity">
+            <styleClass>
+                <String fx:value="spacing--large"/>
+                <String fx:value="padding-top-bottom--small"/>
+            </styleClass>
+            <HBox fx:id="filterButtonBar" alignment="CENTER" VBox.margin="$FILTER_MARGIN">
+                <styleClass>
+                    <String fx:value="toggle-button-group"/>
+                    <String fx:value="spacing--none"/>
+                </styleClass>
+                <RadioToggleButton fx:id="filterButtonTasksAll" text="%Total" onAction="#filterAll" selected="true" maxWidth="Infinity" styleClass="toggle-button-group__left" toggleGroup="$tasksToggleGroup" HBox.hgrow="ALWAYS"/>
+                <RadioToggleButton fx:id="filterButtonTasksOpen" text="%Open" onAction="#filterOpen" maxWidth="Infinity" styleClass="toggle-button-group__center" toggleGroup="$tasksToggleGroup" HBox.hgrow="ALWAYS"/>
+                <RadioToggleButton fx:id="filterButtonTasksClosed" text="%Closed" onAction="#filterClosed" maxWidth="Infinity" styleClass="toggle-button-group__right" toggleGroup="$tasksToggleGroup" HBox.hgrow="ALWAYS"/>
+            </HBox>
+            <EmptyStateList fx:id="taskEmptyStateList" emptyStateMessage="%No tasks to display" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox fx:id="footerPanel" styleClass="sidebar-footer" maxWidth="Infinity" alignment="CENTER_LEFT">
+            <Label fx:id="footerLabel" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+        </HBox>
+    </bottom>
+</fx:root>

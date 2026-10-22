@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+<?import com.cropster.roastingintelligence.ui.components.LineBreak?>
+
+<fx:root type="BorderPane" xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <VBox alignment="TOP_LEFT" styleClass="padding--small">
+            <Label text="%Between batch protocol" maxWidth="Infinity" styleClass="heading" HBox.hgrow="ALWAYS" />
+        </VBox>
+    </top>
+    <center>
+        <VBox fx:id="placeholder" spacing="20" alignment="CENTER" styleClass="pane--neutral" managed="${placeholder.visible}" visible="true">
+            <SVGImage path="/images/bbp-chart.svg"/>
+            <TextFlow styleClass="padding-left-right-placeholder">
+                <Text text="%After the first roast the between batch protocol will be shown here."/>
+                <LineBreak/>
+                <LineBreak/>
+                <Text text="%Between batch protocols of up to 15 minutes can be recorded."/>
+                <LineBreak/>
+                <LineBreak/>
+                <Text text="%Between batch protocols help you roast more consistently. You can also evaluate them afterwards with the Roast Compare report."/>
+            </TextFlow>
+        </VBox>
+    </center>
+</fx:root>
