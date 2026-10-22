@@ -1,0 +1,614 @@
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:6: error: cannot find symbol
+public final class PatchJar implements Opcodes {
+                                       ^
+  symbol: class Opcodes
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:2: error: package org.objectweb.asm does not exist
+import org.objectweb.asm.*;
+                    ^
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\RoastingModel.java:345: error: incompatible types: CurveModel cannot be converted to HeadCurveModel
+               .orElse(curveModel);
+                       ^
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\components\MeasureEditor.java:224: error: incompatible types: ObjectProperty<CAP#1> cannot be converted to ObjectProperty<Number>
+      this.value = this.input.getTextFormatter().valueProperty();
+                                                              ^
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\components\TimeEditor.java:63: error: incompatible types: ObjectProperty<CAP#1> cannot be converted to ObjectProperty<Long>
+      return this.input.getTextFormatter().valueProperty();
+                                                        ^
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\AlarmController.java:292: error: cannot find symbol
+      alarmsSidebar.setAlarmRemover(xva$0 -> rec$.removeAlarms(xva$0));
+                                             ^
+  symbol:   variable rec$
+  location: class AlarmController
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\AlarmController.java:293: error: cannot find symbol
+      alarmsSidebar.setAlarmReplacer(xva$0 -> rec$.replaceAlarms(xva$0));
+                                              ^
+  symbol:   variable rec$
+  location: class AlarmController
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\components\FormComponent.java:89: error: reference to addListener is ambiguous
+      this.contentHBox.getChildren().addListener(e -> {
+                                    ^
+  both method addListener(InvalidationListener) in Observable and method addListener(ListChangeListener<? super E>) in ObservableList match
+  where E is a type-variable:
+    E extends Object declared in interface ObservableList
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\components\FormComponent.java:90: error: cannot find symbol
+         ObservableList<? extends Node> children = e.getList();
+                                                    ^
+  symbol:   method getList()
+  location: variable e of type Observable
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\ProductionSidebar.java:401: error: reference to addListener is ambiguous
+      this.roastList.addListener(c -> this.updateBatchSelectButton());
+                    ^
+  both method addListener(InvalidationListener) in ObservableListBase and method addListener(ListChangeListener<? super E>) in ObservableListBase match
+  where E is a type-variable:
+    E extends Object declared in class ObservableListBase
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\ProductionSidebar.java:427: error: reference to addListener is ambiguous
+      items.addListener(c -> this.productionView.refresh());
+           ^
+  both method addListener(InvalidationListener) in Observable and method addListener(ListChangeListener<? super E>) in ObservableList match
+  where E is a type-variable:
+    E extends Object declared in interface ObservableList
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\ui\chart\CurveChart.java:157: error: incompatible types: CombinedDomainXYPlot cannot be converted to NumberFormat
+      durationFormat = new CombinedDomainXYPlot(this._timeAxis);
+                       ^
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\ui\chart\CurveChart.java:158: error: cannot find symbol
+      durationFormat.setInsets(new RectangleInsets(15.0, 5.0, 5.0, 5.0));
+                    ^
+  symbol:   method setInsets(RectangleInsets)
+  location: variable durationFormat of type NumberFormat
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\ui\chart\CurveChart.java:159: error: cannot find symbol
+      durationFormat.setForegroundAlpha(0.5F);
+                    ^
+  symbol:   method setForegroundAlpha(float)
+  location: variable durationFormat of type NumberFormat
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\ui\chart\CurveChart.java:160: error: cannot find symbol
+      durationFormat.setBackgroundAlpha(1.0F);
+                    ^
+  symbol:   method setBackgroundAlpha(float)
+  location: variable durationFormat of type NumberFormat
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\ui\chart\CurveChart.java:161: error: cannot find symbol
+      durationFormat.setDomainGridlinePaint(Color.GRAY);
+                    ^
+  symbol:   method setDomainGridlinePaint(Color)
+  location: variable durationFormat of type NumberFormat
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\ui\chart\CurveChart.java:162: error: cannot find symbol
+      durationFormat.setRangeGridlinePaint(Color.GRAY);
+                    ^
+  symbol:   method setRangeGridlinePaint(Color)
+  location: variable durationFormat of type NumberFormat
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\ui\chart\CurveChart.java:163: error: cannot find symbol
+      durationFormat.setBackgroundPaint(Color.WHITE);
+                    ^
+  symbol:   method setBackgroundPaint(Color)
+  location: variable durationFormat of type NumberFormat
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\ui\chart\CurveChart.java:164: error: cannot find symbol
+      durationFormat.setDomainPannable(true);
+                    ^
+  symbol:   method setDomainPannable(boolean)
+  location: variable durationFormat of type NumberFormat
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\ui\chart\CurveChart.java:165: error: cannot find symbol
+      durationFormat.setRenderer(new XYLineAndShapeRenderer());
+                    ^
+  symbol:   method setRenderer(XYLineAndShapeRenderer)
+  location: variable durationFormat of type NumberFormat
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\ui\chart\CurveChart.java:166: error: cannot find symbol
+      durationFormat.mapDatasetToRangeAxis(0, 0);
+                    ^
+  symbol:   method mapDatasetToRangeAxis(int,int)
+  location: variable durationFormat of type NumberFormat
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\ui\chart\CurveChart.java:167: error: incompatible types: NumberFormat cannot be converted to Plot
+      this._chart = new JFreeChart(durationFormat);
+                                   ^
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\ui\chart\CurveChart.java:766: error: reference to addOrUpdate is ambiguous
+                  series.addOrUpdate(time, value);
+                        ^
+  both method addOrUpdate(double,double) in XYSeries and method addOrUpdate(Number,Number) in XYSeries match
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\components\ConnectorPanel.java:208: error: incompatible types: TextFormatter<CAP#1> cannot be converted to TextFormatter<Integer>
+         TextFormatter<Integer> formatter = textField.getTextFormatter();
+                                                                      ^
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\components\ConnectorPanel.java:212: error: incompatible types: TextFormatter<CAP#1> cannot be converted to TextFormatter<Double>
+         TextFormatter<Double> formatter = textField.getTextFormatter();
+                                                                     ^
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\components\DragAndDropLabelEditor.java:61: error: reference to addListener is ambiguous
+      this.buttons.addListener(c -> this.buttonBar.getChildren().setAll(this.buttons));
+                  ^
+  both method addListener(InvalidationListener) in Observable and method addListener(ListChangeListener<? super E>) in ObservableList match
+  where E is a type-variable:
+    E extends Object declared in interface ObservableList
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\JavaFxController.java:591: error: lambda expression not expected here
+         : e -> this.stopRoasting());
+           ^
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\JavaFxController.java:2780: error: incompatible types: CurveModel cannot be converted to OverwriteCurveModel
+               .orElse(curveModel);
+                       ^
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\JavaFxController.java:4153: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+      FileSystemConfiguration.Directories directories = this.appModel.getDirectories();
+                                                                     ^
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\PreferencesStore.java:191: error: incompatible types: Enum cannot be converted to E
+      for (E e : (Enum[])enumClass.getEnumConstants()) {
+                 ^
+  where E is a type-variable:
+    E extends Enum<E> declared in method <E>getEnumSet(String,Class<E>)
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\PreferencesStore.java:337: error: cannot find symbol
+                  .filter(c -> channel.getName().startsWith(c.getName()))
+                               ^
+  symbol:   variable channel
+  location: class PreferencesStore
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\PreferencesStore.java:339: error: cannot find symbol
+                  .ifPresentOrElse(c -> channel.setColor(c.getColor()), () -> channel.setColor(Color.BLACK));
+                                        ^
+  symbol:   variable channel
+  location: class PreferencesStore
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\PreferencesStore.java:339: error: cannot find symbol
+                  .ifPresentOrElse(c -> channel.setColor(c.getColor()), () -> channel.setColor(Color.BLACK));
+                                                                              ^
+  symbol:   variable channel
+  location: class PreferencesStore
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\BetweenBatchManager.java:285: error: reference to ActionBuilder is ambiguous
+                     new ActionBuilder(org.cropster.roastingintelligence.util.Messages.m_("Restart between batch protocol"), this::resetBetweenBatchLog)
+                     ^
+  both constructor ActionBuilder(String,Runnable) in ActionBuilder and constructor ActionBuilder(String,Consumer<ActionEvent>) in ActionBuilder match
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\MainPanelController.java:366: error: reference to addListener is ambiguous
+      this.observableTasksList.addListener(c -> {
+                              ^
+  both method addListener(InvalidationListener) in Observable and method addListener(ListChangeListener<? super E>) in ObservableList match
+  where E is a type-variable:
+    E extends Object declared in interface ObservableList
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\PreferencesWindowController.java:162: error: reference to addListener is ambiguous
+      this.channels.addListener(c -> this.updateConnectors());
+                   ^
+  both method addListener(InvalidationListener) in Observable and method addListener(ListChangeListener<? super E>) in ObservableList match
+  where E is a type-variable:
+    E extends Object declared in interface ObservableList
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\PreferencesWindowController.java:163: error: reference to addListener is ambiguous
+      this.states.addListener(c -> this.updateConnectors());
+                 ^
+  both method addListener(InvalidationListener) in Observable and method addListener(ListChangeListener<? super E>) in ObservableList match
+  where E is a type-variable:
+    E extends Object declared in interface ObservableList
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\PreferencesWindowController.java:166: error: reference to addListener is ambiguous
+      this.connectors.addListener(c -> this.filterPossible.set(this.checkFilterPossible()));
+                     ^
+  both method addListener(InvalidationListener) in Observable and method addListener(ListChangeListener<? super E>) in ObservableList match
+  where E is a type-variable:
+    E extends Object declared in interface ObservableList
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\PreferencesWindowController.java:260: error: reference to addListener is ambiguous
+         .addListener(
+         ^
+  both method addListener(InvalidationListener) in Observable and method addListener(ListChangeListener<? super E>) in ObservableList match
+  where E is a type-variable:
+    E extends Object declared in interface ObservableList
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\PreferencesWindowController.java:262: error: cannot find symbol
+               while (c.next()) {
+                       ^
+  symbol:   method next()
+  location: variable c of type Observable
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\PreferencesWindowController.java:263: error: cannot find symbol
+                  if (c.wasRemoved()) {
+                       ^
+  symbol:   method wasRemoved()
+  location: variable c of type Observable
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\PreferencesWindowController.java:264: error: cannot find symbol
+                     c.getRemoved()
+                      ^
+  symbol:   method getRemoved()
+  location: variable c of type Observable
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\PreferencesWindowController.java:272: error: cannot find symbol
+                     c.getRemoved()
+                      ^
+  symbol:   method getRemoved()
+  location: variable c of type Observable
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\PreferencesWindowController.java:281: error: cannot find symbol
+                     c.getRemoved()
+                      ^
+  symbol:   method getRemoved()
+  location: variable c of type Observable
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\PreferencesWindowController.java:788: error: incompatible types: inference variable K has incompatible bounds
+         .collect(Collectors.toMap(Object::getClass, cx -> cx));
+                 ^
+    equality constraints: Class<? extends MeasurementSourceFactory>
+    lower bounds: Class<? extends Object>
+  where K,T,U are type-variables:
+    K extends Object declared in method <T,K,U>toMap(Function<? super T,? extends K>,Function<? super T,? extends U>)
+    T extends Object declared in method <T,K,U>toMap(Function<? super T,? extends K>,Function<? super T,? extends U>)
+    U extends Object declared in method <T,K,U>toMap(Function<? super T,? extends K>,Function<? super T,? extends U>)
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\PreferencesWindowController.java:1154: error: incompatible types: Channel cannot be converted to boolean
+         super.updateItem((boolean)item, empty);
+                                   ^
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\PreferencesWindowController.java:1264: error: incompatible types: ControlStateConfiguration cannot be converted to boolean
+         super.updateItem((boolean)item, empty);
+                                   ^
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\CommentsCustomizationTable.java:86: error: incompatible types: Object cannot be converted to Node
+      for (Node node : new ArrayList(this.gridPane.getChildrenUnmodifiable())) {
+                       ^
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\PreparationPanel.java:383: error: incompatible types: invalid method reference
+      return new FilteredList(FXCollections.observableArrayList(lots), this::isSelectableLot);
+                                                                       ^
+    incompatible types: Object cannot be converted to Lot
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\PreparationPanel.java:722: error: incompatible types: Object cannot be converted to Node
+      for (Node child : new ArrayList(this.getChildren())) {
+                        ^
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\layout\PreparationPanel.java:739: error: incompatible types: Object cannot be converted to Node
+      for (Node child : new ArrayList(this.getChildren())) {
+                        ^
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\JavaFxUtil.java:592: error: cannot find symbol
+         if (c.isContentChange()) {
+              ^
+  symbol:   method isContentChange()
+  location: variable c of type Object
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\JavaFxUtil.java:593: error: cannot find symbol
+            if (!(c.getControl() instanceof TextInputControl control)) {
+                   ^
+  symbol:   method getControl()
+  location: variable c of type Object
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\JavaFxUtil.java:602: error: cannot find symbol
+            if (c.getControlNewText().length() <= maxLength) {
+                 ^
+  symbol:   method getControlNewText()
+  location: variable c of type Object
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\JavaFxUtil.java:606: error: cannot find symbol
+            int beforeChangeLength = c.getRangeStart();
+                                      ^
+  symbol:   method getRangeStart()
+  location: variable c of type Object
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\JavaFxUtil.java:607: error: cannot find symbol
+            int afterChangeLength = c.getControlText().length() - c.getRangeEnd();
+                                     ^
+  symbol:   method getControlText()
+  location: variable c of type Object
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\JavaFxUtil.java:607: error: cannot find symbol
+            int afterChangeLength = c.getControlText().length() - c.getRangeEnd();
+                                                                   ^
+  symbol:   method getRangeEnd()
+  location: variable c of type Object
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\JavaFxUtil.java:610: error: cannot find symbol
+               c.setText("");
+                ^
+  symbol:   method setText(String)
+  location: variable c of type Object
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\JavaFxUtil.java:612: error: cannot find symbol
+               int acceptableInsertLength = Math.min(c.getText().length(), availableSpace);
+                                                      ^
+  symbol:   method getText()
+  location: variable c of type Object
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\JavaFxUtil.java:613: error: cannot find symbol
+               c.setText(c.getText().substring(0, acceptableInsertLength));
+                          ^
+  symbol:   method getText()
+  location: variable c of type Object
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\util\validators\TimeEditorRangeValidator.java:96: error: incompatible types: StringConverter<CAP#1> cannot be converted to StringConverter<Long>
+         StringConverter<Long> valueConverter = this.editor.getInput().getTextFormatter().getValueConverter();
+                                                                                                           ^
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\util\validators\TimeEditorRangeValidator.java:171: error: incompatible types: StringConverter<CAP#1> cannot be converted to StringConverter<Long>
+      StringConverter<Long> valueConverter = this.editor.getInput().getTextFormatter().getValueConverter();
+                                                                                                        ^
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\MacOsFxUtil.java:20: warning: [removal] enableInputMethodEvents(boolean) in Scene has been deprecated and marked for removal
+                  scene.enableInputMethodEvents(false);
+                       ^
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\MacOsFxUtil.java:21: warning: [removal] enableInputMethodEvents(boolean) in Scene has been deprecated and marked for removal
+                  Platform.runLater(() -> scene.enableInputMethodEvents(true));
+                                               ^
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\util\ActionBuilder.java:63: error: no suitable method found for addAll(Object[])
+      Optional.ofNullable((String[])action.getProperties().get("style-class")).ifPresent(styleClass -> button.getStyleClass().addAll((Object[])styleClass));
+                                                                                                                             ^
+    method List.addAll(Collection<? extends String>) is not applicable
+      (argument mismatch; Object[] cannot be converted to Collection<? extends String>)
+    method ObservableList.addAll(String...) is not applicable
+      (varargs mismatch; Object[] cannot be converted to String)
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\util\ActionBuilder.java:127: error: no suitable method found for addAll(Object[])
+      Optional.ofNullable((String[])action.getProperties().get("style-class")).ifPresent(styleClass -> menuItem.getStyleClass().addAll((Object[])styleClass));
+                                                                                                                               ^
+    method List.addAll(Collection<? extends String>) is not applicable
+      (argument mismatch; Object[] cannot be converted to Collection<? extends String>)
+    method ObservableList.addAll(String...) is not applicable
+      (varargs mismatch; Object[] cannot be converted to String)
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\util\GridPaneZebraStyle.java:44: error: incompatible types: Object cannot be converted to Node
+      for (Node node : new ArrayList(this.pane.getChildren())) {
+                       ^
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\util\TextFieldUtils.java:24: error: incompatible types: TextFormatter<CAP#1> cannot be converted to TextFormatter<T>
+      TextFormatter<T> textFormatter = field.getTextFormatter();
+                                                             ^
+  where T is a type-variable:
+    T extends Object declared in method <T>isDirty(TextField)
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\util\validators\MeasureRangeBindingSupport.java:63: error: incompatible types: TextFormatter<CAP#1> cannot be converted to TextFormatter<Number>
+            TextFormatter<Number> formatter = editor.getInput().getTextFormatter();
+                                                                                ^
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+C:\Tools\_soi\roastMane-source-recovery\src\com\cropster\roastingintelligence\ui\util\validators\TimeRangeBindingSupport.java:58: error: incompatible types: TextFormatter<CAP#1> cannot be converted to TextFormatter<Long>
+            TextFormatter<Long> formatter = editor.getInput().getTextFormatter();
+                                                                              ^
+  where CAP#1 is a fresh type-variable:
+    CAP#1 extends Object from capture of ?
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:20: error: cannot find symbol
+     ClassReader cr=new ClassReader(bytes);ClassWriter cw=new ClassWriter(ClassWriter.COMPUTE_MAXS);
+     ^
+  symbol:   class ClassReader
+  location: class PatchJar
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:20: error: cannot find symbol
+     ClassReader cr=new ClassReader(bytes);ClassWriter cw=new ClassWriter(ClassWriter.COMPUTE_MAXS);
+                        ^
+  symbol:   class ClassReader
+  location: class PatchJar
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:20: error: cannot find symbol
+     ClassReader cr=new ClassReader(bytes);ClassWriter cw=new ClassWriter(ClassWriter.COMPUTE_MAXS);
+                                           ^
+  symbol:   class ClassWriter
+  location: class PatchJar
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:20: error: cannot find symbol
+     ClassReader cr=new ClassReader(bytes);ClassWriter cw=new ClassWriter(ClassWriter.COMPUTE_MAXS);
+                                                              ^
+  symbol:   class ClassWriter
+  location: class PatchJar
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:20: error: cannot find symbol
+     ClassReader cr=new ClassReader(bytes);ClassWriter cw=new ClassWriter(ClassWriter.COMPUTE_MAXS);
+                                                                          ^
+  symbol:   variable ClassWriter
+  location: class PatchJar
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:21: error: cannot find symbol
+     cr.accept(new ClassVisitor(ASM9,cw){
+                   ^
+  symbol:   class ClassVisitor
+  location: class PatchJar
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:21: error: cannot find symbol
+     cr.accept(new ClassVisitor(ASM9,cw){
+                                ^
+  symbol:   variable ASM9
+  location: class PatchJar
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:22: error: cannot find symbol
+      public MethodVisitor visitMethod(int access,String n,String d,String sig,String[]ex){
+             ^
+  symbol: class MethodVisitor
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:23: error: cannot find symbol
+       MethodVisitor mv=super.visitMethod(access,n,d,sig,ex);
+       ^
+  symbol: class MethodVisitor
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:23: error: non-static variable super cannot be referenced from a static context
+       MethodVisitor mv=super.visitMethod(access,n,d,sig,ex);
+                        ^
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:23: error: cannot find symbol
+       MethodVisitor mv=super.visitMethod(access,n,d,sig,ex);
+                             ^
+  symbol: method visitMethod(int,String,String,String,String[])
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:24: error: cannot find symbol
+       if(owner.equals("org/cropster/roastingintelligence/service/impl/FilePersister")&&n.equals("getFilesToUpload")){mv.visitCode();mv.visitInsn(ICONST_0);mv.visitTypeInsn(ANEWARRAY,"java/io/File");mv.visitInsn(ARETURN);mv.visitMaxs(1,2);mv.visitEnd();return null;}
+                                                                                                                                                  ^
+  symbol: variable ICONST_0
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:24: error: cannot find symbol
+       if(owner.equals("org/cropster/roastingintelligence/service/impl/FilePersister")&&n.equals("getFilesToUpload")){mv.visitCode();mv.visitInsn(ICONST_0);mv.visitTypeInsn(ANEWARRAY,"java/io/File");mv.visitInsn(ARETURN);mv.visitMaxs(1,2);mv.visitEnd();return null;}
+                                                                                                                                                                             ^
+  symbol: variable ANEWARRAY
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:24: error: cannot find symbol
+       if(owner.equals("org/cropster/roastingintelligence/service/impl/FilePersister")&&n.equals("getFilesToUpload")){mv.visitCode();mv.visitInsn(ICONST_0);mv.visitTypeInsn(ANEWARRAY,"java/io/File");mv.visitInsn(ARETURN);mv.visitMaxs(1,2);mv.visitEnd();return null;}
+                                                                                                                                                                                                                    ^
+  symbol: variable ARETURN
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:26: error: cannot find symbol
+       if(owner.equals("com/cropster/roastingintelligence/service/impl/StorageServiceImpl")&&n.equals("loadDataCache")){mv.visitCode();mv.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","data","()Lcom/cropster/roastingintelligence/Data;",false);mv.visitInsn(ARETURN);mv.visitMaxs(1,1);mv.visitEnd();return null;}
+                                                                                                                                                          ^
+  symbol: variable INVOKESTATIC
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:26: error: cannot find symbol
+       if(owner.equals("com/cropster/roastingintelligence/service/impl/StorageServiceImpl")&&n.equals("loadDataCache")){mv.visitCode();mv.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","data","()Lcom/cropster/roastingintelligence/Data;",false);mv.visitInsn(ARETURN);mv.visitMaxs(1,1);mv.visitEnd();return null;}
+                                                                                                                                                                                                                                                                        ^
+  symbol: variable ARETURN
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:27: error: cannot find symbol
+       if(owner.equals("com/cropster/roastingintelligence/config/FileSystemConfiguration")&&n.equals("directories")){mv.visitCode();mv.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","directories","()Lcom/cropster/roastingintelligence/config/FileSystemConfiguration$Directories;",false);mv.visitInsn(ARETURN);mv.visitMaxs(1,3);mv.visitEnd();return null;}
+                                                                                                                                                       ^
+  symbol: variable INVOKESTATIC
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:27: error: cannot find symbol
+       if(owner.equals("com/cropster/roastingintelligence/config/FileSystemConfiguration")&&n.equals("directories")){mv.visitCode();mv.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","directories","()Lcom/cropster/roastingintelligence/config/FileSystemConfiguration$Directories;",false);mv.visitInsn(ARETURN);mv.visitMaxs(1,3);mv.visitEnd();return null;}
+                                                                                                                                                                                                                                                                                                                  ^
+  symbol: variable ARETURN
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:30: error: cannot find symbol
+        mv.visitCode();mv.visitVarInsn(ALOAD,0);mv.visitVarInsn(ALOAD,1);mv.visitInsn(n.equals("saveNew")?ICONST_1:ICONST_0);mv.visitMethodInsn(INVOKESTATIC,"local/OfflinePersistence","save","(Lorg/cropster/roastingintelligence/service/impl/FilePersister;Lorg/cropster/roastingintelligence/model/Roast;Z)Ljava/io/File;",false);mv.visitInsn(ARETURN);mv.visitMaxs(3,2);mv.visitEnd();return null;
+                                       ^
+  symbol: variable ALOAD
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:30: error: cannot find symbol
+        mv.visitCode();mv.visitVarInsn(ALOAD,0);mv.visitVarInsn(ALOAD,1);mv.visitInsn(n.equals("saveNew")?ICONST_1:ICONST_0);mv.visitMethodInsn(INVOKESTATIC,"local/OfflinePersistence","save","(Lorg/cropster/roastingintelligence/service/impl/FilePersister;Lorg/cropster/roastingintelligence/model/Roast;Z)Ljava/io/File;",false);mv.visitInsn(ARETURN);mv.visitMaxs(3,2);mv.visitEnd();return null;
+                                                                ^
+  symbol: variable ALOAD
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:30: error: cannot find symbol
+        mv.visitCode();mv.visitVarInsn(ALOAD,0);mv.visitVarInsn(ALOAD,1);mv.visitInsn(n.equals("saveNew")?ICONST_1:ICONST_0);mv.visitMethodInsn(INVOKESTATIC,"local/OfflinePersistence","save","(Lorg/cropster/roastingintelligence/service/impl/FilePersister;Lorg/cropster/roastingintelligence/model/Roast;Z)Ljava/io/File;",false);mv.visitInsn(ARETURN);mv.visitMaxs(3,2);mv.visitEnd();return null;
+                                                                                                          ^
+  symbol: variable ICONST_1
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:30: error: cannot find symbol
+        mv.visitCode();mv.visitVarInsn(ALOAD,0);mv.visitVarInsn(ALOAD,1);mv.visitInsn(n.equals("saveNew")?ICONST_1:ICONST_0);mv.visitMethodInsn(INVOKESTATIC,"local/OfflinePersistence","save","(Lorg/cropster/roastingintelligence/service/impl/FilePersister;Lorg/cropster/roastingintelligence/model/Roast;Z)Ljava/io/File;",false);mv.visitInsn(ARETURN);mv.visitMaxs(3,2);mv.visitEnd();return null;
+                                                                                                                   ^
+  symbol: variable ICONST_0
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:30: error: cannot find symbol
+        mv.visitCode();mv.visitVarInsn(ALOAD,0);mv.visitVarInsn(ALOAD,1);mv.visitInsn(n.equals("saveNew")?ICONST_1:ICONST_0);mv.visitMethodInsn(INVOKESTATIC,"local/OfflinePersistence","save","(Lorg/cropster/roastingintelligence/service/impl/FilePersister;Lorg/cropster/roastingintelligence/model/Roast;Z)Ljava/io/File;",false);mv.visitInsn(ARETURN);mv.visitMaxs(3,2);mv.visitEnd();return null;
+                                                                                                                                                ^
+  symbol: variable INVOKESTATIC
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:30: error: cannot find symbol
+        mv.visitCode();mv.visitVarInsn(ALOAD,0);mv.visitVarInsn(ALOAD,1);mv.visitInsn(n.equals("saveNew")?ICONST_1:ICONST_0);mv.visitMethodInsn(INVOKESTATIC,"local/OfflinePersistence","save","(Lorg/cropster/roastingintelligence/service/impl/FilePersister;Lorg/cropster/roastingintelligence/model/Roast;Z)Ljava/io/File;",false);mv.visitInsn(ARETURN);mv.visitMaxs(3,2);mv.visitEnd();return null;
+                                                                                                                                                                                                                                                                                                                                                    ^
+  symbol: variable ARETURN
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:32: error: cannot find symbol
+       if(stub(owner,n)&&Type.getReturnType(d).equals(Type.VOID_TYPE)){mv.visitCode();mv.visitInsn(RETURN);mv.visitMaxs(0,0);mv.visitEnd();return null;}
+                                                      ^
+  symbol: variable Type
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:32: error: cannot find symbol
+       if(stub(owner,n)&&Type.getReturnType(d).equals(Type.VOID_TYPE)){mv.visitCode();mv.visitInsn(RETURN);mv.visitMaxs(0,0);mv.visitEnd();return null;}
+                         ^
+  symbol: variable Type
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:32: error: cannot find symbol
+       if(stub(owner,n)&&Type.getReturnType(d).equals(Type.VOID_TYPE)){mv.visitCode();mv.visitInsn(RETURN);mv.visitMaxs(0,0);mv.visitEnd();return null;}
+                                                                                                   ^
+  symbol: variable RETURN
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:33: error: cannot find symbol
+       if(owner.equals(ui)&&n.equals("start")&&d.equals("(Ljava/util/List;)V")){mv.visitCode();mv.visitVarInsn(ALOAD,0);mv.visitVarInsn(ALOAD,1);mv.visitFieldInsn(PUTFIELD,ui,"setupWarnings","Ljava/util/List;");mv.visitVarInsn(ALOAD,0);mv.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","start","(L"+ui+";)V",false);mv.visitInsn(RETURN);mv.visitMaxs(1,2);mv.visitEnd();return null;}
+                                                                                                               ^
+  symbol: variable ALOAD
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:33: error: cannot find symbol
+       if(owner.equals(ui)&&n.equals("start")&&d.equals("(Ljava/util/List;)V")){mv.visitCode();mv.visitVarInsn(ALOAD,0);mv.visitVarInsn(ALOAD,1);mv.visitFieldInsn(PUTFIELD,ui,"setupWarnings","Ljava/util/List;");mv.visitVarInsn(ALOAD,0);mv.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","start","(L"+ui+";)V",false);mv.visitInsn(RETURN);mv.visitMaxs(1,2);mv.visitEnd();return null;}
+                                                                                                                                        ^
+  symbol: variable ALOAD
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:33: error: cannot find symbol
+       if(owner.equals(ui)&&n.equals("start")&&d.equals("(Ljava/util/List;)V")){mv.visitCode();mv.visitVarInsn(ALOAD,0);mv.visitVarInsn(ALOAD,1);mv.visitFieldInsn(PUTFIELD,ui,"setupWarnings","Ljava/util/List;");mv.visitVarInsn(ALOAD,0);mv.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","start","(L"+ui+";)V",false);mv.visitInsn(RETURN);mv.visitMaxs(1,2);mv.visitEnd();return null;}
+                                                                                                                                                                   ^
+  symbol: variable PUTFIELD
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:33: error: cannot find symbol
+       if(owner.equals(ui)&&n.equals("start")&&d.equals("(Ljava/util/List;)V")){mv.visitCode();mv.visitVarInsn(ALOAD,0);mv.visitVarInsn(ALOAD,1);mv.visitFieldInsn(PUTFIELD,ui,"setupWarnings","Ljava/util/List;");mv.visitVarInsn(ALOAD,0);mv.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","start","(L"+ui+";)V",false);mv.visitInsn(RETURN);mv.visitMaxs(1,2);mv.visitEnd();return null;}
+                                                                                                                                                                                                                                   ^
+  symbol: variable ALOAD
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:33: error: cannot find symbol
+       if(owner.equals(ui)&&n.equals("start")&&d.equals("(Ljava/util/List;)V")){mv.visitCode();mv.visitVarInsn(ALOAD,0);mv.visitVarInsn(ALOAD,1);mv.visitFieldInsn(PUTFIELD,ui,"setupWarnings","Ljava/util/List;");mv.visitVarInsn(ALOAD,0);mv.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","start","(L"+ui+";)V",false);mv.visitInsn(RETURN);mv.visitMaxs(1,2);mv.visitEnd();return null;}
+                                                                                                                                                                                                                                                               ^
+  symbol: variable INVOKESTATIC
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:33: error: cannot find symbol
+       if(owner.equals(ui)&&n.equals("start")&&d.equals("(Ljava/util/List;)V")){mv.visitCode();mv.visitVarInsn(ALOAD,0);mv.visitVarInsn(ALOAD,1);mv.visitFieldInsn(PUTFIELD,ui,"setupWarnings","Ljava/util/List;");mv.visitVarInsn(ALOAD,0);mv.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","start","(L"+ui+";)V",false);mv.visitInsn(RETURN);mv.visitMaxs(1,2);mv.visitEnd();return null;}
+                                                                                                                                                                                                                                                                                                                                               ^
+  symbol: variable RETURN
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:34: error: cannot find symbol
+       return new MethodVisitor(ASM9,mv){
+                  ^
+  symbol: class MethodVisitor
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:34: error: cannot find symbol
+       return new MethodVisitor(ASM9,mv){
+                                ^
+  symbol: variable ASM9
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:35: error: cannot find symbol
+        public void visitInsn(int op){if(owner.equals("org/cropster/roastingintelligence/RoastingManager")&&n.equals("finalizeRoasting")&&op==ARETURN){super.visitInsn(DUP);super.visitMethodInsn(INVOKESTATIC,"local/OfflinePersistence","verifySaved","(Lorg/cropster/roastingintelligence/model/Roast;)V",false);}super.visitInsn(op);}
+                                                                                                                                              ^
+  symbol: variable ARETURN
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:35: error: cannot find symbol
+        public void visitInsn(int op){if(owner.equals("org/cropster/roastingintelligence/RoastingManager")&&n.equals("finalizeRoasting")&&op==ARETURN){super.visitInsn(DUP);super.visitMethodInsn(INVOKESTATIC,"local/OfflinePersistence","verifySaved","(Lorg/cropster/roastingintelligence/model/Roast;)V",false);}super.visitInsn(op);}
+                                                                                                                                                                       ^
+  symbol: variable DUP
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:35: error: non-static variable super cannot be referenced from a static context
+        public void visitInsn(int op){if(owner.equals("org/cropster/roastingintelligence/RoastingManager")&&n.equals("finalizeRoasting")&&op==ARETURN){super.visitInsn(DUP);super.visitMethodInsn(INVOKESTATIC,"local/OfflinePersistence","verifySaved","(Lorg/cropster/roastingintelligence/model/Roast;)V",false);}super.visitInsn(op);}
+                                                                                                                                                       ^
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:35: error: cannot find symbol
+        public void visitInsn(int op){if(owner.equals("org/cropster/roastingintelligence/RoastingManager")&&n.equals("finalizeRoasting")&&op==ARETURN){super.visitInsn(DUP);super.visitMethodInsn(INVOKESTATIC,"local/OfflinePersistence","verifySaved","(Lorg/cropster/roastingintelligence/model/Roast;)V",false);}super.visitInsn(op);}
+                                                                                                                                                                                                  ^
+  symbol: variable INVOKESTATIC
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:35: error: non-static variable super cannot be referenced from a static context
+        public void visitInsn(int op){if(owner.equals("org/cropster/roastingintelligence/RoastingManager")&&n.equals("finalizeRoasting")&&op==ARETURN){super.visitInsn(DUP);super.visitMethodInsn(INVOKESTATIC,"local/OfflinePersistence","verifySaved","(Lorg/cropster/roastingintelligence/model/Roast;)V",false);}super.visitInsn(op);}
+                                                                                                                                                                            ^
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:35: error: non-static variable super cannot be referenced from a static context
+        public void visitInsn(int op){if(owner.equals("org/cropster/roastingintelligence/RoastingManager")&&n.equals("finalizeRoasting")&&op==ARETURN){super.visitInsn(DUP);super.visitMethodInsn(INVOKESTATIC,"local/OfflinePersistence","verifySaved","(Lorg/cropster/roastingintelligence/model/Roast;)V",false);}super.visitInsn(op);}
+                                                                                                                                                                                                                                                                                                                     ^
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:35: error: cannot find symbol
+        public void visitInsn(int op){if(owner.equals("org/cropster/roastingintelligence/RoastingManager")&&n.equals("finalizeRoasting")&&op==ARETURN){super.visitInsn(DUP);super.visitMethodInsn(INVOKESTATIC,"local/OfflinePersistence","verifySaved","(Lorg/cropster/roastingintelligence/model/Roast;)V",false);}super.visitInsn(op);}
+                                                                                                                                                                                                                                                                                                                          ^
+  symbol: method visitInsn(int)
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:36: error: non-static variable super cannot be referenced from a static context
+        public void visitCode(){super.visitCode();if(owner.equals(app)&&n.equals("setupSourceFactories")){super.visitVarInsn(ALOAD,0);super.visitFieldInsn(GETFIELD,app,"_appModel","Lorg/cropster/roastingintelligence/AppModel;");super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","configure","(Lorg/cropster/roastingintelligence/AppModel;)V",false);}}
+                                ^
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:36: error: cannot find symbol
+        public void visitCode(){super.visitCode();if(owner.equals(app)&&n.equals("setupSourceFactories")){super.visitVarInsn(ALOAD,0);super.visitFieldInsn(GETFIELD,app,"_appModel","Lorg/cropster/roastingintelligence/AppModel;");super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","configure","(Lorg/cropster/roastingintelligence/AppModel;)V",false);}}
+                                     ^
+  symbol: method visitCode()
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:36: error: cannot find symbol
+        public void visitCode(){super.visitCode();if(owner.equals(app)&&n.equals("setupSourceFactories")){super.visitVarInsn(ALOAD,0);super.visitFieldInsn(GETFIELD,app,"_appModel","Lorg/cropster/roastingintelligence/AppModel;");super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","configure","(Lorg/cropster/roastingintelligence/AppModel;)V",false);}}
+                                                                                                                             ^
+  symbol: variable ALOAD
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:36: error: non-static variable super cannot be referenced from a static context
+        public void visitCode(){super.visitCode();if(owner.equals(app)&&n.equals("setupSourceFactories")){super.visitVarInsn(ALOAD,0);super.visitFieldInsn(GETFIELD,app,"_appModel","Lorg/cropster/roastingintelligence/AppModel;");super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","configure","(Lorg/cropster/roastingintelligence/AppModel;)V",false);}}
+                                                                                                          ^
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:36: error: cannot find symbol
+        public void visitCode(){super.visitCode();if(owner.equals(app)&&n.equals("setupSourceFactories")){super.visitVarInsn(ALOAD,0);super.visitFieldInsn(GETFIELD,app,"_appModel","Lorg/cropster/roastingintelligence/AppModel;");super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","configure","(Lorg/cropster/roastingintelligence/AppModel;)V",false);}}
+                                                                                                                                                           ^
+  symbol: variable GETFIELD
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:36: error: non-static variable super cannot be referenced from a static context
+        public void visitCode(){super.visitCode();if(owner.equals(app)&&n.equals("setupSourceFactories")){super.visitVarInsn(ALOAD,0);super.visitFieldInsn(GETFIELD,app,"_appModel","Lorg/cropster/roastingintelligence/AppModel;");super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","configure","(Lorg/cropster/roastingintelligence/AppModel;)V",false);}}
+                                                                                                                                      ^
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:36: error: cannot find symbol
+        public void visitCode(){super.visitCode();if(owner.equals(app)&&n.equals("setupSourceFactories")){super.visitVarInsn(ALOAD,0);super.visitFieldInsn(GETFIELD,app,"_appModel","Lorg/cropster/roastingintelligence/AppModel;");super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","configure","(Lorg/cropster/roastingintelligence/AppModel;)V",false);}}
+                                                                                                                                                                                                                                                          ^
+  symbol: variable INVOKESTATIC
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:36: error: non-static variable super cannot be referenced from a static context
+        public void visitCode(){super.visitCode();if(owner.equals(app)&&n.equals("setupSourceFactories")){super.visitVarInsn(ALOAD,0);super.visitFieldInsn(GETFIELD,app,"_appModel","Lorg/cropster/roastingintelligence/AppModel;");super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","configure","(Lorg/cropster/roastingintelligence/AppModel;)V",false);}}
+                                                                                                                                                                                                                                    ^
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:37: error: non-static variable super cannot be referenced from a static context
+        public void visitTypeInsn(int op,String t){super.visitTypeInsn(op,owner.equals(app)&&t.equals("org/cropster/roastingintelligence/remote/CsarConnectionImpl")?"local/OfflineConnection":t);}
+                                                   ^
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:37: error: cannot find symbol
+        public void visitTypeInsn(int op,String t){super.visitTypeInsn(op,owner.equals(app)&&t.equals("org/cropster/roastingintelligence/remote/CsarConnectionImpl")?"local/OfflineConnection":t);}
+                                                        ^
+  symbol: method visitTypeInsn(int,owner.equa[...]" : t)
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:39: error: cannot find symbol
+         if(o.equals("org/cropster/roastingintelligence/model/Roast")&&m.equals("isSynced")&&((owner.equals(ui)&&n.equals("updateFinalValues"))||owner.endsWith("/ProductionSidebar")||owner.endsWith("/ProductionEditor"))){super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","locallySaved","(Lorg/cropster/roastingintelligence/model/Roast;)Z",false);return;}
+                                                                                                                                                                                                                                                   ^
+  symbol: variable INVOKESTATIC
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:39: error: non-static variable super cannot be referenced from a static context
+         if(o.equals("org/cropster/roastingintelligence/model/Roast")&&m.equals("isSynced")&&((owner.equals(ui)&&n.equals("updateFinalValues"))||owner.endsWith("/ProductionSidebar")||owner.endsWith("/ProductionEditor"))){super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","locallySaved","(Lorg/cropster/roastingintelligence/model/Roast;)Z",false);return;}
+                                                                                                                                                                                                                             ^
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:41: error: cannot find symbol
+         if(owner.equals("com/cropster/roastingintelligence/ui/layout/PreparationPanel")&&n.equals("getLotComponents")&&m.equals("lotWeightOrZero")&&desc.equals("(Lorg/cropster/roastingintelligence/model/Lot;Lcom/cropster/util/model/Unit;)D")){super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","availableForBatch","(Ljava/lang/Object;Lorg/cropster/roastingintelligence/model/Lot;Lcom/cropster/util/model/Unit;)D",false);return;}
+                                                                                                                                                                                                                                                                          ^
+  symbol: variable INVOKESTATIC
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:41: error: non-static variable super cannot be referenced from a static context
+         if(owner.equals("com/cropster/roastingintelligence/ui/layout/PreparationPanel")&&n.equals("getLotComponents")&&m.equals("lotWeightOrZero")&&desc.equals("(Lorg/cropster/roastingintelligence/model/Lot;Lcom/cropster/util/model/Unit;)D")){super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","availableForBatch","(Ljava/lang/Object;Lorg/cropster/roastingintelligence/model/Lot;Lcom/cropster/util/model/Unit;)D",false);return;}
+                                                                                                                                                                                                                                                    ^
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:42: error: cannot find symbol
+if(owner.equals(ui)&&o.equals("org/cropster/roastingintelligence/util/BoolMap")&&m.equals("getOr")){super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","any","(Ljava/util/Map;)Z",false);return;}
+                                                                                                                          ^
+  symbol: variable INVOKESTATIC
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:42: error: non-static variable super cannot be referenced from a static context
+if(owner.equals(ui)&&o.equals("org/cropster/roastingintelligence/util/BoolMap")&&m.equals("getOr")){super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","any","(Ljava/util/Map;)Z",false);return;}
+                                                                                                    ^
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:43: error: cannot find symbol
+         if(owner.equals(ui)&&n.equals("finishRoasting")&&o.equals("org/cropster/roastingintelligence/model/Lot")&&m.equals("getWeight")){super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","inventoryWeight","(Lorg/cropster/roastingintelligence/model/Lot;)Lorg/cropster/roastingintelligence/model/Measure;",false);return;}
+                                                                                                                                                                ^
+  symbol: variable INVOKESTATIC
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:43: error: non-static variable super cannot be referenced from a static context
+         if(owner.equals(ui)&&n.equals("finishRoasting")&&o.equals("org/cropster/roastingintelligence/model/Lot")&&m.equals("getWeight")){super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","inventoryWeight","(Lorg/cropster/roastingintelligence/model/Lot;)Lorg/cropster/roastingintelligence/model/Measure;",false);return;}
+                                                                                                                                          ^
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:44: error: cannot find symbol
+         if(owner.equals(ui)&&n.equals("finishRoasting")&&o.equals("org/cropster/roastingintelligence/model/Lot")&&m.equals("setWeight")){super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","setInventoryWeight","(Lorg/cropster/roastingintelligence/model/Lot;Lorg/cropster/roastingintelligence/model/Measure;)V",false);return;}
+                                                                                                                                                                ^
+  symbol: variable INVOKESTATIC
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:44: error: non-static variable super cannot be referenced from a static context
+         if(owner.equals(ui)&&n.equals("finishRoasting")&&o.equals("org/cropster/roastingintelligence/model/Lot")&&m.equals("setWeight")){super.visitMethodInsn(INVOKESTATIC,"local/OfflineBootstrap","setInventoryWeight","(Lorg/cropster/roastingintelligence/model/Lot;Lorg/cropster/roastingintelligence/model/Measure;)V",false);return;}
+                                                                                                                                          ^
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:45: error: non-static variable super cannot be referenced from a static context
+         if(owner.equals(app)&&o.equals("org/cropster/roastingintelligence/remote/CsarConnectionImpl")&&m.equals("<init>"))o="local/OfflineConnection";super.visitMethodInsn(op,o,m,desc,itf);}
+                                                                                                                                                       ^
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\PatchJar.java:45: error: cannot find symbol
+         if(owner.equals(app)&&o.equals("org/cropster/roastingintelligence/remote/CsarConnectionImpl")&&m.equals("<init>"))o="local/OfflineConnection";super.visitMethodInsn(op,o,m,desc,itf);}
+                                                                                                                                                            ^
+  symbol: method visitMethodInsn(int,String,String,String,boolean)
+C:\Tools\_soi\roastMane-source-recovery\src\offline-patch\src\local\SmokeProbe.java:9: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+  if(!model.getDirectories().dataDirectory().toPath().equals(OfflineBootstrap.root()))throw new AssertionError("Data root mismatch");
+           ^
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\tasks\AlarmUploader.java:26: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+      FileSystemConfiguration.Directories directories = this.appModel.getDirectories();
+                                                                     ^
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\tasks\AlarmUploader.java:39: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+         FileSystemConfiguration.Directories directories = this.appModel.getDirectories();
+                                                                        ^
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\tasks\LiveGoalUploader.java:31: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+      FileSystemConfiguration.Directories directories = this.appModel.getDirectories();
+                                                                     ^
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\tasks\LiveGoalUploader.java:46: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+         FileSystemConfiguration.Directories directories = this.appModel.getDirectories();
+                                                                        ^
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\tasks\RoastUploader.java:51: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+         FileSystemConfiguration.Directories directories = this._appModel.getDirectories();
+                                                                         ^
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\tasks\RoastUploader.java:65: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+         FileSystemConfiguration.Directories directories = this._appModel.getDirectories();
+                                                                         ^
+C:\Tools\_soi\roastMane-source-recovery\src\org\cropster\roastingintelligence\tasks\RoastUploader.java:74: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+      FileSystemConfiguration.Directories directories = this._appModel.getDirectories();
+                                                                      ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+131 errors
+11 warnings

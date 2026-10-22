@@ -1,0 +1,35 @@
+{
+  "jar": "fxgraphics2d-1.7.jar",
+  "sha256": "de7b922f7c8f07e0899b721d47a42af6aeea431aaa9954efbe1135c544b95a6e",
+  "class_entries": 6,
+  "classes": [
+    "org/jfree/fx/FXFontMetrics.class",
+    "org/jfree/fx/FXGraphics2D.class",
+    "org/jfree/fx/FXGraphicsConfiguration.class",
+    "org/jfree/fx/FXGraphicsDevice.class",
+    "org/jfree/fx/FXHints$Key.class",
+    "org/jfree/fx/FXHints.class"
+  ],
+  "java_files": 5,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 133,
+      "sha256": "eb0bae4cb209da8e69684afa23f3112faace6f09795748e05fb2ef5189d3ad8d"
+    },
+    {
+      "path": "META-INF/maven/org.jfree/fxgraphics2d/pom.xml",
+      "bytes": 5380,
+      "sha256": "e85a641d0a07bd4b2f66163c0a73843969464ce1a67d087f8ee81227e5269f85"
+    },
+    {
+      "path": "META-INF/maven/org.jfree/fxgraphics2d/pom.properties",
+      "bytes": 105,
+      "sha256": "2c0ba4b93c994330367ba47d94ea8e939ac64daa030032bed2e75338401db84b"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

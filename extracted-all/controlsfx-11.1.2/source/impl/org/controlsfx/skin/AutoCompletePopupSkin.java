@@ -1,0 +1,79 @@
+package impl.org.controlsfx.skin;
+
+import javafx.beans.binding.Bindings;
+import javafx.event.Event;
+import javafx.scene.Node;
+import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
+import javafx.scene.control.Skin;
+import javafx.scene.control.cell.TextFieldListCell;
+import javafx.scene.input.MouseButton;
+import javafx.util.Callback;
+import javafx.util.StringConverter;
+import org.controlsfx.control.textfield.AutoCompletionBinding;
+
+public class AutoCompletePopupSkin<T> implements Skin<AutoCompletePopup<T>> {
+   private final AutoCompletePopup<T> control;
+   private final ListView<T> suggestionList;
+   final int LIST_CELL_HEIGHT = 24;
+
+   public AutoCompletePopupSkin(AutoCompletePopup<T> control) {
+      this(control, control.getConverter());
+   }
+
+   public AutoCompletePopupSkin(AutoCompletePopup<T> control, StringConverter<T> displayConverter) {
+      this(control, TextFieldListCell.forListView(displayConverter));
+   }
+
+   public AutoCompletePopupSkin(AutoCompletePopup<T> control, Callback<ListView<T>, ListCell<T>> cellFactory) {
+      this.control = control;
+      this.suggestionList = new ListView(control.getSuggestions());
+      this.suggestionList.getStyleClass().add("auto-complete-popup");
+      this.suggestionList.getStylesheets().add(AutoCompletionBinding.class.getResource("autocompletion.css").toExternalForm());
+      this.suggestionList
+         .prefHeightProperty()
+         .bind(Bindings.min(control.visibleRowCountProperty(), Bindings.size(this.suggestionList.getItems())).multiply(24).add(18));
+      this.suggestionList.setCellFactory(cellFactory);
+      this.suggestionList.prefWidthProperty().bind(control.prefWidthProperty());
+      this.suggestionList.maxWidthProperty().bind(control.maxWidthProperty());
+      this.suggestionList.minWidthProperty().bind(control.minWidthProperty());
+      this.registerEventListener();
+   }
+
+   private void registerEventListener() {
+      this.suggestionList.setOnMouseClicked(me -> {
+         if (me.getButton() == MouseButton.PRIMARY) {
+            this.onSuggestionChoosen((T)this.suggestionList.getSelectionModel().getSelectedItem());
+         }
+      });
+      this.suggestionList.setOnKeyPressed(ke -> {
+         switch (ke.getCode()) {
+            case TAB:
+            case ENTER:
+               this.onSuggestionChoosen((T)this.suggestionList.getSelectionModel().getSelectedItem());
+               break;
+            case ESCAPE:
+               if (this.control.isHideOnEscape()) {
+                  this.control.hide();
+               }
+         }
+      });
+   }
+
+   private void onSuggestionChoosen(T suggestion) {
+      if (suggestion != null) {
+         Event.fireEvent(this.control, new AutoCompletePopup.SuggestionEvent<>(suggestion));
+      }
+   }
+
+   public Node getNode() {
+      return this.suggestionList;
+   }
+
+   public AutoCompletePopup<T> getSkinnable() {
+      return this.control;
+   }
+
+   public void dispose() {
+   }
+}

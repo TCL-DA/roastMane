@@ -1,0 +1,30 @@
+{
+  "jar": "offline-local.jar",
+  "sha256": "93d04ede8070443c29e6b54a725f25e3b8e52dffe06dc2031b03ff1d98430adc",
+  "class_entries": 11,
+  "classes": [
+    "local/Launcher$1.class",
+    "local/Launcher.class",
+    "local/OfflineBootstrap.class",
+    "local/OfflineConnection$1.class",
+    "local/OfflineConnection$2.class",
+    "local/OfflineConnection$3.class",
+    "local/OfflineConnection$4.class",
+    "local/OfflineConnection$FileWriterAction.class",
+    "local/OfflineConnection.class",
+    "local/OfflinePersistence.class",
+    "local/SmokeProbe.class"
+  ],
+  "java_files": 5,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 67,
+      "sha256": "bd9481e79e3256993b8ee50122e5307eee64ca4f5ec5d4b55404e4b816584f27"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

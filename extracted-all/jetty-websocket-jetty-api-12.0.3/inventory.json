@@ -1,0 +1,66 @@
+{
+  "jar": "jetty-websocket-jetty-api-12.0.3.jar",
+  "sha256": "d421eb6b21e17d3640a42117f4039807d245e3b907159bd8fd59f7b89790af77",
+  "class_entries": 37,
+  "classes": [
+    "org/eclipse/jetty/websocket/api/Callback$1.class",
+    "org/eclipse/jetty/websocket/api/Callback$2.class",
+    "org/eclipse/jetty/websocket/api/Callback$Completable.class",
+    "org/eclipse/jetty/websocket/api/Callback.class",
+    "org/eclipse/jetty/websocket/api/Configurable.class",
+    "org/eclipse/jetty/websocket/api/ExtensionConfig$Parser.class",
+    "org/eclipse/jetty/websocket/api/ExtensionConfig.class",
+    "org/eclipse/jetty/websocket/api/Frame$Type.class",
+    "org/eclipse/jetty/websocket/api/Frame.class",
+    "org/eclipse/jetty/websocket/api/Session$Listener$Abstract.class",
+    "org/eclipse/jetty/websocket/api/Session$Listener$AbstractAutoDemanding.class",
+    "org/eclipse/jetty/websocket/api/Session$Listener$AutoDemanding.class",
+    "org/eclipse/jetty/websocket/api/Session$Listener.class",
+    "org/eclipse/jetty/websocket/api/Session.class",
+    "org/eclipse/jetty/websocket/api/StatusCode.class",
+    "org/eclipse/jetty/websocket/api/UpgradeRequest.class",
+    "org/eclipse/jetty/websocket/api/UpgradeResponse.class",
+    "org/eclipse/jetty/websocket/api/WebSocketContainer.class",
+    "org/eclipse/jetty/websocket/api/WebSocketSessionListener.class",
+    "org/eclipse/jetty/websocket/api/annotations/OnWebSocketClose.class",
+    "org/eclipse/jetty/websocket/api/annotations/OnWebSocketError.class",
+    "org/eclipse/jetty/websocket/api/annotations/OnWebSocketFrame.class",
+    "org/eclipse/jetty/websocket/api/annotations/OnWebSocketMessage.class",
+    "org/eclipse/jetty/websocket/api/annotations/OnWebSocketOpen.class",
+    "org/eclipse/jetty/websocket/api/annotations/WebSocket.class",
+    "org/eclipse/jetty/websocket/api/exceptions/BadPayloadException.class",
+    "org/eclipse/jetty/websocket/api/exceptions/CloseException.class",
+    "org/eclipse/jetty/websocket/api/exceptions/InvalidWebSocketException.class",
+    "org/eclipse/jetty/websocket/api/exceptions/MessageTooLargeException.class",
+    "org/eclipse/jetty/websocket/api/exceptions/PolicyViolationException.class",
+    "org/eclipse/jetty/websocket/api/exceptions/ProtocolException.class",
+    "org/eclipse/jetty/websocket/api/exceptions/UpgradeException.class",
+    "org/eclipse/jetty/websocket/api/exceptions/WebSocketException.class",
+    "org/eclipse/jetty/websocket/api/exceptions/WebSocketTimeoutException.class",
+    "org/eclipse/jetty/websocket/api/util/WSURI.class",
+    "org/eclipse/jetty/websocket/api/util/WebSocketConstants.class",
+    "module-info.class"
+  ],
+  "java_files": 28,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 1374,
+      "sha256": "ff3fecc9772d9254defa23840a1c26ddec56c66554dd68dbbde0a37538186593"
+    },
+    {
+      "path": "META-INF/maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-api/pom.xml",
+      "bytes": 643,
+      "sha256": "7effc86253a998014206f8067c063886bae32ac6737d7ad422dd7c68f570d08e"
+    },
+    {
+      "path": "META-INF/maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-api/pom.properties",
+      "bytes": 88,
+      "sha256": "a2d2e24258cec02580bbdf8a44dbdc7f0c0133b2bad9f530c39bfdbf8cea38e5"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

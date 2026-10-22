@@ -1,0 +1,4 @@
+C:\Tools\_soi\roastMane-github\offline-v06\patch-src\local\SmokeProbe.java:14: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+  if(!model.getDirectories().dataDirectory().toPath().equals(OfflineBootstrap.root()))throw new AssertionError("Data root mismatch");
+           ^
+1 warning

@@ -1,0 +1,89 @@
+{
+  "jar": "jersey-container-jetty-http-3.1.5.jar",
+  "sha256": "e9ade663fd7a0c1ba4cff0221ff4236d18e576c4630479e3d01362bd470637b4",
+  "class_entries": 30,
+  "classes": [
+    "META-INF/versions/17/org/glassfish/jersey/jetty/JettyHttpContainer$1.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/JettyHttpContainer$2.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/JettyHttpContainer$3.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/JettyHttpContainer$JettyBinder$1.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/JettyHttpContainer$JettyBinder$2.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/JettyHttpContainer$JettyBinder.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/JettyHttpContainer$JettyRequestReferencingFactory.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/JettyHttpContainer$JettyResponseReferencingFactory.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/JettyHttpContainer$ResponseWriter$1.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/JettyHttpContainer$ResponseWriter.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/JettyHttpContainer.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/JettyHttpContainerFactory$1.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/JettyHttpContainerFactory$JettyConnectorThreadPool.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/JettyHttpContainerFactory.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/JettyHttpContainerProvider.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/JettyHttpServer.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/JettyHttpServerProvider.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/internal/LocalizationMessages$1.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/internal/LocalizationMessages$BundleSupplier.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/internal/LocalizationMessages.class",
+    "META-INF/versions/17/org/glassfish/jersey/jetty/package-info.class",
+    "org/glassfish/jersey/jetty/JettyHttpContainer.class",
+    "org/glassfish/jersey/jetty/JettyHttpContainerFactory.class",
+    "org/glassfish/jersey/jetty/JettyHttpContainerProvider.class",
+    "org/glassfish/jersey/jetty/JettyHttpServer.class",
+    "org/glassfish/jersey/jetty/JettyHttpServerProvider.class",
+    "org/glassfish/jersey/jetty/internal/LocalizationMessages$1.class",
+    "org/glassfish/jersey/jetty/internal/LocalizationMessages$BundleSupplier.class",
+    "org/glassfish/jersey/jetty/internal/LocalizationMessages.class",
+    "org/glassfish/jersey/jetty/package-info.class"
+  ],
+  "java_files": 7,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 1746,
+      "sha256": "cdffdc35f4643cfd3bd5ac3982d2bbd89ab97948a2dcb1a31147bfab285594c8"
+    },
+    {
+      "path": "META-INF/LICENSE.md",
+      "bytes": 35082,
+      "sha256": "3b6f2a5d22e00be63fbd8c241291cbd00daf803028451c50cf1bd039a9e54272"
+    },
+    {
+      "path": "META-INF/NOTICE.md",
+      "bytes": 4430,
+      "sha256": "9eccf110cb97ace5d70fc251d71796ebbf36220eb30dd96ec9b306a56bcb1507"
+    },
+    {
+      "path": "META-INF/maven/org.glassfish.jersey.containers/jersey-container-jetty-http/pom.properties",
+      "bytes": 93,
+      "sha256": "cb1ff63663c96d177311d56e0846b03c010571fb57f2b54ef33e4e9ed4625dea"
+    },
+    {
+      "path": "META-INF/maven/org.glassfish.jersey.containers/jersey-container-jetty-http/pom.xml",
+      "bytes": 11185,
+      "sha256": "f21927a115bf916be1c3d64a98c95c7125ca48a9da053ade6873d808df3478e8"
+    },
+    {
+      "path": "META-INF/services/org.glassfish.jersey.server.spi.ContainerProvider",
+      "bytes": 54,
+      "sha256": "784f7229d82f3b656bd89f7c5f3a8d6ab3e931f56781fc4a82f749c9ea16491b"
+    },
+    {
+      "path": "META-INF/services/org.glassfish.jersey.server.spi.WebServerProvider",
+      "bytes": 51,
+      "sha256": "91d9525c6ba525ed7b3d9cf33925144a1a8023fdfdd9e077b1a6fa67bdae2ffd"
+    },
+    {
+      "path": "META-INF/versions/17/org/glassfish/jersey/jetty/internal/localization.properties",
+      "bytes": 1255,
+      "sha256": "454a4f371cbe98e20c79e1c1f80d678ebdf09c775de20a480c247a4c609e9c48"
+    },
+    {
+      "path": "org/glassfish/jersey/jetty/internal/localization.properties",
+      "bytes": 1255,
+      "sha256": "454a4f371cbe98e20c79e1c1f80d678ebdf09c775de20a480c247a4c609e9c48"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

@@ -1,0 +1,9 @@
+package org.glassfish.hk2.api;
+
+public enum ErrorType {
+   FAILURE_TO_REIFY,
+   DYNAMIC_CONFIGURATION_FAILURE,
+   SERVICE_CREATION_FAILURE,
+   SERVICE_DESTRUCTION_FAILURE,
+   VALIDATE_FAILURE;
+}

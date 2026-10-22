@@ -1,0 +1,20 @@
+{
+  "jar": "kotlin-stdlib-jdk8-1.9.10.jar",
+  "sha256": "a4c74d94d64ce1abe53760fe0389dd941f6fc558d0dab35e47c085a11ec80f28",
+  "class_entries": 1,
+  "classes": [
+    "META-INF/versions/9/module-info.class"
+  ],
+  "java_files": 0,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 219,
+      "sha256": "7a2a608b8c645c42eafa36fa81aff965598633fc1bd92a417fe871293f64c65e"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

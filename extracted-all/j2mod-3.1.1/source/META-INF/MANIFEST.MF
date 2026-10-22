@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1643245496775
+Build-Jdk: 1.8.0_301
+Built-By: User
+Bundle-Description: A Modbus TCP/UDP/Serial Master and Slave implement
+ ation
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: j2mod
+Bundle-SymbolicName: com.ghgande.j2mod
+Bundle-Version: 3.1.1
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.ghgande.j2mod.modbus.facade;uses:="com.ghgande.j2m
+ od.modbus,com.ghgande.j2mod.modbus.io,com.ghgande.j2mod.modbus.net,co
+ m.ghgande.j2mod.modbus.procimg,com.ghgande.j2mod.modbus.util";version
+ ="3.1.1",com.ghgande.j2mod.modbus.io;uses:="com.ghgande.j2mod.modbus,
+ com.ghgande.j2mod.modbus.msg,com.ghgande.j2mod.modbus.net";version="3
+ .1.1",com.ghgande.j2mod.modbus;version="3.1.1",com.ghgande.j2mod.modb
+ us.msg;uses:="com.ghgande.j2mod.modbus.io,com.ghgande.j2mod.modbus.ne
+ t,com.ghgande.j2mod.modbus.procimg,com.ghgande.j2mod.modbus.util";ver
+ sion="3.1.1",com.ghgande.j2mod.modbus.net;uses:="com.ghgande.j2mod.mo
+ dbus.io,com.ghgande.j2mod.modbus.procimg,com.ghgande.j2mod.modbus.uti
+ l";version="3.1.1",com.ghgande.j2mod.modbus.procimg;uses:="com.ghgand
+ e.j2mod.modbus.util";version="3.1.1",com.ghgande.j2mod.modbus.slave;u
+ ses:="com.ghgande.j2mod.modbus,com.ghgande.j2mod.modbus.net,com.ghgan
+ de.j2mod.modbus.procimg,com.ghgande.j2mod.modbus.util";version="3.1.1
+ ",com.ghgande.j2mod.modbus.util;uses:="com.ghgande.j2mod.modbus.msg";
+ version="3.1.1"
+Implemenation-Vendor: ${project.organization.name}
+Implementation-Title: j2mod
+Implementation-Version: 3.1.1
+Import-Package: com.fazecast.jSerialComm;version="[2.8,3)",org.slf4j;v
+ ersion="[1.6,2)"
+Main-Class: com.ghgande.j2mod.modbus.util.ModPoll
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.5.0.201709291849

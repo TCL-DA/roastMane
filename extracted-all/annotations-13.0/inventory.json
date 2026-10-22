@@ -1,0 +1,61 @@
+{
+  "jar": "annotations-13.0.jar",
+  "sha256": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478",
+  "class_entries": 32,
+  "classes": [
+    "org/intellij/lang/annotations/Flow.class",
+    "org/intellij/lang/annotations/Identifier.class",
+    "org/intellij/lang/annotations/JdkConstants$AdjustableOrientation.class",
+    "org/intellij/lang/annotations/JdkConstants$BoxLayoutAxis.class",
+    "org/intellij/lang/annotations/JdkConstants$CalendarMonth.class",
+    "org/intellij/lang/annotations/JdkConstants$CursorType.class",
+    "org/intellij/lang/annotations/JdkConstants$FlowLayoutAlignment.class",
+    "org/intellij/lang/annotations/JdkConstants$FontStyle.class",
+    "org/intellij/lang/annotations/JdkConstants$HorizontalAlignment.class",
+    "org/intellij/lang/annotations/JdkConstants$InputEventMask.class",
+    "org/intellij/lang/annotations/JdkConstants$ListSelectionMode.class",
+    "org/intellij/lang/annotations/JdkConstants$PatternFlags.class",
+    "org/intellij/lang/annotations/JdkConstants$TabLayoutPolicy.class",
+    "org/intellij/lang/annotations/JdkConstants$TabPlacement.class",
+    "org/intellij/lang/annotations/JdkConstants$TitledBorderJustification.class",
+    "org/intellij/lang/annotations/JdkConstants$TitledBorderTitlePosition.class",
+    "org/intellij/lang/annotations/JdkConstants$TreeSelectionMode.class",
+    "org/intellij/lang/annotations/JdkConstants.class",
+    "org/intellij/lang/annotations/Language.class",
+    "org/intellij/lang/annotations/MagicConstant.class",
+    "org/intellij/lang/annotations/Pattern.class",
+    "org/intellij/lang/annotations/PrintFormat.class",
+    "org/intellij/lang/annotations/PrintFormatPattern.class",
+    "org/intellij/lang/annotations/RegExp.class",
+    "org/intellij/lang/annotations/Subst.class",
+    "org/jetbrains/annotations/Contract.class",
+    "org/jetbrains/annotations/Nls.class",
+    "org/jetbrains/annotations/NonNls.class",
+    "org/jetbrains/annotations/NotNull.class",
+    "org/jetbrains/annotations/Nullable.class",
+    "org/jetbrains/annotations/PropertyKey.class",
+    "org/jetbrains/annotations/TestOnly.class"
+  ],
+  "java_files": 17,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 128,
+      "sha256": "6f899c5ec48c91958fe672e3f4bc951d48e70e9cf97de88f356b6805bd57c03e"
+    },
+    {
+      "path": "META-INF/maven/org.jetbrains/annotations/pom.xml",
+      "bytes": 4930,
+      "sha256": "965aeb2bedff369819bdde1bf7a0b3b89b8247dd69c88b86375d76163bb8c397"
+    },
+    {
+      "path": "META-INF/maven/org.jetbrains/annotations/pom.properties",
+      "bytes": 108,
+      "sha256": "965c897ac1473ff848649acae0eb9409c6b9fcc87941f68ed13924947573629b"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

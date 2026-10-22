@@ -1,0 +1,92 @@
+{
+  "jar": "jakarta.activation-api-2.1.0.jar",
+  "sha256": "56e8d994095fe49c28138c60291482f66f18d12ac2b720e938697dce6a3135c7",
+  "class_entries": 43,
+  "classes": [
+    "jakarta/activation/FileDataSource.class",
+    "jakarta/activation/DataSource.class",
+    "jakarta/activation/FileTypeMap.class",
+    "jakarta/activation/DataHandler$1.class",
+    "jakarta/activation/DataHandler.class",
+    "jakarta/activation/CommandMap.class",
+    "jakarta/activation/ActivationDataFlavor.class",
+    "jakarta/activation/DataContentHandler.class",
+    "jakarta/activation/DataContentHandlerFactory.class",
+    "jakarta/activation/CommandInfo$Beans$1.class",
+    "jakarta/activation/CommandInfo$Beans.class",
+    "jakarta/activation/CommandInfo.class",
+    "jakarta/activation/MimeType.class",
+    "jakarta/activation/MimeTypeParameterList.class",
+    "jakarta/activation/MimeTypeParseException.class",
+    "jakarta/activation/DataHandlerDataSource.class",
+    "jakarta/activation/DataSourceDataContentHandler.class",
+    "jakarta/activation/ObjectDataContentHandler.class",
+    "jakarta/activation/spi/MimeTypeRegistryProvider.class",
+    "jakarta/activation/spi/MailcapRegistryProvider.class",
+    "jakarta/activation/MimeTypeRegistry.class",
+    "jakarta/activation/MimeTypeEntry.class",
+    "jakarta/activation/MailcapRegistry.class",
+    "jakarta/activation/SecuritySupport$1.class",
+    "jakarta/activation/SecuritySupport$2.class",
+    "jakarta/activation/SecuritySupport$3.class",
+    "jakarta/activation/SecuritySupport$4.class",
+    "jakarta/activation/SecuritySupport$5.class",
+    "jakarta/activation/SecuritySupport.class",
+    "jakarta/activation/MimetypesFileTypeMap$1.class",
+    "jakarta/activation/MimetypesFileTypeMap.class",
+    "jakarta/activation/CommandObject.class",
+    "jakarta/activation/ServiceLoaderUtil$ExceptionHandler.class",
+    "jakarta/activation/ServiceLoaderUtil.class",
+    "jakarta/activation/UnsupportedDataTypeException.class",
+    "jakarta/activation/LogSupport.class",
+    "jakarta/activation/MailcapCommandMap$1.class",
+    "jakarta/activation/MailcapCommandMap.class",
+    "jakarta/activation/FactoryFinder$1.class",
+    "jakarta/activation/FactoryFinder$2.class",
+    "jakarta/activation/FactoryFinder.class",
+    "jakarta/activation/URLDataSource.class",
+    "module-info.class"
+  ],
+  "java_files": 30,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 998,
+      "sha256": "c6d312026db4cf58ced72f11e5e5403c55e6c1fde4c2bda93fe01fd4b963f4ed"
+    },
+    {
+      "path": "META-INF/mailcap.default",
+      "bytes": 733,
+      "sha256": "e26fed11561feb323c23d3f2cbbd6ed3888a6cf2c79cfe1c3973bbac16eb7759"
+    },
+    {
+      "path": "META-INF/mimetypes.default",
+      "bytes": 903,
+      "sha256": "a29d616ce79b8ba1abd7056c8a12307dbfd1b3590d5e39a432c91f925c638e30"
+    },
+    {
+      "path": "META-INF/LICENSE.md",
+      "bytes": 1638,
+      "sha256": "87eba02f8a415f1a25de6ca3ac6b5c77eb33f33f00ae5a5f9d6ee963147f7956"
+    },
+    {
+      "path": "META-INF/NOTICE.md",
+      "bytes": 750,
+      "sha256": "aec9d66e474fa5a26f57a2a99d4ca5b38969518caa8f5ea59767d13e4ff6080e"
+    },
+    {
+      "path": "META-INF/maven/jakarta.activation/jakarta.activation-api/pom.xml",
+      "bytes": 17942,
+      "sha256": "870d2a75cc92e0aec37e8d163710552d3543189e81e9ca9009a325df760c2b06"
+    },
+    {
+      "path": "META-INF/maven/jakarta.activation/jakarta.activation-api/pom.properties",
+      "bytes": 75,
+      "sha256": "4164ac99c881c75b406debdca6827c3a6b25b660ca7d0f0886ba77caf1a41de9"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

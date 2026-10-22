@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import com.cropster.roastingintelligence.ui.components.TimeEditor?>
+<?import com.cropster.roastingintelligence.ui.components.TitledPaneRight?>
+<?import com.cropster.roastingintelligence.ui.components.ToggleSwitch?>
+
+<fx:root type="javafx.scene.layout.GridPane" styleClass="channel-configuration-panel" prefWidth="500" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Insets fx:id="SWITCH_MARGIN" right="80.0"/>
+        <SVGImage fx:id="ICON_DRAG_AND_DROP" icon="DRAG_AND_DROP"/>
+        <ToggleGroup fx:id="separatorToggleGroup"/>
+    </fx:define>
+    <columnConstraints>
+        <ColumnConstraints halignment="LEFT" hgrow="NEVER" minWidth="24.0"/>
+        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints valignment="CENTER" minHeight="24.0" vgrow="NEVER"/>
+        <RowConstraints vgrow="ALWAYS"/>
+    </rowConstraints>
+
+    <!-- Note: title pane's text must be set to " " otherwise the graphics is not pushed to the right. -->
+    <TitledPaneRight fx:id="titledPanel" text=" " contentDisplay="RIGHT" managed="${enableSwitch.on}" visible="${enableSwitch.on}" maxHeight="Infinity" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.rowSpan="2">
+        <styleClass>
+            <!-- CR: The following style is added to remove the default top gray line -->
+            <String fx:value="titled-pane__header"/>
+        </styleClass>
+        <graphic>
+            <!-- Use to give the same separation space of measurements and slider controls -->
+            <HBox prefHeight="24.0" prefWidth="2.0"/>
+        </graphic>
+        <content>
+            <BorderPane>
+                <center>
+                    <VBox spacing="16" fillWidth="true">
+                        <GridPane fx:id="configurationPanel" styleClass="channel-configuration-panel__content" managed="${configurationPanel.visible}">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="NEVER"/>
+                                <ColumnConstraints hgrow="NEVER"/>
+                                <ColumnConstraints hgrow="NEVER"/>
+                                <ColumnConstraints hgrow="ALWAYS"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="NEVER"/>
+                                <RowConstraints vgrow="NEVER"/>
+                                <RowConstraints vgrow="NEVER"/>
+                            </rowConstraints>
+
+                            <CheckBox fx:id="customNameCheckbox" text="%Custom name" prefHeight="24" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                            <TextField fx:id="customNameField" disable="${!customNameCheckbox.selected}" prefHeight="24" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.columnSpan="3"/>
+
+                            <CheckBox fx:id="separatorCheckbox" text="%Show separator" prefHeight="24" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                            <RadioButton fx:id="separatorAboveRadio" text="%Above" toggleGroup="$separatorToggleGroup" disable="${!separatorCheckbox.selected}" selected="true" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                            <RadioButton fx:id="separatorBelowRadio" text="%Below" toggleGroup="$separatorToggleGroup" disable="${!separatorCheckbox.selected}" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+
+                            <HBox spacing="8" alignment="CENTER_LEFT" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="4">
+                                <CheckBox fx:id="timerEnabledCheckbox" text="%Enable self-turn-off timer once activated" prefHeight="24"/>
+                                <TimeEditor fx:id="timerIntervalEditor" disable="${!timerEnabledCheckbox.selected}" negativeAllowed="false" maxWidth="Infinity" styleClass="infinite-width" prefHeight="24"/>
+                            </HBox>
+                        </GridPane>
+                    </VBox>
+                </center>
+            </BorderPane>
+        </content>
+    </TitledPaneRight>
+
+    <!-- All the following will overlay above the title pane. -->
+    <Label fx:id="dragRegion" graphic="$ICON_DRAG_AND_DROP" styleClass="dragable" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <ToggleSwitch fx:id="enableSwitch" text="${controller.visibleName}" captionPosition="RIGHT" alignment="CENTER_LEFT" styleClass="toggle-switch--small" GridPane.margin="$SWITCH_MARGIN" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+</fx:root>

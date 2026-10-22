@@ -1,0 +1,23 @@
+{
+  "jar": "converter-gson-2.9.0.jar",
+  "sha256": "32aa206b9a29c9df5eda93a092cfb3b0b9133e232c062baa882f0319f0e79f0e",
+  "class_entries": 4,
+  "classes": [
+    "retrofit2/converter/gson/GsonRequestBodyConverter.class",
+    "retrofit2/converter/gson/GsonConverterFactory.class",
+    "retrofit2/converter/gson/GsonResponseBodyConverter.class",
+    "retrofit2/converter/gson/package-info.class"
+  ],
+  "java_files": 4,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 74,
+      "sha256": "5d42a0ac5bd764a62b42a396e1c9fdf2d5d74fefea32e43eec54ad1ac8e87a1c"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

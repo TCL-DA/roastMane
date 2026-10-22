@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven Bundle Plugin
+Built-By: jenkins
+Build-Jdk: 17.0.2
+Multi-Release: true
+Bnd-LastModified: 1680507839817
+Build-Jdk-Spec: 17
+Bundle-Description: Eclipse Yasson. Reference implementation of JSR-367 
+ (JSON-B).
+Bundle-DocURL: http://www.oracle.com/
+Bundle-License: http://www.eclipse.org/legal/epl-v20.html, http://www.ec
+ lipse.org/org/documents/edl-v10.php
+Bundle-ManifestVersion: 2
+Bundle-Name: Yasson
+Bundle-SymbolicName: yasson
+Bundle-Vendor: Oracle Corporation
+Bundle-Version: 3.0.3
+Export-Package: org.eclipse.yasson;uses:="jakarta.json,jakarta.json.bind
+ ,jakarta.json.bind.config,jakarta.json.bind.serializer,jakarta.json.bin
+ d.spi,jakarta.json.stream";version="3.0.3"
+Import-Package: jakarta.enterprise.context.spi;resolution:=optional,jaka
+ rta.enterprise.inject.spi;resolution:=optional,jakarta.json;version="[2
+ .1,3)",jakarta.json.bind;version="[3.0,4)",jakarta.json.bind.adapter;ve
+ rsion="[3.0,4)",jakarta.json.bind.annotation;version="[3.0,4)",jakarta.
+ json.bind.config;version="[3.0,4)",jakarta.json.bind.serializer;version
+ ="[3.0,4)",jakarta.json.bind.spi;version="[3.0,4)",jakarta.json.spi;ver
+ sion="[2.1,3)",jakarta.json.stream;version="[2.1,3)",java.beans;resolut
+ ion:=optional,javax.naming;resolution:=optional,javax.xml.datatype
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=11))"
+Tool: Bnd-5.1.1.202006162103
+

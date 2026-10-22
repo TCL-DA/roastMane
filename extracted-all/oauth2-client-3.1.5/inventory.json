@@ -1,0 +1,75 @@
+{
+  "jar": "oauth2-client-3.1.5.jar",
+  "sha256": "e4438908ccc9cd5103734052760133bcd70428bf2fe6c34b18bfa4e54c152367",
+  "class_entries": 31,
+  "classes": [
+    "org/glassfish/jersey/client/oauth2/AbstractAuthorizationCodeGrantBuilder.class",
+    "org/glassfish/jersey/client/oauth2/AuthCodeGrantImpl$1.class",
+    "org/glassfish/jersey/client/oauth2/AuthCodeGrantImpl$Builder.class",
+    "org/glassfish/jersey/client/oauth2/AuthCodeGrantImpl$DefaultTokenMessageBodyReader$1.class",
+    "org/glassfish/jersey/client/oauth2/AuthCodeGrantImpl$DefaultTokenMessageBodyReader.class",
+    "org/glassfish/jersey/client/oauth2/AuthCodeGrantImpl.class",
+    "org/glassfish/jersey/client/oauth2/ClientIdentifier.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2ClientFeature.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2ClientFilter.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2ClientSupport.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2CodeGrantFlow$1.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2CodeGrantFlow$Builder.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2CodeGrantFlow$Phase$1.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2CodeGrantFlow$Phase$2.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2CodeGrantFlow$Phase$3.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2CodeGrantFlow$Phase$4.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2CodeGrantFlow$Phase.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2CodeGrantFlow.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2FlowFacebookBuilder$FacebookTokenMessageBodyReader.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2FlowFacebookBuilder.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2FlowGoogleBuilder$AccessType.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2FlowGoogleBuilder$Display.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2FlowGoogleBuilder$Prompt.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2FlowGoogleBuilder.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2Parameters$GrantType.class",
+    "org/glassfish/jersey/client/oauth2/OAuth2Parameters.class",
+    "org/glassfish/jersey/client/oauth2/TokenResult.class",
+    "org/glassfish/jersey/client/oauth2/internal/LocalizationMessages$1.class",
+    "org/glassfish/jersey/client/oauth2/internal/LocalizationMessages$BundleSupplier.class",
+    "org/glassfish/jersey/client/oauth2/internal/LocalizationMessages.class",
+    "org/glassfish/jersey/client/oauth2/package-info.class"
+  ],
+  "java_files": 13,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 81,
+      "sha256": "2a185c3a3a6b39d2987b2acabd0af36555390a556370ce50072b34e97c317963"
+    },
+    {
+      "path": "META-INF/LICENSE.md",
+      "bytes": 35082,
+      "sha256": "3b6f2a5d22e00be63fbd8c241291cbd00daf803028451c50cf1bd039a9e54272"
+    },
+    {
+      "path": "META-INF/NOTICE.md",
+      "bytes": 4430,
+      "sha256": "9eccf110cb97ace5d70fc251d71796ebbf36220eb30dd96ec9b306a56bcb1507"
+    },
+    {
+      "path": "org/glassfish/jersey/client/oauth2/internal/localization.properties",
+      "bytes": 1167,
+      "sha256": "992d8a034a371f59b31a187da4479f033a19a7033874bac7b9b550593b104eb8"
+    },
+    {
+      "path": "META-INF/maven/org.glassfish.jersey.security/oauth2-client/pom.xml",
+      "bytes": 2900,
+      "sha256": "18d0b6876a626e2c3116ae263999bb409507368a477c633894e1aef16f23ab51"
+    },
+    {
+      "path": "META-INF/maven/org.glassfish.jersey.security/oauth2-client/pom.properties",
+      "bytes": 77,
+      "sha256": "394477ccadcb858a39fe5f0e4a141c9008083c2ceedfe81f99f76c01c5b469cf"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

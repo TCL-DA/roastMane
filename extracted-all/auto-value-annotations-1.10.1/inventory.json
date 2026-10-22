@@ -1,0 +1,38 @@
+{
+  "jar": "auto-value-annotations-1.10.1.jar",
+  "sha256": "a4fe0a211925e938a8510d741763ee1171a11bf931f5891ef4d4ee84fca72be2",
+  "class_entries": 9,
+  "classes": [
+    "com/google/auto/value/extension/serializable/SerializableAutoValue.class",
+    "com/google/auto/value/extension/memoized/Memoized.class",
+    "com/google/auto/value/extension/toprettystring/ToPrettyString.class",
+    "com/google/auto/value/AutoBuilder.class",
+    "com/google/auto/value/AutoOneOf.class",
+    "com/google/auto/value/AutoAnnotation.class",
+    "com/google/auto/value/AutoValue$CopyAnnotations.class",
+    "com/google/auto/value/AutoValue$Builder.class",
+    "com/google/auto/value/AutoValue.class"
+  ],
+  "java_files": 7,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 81,
+      "sha256": "2a185c3a3a6b39d2987b2acabd0af36555390a556370ce50072b34e97c317963"
+    },
+    {
+      "path": "META-INF/maven/com.google.auto.value/auto-value-annotations/pom.xml",
+      "bytes": 2747,
+      "sha256": "9fbacc8694d1904dfb4d5af1e4a5460fd64c1ca9d0049d1814542cd2ad28b047"
+    },
+    {
+      "path": "META-INF/maven/com.google.auto.value/auto-value-annotations/pom.properties",
+      "bytes": 79,
+      "sha256": "830a773ffe801637aa115e948e7d87f7388f61da4ce5609c9b6cadc4e1d53320"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

@@ -1,0 +1,82 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven Bundle Plugin
+Built-By: vd
+Build-Jdk: 11.0.21
+Specification-Title: Nimbus JOSE+JWT
+Specification-Version: 9.37.3
+Specification-Vendor: Connect2id Ltd.
+Implementation-Title: Nimbus JOSE+JWT
+Implementation-Version: 9.37.3
+Implementation-Vendor-Id: com.nimbusds
+Implementation-Vendor: Connect2id Ltd.
+Implementation-URL: https://bitbucket.org/connect2id/nimbus-jose-jwt
+Automatic-Module-Name: com.nimbusds.jose.jwt
+Build-Date: ${timestamp}
+Build-Number: ${buildNumber}
+Build-Tag: 9.37.3
+Bnd-LastModified: 1702025275303
+Bundle-Description: Java library for Javascript Object Signing and Encry
+ ption (JOSE) and        JSON Web Tokens (JWT)
+Bundle-DocURL: https://connect2id.com
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Nimbus JOSE+JWT
+Bundle-SymbolicName: com.nimbusds.nimbus-jose-jwt
+Bundle-Vendor: Connect2id Ltd.
+Bundle-Version: 9.37.3
+Export-Package: com.nimbusds.jose;uses:="com.nimbusds.jose.jca,com.nimbu
+ sds.jose.jwk,com.nimbusds.jose.util,com.nimbusds.jwt,net.jcip.annotatio
+ ns";version="9.37.3",com.nimbusds.jose.crypto;uses:="com.nimbusds.jose,
+ com.nimbusds.jose.crypto.impl,com.nimbusds.jose.jwk,com.nimbusds.jose.u
+ til,javax.crypto,net.jcip.annotations";version="9.37.3",com.nimbusds.jo
+ se.crypto.bc;uses:="org.bouncycastle.jcajce.provider,org.bouncycastle.j
+ ce.provider";version="9.37.3",com.nimbusds.jose.crypto.factories;uses:=
+ "com.nimbusds.jose,com.nimbusds.jose.jca,com.nimbusds.jose.jwk,com.nimb
+ usds.jose.proc,com.nimbusds.jose.produce,net.jcip.annotations";version=
+ "9.37.3",com.nimbusds.jose.crypto.impl;uses:="com.nimbusds.jose,com.nim
+ busds.jose.jca,com.nimbusds.jose.jwk,com.nimbusds.jose.util,javax.crypt
+ o,net.jcip.annotations,org.bouncycastle.crypto.engines";version="9.37.3
+ ",com.nimbusds.jose.crypto.opts;uses:="com.nimbusds.jose,net.jcip.annot
+ ations";version="9.37.3",com.nimbusds.jose.crypto.utils;version="9.37.3
+ ",com.nimbusds.jose.jca;uses:="com.nimbusds.jose";version="9.37.3",com.
+ nimbusds.jose.jwk;uses:="com.nimbusds.jose,com.nimbusds.jose.util,javax
+ .crypto,net.jcip.annotations";version="9.37.3",com.nimbusds.jose.jwk.ge
+ n;uses:="com.nimbusds.jose,com.nimbusds.jose.jwk";version="9.37.3",com.
+ nimbusds.jose.jwk.source;uses:="com.nimbusds.jose,com.nimbusds.jose.jwk
+ ,com.nimbusds.jose.proc,com.nimbusds.jose.util,com.nimbusds.jose.util.e
+ vents,com.nimbusds.jose.util.health,javax.crypto,net.jcip.annotations";
+ version="9.37.3",com.nimbusds.jose.mint;uses:="com.nimbusds.jose,com.ni
+ mbusds.jose.jwk.source,com.nimbusds.jose.proc,com.nimbusds.jose.produce
+ ";version="9.37.3",com.nimbusds.jose.proc;uses:="com.nimbusds.jose,com.
+ nimbusds.jose.jwk,com.nimbusds.jose.jwk.source,net.jcip.annotations";ve
+ rsion="9.37.3",com.nimbusds.jose.produce;uses:="com.nimbusds.jose,com.n
+ imbusds.jose.jwk";version="9.37.3",com.nimbusds.jose.util;uses:="com.ni
+ mbusds.jose,javax.crypto,javax.net.ssl,net.jcip.annotations";version="9
+ .37.3",com.nimbusds.jose.util.cache;uses:="net.jcip.annotations";versio
+ n="9.37.3",com.nimbusds.jose.util.events;uses:="com.nimbusds.jose.proc"
+ ;version="9.37.3",com.nimbusds.jose.util.health;uses:="com.nimbusds.jos
+ e.proc,com.nimbusds.jose.util.events,net.jcip.annotations";version="9.3
+ 7.3",com.nimbusds.jwt;uses:="com.nimbusds.jose,com.nimbusds.jose.util,n
+ et.jcip.annotations";version="9.37.3",com.nimbusds.jwt.proc;uses:="com.
+ nimbusds.jose,com.nimbusds.jose.proc,com.nimbusds.jwt,net.jcip.annotati
+ ons";version="9.37.3",com.nimbusds.jwt.util;version="9.37.3"
+Import-Package: com.google.crypto.tink.subtle;resolution:=optional,com.g
+ oogle.gson;version="[2.10,3)";resolution:=optional,com.google.gson.inte
+ rnal;resolution:=optional,com.google.gson.reflect;version="[2.10,3)";re
+ solution:=optional,javax.crypto,javax.crypto.spec,javax.net.ssl,net.jci
+ p.annotations,org.bouncycastle.asn1;version="[1.77,2)";resolution:=opti
+ onal,org.bouncycastle.asn1.pkcs;version="[1.77,2)";resolution:=optional
+ ,org.bouncycastle.asn1.x509;version="[1.77,2)";resolution:=optional,org
+ .bouncycastle.cert;version="[1.77,2)";resolution:=optional,org.bouncyca
+ stle.cert.jcajce;version="[1.77,2)";resolution:=optional,org.bouncycast
+ le.crypto;version="[1.77,2)";resolution:=optional,org.bouncycastle.cryp
+ to.engines;version="[1.77,2)";resolution:=optional,org.bouncycastle.cry
+ pto.modes;version="[1.77,2)";resolution:=optional,org.bouncycastle.cryp
+ to.params;version="[1.77,2)";resolution:=optional,org.bouncycastle.jcaj
+ ce.provider;resolution:=optional,org.bouncycastle.jce.provider;version=
+ "[1.77,2)";resolution:=optional,org.bouncycastle.openssl;version="[1.77
+ ,2)";resolution:=optional,org.bouncycastle.openssl.jcajce;version="[1.7
+ 7,2)";resolution:=optional
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Tool: Bnd-2.3.0.201405100607
+

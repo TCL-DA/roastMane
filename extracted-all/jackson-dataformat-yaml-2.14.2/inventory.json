@@ -1,0 +1,70 @@
+{
+  "jar": "jackson-dataformat-yaml-2.14.2.jar",
+  "sha256": "5c3a0a71d0339529c80ae771497b20fdc0fa7cb67c772f99af5935927560006a",
+  "class_entries": 21,
+  "classes": [
+    "com/fasterxml/jackson/dataformat/yaml/JacksonYAMLParseException.class",
+    "com/fasterxml/jackson/dataformat/yaml/PackageVersion.class",
+    "com/fasterxml/jackson/dataformat/yaml/UTF8Reader.class",
+    "com/fasterxml/jackson/dataformat/yaml/UTF8Writer.class",
+    "com/fasterxml/jackson/dataformat/yaml/YAMLFactory.class",
+    "com/fasterxml/jackson/dataformat/yaml/YAMLFactoryBuilder.class",
+    "com/fasterxml/jackson/dataformat/yaml/YAMLGenerator$Feature.class",
+    "com/fasterxml/jackson/dataformat/yaml/YAMLGenerator.class",
+    "com/fasterxml/jackson/dataformat/yaml/YAMLMapper$Builder.class",
+    "com/fasterxml/jackson/dataformat/yaml/YAMLMapper.class",
+    "com/fasterxml/jackson/dataformat/yaml/YAMLParser$Feature.class",
+    "com/fasterxml/jackson/dataformat/yaml/YAMLParser.class",
+    "com/fasterxml/jackson/dataformat/yaml/package-info.class",
+    "com/fasterxml/jackson/dataformat/yaml/snakeyaml/error/Mark.class",
+    "com/fasterxml/jackson/dataformat/yaml/snakeyaml/error/MarkedYAMLException.class",
+    "com/fasterxml/jackson/dataformat/yaml/snakeyaml/error/YAMLException.class",
+    "com/fasterxml/jackson/dataformat/yaml/snakeyaml/error/package-info.class",
+    "com/fasterxml/jackson/dataformat/yaml/util/StringQuotingChecker$Default.class",
+    "com/fasterxml/jackson/dataformat/yaml/util/StringQuotingChecker.class",
+    "com/fasterxml/jackson/dataformat/yaml/util/package-info.class",
+    "META-INF/versions/9/module-info.class"
+  ],
+  "java_files": 16,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 2745,
+      "sha256": "06ef943db7f6272c576dfbc1198145930fd6216b793b6d6b7fa9362ddb31d6b3"
+    },
+    {
+      "path": "META-INF/LICENSE",
+      "bytes": 317,
+      "sha256": "9cbf648c6a2670783361baf7e5cbc965afd41905d704d6600486b40a057d76cc"
+    },
+    {
+      "path": "META-INF/NOTICE",
+      "bytes": 825,
+      "sha256": "41c338db0adac3ea540c53845bd4cec40d437e843b22c84ae08375a4d6442543"
+    },
+    {
+      "path": "META-INF/maven/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/pom.properties",
+      "bytes": 91,
+      "sha256": "7324632cf7cfa5e7e4581cc3ee161d7e48afb927fb65086b9ee9919c2c46f667"
+    },
+    {
+      "path": "META-INF/maven/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/pom.xml",
+      "bytes": 2635,
+      "sha256": "4dbf4b503cfb2b42bb376930f39f444269ba6b9e3595f813d853a1b423eb984b"
+    },
+    {
+      "path": "META-INF/services/com.fasterxml.jackson.core.JsonFactory",
+      "bytes": 50,
+      "sha256": "6d4681a7e931eb8682e37b404762decb4f2d2872c065137665d064cae5793034"
+    },
+    {
+      "path": "META-INF/services/com.fasterxml.jackson.core.ObjectCodec",
+      "bytes": 49,
+      "sha256": "d52dd5e1e07abdc4ea3ece5de02e0a47032a70919c95ae04d6062c3cf5af3915"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

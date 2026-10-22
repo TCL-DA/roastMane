@@ -1,0 +1,104 @@
+[
+  {
+    "jar": "classgraph-4.8.161.jar",
+    "version": "9",
+    "exit": 0,
+    "java_files": 1
+  },
+  {
+    "jar": "gson-2.9.1.jar",
+    "version": "9",
+    "exit": 0,
+    "java_files": 1
+  },
+  {
+    "jar": "jackson-core-2.14.2.jar",
+    "version": "9",
+    "exit": 0,
+    "java_files": 1
+  },
+  {
+    "jar": "jackson-databind-2.14.2.jar",
+    "version": "9",
+    "exit": 0,
+    "java_files": 1
+  },
+  {
+    "jar": "jackson-dataformat-yaml-2.14.2.jar",
+    "version": "9",
+    "exit": 0,
+    "java_files": 1
+  },
+  {
+    "jar": "jackson-module-jakarta-xmlbind-annotations-2.14.2.jar",
+    "version": "11",
+    "exit": 0,
+    "java_files": 1
+  },
+  {
+    "jar": "jcl-over-slf4j-2.0.18.jar",
+    "version": "9",
+    "exit": 0,
+    "java_files": 1
+  },
+  {
+    "jar": "jersey-container-jetty-http-3.1.5.jar",
+    "version": "17",
+    "exit": 0,
+    "java_files": 7
+  },
+  {
+    "jar": "kotlin-stdlib-1.9.10.jar",
+    "version": "9",
+    "exit": 0,
+    "java_files": 1
+  },
+  {
+    "jar": "kotlin-stdlib-jdk7-1.9.10.jar",
+    "version": "9",
+    "exit": 0,
+    "java_files": 1
+  },
+  {
+    "jar": "kotlin-stdlib-jdk8-1.9.10.jar",
+    "version": "9",
+    "exit": 0,
+    "java_files": 1
+  },
+  {
+    "jar": "log4j-api-2.26.0.jar",
+    "version": "9",
+    "exit": 0,
+    "java_files": 4
+  },
+  {
+    "jar": "log4j-core-2.26.0.jar",
+    "version": "9",
+    "exit": 0,
+    "java_files": 5
+  },
+  {
+    "jar": "retrofit-2.11.0.jar",
+    "version": "14",
+    "exit": 0,
+    "java_files": 1
+  },
+  {
+    "jar": "retrofit-2.11.0.jar",
+    "version": "16",
+    "exit": 0,
+    "java_files": 1
+  },
+  {
+    "jar": "slf4j-api-2.0.18.jar",
+    "version": "9",
+    "exit": 0,
+    "java_files": 1
+  },
+  {
+    "jar": "yasson-3.0.3.jar",
+    "version": "16",
+    "exit": 0,
+    "java_files": 1
+  }
+]

@@ -1,0 +1,785 @@
+{
+  "jar": "commons-codec-1.15.jar",
+  "sha256": "b3e9f6d63a790109bf0d056611fbed1cf69055826defeb9894a71369d246ed63",
+  "class_entries": 106,
+  "classes": [
+    "org/apache/commons/codec/BinaryDecoder.class",
+    "org/apache/commons/codec/BinaryEncoder.class",
+    "org/apache/commons/codec/CharEncoding.class",
+    "org/apache/commons/codec/Charsets.class",
+    "org/apache/commons/codec/CodecPolicy.class",
+    "org/apache/commons/codec/Decoder.class",
+    "org/apache/commons/codec/DecoderException.class",
+    "org/apache/commons/codec/Encoder.class",
+    "org/apache/commons/codec/EncoderException.class",
+    "org/apache/commons/codec/Resources.class",
+    "org/apache/commons/codec/StringDecoder.class",
+    "org/apache/commons/codec/StringEncoder.class",
+    "org/apache/commons/codec/StringEncoderComparator.class",
+    "org/apache/commons/codec/binary/Base16.class",
+    "org/apache/commons/codec/binary/Base16InputStream.class",
+    "org/apache/commons/codec/binary/Base16OutputStream.class",
+    "org/apache/commons/codec/binary/Base32.class",
+    "org/apache/commons/codec/binary/Base32InputStream.class",
+    "org/apache/commons/codec/binary/Base32OutputStream.class",
+    "org/apache/commons/codec/binary/Base64.class",
+    "org/apache/commons/codec/binary/Base64InputStream.class",
+    "org/apache/commons/codec/binary/Base64OutputStream.class",
+    "org/apache/commons/codec/binary/BaseNCodec$Context.class",
+    "org/apache/commons/codec/binary/BaseNCodec.class",
+    "org/apache/commons/codec/binary/BaseNCodecInputStream.class",
+    "org/apache/commons/codec/binary/BaseNCodecOutputStream.class",
+    "org/apache/commons/codec/binary/BinaryCodec.class",
+    "org/apache/commons/codec/binary/CharSequenceUtils.class",
+    "org/apache/commons/codec/binary/Hex.class",
+    "org/apache/commons/codec/binary/StringUtils.class",
+    "org/apache/commons/codec/cli/Digest.class",
+    "org/apache/commons/codec/digest/B64.class",
+    "org/apache/commons/codec/digest/Crypt.class",
+    "org/apache/commons/codec/digest/DigestUtils.class",
+    "org/apache/commons/codec/digest/HmacAlgorithms.class",
+    "org/apache/commons/codec/digest/HmacUtils.class",
+    "org/apache/commons/codec/digest/Md5Crypt.class",
+    "org/apache/commons/codec/digest/MessageDigestAlgorithms.class",
+    "org/apache/commons/codec/digest/MurmurHash2.class",
+    "org/apache/commons/codec/digest/MurmurHash3$IncrementalHash32.class",
+    "org/apache/commons/codec/digest/MurmurHash3$IncrementalHash32x86.class",
+    "org/apache/commons/codec/digest/MurmurHash3.class",
+    "org/apache/commons/codec/digest/PureJavaCrc32.class",
+    "org/apache/commons/codec/digest/PureJavaCrc32C.class",
+    "org/apache/commons/codec/digest/Sha2Crypt.class",
+    "org/apache/commons/codec/digest/UnixCrypt.class",
+    "org/apache/commons/codec/digest/XXHash32.class",
+    "org/apache/commons/codec/language/AbstractCaverphone.class",
+    "org/apache/commons/codec/language/Caverphone.class",
+    "org/apache/commons/codec/language/Caverphone1.class",
+    "org/apache/commons/codec/language/Caverphone2.class",
+    "org/apache/commons/codec/language/ColognePhonetic$CologneBuffer.class",
+    "org/apache/commons/codec/language/ColognePhonetic$CologneInputBuffer.class",
+    "org/apache/commons/codec/language/ColognePhonetic$CologneOutputBuffer.class",
+    "org/apache/commons/codec/language/ColognePhonetic.class",
+    "org/apache/commons/codec/language/DaitchMokotoffSoundex$1.class",
+    "org/apache/commons/codec/language/DaitchMokotoffSoundex$Branch.class",
+    "org/apache/commons/codec/language/DaitchMokotoffSoundex$Rule.class",
+    "org/apache/commons/codec/language/DaitchMokotoffSoundex.class",
+    "org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult.class",
+    "org/apache/commons/codec/language/DoubleMetaphone.class",
+    "org/apache/commons/codec/language/MatchRatingApproachEncoder.class",
+    "org/apache/commons/codec/language/Metaphone.class",
+    "org/apache/commons/codec/language/Nysiis.class",
+    "org/apache/commons/codec/language/RefinedSoundex.class",
+    "org/apache/commons/codec/language/Soundex.class",
+    "org/apache/commons/codec/language/SoundexUtils.class",
+    "org/apache/commons/codec/language/bm/BeiderMorseEncoder.class",
+    "org/apache/commons/codec/language/bm/Lang$1.class",
+    "org/apache/commons/codec/language/bm/Lang$LangRule.class",
+    "org/apache/commons/codec/language/bm/Lang.class",
+    "org/apache/commons/codec/language/bm/Languages$1.class",
+    "org/apache/commons/codec/language/bm/Languages$2.class",
+    "org/apache/commons/codec/language/bm/Languages$LanguageSet.class",
+    "org/apache/commons/codec/language/bm/Languages$SomeLanguages.class",
+    "org/apache/commons/codec/language/bm/Languages.class",
+    "org/apache/commons/codec/language/bm/NameType.class",
+    "org/apache/commons/codec/language/bm/PhoneticEngine$1.class",
+    "org/apache/commons/codec/language/bm/PhoneticEngine$PhonemeBuilder.class",
+    "org/apache/commons/codec/language/bm/PhoneticEngine$RulesApplication.class",
+    "org/apache/commons/codec/language/bm/PhoneticEngine.class",
+    "org/apache/commons/codec/language/bm/ResourceConstants.class",
+    "org/apache/commons/codec/language/bm/Rule$1.class",
+    "org/apache/commons/codec/language/bm/Rule$10.class",
+    "org/apache/commons/codec/language/bm/Rule$2.class",
+    "org/apache/commons/codec/language/bm/Rule$3.class",
+    "org/apache/commons/codec/language/bm/Rule$4.class",
+    "org/apache/commons/codec/language/bm/Rule$5.class",
+    "org/apache/commons/codec/language/bm/Rule$6.class",
+    "org/apache/commons/codec/language/bm/Rule$7.class",
+    "org/apache/commons/codec/language/bm/Rule$8.class",
+    "org/apache/commons/codec/language/bm/Rule$9.class",
+    "org/apache/commons/codec/language/bm/Rule$Phoneme$1.class",
+    "org/apache/commons/codec/language/bm/Rule$Phoneme.class",
+    "org/apache/commons/codec/language/bm/Rule$PhonemeExpr.class",
+    "org/apache/commons/codec/language/bm/Rule$PhonemeList.class",
+    "org/apache/commons/codec/language/bm/Rule$RPattern.class",
+    "org/apache/commons/codec/language/bm/Rule.class",
+    "org/apache/commons/codec/language/bm/RuleType.class",
+    "org/apache/commons/codec/net/BCodec.class",
+    "org/apache/commons/codec/net/PercentCodec.class",
+    "org/apache/commons/codec/net/QCodec.class",
+    "org/apache/commons/codec/net/QuotedPrintableCodec.class",
+    "org/apache/commons/codec/net/RFC1522Codec.class",
+    "org/apache/commons/codec/net/URLCodec.class",
+    "org/apache/commons/codec/net/Utils.class"
+  ],
+  "java_files": 72,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 19823,
+      "sha256": "6edc52c7f93cc2d15b59e5e9076f3d4c74f17c8429af091c0385d1840e16d0d5"
+    },
+    {
+      "path": "META-INF/LICENSE.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "META-INF/NOTICE.txt",
+      "bytes": 733,
+      "sha256": "0e529f7dd092a0c4675485e14c3f79b0c2855fc84830a5b2d79564ba89f71ee6"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_approx_any.txt",
+      "bytes": 4708,
+      "sha256": "ad6c75e0e50b51f807d73a3d3ef46a6f666a891cb4953cc357a5d305e61e30ab"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_approx_common.txt",
+      "bytes": 4971,
+      "sha256": "da5b7febc70f860f91bcccca37c29a619a23442cc80b9cd98ad884e16d6c9854"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_approx_cyrillic.txt",
+      "bytes": 831,
+      "sha256": "a29917ea4c00bdd216db31d36205ef3829d0fb76926d189fcd8260d3700d4c57"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_approx_english.txt",
+      "bytes": 1489,
+      "sha256": "53739bd27868292338606ef7a1fd209b6253d35e94d7a4afb031769498d60d64"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_approx_french.txt",
+      "bytes": 1224,
+      "sha256": "19650e4ab69678bb849028900e4c2e867f75229c4447a0fcbf5a5bd6b3bd69c3"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_approx_german.txt",
+      "bytes": 1852,
+      "sha256": "cfc7c1ef41209af89b676ba46a183060b93dedcab1e7d730f6253f48f5af0ea9"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_approx_hebrew.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_approx_hungarian.txt",
+      "bytes": 830,
+      "sha256": "6bd249910726949afa4e5a9623ec3999151c3ef43843714a90003cfb11350309"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_approx_polish.txt",
+      "bytes": 2228,
+      "sha256": "5f56627d50d4ef0e3c8c76225d3e72fd95c8c90ae629d65d32f202f792d5912a"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_approx_romanian.txt",
+      "bytes": 830,
+      "sha256": "900bcb8b852ce9738f85efacda91bbcaf0192d662f2fa996ebbe34e115801736"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_approx_russian.txt",
+      "bytes": 1427,
+      "sha256": "b908b81325099091067ecbaab232db0215b61ebd6899d0f7d989a013363a7cb3"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_approx_spanish.txt",
+      "bytes": 830,
+      "sha256": "6bd249910726949afa4e5a9623ec3999151c3ef43843714a90003cfb11350309"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_exact_any.txt",
+      "bytes": 1952,
+      "sha256": "bc6b6b423e6af997ce45348e17f3a0d6a18617cfe67b50bdb501cc97258c3d35"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_exact_approx_common.txt",
+      "bytes": 1736,
+      "sha256": "a1f947e071423aa5c24360484f85b7139f7a3ffe77d2089e367ca152743d1a19"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_exact_common.txt",
+      "bytes": 1095,
+      "sha256": "fc3558377839a10375bb40146d9d12ec9b37487223023cc0769946aed24f352f"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_exact_cyrillic.txt",
+      "bytes": 830,
+      "sha256": "265d93b530f2f0b3b2b602afda6e912370c0b01c06df4a2987119f6320bffb44"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_exact_english.txt",
+      "bytes": 830,
+      "sha256": "265d93b530f2f0b3b2b602afda6e912370c0b01c06df4a2987119f6320bffb44"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_exact_french.txt",
+      "bytes": 830,
+      "sha256": "265d93b530f2f0b3b2b602afda6e912370c0b01c06df4a2987119f6320bffb44"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_exact_german.txt",
+      "bytes": 826,
+      "sha256": "32674f342f7c8b73fe831f46b0537df0a2b9d43c45fcded7617ddf28495c0e2a"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_exact_hebrew.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_exact_hungarian.txt",
+      "bytes": 830,
+      "sha256": "265d93b530f2f0b3b2b602afda6e912370c0b01c06df4a2987119f6320bffb44"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_exact_polish.txt",
+      "bytes": 875,
+      "sha256": "d04d6e8ea4ed593f478fe1ff150a1f57ac30557c13f9f019fcf2b1658b6ff49e"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_exact_romanian.txt",
+      "bytes": 830,
+      "sha256": "265d93b530f2f0b3b2b602afda6e912370c0b01c06df4a2987119f6320bffb44"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_exact_russian.txt",
+      "bytes": 831,
+      "sha256": "34bfa509511f7517a628330cca7c5e51464ab4eef953834054f684d02e11ffc7"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_exact_spanish.txt",
+      "bytes": 830,
+      "sha256": "265d93b530f2f0b3b2b602afda6e912370c0b01c06df4a2987119f6320bffb44"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_hebrew_common.txt",
+      "bytes": 2983,
+      "sha256": "ad11a0f537e90b0893e8624e0c997dd8e2ece13dfe8b90b366d3a773f829bee5"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_lang.txt",
+      "bytes": 4874,
+      "sha256": "93bc49f227498c3151f4f132363256429e700eece2b72e3d3bc5b7fd857cc22a"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_languages.txt",
+      "bytes": 888,
+      "sha256": "ee736888a0725497a11c74cca309ee21d520d5ad64b5541250e8f1da9138fe97"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_rules_any.txt",
+      "bytes": 9451,
+      "sha256": "bdb60c3901ab057f4c94b384b302a0bdd7a6012ac07cf4edb87bd37b9283d17b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_rules_cyrillic.txt",
+      "bytes": 2366,
+      "sha256": "361bc87691da6bfda59ff416ce61c922aae811944669fd05f537ac629eefed84"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_rules_english.txt",
+      "bytes": 2970,
+      "sha256": "7c28986e7dc911d8798ebe9f26b93d0487e632482fc5348363cd8ef94dac1a5e"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_rules_french.txt",
+      "bytes": 2274,
+      "sha256": "234f4b1eeacea6c814af4494c155799c21387f2b3ce61c47f0f5e90e9592802a"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_rules_german.txt",
+      "bytes": 2787,
+      "sha256": "00b0a4baf27ff74f992f39ff875df7b694efe7218f228734695b4b0817575758"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_rules_hebrew.txt",
+      "bytes": 1472,
+      "sha256": "1e36828bd90a0721b6513f6f687eac503dc8c1a37824ae6e6d8d496344620194"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_rules_hungarian.txt",
+      "bytes": 1960,
+      "sha256": "a247af30ac47cbaa87cc9458fe33a9fa101424d77565c7ca012b4e8b923a369d"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_rules_polish.txt",
+      "bytes": 4167,
+      "sha256": "047bf7630b038e180ac407dc6bedb45ebbc42c01a7c9be7b17845c4e9b15f250"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_rules_romanian.txt",
+      "bytes": 1526,
+      "sha256": "212f03c2a1c539a08d4664107b107bddced3a461b6d5362335c0c1039dd88d7c"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_rules_russian.txt",
+      "bytes": 3980,
+      "sha256": "9d9904d23ec6031ff620967766cf72a06f5aa9ac958ebc9ab6c4956a19c2c76b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/ash_rules_spanish.txt",
+      "bytes": 2073,
+      "sha256": "c9e410a8a5c0965b39e39362a904bd107239bbfe0176348e003423e5e4812aa0"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_any.txt",
+      "bytes": 4043,
+      "sha256": "a72bbd45de8a31aa3ceaaa06513896c4abb59bc76ef945811a3edc63b55451d4"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_arabic.txt",
+      "bytes": 991,
+      "sha256": "838a47e6f968189a4a882b82220654ca219450956d2cf0ae0336d342894c598f"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_common.txt",
+      "bytes": 5120,
+      "sha256": "edf03e4f49c343d45b63ea9c3d470b6baf95a3688c5723ad1e85bdfb860e3314"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_cyrillic.txt",
+      "bytes": 831,
+      "sha256": "f9a750d48156d8e8e1d94c8ed34dbf596c24efe945123d6e808af069dee2599a"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_czech.txt",
+      "bytes": 830,
+      "sha256": "e52b12a250fa593f99ca8a06e02b18a091518a1e6b66fd496e78a7db3888cc43"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_dutch.txt",
+      "bytes": 830,
+      "sha256": "e52b12a250fa593f99ca8a06e02b18a091518a1e6b66fd496e78a7db3888cc43"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_english.txt",
+      "bytes": 1489,
+      "sha256": "53739bd27868292338606ef7a1fd209b6253d35e94d7a4afb031769498d60d64"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_french.txt",
+      "bytes": 942,
+      "sha256": "1d9d34f64e5d8d3009749d9d818c0583463ee89f08c0f7d2b0544a4316acad47"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_german.txt",
+      "bytes": 1853,
+      "sha256": "4330f43e087759d3616b02eb362074aed94698cb4d4f848a6e58f2532c5b0aeb"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_greek.txt",
+      "bytes": 830,
+      "sha256": "e52b12a250fa593f99ca8a06e02b18a091518a1e6b66fd496e78a7db3888cc43"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_greeklatin.txt",
+      "bytes": 845,
+      "sha256": "dffa002d397f85134af0350cc2fa75f1eddfd75a2a18be5a5761e3c80781f12e"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_hebrew.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_hungarian.txt",
+      "bytes": 831,
+      "sha256": "f827f54af6560a4c6d615618433457e1c9dc06c78c7683dee6d4187cdbcd8c83"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_italian.txt",
+      "bytes": 831,
+      "sha256": "f827f54af6560a4c6d615618433457e1c9dc06c78c7683dee6d4187cdbcd8c83"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_polish.txt",
+      "bytes": 2183,
+      "sha256": "d062343f0330e121c684e3e6943f7775855c78e965b043a839a4dba87336d4d8"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_portuguese.txt",
+      "bytes": 830,
+      "sha256": "e52b12a250fa593f99ca8a06e02b18a091518a1e6b66fd496e78a7db3888cc43"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_romanian.txt",
+      "bytes": 830,
+      "sha256": "4e35dd86b22d8d011287b19aba8b1d4af9e8c63ebdf27d0899e8d9edf4d4b1ed"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_russian.txt",
+      "bytes": 1437,
+      "sha256": "15e71e33faf7bb4558fd3f64ec9e38111bb04852343bc4a89b09ae127279caf0"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_spanish.txt",
+      "bytes": 868,
+      "sha256": "ca9391f883011b749197fbbc79776777d957dd5f55749d9a600c1d229f80b8df"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_approx_turkish.txt",
+      "bytes": 830,
+      "sha256": "e52b12a250fa593f99ca8a06e02b18a091518a1e6b66fd496e78a7db3888cc43"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_any.txt",
+      "bytes": 1226,
+      "sha256": "cf8da3ee51d478dce1ff6fa1ccef2f65411308d47703f920423cc1172266623e"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_approx_common.txt",
+      "bytes": 1769,
+      "sha256": "948f6d4355ac74011cccd7bd54ec3bce4a29ea26c5d4518f019cdc1dcef27285"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_arabic.txt",
+      "bytes": 816,
+      "sha256": "891a20110c50fd5dd6c34ba71c11207e2e11948c3cca5f1554b3c934644f5a05"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_common.txt",
+      "bytes": 1093,
+      "sha256": "6a943ca8cf3f7bed1ff516de9a3ecf44f13c801d3dc967803b1b6a95ae45d372"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_cyrillic.txt",
+      "bytes": 830,
+      "sha256": "fd5517e98eebfbe1f979ec21f9749e9d6cafd3e6798e5f31c173a0be08c025e5"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_czech.txt",
+      "bytes": 830,
+      "sha256": "fd5517e98eebfbe1f979ec21f9749e9d6cafd3e6798e5f31c173a0be08c025e5"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_dutch.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_english.txt",
+      "bytes": 830,
+      "sha256": "fd5517e98eebfbe1f979ec21f9749e9d6cafd3e6798e5f31c173a0be08c025e5"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_french.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_german.txt",
+      "bytes": 826,
+      "sha256": "abe0c2b293dde37d051c84c0a60194b8c3038f399411b60f0706dcddfadb0bdf"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_greek.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_greeklatin.txt",
+      "bytes": 817,
+      "sha256": "8784c2b1d8b8e206e3dfce6eda4f3dec800a1bc213dc4f4dc0cb09a8132a542c"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_hebrew.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_hungarian.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_italian.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_polish.txt",
+      "bytes": 874,
+      "sha256": "6d805f7fc3172f02f11240b9043fedc535d0729a105f218205ddbcee3245781a"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_portuguese.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_romanian.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_russian.txt",
+      "bytes": 831,
+      "sha256": "34bfa509511f7517a628330cca7c5e51464ab4eef953834054f684d02e11ffc7"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_spanish.txt",
+      "bytes": 832,
+      "sha256": "b3388ed5a9817dfa7172b1061cd2003068623c5b794b4d25a221225c893eddf2"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_exact_turkish.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_hebrew_common.txt",
+      "bytes": 2845,
+      "sha256": "4a989b869f2293590c21af2305da6588966aee6d3bde431b3e49123904b11bcf"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_lang.txt",
+      "bytes": 7594,
+      "sha256": "705d3b0eca3803ab2764f00b4cf9b2a68f9ec2201a7b340d6893412361022d95"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_languages.txt",
+      "bytes": 951,
+      "sha256": "b3165adaa36026c29338dc8d8f351cebc7423731465e1d6422f27d6778494c7d"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_any.txt",
+      "bytes": 13059,
+      "sha256": "d23d576829821edd7de13f6734eca746a767dd6d565a4cd18e33d9736df0d0ac"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_arabic.txt",
+      "bytes": 2208,
+      "sha256": "82b707c79998031bda269fd7c1192ea1a9670c03ead09ee77a77ce4feca12c38"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_cyrillic.txt",
+      "bytes": 2300,
+      "sha256": "0c8158127f19bd0e683bf883ab2fb7eb4c173a34ee51ab6752f56c932ab125e8"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_czech.txt",
+      "bytes": 1561,
+      "sha256": "84de9e152412cd6129340590372571fedb14876054b5df3b82a2a36564fcd619"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_dutch.txt",
+      "bytes": 1867,
+      "sha256": "9921e75dbbc942d2572a8660b0979329639e8707ffa9bb1de6b7d1a7a9955c2b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_english.txt",
+      "bytes": 3013,
+      "sha256": "bcfb8723cbf3966b09ba0dc6f3dbbdc7882869c4e7af160f803c2f0519785a22"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_french.txt",
+      "bytes": 2778,
+      "sha256": "b5f12b085cfb4896a91020f901bc16e6f3164f0641e683b0d205a730560274b3"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_german.txt",
+      "bytes": 2735,
+      "sha256": "453d474ab996523a2f09a1c5897d8e3e1b4c045061227c052792f982e1c3c8b7"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_greek.txt",
+      "bytes": 2918,
+      "sha256": "6b56c5d8a9b6270f8777cce5f1b0860390aa218f7e2b43eeb1d7cbdb38778830"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_greeklatin.txt",
+      "bytes": 3041,
+      "sha256": "06122f03fe879f2ef78b0b76bf1412eb170c69fa828f40d7e7b907856656446e"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_hebrew.txt",
+      "bytes": 1462,
+      "sha256": "a570f37f45f35f2e409b1173d955d83adc878da8187f899db930d5d19f89a5f1"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_hungarian.txt",
+      "bytes": 1887,
+      "sha256": "16ba7cf79bf85089dc29fd92eff6358c893bc6aef85e6396dd29af7c41a4f611"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_italian.txt",
+      "bytes": 1873,
+      "sha256": "99155dedf0caeaae4212877d0b90da52e0252812eee4ab06a9aaf5393b94afb0"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_polish.txt",
+      "bytes": 4112,
+      "sha256": "e4e0eb610a8bccf71d39cd0e10b2c51e4d1f132a052d183c749511464ed51fc9"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_portuguese.txt",
+      "bytes": 2598,
+      "sha256": "0c51c2cc22988516b03f6afdd5699897b7cafe2b3e5d3676ab101941fbfd92dc"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_romanian.txt",
+      "bytes": 1509,
+      "sha256": "75ee26f3c6bf6cafc2258be21b820952e2e07c192919e34fd717dd81b0a2f4ad"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_russian.txt",
+      "bytes": 3042,
+      "sha256": "ded105c857167c2ba8c44ced7cee000d6bcd7823a4851b698f8ea540115a7f37"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_spanish.txt",
+      "bytes": 2382,
+      "sha256": "e7253c7c1ab7e46d29c85792be68c15a7bdb8937c364043f4c4c658d08f76a6b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/gen_rules_turkish.txt",
+      "bytes": 1386,
+      "sha256": "1800bab9aee6be5f57838bfaaf071009841c1af93d5dd22789e1a7643d199261"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/lang.txt",
+      "bytes": 819,
+      "sha256": "05987a68044246aa19eabb6abc5a6d9bd066cb250b7fdc95ae9672b7389dc91e"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_approx_any.txt",
+      "bytes": 830,
+      "sha256": "47661c92b7bd2a3dbff0b19f2342281076f2877fab2592a0c076a555a813947f"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_approx_common.txt",
+      "bytes": 3195,
+      "sha256": "7f3ea2985fd4b1b5e0f5a6544a47ab632497a7853b691aef5e6bd7320fcaa3a6"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_approx_french.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_approx_hebrew.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_approx_italian.txt",
+      "bytes": 830,
+      "sha256": "b6165dbda3d972b5c54b2191409a2c04ac35fc7dba0abf5ddf3c9ae13f9a98a0"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_approx_portuguese.txt",
+      "bytes": 831,
+      "sha256": "21d632279772ae8983832220505bcf0c6fb500f4ffade0f9908306d018710f13"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_approx_spanish.txt",
+      "bytes": 831,
+      "sha256": "21d632279772ae8983832220505bcf0c6fb500f4ffade0f9908306d018710f13"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_exact_any.txt",
+      "bytes": 817,
+      "sha256": "df3f63b3946b8d5f05c4977ee5ab488da8162f4ad8cafa7a81cd8731b4954cb8"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_exact_approx_common.txt",
+      "bytes": 1685,
+      "sha256": "232f59750f9dedcf0bc2af194d16a1f434a56a0ace0415fe67924b73c7e22a32"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_exact_common.txt",
+      "bytes": 1109,
+      "sha256": "c3654ad436be18536fef3e3872db7255659c413bfc9b5ad446b1467b68c8b8c0"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_exact_french.txt",
+      "bytes": 815,
+      "sha256": "9ddcb79875c3a49259e98faf98433c7d8c29e368dedea7155c9ff7171016857d"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_exact_hebrew.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_exact_italian.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_exact_portuguese.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_exact_spanish.txt",
+      "bytes": 812,
+      "sha256": "d54f26f806ec83a34beaa033cbd110a9204f853045bf9050a3050146b52ec50b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_hebrew_common.txt",
+      "bytes": 2187,
+      "sha256": "f54d8a4d50ac4331b34a9a6d6466108e8d462f590d83b88130cb439f760a74e8"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_lang.txt",
+      "bytes": 2431,
+      "sha256": "f3b5f5fda135f0b1d3016b67eea126a9415c50d3b169ee4fa9bd8dd0143fa9f5"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_languages.txt",
+      "bytes": 849,
+      "sha256": "9cc12d4172e415642b4105d96717d9c9b28abca8abfb61b6443f4e9c47adaf87"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_rules_any.txt",
+      "bytes": 4632,
+      "sha256": "a334356decf81c182682d8e0d03e1727ab45a068446ed11c96809167aca1877f"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_rules_french.txt",
+      "bytes": 2224,
+      "sha256": "2a3cbe347fda0df595e3110959c49656c6ec6b6f3b7af69a67d5590f0729699b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_rules_hebrew.txt",
+      "bytes": 1459,
+      "sha256": "545919eeecaee7301ff14afe69c88faf0277f3568c154032be204d3ff0d9da68"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_rules_italian.txt",
+      "bytes": 1848,
+      "sha256": "3b4d253710d0c9dd5649594047c8e10763094c10b7b518cfd84048c122255f9b"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_rules_portuguese.txt",
+      "bytes": 2573,
+      "sha256": "8a1e06755eba82e40de80beecdcabc01d8a0e9a547f1eabb35346e526bcf90b2"
+    },
+    {
+      "path": "org/apache/commons/codec/language/bm/sep_rules_spanish.txt",
+      "bytes": 2480,
+      "sha256": "57654b4355e47b908556126a8cf10f9a77dc49e5bf3b179e9797b4e9b47f88ed"
+    },
+    {
+      "path": "org/apache/commons/codec/language/dmrules.txt",
+      "bytes": 3545,
+      "sha256": "90ff9e9c775e01444f19dec3f8444eaa6d39fdeca77d0eaf4ddcb970a43687f7"
+    },
+    {
+      "path": "META-INF/maven/commons-codec/commons-codec/pom.xml",
+      "bytes": 15443,
+      "sha256": "c86ee198a35a3715487860f419cbf642e7e4d9e8714777947dbe6a4e3a20ab58"
+    },
+    {
+      "path": "META-INF/maven/commons-codec/commons-codec/pom.properties",
+      "bytes": 60,
+      "sha256": "696d43d45852e777b762ae18c5468d06906a2f7335f79b20a82427365b5545d8"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

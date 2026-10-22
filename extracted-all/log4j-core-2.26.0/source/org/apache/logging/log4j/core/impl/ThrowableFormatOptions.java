@@ -1,0 +1,189 @@
+package org.apache.logging.log4j.core.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import org.apache.logging.log4j.core.pattern.JAnsiTextRenderer;
+import org.apache.logging.log4j.core.pattern.PlainTextRenderer;
+import org.apache.logging.log4j.core.pattern.TextRenderer;
+import org.apache.logging.log4j.core.util.Integers;
+import org.apache.logging.log4j.core.util.Patterns;
+import org.apache.logging.log4j.util.Strings;
+
+public final class ThrowableFormatOptions {
+   private static final int DEFAULT_LINES = Integer.MAX_VALUE;
+   protected static final ThrowableFormatOptions DEFAULT = new ThrowableFormatOptions();
+   private static final String FULL = "full";
+   private static final String NONE = "none";
+   private static final String SHORT = "short";
+   private final TextRenderer textRenderer;
+   private final int lines;
+   private final String separator;
+   private final String suffix;
+   private final List<String> ignorePackages;
+   public static final String CLASS_NAME = "short.className";
+   public static final String METHOD_NAME = "short.methodName";
+   public static final String LINE_NUMBER = "short.lineNumber";
+   public static final String FILE_NAME = "short.fileName";
+   public static final String MESSAGE = "short.message";
+   public static final String LOCALIZED_MESSAGE = "short.localizedMessage";
+
+   protected ThrowableFormatOptions(
+      final int lines, final String separator, final List<String> ignorePackages, final TextRenderer textRenderer, final String suffix
+   ) {
+      this.lines = lines;
+      this.separator = separator == null ? Strings.LINE_SEPARATOR : separator;
+      this.ignorePackages = ignorePackages;
+      this.textRenderer = (TextRenderer)(textRenderer == null ? PlainTextRenderer.getInstance() : textRenderer);
+      this.suffix = suffix;
+   }
+
+   protected ThrowableFormatOptions(final List<String> packages) {
+      this(Integer.MAX_VALUE, null, packages, null, null);
+   }
+
+   protected ThrowableFormatOptions() {
+      this(Integer.MAX_VALUE, null, null, null, null);
+   }
+
+   public int getLines() {
+      return this.lines;
+   }
+
+   public String getSeparator() {
+      return this.separator;
+   }
+
+   public TextRenderer getTextRenderer() {
+      return this.textRenderer;
+   }
+
+   public List<String> getIgnorePackages() {
+      return this.ignorePackages;
+   }
+
+   public boolean allLines() {
+      return this.lines == Integer.MAX_VALUE;
+   }
+
+   public boolean anyLines() {
+      return this.lines > 0;
+   }
+
+   public int minLines(final int maxLines) {
+      return Math.min(this.lines, maxLines);
+   }
+
+   public boolean hasPackages() {
+      return this.ignorePackages != null && !this.ignorePackages.isEmpty();
+   }
+
+   @Override
+   public String toString() {
+      StringBuilder s = new StringBuilder();
+      s.append('{').append(this.allLines() ? "full" : (this.lines == 2 ? "short" : (this.anyLines() ? String.valueOf(this.lines) : "none"))).append('}');
+      s.append("{separator(").append(this.separator).append(")}");
+      if (this.hasPackages()) {
+         s.append("{filters(");
+
+         for (String p : this.ignorePackages) {
+            s.append(p).append(',');
+         }
+
+         s.deleteCharAt(s.length() - 1);
+         s.append(")}");
+      }
+
+      return s.toString();
+   }
+
+   public static ThrowableFormatOptions newInstance(String[] options) {
+      if (options != null && options.length != 0) {
+         if (options.length == 1 && Strings.isNotEmpty(options[0])) {
+            String[] opts = options[0].split(Patterns.COMMA_SEPARATOR, 2);
+            String first = opts[0].trim();
+            Scanner scanner = new Scanner(first);
+
+            try {
+               if (opts.length > 1
+                  && (first.equalsIgnoreCase("full") || first.equalsIgnoreCase("short") || first.equalsIgnoreCase("none") || scanner.hasNextInt())) {
+                  options = new String[]{first, opts[1].trim()};
+               }
+            } catch (Throwable var18) {
+               try {
+                  scanner.close();
+               } catch (Throwable var17) {
+                  var18.addSuppressed(var17);
+               }
+
+               throw var18;
+            }
+
+            scanner.close();
+         }
+
+         int lines = DEFAULT.lines;
+         String separator = DEFAULT.separator;
+         List<String> packages = DEFAULT.ignorePackages;
+         TextRenderer ansiRenderer = DEFAULT.textRenderer;
+         String suffix = DEFAULT.getSuffix();
+
+         for (String rawOption : options) {
+            if (rawOption != null) {
+               String option = rawOption.trim();
+               if (!option.isEmpty()) {
+                  if (option.startsWith("separator(") && option.endsWith(")")) {
+                     separator = option.substring("separator(".length(), option.length() - 1);
+                  } else if (option.startsWith("filters(") && option.endsWith(")")) {
+                     String filterStr = option.substring("filters(".length(), option.length() - 1);
+                     if (!filterStr.isEmpty()) {
+                        String[] array = filterStr.split(Patterns.COMMA_SEPARATOR);
+                        if (array.length > 0) {
+                           packages = new ArrayList<>(array.length);
+
+                           for (String token : array) {
+                              token = token.trim();
+                              if (!token.isEmpty()) {
+                                 packages.add(token);
+                              }
+                           }
+                        }
+                     }
+                  } else if (option.equalsIgnoreCase("none")) {
+                     lines = 0;
+                  } else if (!option.equalsIgnoreCase("short")
+                     && !option.equalsIgnoreCase("short.className")
+                     && !option.equalsIgnoreCase("short.methodName")
+                     && !option.equalsIgnoreCase("short.lineNumber")
+                     && !option.equalsIgnoreCase("short.fileName")
+                     && !option.equalsIgnoreCase("short.message")
+                     && !option.equalsIgnoreCase("short.localizedMessage")) {
+                     if ((!option.startsWith("ansi(") || !option.endsWith(")")) && !option.equals("ansi")) {
+                        if (option.startsWith("S(") && option.endsWith(")")) {
+                           suffix = option.substring("S(".length(), option.length() - 1);
+                        } else if (option.startsWith("suffix(") && option.endsWith(")")) {
+                           suffix = option.substring("suffix(".length(), option.length() - 1);
+                        } else if (!option.equalsIgnoreCase("full")) {
+                           lines = Integers.parseInt(option);
+                        }
+                     } else {
+                        String styleMapStr = option.equals("ansi") ? "" : option.substring("ansi(".length(), option.length() - 1);
+                        ansiRenderer = new JAnsiTextRenderer(new String[]{null, styleMapStr}, JAnsiTextRenderer.DefaultExceptionStyleMap);
+                     }
+                  } else {
+                     lines = 2;
+                  }
+               }
+            }
+         }
+
+         return new ThrowableFormatOptions(lines, separator, packages, ansiRenderer, suffix);
+      } else {
+         return DEFAULT;
+      }
+   }
+
+   public String getSuffix() {
+      return this.suffix;
+   }
+}

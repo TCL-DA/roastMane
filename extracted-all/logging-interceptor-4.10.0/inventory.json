@@ -1,0 +1,32 @@
+{
+  "jar": "logging-interceptor-4.10.0.jar",
+  "sha256": "273ba218636c34f7a091c059d159600543e03ea8beef2c5fc56525b47396160e",
+  "class_entries": 8,
+  "classes": [
+    "okhttp3/logging/Utf8Kt.class",
+    "okhttp3/logging/HttpLoggingInterceptor.class",
+    "okhttp3/logging/HttpLoggingInterceptor$Logger$Companion.class",
+    "okhttp3/logging/HttpLoggingInterceptor$Logger.class",
+    "okhttp3/logging/LoggingEventListener$Factory.class",
+    "okhttp3/logging/HttpLoggingInterceptor$Logger$Companion$DefaultLogger.class",
+    "okhttp3/logging/LoggingEventListener.class",
+    "okhttp3/logging/HttpLoggingInterceptor$Level.class"
+  ],
+  "java_files": 3,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 65,
+      "sha256": "d203851f1a1f255d98eecc7e2eb0aeb4f48517946bf728a863b22d8a4e859bbb"
+    },
+    {
+      "path": "META-INF/okhttp-logging-interceptor.kotlin_module",
+      "bytes": 51,
+      "sha256": "cf3b24e620349ac3a187dc92c702866abbaf24bbf9ffaeb8b7e39a43e828daec"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

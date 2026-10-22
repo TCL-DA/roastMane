@@ -1,0 +1,28 @@
+{
+  "jar": "moka7-1.0.1.jar",
+  "sha256": "e48e33632145251d56dd6f68794be3c99caf4b02a874b1cf97b97003ad15ac9e",
+  "class_entries": 9,
+  "classes": [
+    "net/sourceforge/snap7/moka7/S7Protection.class",
+    "net/sourceforge/snap7/moka7/S7CpInfo.class",
+    "net/sourceforge/snap7/moka7/S7Client.class",
+    "net/sourceforge/snap7/moka7/S7.class",
+    "net/sourceforge/snap7/moka7/S7CpuInfo.class",
+    "net/sourceforge/snap7/moka7/S7OrderCode.class",
+    "net/sourceforge/snap7/moka7/S7Szl.class",
+    "net/sourceforge/snap7/moka7/IntByRef.class",
+    "net/sourceforge/snap7/moka7/S7BlockInfo.class"
+  ],
+  "java_files": 9,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 25,
+      "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

@@ -1,0 +1,46 @@
+{
+  "jar": "jakarta.inject-api-2.0.1.jar",
+  "sha256": "f7dc98062fccf14126abb751b64fab12c312566e8cbdc8483598bffcea93af7c",
+  "class_entries": 7,
+  "classes": [
+    "jakarta/inject/Named.class",
+    "jakarta/inject/Qualifier.class",
+    "jakarta/inject/Singleton.class",
+    "jakarta/inject/Scope.class",
+    "jakarta/inject/Provider.class",
+    "jakarta/inject/Inject.class",
+    "module-info.class"
+  ],
+  "java_files": 7,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 673,
+      "sha256": "4fee7a6870f5a30b020d85e8fb098620c86fab233b9aad90dc2067290a456b88"
+    },
+    {
+      "path": "META-INF/LICENSE.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "META-INF/NOTICE.md",
+      "bytes": 1074,
+      "sha256": "992ed62dd3ee17d73ce6a4a5e02dd0fed9eb326bf386aa5304e6a512214df540"
+    },
+    {
+      "path": "META-INF/maven/jakarta.inject/jakarta.inject-api/pom.xml",
+      "bytes": 5922,
+      "sha256": "e7fd7232e96307a575b2494c9367d68cf43ec98244aace3ccc23e1773ffa6fda"
+    },
+    {
+      "path": "META-INF/maven/jakarta.inject/jakarta.inject-api/pom.properties",
+      "bytes": 67,
+      "sha256": "6c15c37383b4e4b5cadce608ff83a76fd028500dfaa95e8a6ff4b4b3d76e0b9f"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

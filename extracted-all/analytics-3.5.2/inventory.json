@@ -1,0 +1,55 @@
+{
+  "jar": "analytics-3.5.2.jar",
+  "sha256": "98b10c603c67b42b69bc5df6525e5759a823908cb26c6751e3b1f5757e389b45",
+  "class_entries": 26,
+  "classes": [
+    "com/segment/analytics/MessageTransformer$1.class",
+    "com/segment/analytics/Platform$1$1.class",
+    "com/segment/analytics/Analytics.class",
+    "com/segment/analytics/MessageInterceptor.class",
+    "com/segment/analytics/Log.class",
+    "com/segment/analytics/MessageTransformer$Typed.class",
+    "com/segment/analytics/internal/AnalyticsClient$1.class",
+    "com/segment/analytics/internal/AnalyticsClient.class",
+    "com/segment/analytics/internal/FlushMessage.class",
+    "com/segment/analytics/internal/AnalyticsClient$BatchUploadTask.class",
+    "com/segment/analytics/internal/AnalyticsClient$BatchUtility.class",
+    "com/segment/analytics/internal/AnalyticsClient$Looper.class",
+    "com/segment/analytics/internal/StopMessage.class",
+    "com/segment/analytics/internal/AnalyticsVersion.class",
+    "com/segment/analytics/MessageTransformer.class",
+    "com/segment/analytics/MessageInterceptor$1.class",
+    "com/segment/analytics/Platform.class",
+    "com/segment/analytics/MessageInterceptor$Typed.class",
+    "com/segment/analytics/Analytics$Builder$1.class",
+    "com/segment/analytics/Log$Level.class",
+    "com/segment/analytics/AnalyticsRequestInterceptor.class",
+    "com/segment/analytics/Analytics$Builder.class",
+    "com/segment/analytics/Log$1.class",
+    "com/segment/analytics/Plugin.class",
+    "com/segment/analytics/Callback.class",
+    "com/segment/analytics/Platform$1.class"
+  ],
+  "java_files": 12,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 81,
+      "sha256": "2a185c3a3a6b39d2987b2acabd0af36555390a556370ce50072b34e97c317963"
+    },
+    {
+      "path": "META-INF/maven/com.segment.analytics.java/analytics/pom.xml",
+      "bytes": 2758,
+      "sha256": "ca4288ab9d592045fa1b62b1417f5d6f2dd46e3953cc715eb5c38d716a249640"
+    },
+    {
+      "path": "META-INF/maven/com.segment.analytics.java/analytics/pom.properties",
+      "bytes": 70,
+      "sha256": "da187b20ab6d5319038d7a4d0c838280c47514df02480691e90d2a7c07ecad4e"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

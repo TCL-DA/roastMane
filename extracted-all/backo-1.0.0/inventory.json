@@ -1,0 +1,32 @@
+{
+  "jar": "backo-1.0.0.jar",
+  "sha256": "f737d9319088714f7b116948f79d47058b40e3ddf25a56bb07010cc6df656f76",
+  "class_entries": 3,
+  "classes": [
+    "com/segment/backo/Backo$1.class",
+    "com/segment/backo/Backo$Builder.class",
+    "com/segment/backo/Backo.class"
+  ],
+  "java_files": 1,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 132,
+      "sha256": "92dd01e52023a4c36e2f28f6ceff0655102b8ca2be61e17eebc8116b4164096f"
+    },
+    {
+      "path": "META-INF/maven/com.segment.backo/backo/pom.xml",
+      "bytes": 930,
+      "sha256": "9a5fcd4e3974f4defa1fb280859f49ccc9415766eab72786f2b97774f066800f"
+    },
+    {
+      "path": "META-INF/maven/com.segment.backo/backo/pom.properties",
+      "bytes": 107,
+      "sha256": "c10ab0275dff61024fd980b8b951815f3bdd712852fc7eacfc9139923f6cede7"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

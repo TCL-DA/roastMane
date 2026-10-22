@@ -1,0 +1,41 @@
+package org.girod.javafx.svgimage.tosvg.utils;
+
+public interface CSSProperties {
+   String VISIBILITY = "-visibility";
+   String OPACITY = "-fx-opacity";
+   String TRANSLATE_X = "-fx-translate-x";
+   String TRANSLATE_Y = "-fx-translate-y";
+   String SCALE_X = "-fx-scale-x";
+   String SCALE_Y = "-fx-scale-y";
+   String REGION_BACKGROUND = "-fx-region-background";
+   String REGION_BORDER = "-fx-region-border";
+   String BACKGROUND_COLOR = "-fx-background-color";
+   String BACKGROUND_IMAGE = "-fx-background-image";
+   String BACKGROUND_RADIUS = "-fx-background-radius";
+   String REGION_BACKGROUND_SIZE = "-fx-background-size";
+   String REGION_BACKGROUND_RADIUS = "-fx-background-radius";
+   String REGION_BACKGROUND_POSITION = "-fx-background-position";
+   String BORDER_COLOR = "-fx-border-color";
+   String BORDER_RADIUS = "-fx-border-radius";
+   String SHAPE = "-fx-shape";
+   String SCALE_SHAPE = "-fx-scale-shape";
+   String ARC_WIDTH = "-fx-arc-width";
+   String ARC_HEIGHT = "-fx-arc-height";
+   String IMAGE = "-fx-image";
+   String STROKE_PAINT = "-fx-stroke";
+   String FILL_PAINT = "-fx-fill";
+   String TEXT_FILL = "-fx-text-fill";
+   String TEXT_BOUNDS_TYPE = "-fx-bounds-type";
+   String FONT = "-fx-font";
+   String FONT_FAMILY = "-fx-font-family";
+   String FONT_SIZE = "-fx-font-size";
+   String FONT_STYLE = "-fx-font-style";
+   String FONT_WEIGHT = "-fx-font-weight";
+   String STROKE_WIDTH = "-fx-stroke-width";
+   String STROKE_LINECAP = "-fx-stroke-line-cap";
+   String STROKE_LINEJOIN = "-fx-stroke-line-join";
+   String STROKE_MITERLIMIT = "-fx-stroke-miter-limit";
+   String STROKE_DASHARRAY = "-fx-stroke-dash-array";
+   String STROKE_DASHOFFSET = "-fx-stroke-dash-offset";
+   String STROKE_TYPE = "-fx-stroke-type";
+}

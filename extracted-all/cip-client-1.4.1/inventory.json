@@ -1,0 +1,37 @@
+{
+  "jar": "cip-client-1.4.1.jar",
+  "sha256": "b7c910a6e628e46c9b6ab3dcead99ebc094eeaa58e940ae0673a7c5852f96f0c",
+  "class_entries": 8,
+  "classes": [
+    "com/digitalpetri/enip/cip/CipClient$CpfItemHandler.class",
+    "com/digitalpetri/enip/cip/CipConnectionPool$CipConnectionFactory.class",
+    "com/digitalpetri/enip/cip/CipConnectionPool$DefaultConnectionFactory.class",
+    "com/digitalpetri/enip/cip/CipConnectionPool$CipConnection.class",
+    "com/digitalpetri/enip/cip/CipConnectionPool.class",
+    "com/digitalpetri/enip/cip/CipClient$1.class",
+    "com/digitalpetri/enip/cip/CipClient$ConnectedDataHandler.class",
+    "com/digitalpetri/enip/cip/CipClient.class"
+  ],
+  "java_files": 2,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 131,
+      "sha256": "1df5b11395f036809d94e0952288429fcd2cfc4777bfcbb2b7080f78f841c08e"
+    },
+    {
+      "path": "META-INF/maven/com.digitalpetri.enip/cip-client/pom.xml",
+      "bytes": 1065,
+      "sha256": "0fc5a537d35bb2ec77e9b0cca383f84e96dd9a80f08bca588bf3fb3dabd559aa"
+    },
+    {
+      "path": "META-INF/maven/com.digitalpetri.enip/cip-client/pom.properties",
+      "bytes": 116,
+      "sha256": "4063b85f49df23bf8697b1395aaac84d68b8d21d59d34dd703050fecb3b5b01f"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import com.cropster.roastingintelligence.ui.components.*?>
+
+<fx:root type="VBox" fillWidth="true" xmlns:fx="http://javafx.com/fxml">
+    <styleClass>
+        <String fx:value="comment-popup"/>
+        <String fx:value="comment-popup__time-input"/>
+    </styleClass>
+    <Label id="popoverHeaderLabel" text="%Comment at:" />
+    <TimeEditor fx:id="timeInput" />
+    <MeasureEditor fx:id="tempInput" visible="false" />
+</fx:root>

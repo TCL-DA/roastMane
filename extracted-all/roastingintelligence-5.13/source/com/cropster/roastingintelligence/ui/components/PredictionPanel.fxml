@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import com.cropster.roastingintelligence.ui.components.ToggleSwitch?>
+
+<fx:root type="javafx.scene.layout.HBox" styleClass="hbox" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+   <Label text="%Prediction:" style="-fx-font-weight: bold" styleClass="label--for"/>
+   <BorderPane fx:id="beanPanel" styleClass="toggle-switch--smart-predictions">
+      <center>
+         <ToggleSwitch fx:id="beanButton" managed="${beanButton.visible}" text="%Bean" captionPosition="RIGHT" styleClass="toggle-switch--small" maxHeight="16.0" BorderPane.alignment="CENTER"/>
+      </center>
+   </BorderPane>
+   <BorderPane fx:id="firstCrackPanel" styleClass="toggle-switch--smart-predictions">
+      <center>
+         <ToggleSwitch fx:id="firstCrackButton" managed="${firstCrackButton.visible}" text="%First crack" captionPosition="RIGHT" styleClass="toggle-switch--small" maxHeight="16.0" BorderPane.alignment="CENTER"/>
+      </center>
+   </BorderPane>
+   <BorderPane fx:id="flickPanel" styleClass="toggle-switch--smart-predictions">
+      <center>
+         <ToggleSwitch fx:id="flickButton" managed="${flickButton.visible}" text="%Flick" captionPosition="RIGHT" styleClass="toggle-switch--small" maxHeight="16.0" BorderPane.alignment="CENTER"/>
+      </center>
+   </BorderPane>
+</fx:root>

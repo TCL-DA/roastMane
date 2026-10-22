@@ -1,0 +1,33 @@
+{
+  "jar": "jcip-annotations-1.0-1.jar",
+  "sha256": "4fccff8382aafc589962c4edb262f6aa595e34f1e11e61057d1c6a96e8fc7323",
+  "class_entries": 4,
+  "classes": [
+    "net/jcip/annotations/GuardedBy.class",
+    "net/jcip/annotations/Immutable.class",
+    "net/jcip/annotations/NotThreadSafe.class",
+    "net/jcip/annotations/ThreadSafe.class"
+  ],
+  "java_files": 4,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 133,
+      "sha256": "cdd219975c1d6fcd13d0bb0ce131d188511f481a5f136d511e075d8a72b9ed48"
+    },
+    {
+      "path": "META-INF/maven/com.github.stephenc.jcip/jcip-annotations/pom.xml",
+      "bytes": 5428,
+      "sha256": "68c2a5aa6e8f345743093e52b5b9e0190ba4d5a5215c0a59b4d7d33647208cbb"
+    },
+    {
+      "path": "META-INF/maven/com.github.stephenc.jcip/jcip-annotations/pom.properties",
+      "bytes": 125,
+      "sha256": "3453055135512306a1dbf69f811c54455bf55dff4d7a5cf6c4fceae38b7d7658"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

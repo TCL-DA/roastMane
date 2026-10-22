@@ -1,0 +1,20 @@
+{
+  "jar": "libintl-0.19.2.jar",
+  "sha256": "6bce47a334732a942fa512172488d4827cb395f7b614062496eb6ba7d4b9fb7e",
+  "class_entries": 1,
+  "classes": [
+    "gnu/gettext/GettextResource.class"
+  ],
+  "java_files": 1,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 68,
+      "sha256": "1b1b01e5f04ac3415febad1966128249e28b1ffefeed83ec8a40e58c608031f1"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

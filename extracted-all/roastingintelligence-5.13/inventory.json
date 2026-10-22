@@ -1,0 +1,2556 @@
+{
+  "jar": "roastingintelligence-5.13.jar",
+  "sha256": "2547b87aef9e4b4916789679b028174900921334c4ee2d91e4cf802ad67cda3a",
+  "class_entries": 957,
+  "classes": [
+    "com/cropster/roastingintelligence/Data.class",
+    "com/cropster/roastingintelligence/model/alarms/Alarm$AlarmBuilder.class",
+    "com/cropster/roastingintelligence/model/alarms/Alarm$1.class",
+    "com/cropster/roastingintelligence/model/alarms/Alarm.class",
+    "com/cropster/roastingintelligence/model/alarms/AlarmTargetDirection.class",
+    "com/cropster/roastingintelligence/model/alarms/AlarmType.class",
+    "com/cropster/roastingintelligence/model/livegoals/CheckResult$CheckStatus.class",
+    "com/cropster/roastingintelligence/model/livegoals/CheckResult$EvaluationStatus.class",
+    "com/cropster/roastingintelligence/model/livegoals/CheckResult$GoalWrapper.class",
+    "com/cropster/roastingintelligence/model/livegoals/CheckResult.class",
+    "com/cropster/roastingintelligence/model/livegoals/LiveGoalDisplayMode.class",
+    "com/cropster/roastingintelligence/model/livegoals/Checker.class",
+    "com/cropster/roastingintelligence/model/livegoals/LiveGoal$LiveGoalBuilder.class",
+    "com/cropster/roastingintelligence/model/livegoals/LiveGoal.class",
+    "com/cropster/roastingintelligence/model/livegoals/LiveGoalType.class",
+    "com/cropster/roastingintelligence/model/livegoals/LiveGoalMode.class",
+    "com/cropster/roastingintelligence/model/livegoals/Checkers$1.class",
+    "com/cropster/roastingintelligence/model/livegoals/Checkers.class",
+    "com/cropster/roastingintelligence/model/livegoals/LiveGoalBetweenBatchModel.class",
+    "com/cropster/roastingintelligence/model/livegoals/LiveGoalPostRoastingModel$RoastWrapper.class",
+    "com/cropster/roastingintelligence/model/livegoals/LiveGoalPostRoastingModel.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/AbstractChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/AbstractCurveChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/ChargeChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/CompletedOnPassedOrFailedChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/SimpleChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/ConstantBeanTempChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/ConstantRoRChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/DevelopmentTimeChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/MeasureChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/DevelopmentTimeRatioChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/DurationChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/EndChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/EndWeightChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/FirstCrackChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/RoRChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/RoastValue2Checker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/RoastValueChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/SimpleRorChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/StartWeightChecker.class",
+    "com/cropster/roastingintelligence/model/livegoals/checkers/WeightLossChecker.class",
+    "com/cropster/roastingintelligence/model/RoastingPhase.class",
+    "com/cropster/roastingintelligence/model/notification/Notifications.class",
+    "com/cropster/roastingintelligence/model/notification/NotificationType.class",
+    "com/cropster/roastingintelligence/model/notification/Notification$NotificationBuilder.class",
+    "com/cropster/roastingintelligence/model/notification/Notification.class",
+    "com/cropster/roastingintelligence/model/notification/Subscription.class",
+    "com/cropster/roastingintelligence/model/ControlStateConfiguration.class",
+    "com/cropster/roastingintelligence/model/SeparatorType.class",
+    "com/cropster/roastingintelligence/model/CombinedMeasure.class",
+    "com/cropster/roastingintelligence/ui/components/RoastLabel$QrCodePosition.class",
+    "com/cropster/roastingintelligence/ui/components/RoastLabel$RoastLabelStyle.class",
+    "com/cropster/roastingintelligence/ui/components/RoastLabel$DateFormatter.class",
+    "com/cropster/roastingintelligence/ui/components/RoastLabel$ComponentStyle.class",
+    "com/cropster/roastingintelligence/ui/components/RoastLabel$RoastLabelComponent.class",
+    "com/cropster/roastingintelligence/ui/components/RoastLabel$RoastLabelData.class",
+    "com/cropster/roastingintelligence/ui/components/RoastLabel.class",
+    "com/cropster/roastingintelligence/ui/components/CommentPopupContent$CommentValueProvider.class",
+    "com/cropster/roastingintelligence/ui/components/CommentPopupContent$RoastingModelValueProvider.class",
+    "com/cropster/roastingintelligence/ui/components/CommentPopupContent.class",
+    "com/cropster/roastingintelligence/ui/components/UserPanel.class",
+    "com/cropster/roastingintelligence/ui/components/QrCodeRenderer.class",
+    "com/cropster/roastingintelligence/ui/components/AbstractTitled.class",
+    "com/cropster/roastingintelligence/ui/components/StatusDot$Status.class",
+    "com/cropster/roastingintelligence/ui/components/StatusDot$1.class",
+    "com/cropster/roastingintelligence/ui/components/StatusDot.class",
+    "com/cropster/roastingintelligence/ui/components/ButtonBarWindow.class",
+    "com/cropster/roastingintelligence/ui/components/RoastInfoPanel.class",
+    "com/cropster/roastingintelligence/ui/components/ControlSlider.class",
+    "com/cropster/roastingintelligence/ui/components/ToggleSwitch$1.class",
+    "com/cropster/roastingintelligence/ui/components/ToggleSwitch$2.class",
+    "com/cropster/roastingintelligence/ui/components/ToggleSwitch.class",
+    "com/cropster/roastingintelligence/ui/components/MeasureEditor$FocusListener.class",
+    "com/cropster/roastingintelligence/ui/components/MeasureEditor$UnitListener.class",
+    "com/cropster/roastingintelligence/ui/components/MeasureEditor.class",
+    "com/cropster/roastingintelligence/ui/components/SliderButton.class",
+    "com/cropster/roastingintelligence/ui/components/ControlSliderToggleButton.class",
+    "com/cropster/roastingintelligence/ui/components/DragAndDropPlaceholder.class",
+    "com/cropster/roastingintelligence/ui/components/SearchableListView.class",
+    "com/cropster/roastingintelligence/ui/components/FormComponent.class",
+    "com/cropster/roastingintelligence/ui/components/TimeEditor$1.class",
+    "com/cropster/roastingintelligence/ui/components/TimeEditor$FocusListener.class",
+    "com/cropster/roastingintelligence/ui/components/TimeEditor.class",
+    "com/cropster/roastingintelligence/ui/components/RandomShortcutPane.class",
+    "com/cropster/roastingintelligence/ui/components/KeyCodeCombinationLabel$1.class",
+    "com/cropster/roastingintelligence/ui/components/KeyCodeCombinationLabel.class",
+    "com/cropster/roastingintelligence/ui/components/MessageBox.class",
+    "com/cropster/roastingintelligence/ui/components/DragAndDropLabelEditor.class",
+    "com/cropster/roastingintelligence/ui/components/DragSourceLabel.class",
+    "com/cropster/roastingintelligence/ui/components/DragTargetLabel.class",
+    "com/cropster/roastingintelligence/ui/components/PopOverBubble$Builder.class",
+    "com/cropster/roastingintelligence/ui/components/PopOverBubble$1.class",
+    "com/cropster/roastingintelligence/ui/components/PopOverBubble.class",
+    "com/cropster/roastingintelligence/ui/components/FlickPredictionPanel.class",
+    "com/cropster/roastingintelligence/ui/components/PredictionPanel.class",
+    "com/cropster/roastingintelligence/ui/components/SidebarButton.class",
+    "com/cropster/roastingintelligence/ui/components/ProductionLabel.class",
+    "com/cropster/roastingintelligence/ui/components/ControlToggleBar.class",
+    "com/cropster/roastingintelligence/ui/components/TitledPaneRight.class",
+    "com/cropster/roastingintelligence/ui/components/TimerLabel.class",
+    "com/cropster/roastingintelligence/ui/components/PercentageLabel.class",
+    "com/cropster/roastingintelligence/ui/components/HintsButton$1.class",
+    "com/cropster/roastingintelligence/ui/components/HintsButton.class",
+    "com/cropster/roastingintelligence/ui/components/ControlSliderToggleBar.class",
+    "com/cropster/roastingintelligence/ui/components/ControlStateBar.class",
+    "com/cropster/roastingintelligence/ui/components/ChannelStatusLabel.class",
+    "com/cropster/roastingintelligence/ui/components/RadioToggleButton.class",
+    "com/cropster/roastingintelligence/ui/components/ControlSwitch$1.class",
+    "com/cropster/roastingintelligence/ui/components/ControlSwitch$SelfTurnOffTimerHolder.class",
+    "com/cropster/roastingintelligence/ui/components/ControlSwitch.class",
+    "com/cropster/roastingintelligence/ui/components/LinkToRoastLabel.class",
+    "com/cropster/roastingintelligence/ui/components/AbstractLinkLabel.class",
+    "com/cropster/roastingintelligence/ui/components/AlarmEditor$1$1.class",
+    "com/cropster/roastingintelligence/ui/components/AlarmEditor$1.class",
+    "com/cropster/roastingintelligence/ui/components/AlarmEditor$3.class",
+    "com/cropster/roastingintelligence/ui/components/AlarmEditor$5.class",
+    "com/cropster/roastingintelligence/ui/components/AlarmEditor$4.class",
+    "com/cropster/roastingintelligence/ui/components/AlarmEditor$2.class",
+    "com/cropster/roastingintelligence/ui/components/AlarmEditor$6.class",
+    "com/cropster/roastingintelligence/ui/components/AlarmEditor.class",
+    "com/cropster/roastingintelligence/ui/components/TriggeredAlarmLabel$1.class",
+    "com/cropster/roastingintelligence/ui/components/TriggeredAlarmLabel.class",
+    "com/cropster/roastingintelligence/ui/components/AlarmLabel$1.class",
+    "com/cropster/roastingintelligence/ui/components/AlarmLabel.class",
+    "com/cropster/roastingintelligence/ui/components/ComboBoxHighlight$Status.class",
+    "com/cropster/roastingintelligence/ui/components/ComboBoxHighlight.class",
+    "com/cropster/roastingintelligence/ui/components/TaskEditor.class",
+    "com/cropster/roastingintelligence/ui/components/TaskLabel$1.class",
+    "com/cropster/roastingintelligence/ui/components/TaskLabel.class",
+    "com/cropster/roastingintelligence/ui/components/CommentEditor.class",
+    "com/cropster/roastingintelligence/ui/components/ProductionEditor$1.class",
+    "com/cropster/roastingintelligence/ui/components/ProductionEditor.class",
+    "com/cropster/roastingintelligence/ui/components/MeasureLabel.class",
+    "com/cropster/roastingintelligence/ui/components/CommentPopupHeader$CommentValueProvider.class",
+    "com/cropster/roastingintelligence/ui/components/CommentPopupHeader.class",
+    "com/cropster/roastingintelligence/ui/components/WebLink.class",
+    "com/cropster/roastingintelligence/ui/components/ActiveGoalLabel$1.class",
+    "com/cropster/roastingintelligence/ui/components/ActiveGoalLabel.class",
+    "com/cropster/roastingintelligence/ui/components/LiveGoalLabel.class",
+    "com/cropster/roastingintelligence/ui/components/Tooltip$1.class",
+    "com/cropster/roastingintelligence/ui/components/Tooltip.class",
+    "com/cropster/roastingintelligence/ui/components/AbstractDraggableConfigurationPanel.class",
+    "com/cropster/roastingintelligence/ui/components/BlendLabel.class",
+    "com/cropster/roastingintelligence/ui/components/ChannelConfigurationPanel$SuspendableChangeListener.class",
+    "com/cropster/roastingintelligence/ui/components/ChannelConfigurationPanel.class",
+    "com/cropster/roastingintelligence/ui/components/CommentLabel.class",
+    "com/cropster/roastingintelligence/ui/components/TimeLabel.class",
+    "com/cropster/roastingintelligence/ui/components/ConnectorPanel.class",
+    "com/cropster/roastingintelligence/ui/components/ControlStateConfigurationPanel$1.class",
+    "com/cropster/roastingintelligence/ui/components/ControlStateConfigurationPanel.class",
+    "com/cropster/roastingintelligence/ui/components/EmptyLineText.class",
+    "com/cropster/roastingintelligence/ui/components/HintLabel.class",
+    "com/cropster/roastingintelligence/ui/components/Spacer.class",
+    "com/cropster/roastingintelligence/ui/components/HintsFooterElement.class",
+    "com/cropster/roastingintelligence/ui/components/HyperlinkText$1.class",
+    "com/cropster/roastingintelligence/ui/components/HyperlinkText$2.class",
+    "com/cropster/roastingintelligence/ui/components/HyperlinkText.class",
+    "com/cropster/roastingintelligence/ui/components/InfoBox.class",
+    "com/cropster/roastingintelligence/ui/components/LineBreak.class",
+    "com/cropster/roastingintelligence/ui/components/LinkToPhysicalLabel.class",
+    "com/cropster/roastingintelligence/ui/components/LinkToSensorialLabel.class",
+    "com/cropster/roastingintelligence/ui/components/NewBadge.class",
+    "com/cropster/roastingintelligence/ui/components/PopOverTour$TourPage.class",
+    "com/cropster/roastingintelligence/ui/components/PopOverTour$TextTourPage.class",
+    "com/cropster/roastingintelligence/ui/components/PopOverTour$NodeTourPage.class",
+    "com/cropster/roastingintelligence/ui/components/PopOverTour.class",
+    "com/cropster/roastingintelligence/ui/components/ProductionErrorLabel.class",
+    "com/cropster/roastingintelligence/ui/components/ProgressDot.class",
+    "com/cropster/roastingintelligence/ui/components/ReferenceInfoPanel.class",
+    "com/cropster/roastingintelligence/ui/components/RoastLabelSeparator.class",
+    "com/cropster/roastingintelligence/ui/components/TitledLabel.class",
+    "com/cropster/roastingintelligence/ui/components/TitledText.class",
+    "com/cropster/roastingintelligence/ui/components/TitledValueLabel.class",
+    "com/cropster/roastingintelligence/ui/components/skin/LabeledSkinBase$1.class",
+    "com/cropster/roastingintelligence/ui/components/skin/LabeledSkinBase.class",
+    "com/cropster/roastingintelligence/ui/components/skin/NoTitlePopOverSkin.class",
+    "com/cropster/roastingintelligence/ui/components/skin/ProgressDotSkin$1.class",
+    "com/cropster/roastingintelligence/ui/components/skin/ProgressDotSkin$2.class",
+    "com/cropster/roastingintelligence/ui/components/skin/ProgressDotSkin$3.class",
+    "com/cropster/roastingintelligence/ui/components/skin/ProgressDotSkin$4.class",
+    "com/cropster/roastingintelligence/ui/components/skin/ProgressDotSkin$IndeterminateTransition.class",
+    "com/cropster/roastingintelligence/ui/components/skin/ProgressDotSkin$StyleableProperties$1.class",
+    "com/cropster/roastingintelligence/ui/components/skin/ProgressDotSkin$StyleableProperties$2.class",
+    "com/cropster/roastingintelligence/ui/components/skin/ProgressDotSkin$StyleableProperties$3.class",
+    "com/cropster/roastingintelligence/ui/components/skin/ProgressDotSkin$StyleableProperties$4.class",
+    "com/cropster/roastingintelligence/ui/components/skin/ProgressDotSkin$StyleableProperties.class",
+    "com/cropster/roastingintelligence/ui/components/skin/ProgressDotSkin.class",
+    "com/cropster/roastingintelligence/ui/components/skin/TextFieldWithIconAndMessageSkin.class",
+    "com/cropster/roastingintelligence/ui/components/skin/TitledPaneRightSkin$1.class",
+    "com/cropster/roastingintelligence/ui/components/skin/TitledPaneRightSkin$2.class",
+    "com/cropster/roastingintelligence/ui/components/skin/TitledPaneRightSkin$TitleRegion$1.class",
+    "com/cropster/roastingintelligence/ui/components/skin/TitledPaneRightSkin$TitleRegion.class",
+    "com/cropster/roastingintelligence/ui/components/skin/TitledPaneRightSkin.class",
+    "com/cropster/roastingintelligence/ui/components/skin/ValueTrackSliderSkin.class",
+    "com/cropster/roastingintelligence/ui/util/KeyboardShortcut.class",
+    "com/cropster/roastingintelligence/ui/util/Styles.class",
+    "com/cropster/roastingintelligence/ui/util/validators/RangeBindingEditorSupport.class",
+    "com/cropster/roastingintelligence/ui/util/validators/MeasureEditorRangeValidator.class",
+    "com/cropster/roastingintelligence/ui/util/validators/AbstractValueValidator.class",
+    "com/cropster/roastingintelligence/ui/util/validators/AbstractValidator$1.class",
+    "com/cropster/roastingintelligence/ui/util/validators/AbstractValidator.class",
+    "com/cropster/roastingintelligence/ui/util/validators/TimeEditorRangeValidator.class",
+    "com/cropster/roastingintelligence/ui/util/validators/MeasureRangeBindingSupport.class",
+    "com/cropster/roastingintelligence/ui/util/validators/StringEditorValidator.class",
+    "com/cropster/roastingintelligence/ui/util/validators/TimeRangeBindingSupport.class",
+    "com/cropster/roastingintelligence/ui/util/Validators$Status.class",
+    "com/cropster/roastingintelligence/ui/util/Validators$Validator.class",
+    "com/cropster/roastingintelligence/ui/util/Validators.class",
+    "com/cropster/roastingintelligence/ui/util/PlatformScheduler.class",
+    "com/cropster/roastingintelligence/ui/util/WindowUtil$1.class",
+    "com/cropster/roastingintelligence/ui/util/WindowUtil.class",
+    "com/cropster/roastingintelligence/ui/util/SlidingAnimation$SlidingDirection.class",
+    "com/cropster/roastingintelligence/ui/util/SlidingAnimation$SlidingMode.class",
+    "com/cropster/roastingintelligence/ui/util/SlidingAnimation$SlidingStatus.class",
+    "com/cropster/roastingintelligence/ui/util/SlidingAnimation$1.class",
+    "com/cropster/roastingintelligence/ui/util/SlidingAnimation.class",
+    "com/cropster/roastingintelligence/ui/util/PopOverHandler.class",
+    "com/cropster/roastingintelligence/ui/util/VeilSupport.class",
+    "com/cropster/roastingintelligence/ui/util/AnimatedBorders.class",
+    "com/cropster/roastingintelligence/ui/util/GridPaneZebraStyle.class",
+    "com/cropster/roastingintelligence/ui/util/AbstractListCell.class",
+    "com/cropster/roastingintelligence/ui/util/DirtyListener.class",
+    "com/cropster/roastingintelligence/ui/util/ComboBoxSearch$1.class",
+    "com/cropster/roastingintelligence/ui/util/ComboBoxSearch.class",
+    "com/cropster/roastingintelligence/ui/util/LotSearch.class",
+    "com/cropster/roastingintelligence/ui/util/ProgressMonitor.class",
+    "com/cropster/roastingintelligence/ui/util/ProgressTask.class",
+    "com/cropster/roastingintelligence/ui/util/SearchHighlightingListCell.class",
+    "com/cropster/roastingintelligence/ui/util/TranslatedListCell.class",
+    "com/cropster/roastingintelligence/ui/util/Icon.class",
+    "com/cropster/roastingintelligence/ui/util/ActionBuilder$1.class",
+    "com/cropster/roastingintelligence/ui/util/ActionBuilder$2.class",
+    "com/cropster/roastingintelligence/ui/util/ActionBuilder$3.class",
+    "com/cropster/roastingintelligence/ui/util/ActionBuilder.class",
+    "com/cropster/roastingintelligence/ui/util/AlarmsUtil$1.class",
+    "com/cropster/roastingintelligence/ui/util/AlarmsUtil.class",
+    "com/cropster/roastingintelligence/ui/util/AutoIncIndex.class",
+    "com/cropster/roastingintelligence/ui/util/ChartUtils$1.class",
+    "com/cropster/roastingintelligence/ui/util/ChartUtils.class",
+    "com/cropster/roastingintelligence/ui/util/DelegatingBuilderFactory$SVGImageBuilder.class",
+    "com/cropster/roastingintelligence/ui/util/DelegatingBuilderFactory.class",
+    "com/cropster/roastingintelligence/ui/util/DoubleFunctionBinding.class",
+    "com/cropster/roastingintelligence/ui/util/FormattedTableCellFactory$1.class",
+    "com/cropster/roastingintelligence/ui/util/FormattedTableCellFactory$2.class",
+    "com/cropster/roastingintelligence/ui/util/FormattedTableCellFactory.class",
+    "com/cropster/roastingintelligence/ui/util/FxListenerUtil.class",
+    "com/cropster/roastingintelligence/ui/util/IntegerBooleanBinding.class",
+    "com/cropster/roastingintelligence/ui/util/LocaleListCell.class",
+    "com/cropster/roastingintelligence/ui/util/MachineListCell.class",
+    "com/cropster/roastingintelligence/ui/util/NumberInputValidBinding.class",
+    "com/cropster/roastingintelligence/ui/util/OnceRunnable.class",
+    "com/cropster/roastingintelligence/ui/util/RendererListCell.class",
+    "com/cropster/roastingintelligence/ui/util/ResourceBundleListCell.class",
+    "com/cropster/roastingintelligence/ui/util/ReverseList.class",
+    "com/cropster/roastingintelligence/ui/util/TextFieldUtils.class",
+    "com/cropster/roastingintelligence/ui/util/Tours.class",
+    "com/cropster/roastingintelligence/ui/util/TranslatedTableCellFactory$1.class",
+    "com/cropster/roastingintelligence/ui/util/TranslatedTableCellFactory.class",
+    "com/cropster/roastingintelligence/ui/ComponentManager.class",
+    "com/cropster/roastingintelligence/ui/JavaFxApplicationState$Phase.class",
+    "com/cropster/roastingintelligence/ui/JavaFxApplicationState.class",
+    "com/cropster/roastingintelligence/ui/MacOsFxUtil.class",
+    "com/cropster/roastingintelligence/ui/JavaFxUtil$FailSafeResourceBundle.class",
+    "com/cropster/roastingintelligence/ui/JavaFxUtil$1.class",
+    "com/cropster/roastingintelligence/ui/JavaFxUtil.class",
+    "com/cropster/roastingintelligence/ui/PermissionNotificationController$NotificationHandler.class",
+    "com/cropster/roastingintelligence/ui/PermissionNotificationController.class",
+    "com/cropster/roastingintelligence/ui/ToastNotificationController$NotificationPopupHandler$CustomTransition.class",
+    "com/cropster/roastingintelligence/ui/ToastNotificationController$NotificationPopupHandler$NotificationRegion$1.class",
+    "com/cropster/roastingintelligence/ui/ToastNotificationController$NotificationPopupHandler$NotificationRegion.class",
+    "com/cropster/roastingintelligence/ui/ToastNotificationController$NotificationPopupHandler$NotificationWrapper.class",
+    "com/cropster/roastingintelligence/ui/ToastNotificationController$NotificationPopupHandler.class",
+    "com/cropster/roastingintelligence/ui/ToastNotificationController$1.class",
+    "com/cropster/roastingintelligence/ui/ToastNotificationController.class",
+    "com/cropster/roastingintelligence/ui/layout/preferences/SmartPreferencesPage$1$1.class",
+    "com/cropster/roastingintelligence/ui/layout/preferences/SmartPreferencesPage$1.class",
+    "com/cropster/roastingintelligence/ui/layout/preferences/SmartPreferencesPage.class",
+    "com/cropster/roastingintelligence/ui/layout/preferences/PreferencesPanel.class",
+    "com/cropster/roastingintelligence/ui/layout/preferences/ChartPreferencesPage.class",
+    "com/cropster/roastingintelligence/ui/layout/preferences/RorPreferencesPage.class",
+    "com/cropster/roastingintelligence/ui/layout/preferences/GeneralPreferencesPage.class",
+    "com/cropster/roastingintelligence/ui/layout/preferences/UnitPreferencesPage.class",
+    "com/cropster/roastingintelligence/ui/layout/preferences/InterfacePreferencesPage.class",
+    "com/cropster/roastingintelligence/ui/layout/preferences/PrintPreferencesPage.class",
+    "com/cropster/roastingintelligence/ui/layout/preferences/ConfigurationPreferencesPage.class",
+    "com/cropster/roastingintelligence/ui/layout/preferences/MeasurementPreferencesPage.class",
+    "com/cropster/roastingintelligence/ui/layout/preferences/ControlSliderPreferencesPage.class",
+    "com/cropster/roastingintelligence/ui/layout/preferences/ControlSwitchPreferencesPage.class",
+    "com/cropster/roastingintelligence/ui/layout/MainPanelController$SelectionSnapshot$Kind.class",
+    "com/cropster/roastingintelligence/ui/layout/MainPanelController$SelectionSnapshot.class",
+    "com/cropster/roastingintelligence/ui/layout/MainPanelController.class",
+    "com/cropster/roastingintelligence/ui/layout/FinishPanel$1.class",
+    "com/cropster/roastingintelligence/ui/layout/FinishPanel.class",
+    "com/cropster/roastingintelligence/ui/layout/PreferencesWindowController$1.class",
+    "com/cropster/roastingintelligence/ui/layout/PreferencesWindowController$AbstractListCell.class",
+    "com/cropster/roastingintelligence/ui/layout/PreferencesWindowController$ChannelListCell.class",
+    "com/cropster/roastingintelligence/ui/layout/PreferencesWindowController$ControlStateConfigurationListCell.class",
+    "com/cropster/roastingintelligence/ui/layout/PreferencesWindowController$ConnectorListCell.class",
+    "com/cropster/roastingintelligence/ui/layout/PreferencesWindowController.class",
+    "com/cropster/roastingintelligence/ui/layout/PrintWindowController.class",
+    "com/cropster/roastingintelligence/ui/layout/CommentsCustomizationTable.class",
+    "com/cropster/roastingintelligence/ui/layout/SlidingPanel.class",
+    "com/cropster/roastingintelligence/ui/layout/SystemSidebar.class",
+    "com/cropster/roastingintelligence/ui/layout/DetachableSidebar.class",
+    "com/cropster/roastingintelligence/ui/layout/ProductionSidebar$ProductionListCell.class",
+    "com/cropster/roastingintelligence/ui/layout/ProductionSidebar$BlendListCell.class",
+    "com/cropster/roastingintelligence/ui/layout/ProductionSidebar.class",
+    "com/cropster/roastingintelligence/ui/layout/CommentsSidebar$CommentListCell.class",
+    "com/cropster/roastingintelligence/ui/layout/CommentsSidebar.class",
+    "com/cropster/roastingintelligence/ui/layout/SupportSidebar.class",
+    "com/cropster/roastingintelligence/ui/layout/TasksSidebar$TaskListCell.class",
+    "com/cropster/roastingintelligence/ui/layout/TasksSidebar.class",
+    "com/cropster/roastingintelligence/ui/layout/PreparationPanel$2.class",
+    "com/cropster/roastingintelligence/ui/layout/PreparationPanel$1.class",
+    "com/cropster/roastingintelligence/ui/layout/PreparationPanel.class",
+    "com/cropster/roastingintelligence/ui/layout/AlarmsSidebar$AlarmListCell.class",
+    "com/cropster/roastingintelligence/ui/layout/AlarmsSidebar$TriggeredAlarmListCell.class",
+    "com/cropster/roastingintelligence/ui/layout/AlarmsSidebar.class",
+    "com/cropster/roastingintelligence/ui/layout/MachineControlSidebar.class",
+    "com/cropster/roastingintelligence/ui/layout/StatisticsPanel.class",
+    "com/cropster/roastingintelligence/ui/layout/QualityPanel.class",
+    "com/cropster/roastingintelligence/ui/layout/CommentsGrid.class",
+    "com/cropster/roastingintelligence/ui/layout/BetweenBatchPanel.class",
+    "com/cropster/roastingintelligence/ui/layout/AbstractBlendPanel$1.class",
+    "com/cropster/roastingintelligence/ui/layout/AbstractBlendPanel$RoastComponent.class",
+    "com/cropster/roastingintelligence/ui/layout/AbstractBlendPanel.class",
+    "com/cropster/roastingintelligence/ui/layout/BlendWithProfilePanel$1.class",
+    "com/cropster/roastingintelligence/ui/layout/BlendWithProfilePanel$2.class",
+    "com/cropster/roastingintelligence/ui/layout/BlendWithProfilePanel$NoMatchingProfileException.class",
+    "com/cropster/roastingintelligence/ui/layout/BlendWithProfilePanel$ProfileGroupSummary.class",
+    "com/cropster/roastingintelligence/ui/layout/BlendWithProfilePanel.class",
+    "com/cropster/roastingintelligence/ui/layout/LoginWindowController$1.class",
+    "com/cropster/roastingintelligence/ui/layout/LoginWindowController.class",
+    "com/cropster/roastingintelligence/ui/layout/ManualBlendPanel$1.class",
+    "com/cropster/roastingintelligence/ui/layout/ManualBlendPanel.class",
+    "com/cropster/roastingintelligence/ui/layout/ReferenceChartPanel.class",
+    "com/cropster/roastingintelligence/ui/JavaFxController$1.class",
+    "com/cropster/roastingintelligence/ui/JavaFxController$2.class",
+    "com/cropster/roastingintelligence/ui/JavaFxController$3.class",
+    "com/cropster/roastingintelligence/ui/JavaFxController$4.class",
+    "com/cropster/roastingintelligence/ui/JavaFxController$5.class",
+    "com/cropster/roastingintelligence/ui/JavaFxController$6.class",
+    "com/cropster/roastingintelligence/ui/JavaFxController$7.class",
+    "com/cropster/roastingintelligence/ui/JavaFxController$8.class",
+    "com/cropster/roastingintelligence/ui/JavaFxController$ConfirmStopHandler.class",
+    "com/cropster/roastingintelligence/ui/JavaFxController$TouchScreenDetector.class",
+    "com/cropster/roastingintelligence/ui/JavaFxController$TaskUpdateMonitor.class",
+    "com/cropster/roastingintelligence/ui/JavaFxController$9.class",
+    "com/cropster/roastingintelligence/ui/JavaFxController.class",
+    "com/cropster/roastingintelligence/ui/AbstractNotificationController.class",
+    "com/cropster/roastingintelligence/ui/audio/Sound.class",
+    "com/cropster/roastingintelligence/ui/audio/SoundManager$SoundManagerHolder.class",
+    "com/cropster/roastingintelligence/ui/audio/SoundManager.class",
+    "com/cropster/roastingintelligence/ui/AlarmController$TriggeredAlarmHolder$1.class",
+    "com/cropster/roastingintelligence/ui/AlarmController$TriggeredAlarmHolder.class",
+    "com/cropster/roastingintelligence/ui/AlarmController$1.class",
+    "com/cropster/roastingintelligence/ui/AlarmController.class",
+    "com/cropster/roastingintelligence/ui/LiveGoalController$ActiveGoalGridCell.class",
+    "com/cropster/roastingintelligence/ui/LiveGoalController$LiveGoalListCell.class",
+    "com/cropster/roastingintelligence/ui/LiveGoalController$1.class",
+    "com/cropster/roastingintelligence/ui/LiveGoalController.class",
+    "com/cropster/roastingintelligence/ui/SystemNotificationController$NotificationHandler.class",
+    "com/cropster/roastingintelligence/ui/SystemNotificationController$1.class",
+    "com/cropster/roastingintelligence/ui/SystemNotificationController.class",
+    "com/cropster/roastingintelligence/ui/BlendNotificationController$NotificationHandler.class",
+    "com/cropster/roastingintelligence/ui/BlendNotificationController.class",
+    "com/cropster/roastingintelligence/ui/chart/RoastChartWrapper.class",
+    "com/cropster/roastingintelligence/ui/chart/ChartWrapper.class",
+    "com/cropster/roastingintelligence/ui/chart/MouseCoordinatesPane.class",
+    "com/cropster/roastingintelligence/ui/chart/MouseCoordinatesTracker$DotData.class",
+    "com/cropster/roastingintelligence/ui/chart/MouseCoordinatesTracker$DotCrosshair.class",
+    "com/cropster/roastingintelligence/ui/chart/MouseCoordinatesTracker$VerticalCrosshair.class",
+    "com/cropster/roastingintelligence/ui/chart/MouseCoordinatesTracker.class",
+    "com/cropster/roastingintelligence/ui/chart/BetweenBatchChartWrapper.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/WhatsNewDialog$Builder.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/WhatsNewDialog.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/WhatsNewPane.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/WhatsNewPage$1.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/WhatsNewPage$2.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/WhatsNewPage.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/AbstractPage$ImageFormat.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/AbstractPage$PlatformPostfix.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/AbstractPage.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N00_ReplaySlider.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N01_PreRoastLayout.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N02_ProfileRatios.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N03_ReorderMeasurements.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N04_TrackingAssistant.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N05_CurvesValues.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N06_DetachableSidebars.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N07_KeyboardShortcuts.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N08_CustomizableReadouts.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N09_ToastNotifications.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N10_BbpStopAndMouseCoordinates.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N11_CustomizableAlarms.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N12_RightSidebarImprovements.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N13_SliderControlImprovements.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N14_SystemSidebar.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N15_SwitchControls.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N16_SliderControlsLayout.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N17_Cards.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N18_BlendCreation.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N19_FcPredictionEnhanced.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N20_ActivityInsights.class",
+    "com/cropster/roastingintelligence/ui/whatsnew/pages/N21_SmartGoals.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/MeasurementHandler.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/HandlerChain.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/HandlerChainManager.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/StateHandler.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/StateHandlerChain.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/AbstractChannelStatusHandler.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/AbstractControlHandler.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/AbstractControlSwitchStateHandler.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/ChannelStatusHandler.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/ChannelStatusHandlerAutoMode.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/ChannelStatusHandlerGiesen.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/ControlHandlerAuto.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/ControlHandlerMode.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/ControlHandlerBase.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/ControlHandlerGiesenGas.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/ControlHandlerGiesenGasControl.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/ControlHandlerManual.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/ControlHandlerManualMeasurement.class",
+    "com/cropster/roastingintelligence/ui/handler/measurement/ControlStateBarHandler.class",
+    "com/cropster/roastingintelligence/ui/list/EmptyStateList.class",
+    "com/cropster/roastingintelligence/ui/list/EmptyStateGrid.class",
+    "com/cropster/roastingintelligence/ui/list/GridView$DefaultGridCell$DefaultGridCellLabel.class",
+    "com/cropster/roastingintelligence/ui/list/GridView$DefaultGridCell.class",
+    "com/cropster/roastingintelligence/ui/list/GridView.class",
+    "com/cropster/roastingintelligence/ui/list/GridCell$1.class",
+    "com/cropster/roastingintelligence/ui/list/GridCell$2.class",
+    "com/cropster/roastingintelligence/ui/list/GridCell.class",
+    "com/cropster/roastingintelligence/ui/list/DraggableListCell$AutoscrollHelper$ScrollTask.class",
+    "com/cropster/roastingintelligence/ui/list/DraggableListCell$AutoscrollHelper.class",
+    "com/cropster/roastingintelligence/ui/list/DraggableListCell.class",
+    "com/cropster/roastingintelligence/ui/list/skin/AccessibleListViewSkin$AccessibleVirtualFlow.class",
+    "com/cropster/roastingintelligence/ui/list/skin/AccessibleListViewSkin.class",
+    "com/cropster/roastingintelligence/ui/list/skin/GridCellSkin.class",
+    "com/cropster/roastingintelligence/ui/WindowManager$WindowsManageraHolder.class",
+    "com/cropster/roastingintelligence/ui/WindowManager.class",
+    "com/cropster/roastingintelligence/ui/listener/CurvePredictionListener.class",
+    "com/cropster/roastingintelligence/ui/listener/FirstCrackPredictionListener.class",
+    "com/cropster/roastingintelligence/ui/listener/FlickPredictionListener.class",
+    "com/cropster/roastingintelligence/config/FileSystemConfiguration$Directories.class",
+    "com/cropster/roastingintelligence/config/FileSystemConfiguration.class",
+    "com/cropster/roastingintelligence/config/PreferencesConfiguration.class",
+    "com/cropster/roastingintelligence/annotation/NotMutuallyExclusiveSource.class",
+    "com/cropster/roastingintelligence/SystemProperties.class",
+    "com/cropster/roastingintelligence/system/SystemSupport.class",
+    "com/cropster/roastingintelligence/Preferences.class",
+    "com/cropster/roastingintelligence/task/RoastReplayer.class",
+    "com/cropster/roastingintelligence/task/control/WriteCommand.class",
+    "com/cropster/roastingintelligence/task/control/Command.class",
+    "com/cropster/roastingintelligence/service/AlarmService.class",
+    "com/cropster/roastingintelligence/service/LiveGoalService$ActiveGoal.class",
+    "com/cropster/roastingintelligence/service/LiveGoalService.class",
+    "com/cropster/roastingintelligence/service/NotificationBusService.class",
+    "com/cropster/roastingintelligence/service/StorageService.class",
+    "com/cropster/roastingintelligence/service/impl/AlarmServiceImpl$1.class",
+    "com/cropster/roastingintelligence/service/impl/AlarmServiceImpl$2.class",
+    "com/cropster/roastingintelligence/service/impl/AlarmServiceImpl$EventBasedAlarmHolder.class",
+    "com/cropster/roastingintelligence/service/impl/AlarmServiceImpl$MeasureBasedAlarmHolder.class",
+    "com/cropster/roastingintelligence/service/impl/AlarmServiceImpl$3.class",
+    "com/cropster/roastingintelligence/service/impl/AlarmServiceImpl.class",
+    "com/cropster/roastingintelligence/service/impl/LiveGoalServiceImpl$1.class",
+    "com/cropster/roastingintelligence/service/impl/LiveGoalServiceImpl$2.class",
+    "com/cropster/roastingintelligence/service/impl/LiveGoalServiceImpl$BaseActiveGoal.class",
+    "com/cropster/roastingintelligence/service/impl/LiveGoalServiceImpl$CurveActiveGoal.class",
+    "com/cropster/roastingintelligence/service/impl/LiveGoalServiceImpl$EventActiveGoal.class",
+    "com/cropster/roastingintelligence/service/impl/LiveGoalServiceImpl$MissingActiveGoal.class",
+    "com/cropster/roastingintelligence/service/impl/LiveGoalServiceImpl$ReferenceActiveGoal.class",
+    "com/cropster/roastingintelligence/service/impl/LiveGoalServiceImpl$ValueActiveGoal.class",
+    "com/cropster/roastingintelligence/service/impl/LiveGoalServiceImpl$3.class",
+    "com/cropster/roastingintelligence/service/impl/LiveGoalServiceImpl.class",
+    "com/cropster/roastingintelligence/service/impl/NotificationBusServiceImpl$1.class",
+    "com/cropster/roastingintelligence/service/impl/NotificationBusServiceImpl$BusSubscription.class",
+    "com/cropster/roastingintelligence/service/impl/NotificationBusServiceImpl.class",
+    "com/cropster/roastingintelligence/service/impl/StorageServiceImpl.class",
+    "com/cropster/roastingintelligence/listener/AlarmsChangeListener.class",
+    "com/cropster/roastingintelligence/listener/TriggeredAlarmListener.class",
+    "com/cropster/roastingintelligence/listener/ActiveGoalsChangeListener.class",
+    "com/cropster/roastingintelligence/listener/LiveGoalsChangeListener.class",
+    "com/cropster/roastingintelligence/listener/ControlStateConfigurationListener.class",
+    "com/cropster/roastingintelligence/listener/TriggeredAlarmEvent.class",
+    "com/cropster/roastingintelligence/listener/LiveGoalsChangeEvent$ChangeType.class",
+    "com/cropster/roastingintelligence/listener/LiveGoalsChangeEvent.class",
+    "com/cropster/roastingintelligence/listener/ActiveGoalsChangeEvent$ChangeType.class",
+    "com/cropster/roastingintelligence/listener/ActiveGoalsChangeEvent.class",
+    "com/cropster/roastingintelligence/listener/AlarmsChangeEvent$ChangeType.class",
+    "com/cropster/roastingintelligence/listener/AlarmsChangeEvent.class",
+    "com/cropster/roastingintelligence/remote/Authenticator.class",
+    "com/cropster/roastingintelligence/remote/SegmentTracker.class",
+    "com/cropster/roastingintelligence/remote/impl/OAuth2CallbackResource.class",
+    "com/cropster/roastingintelligence/remote/impl/OAuth2Connection$OpenIdConfiguration.class",
+    "com/cropster/roastingintelligence/remote/impl/OAuth2Connection$SingeltonBinder.class",
+    "com/cropster/roastingintelligence/remote/impl/OAuth2Connection$OAuth2ClientFilter.class",
+    "com/cropster/roastingintelligence/remote/impl/OAuth2Connection.class",
+    "com/cropster/roastingintelligence/remote/impl/OAuth2TokenHandler.class",
+    "com/cropster/roastingintelligence/remote/impl/OAuthState.class",
+    "com/cropster/roastingintelligence/remote/impl/SessionCookieFilter.class",
+    "com/cropster/roastingintelligence/exception/BetaAccessDeniedException.class",
+    "com/cropster/roastingintelligence/exception/LoginTimeoutException.class",
+    "com/cropster/roastingintelligence/exception/TokenRefreshException.class",
+    "com/cropster/roastingintelligence/Launcher.class",
+    "com/cropster/roastingintelligence/util/ChannelComparator.class",
+    "com/cropster/roastingintelligence/util/DataUtil.class",
+    "com/cropster/roastingintelligence/util/MinusPlusIterator.class",
+    "com/cropster/roastingintelligence/util/NumberUtils.class",
+    "com/cropster/roastingintelligence/util/RenamingThreadFactory.class",
+    "com/cropster/roastingintelligence/util/json/ObjectMapperProvider.class",
+    "org/cropster/roastingintelligence/model/Machine.class",
+    "org/cropster/roastingintelligence/model/Identifiable.class",
+    "org/cropster/roastingintelligence/model/Profile.class",
+    "org/cropster/roastingintelligence/model/Lot.class",
+    "org/cropster/roastingintelligence/model/WorkerTask$TaskStatus.class",
+    "org/cropster/roastingintelligence/model/WorkerTask$TaskFrequency.class",
+    "org/cropster/roastingintelligence/model/WorkerTask.class",
+    "org/cropster/roastingintelligence/model/Channel$Visibility.class",
+    "org/cropster/roastingintelligence/model/Channel.class",
+    "org/cropster/roastingintelligence/model/Roast$DateComparator.class",
+    "org/cropster/roastingintelligence/model/Roast.class",
+    "org/cropster/roastingintelligence/model/GroupMember.class",
+    "org/cropster/roastingintelligence/model/RoastingAnalyzerListener.class",
+    "org/cropster/roastingintelligence/model/AutoStartListener.class",
+    "org/cropster/roastingintelligence/model/BetweenBatchLog.class",
+    "org/cropster/roastingintelligence/model/Analysis.class",
+    "org/cropster/roastingintelligence/model/Goal.class",
+    "org/cropster/roastingintelligence/model/LotConsistencyCheck.class",
+    "org/cropster/roastingintelligence/model/ProcessingAlert.class",
+    "org/cropster/roastingintelligence/model/Measure.class",
+    "org/cropster/roastingintelligence/model/Cupping.class",
+    "org/cropster/roastingintelligence/model/Physical.class",
+    "org/cropster/roastingintelligence/model/Descriptor.class",
+    "org/cropster/roastingintelligence/model/CuppingItem.class",
+    "org/cropster/roastingintelligence/model/CuppingSheetItem.class",
+    "org/cropster/roastingintelligence/model/Curve.class",
+    "org/cropster/roastingintelligence/model/CurveData.class",
+    "org/cropster/roastingintelligence/model/RoastingComment$TimeComparator.class",
+    "org/cropster/roastingintelligence/model/RoastingComment.class",
+    "org/cropster/roastingintelligence/model/ControlState.class",
+    "org/cropster/roastingintelligence/model/CurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/AbstractCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/AbstractCommentable.class",
+    "org/cropster/roastingintelligence/model/impl/CombinedCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/ConverterCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/FacadeCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/HeadCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/LinearInterpolationCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/MovingAverageCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/OffsetCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/OverwriteCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/RelativeCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/RemoveDuplicatesCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/RorCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/RoundingCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/ScalingCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/SkipCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/SnapshotCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/StandardCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/StartEndPointCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/StepCurveModel.class",
+    "org/cropster/roastingintelligence/model/impl/TailCurveModel.class",
+    "org/cropster/roastingintelligence/model/MeasurementModel.class",
+    "org/cropster/roastingintelligence/model/Commentable.class",
+    "org/cropster/roastingintelligence/model/Scheduled.class",
+    "org/cropster/roastingintelligence/model/Weighable.class",
+    "org/cropster/roastingintelligence/model/ComponentLot.class",
+    "org/cropster/roastingintelligence/model/CommentListener.class",
+    "org/cropster/roastingintelligence/model/BlendComponent$PercentageComparator.class",
+    "org/cropster/roastingintelligence/model/BlendComponent.class",
+    "org/cropster/roastingintelligence/model/LotTransaction.class",
+    "org/cropster/roastingintelligence/model/BlendProfile.class",
+    "org/cropster/roastingintelligence/model/BlendProfileComponent.class",
+    "org/cropster/roastingintelligence/model/ProfileGroup.class",
+    "org/cropster/roastingintelligence/model/User.class",
+    "org/cropster/roastingintelligence/model/Group.class",
+    "org/cropster/roastingintelligence/model/UnsavedBetweenBatchLog.class",
+    "org/cropster/roastingintelligence/model/Project.class",
+    "org/cropster/roastingintelligence/model/Location.class",
+    "org/cropster/roastingintelligence/model/Reference.class",
+    "org/cropster/roastingintelligence/model/MeasureDefinition.class",
+    "org/cropster/roastingintelligence/model/RoastingAnalyzer.class",
+    "org/cropster/roastingintelligence/model/RoastingDataPoint.class",
+    "org/cropster/roastingintelligence/util/MathUtil.class",
+    "org/cropster/roastingintelligence/util/Measures.class",
+    "org/cropster/roastingintelligence/util/Messages.class",
+    "org/cropster/roastingintelligence/util/CollectionUtil.class",
+    "org/cropster/roastingintelligence/util/StringUtil.class",
+    "org/cropster/roastingintelligence/util/MeasureFormat.class",
+    "org/cropster/roastingintelligence/util/Smoothing.class",
+    "org/cropster/roastingintelligence/util/Storage$1.class",
+    "org/cropster/roastingintelligence/util/Storage.class",
+    "org/cropster/roastingintelligence/util/LinearValueConverter.class",
+    "org/cropster/roastingintelligence/util/ValueConverter.class",
+    "org/cropster/roastingintelligence/util/AliasResourceBundle$Alias.class",
+    "org/cropster/roastingintelligence/util/AliasResourceBundle.class",
+    "org/cropster/roastingintelligence/util/BetweenBatchLogFilters.class",
+    "org/cropster/roastingintelligence/util/BoolMap.class",
+    "org/cropster/roastingintelligence/util/CropsterThrowablePatternConverter.class",
+    "org/cropster/roastingintelligence/util/DateUtil.class",
+    "org/cropster/roastingintelligence/util/EmptyResourceBundle.class",
+    "org/cropster/roastingintelligence/util/FileComparator.class",
+    "org/cropster/roastingintelligence/util/IdentityValueConverter.class",
+    "org/cropster/roastingintelligence/util/MultiResourceBundle.class",
+    "org/cropster/roastingintelligence/util/NanoTime.class",
+    "org/cropster/roastingintelligence/util/NetworkUtil.class",
+    "org/cropster/roastingintelligence/util/OverrideResourceBundle.class",
+    "org/cropster/roastingintelligence/util/RoastFilters.class",
+    "org/cropster/roastingintelligence/util/TaskCompletionLogger.class",
+    "org/cropster/roastingintelligence/util/json/CurveDeserializer.class",
+    "org/cropster/roastingintelligence/util/json/CurveSerializer.class",
+    "org/cropster/roastingintelligence/util/json/LenientClassDeserialzer.class",
+    "org/cropster/roastingintelligence/util/json/MapAsNameValuesDeserializer.class",
+    "org/cropster/roastingintelligence/util/json/MapAsNameValuesSerializer.class",
+    "org/cropster/roastingintelligence/util/json/ReferenceDeserializer.class",
+    "org/cropster/roastingintelligence/util/json/ReferenceSerializer.class",
+    "org/cropster/roastingintelligence/util/json/ScheduledDeserializer.class",
+    "org/cropster/roastingintelligence/util/json/SourceParameterDeserializer.class",
+    "org/cropster/roastingintelligence/util/json/SourceParameterSerializer.class",
+    "org/cropster/roastingintelligence/util/modbus/FloatRegisterRead.class",
+    "org/cropster/roastingintelligence/util/modbus/FloatRegisterWrite.class",
+    "org/cropster/roastingintelligence/measurement/impl/DiedrichGasAirflowSourceFactory$DiedrichGas.class",
+    "org/cropster/roastingintelligence/measurement/impl/DiedrichGasAirflowSourceFactory$1.class",
+    "org/cropster/roastingintelligence/measurement/impl/DiedrichGasAirflowSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/MillCitySourceFactory$MillCityVersion.class",
+    "org/cropster/roastingintelligence/measurement/impl/MillCitySourceFactory$MillCityPhidgetSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/MillCitySourceFactory$1.class",
+    "org/cropster/roastingintelligence/measurement/impl/MillCitySourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/Phidget22SourceFactory$Phidget22Library.class",
+    "org/cropster/roastingintelligence/measurement/impl/Phidget22SourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/DemoSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/SerialSourceFactory$1.class",
+    "org/cropster/roastingintelligence/measurement/impl/SerialSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/PhidgetDeviceDetector$DeviceFilter.class",
+    "org/cropster/roastingintelligence/measurement/impl/PhidgetDeviceDetector.class",
+    "org/cropster/roastingintelligence/measurement/impl/HubSensorSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/AbstractPhidgetNetworkingSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/AbstractAnalogPhidget22Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/AbstractManagedPhidget22Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/AbstractPhidget22Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/AbstractMeasurementSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/AbstractSiemensS7Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/TemperaturePhidgetSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/AbstractYoctopuceSource$1.class",
+    "org/cropster/roastingintelligence/measurement/impl/AbstractYoctopuceSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/AtillaSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/AtillaSourceFactory$AtillaVersion.class",
+    "org/cropster/roastingintelligence/measurement/impl/AtillaSourceFactory$1.class",
+    "org/cropster/roastingintelligence/measurement/impl/AtillaSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/NetworkSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/AtillaV2Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/AutonicsTk4sSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/AutonicsTk4sSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/BellaTWSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/BellaTWSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/GenericModbusSource$ModbusConfig.class",
+    "org/cropster/roastingintelligence/measurement/impl/GenericModbusSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/BertoSource$ModbusTarget.class",
+    "org/cropster/roastingintelligence/measurement/impl/BertoSource$ModbusControlTarget.class",
+    "org/cropster/roastingintelligence/measurement/impl/BertoSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/BertoSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/BescaAutoSource$Control.class",
+    "org/cropster/roastingintelligence/measurement/impl/BescaAutoSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/BescaAutoSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/BescaManualSourceFactory$BescaManualVersion.class",
+    "org/cropster/roastingintelligence/measurement/impl/BescaManualSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/BescaManualSource$1.class",
+    "org/cropster/roastingintelligence/measurement/impl/BescaManualSource$2.class",
+    "org/cropster/roastingintelligence/measurement/impl/BescaManualSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/BescaManualV2Source$1.class",
+    "org/cropster/roastingintelligence/measurement/impl/BescaManualV2Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/BridgePhidgetSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/BuhlerPlcSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/BuhlerPlcSourceFactory$BuhlerPlcVersion.class",
+    "org/cropster/roastingintelligence/measurement/impl/BuhlerPlcSourceFactory$1.class",
+    "org/cropster/roastingintelligence/measurement/impl/BuhlerPlcSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/BuhlerPlcV2Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/CaparaoSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/CaparaoSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/CarmomaqNetworkSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/CarmomaqNetworkSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/CoffedNetworkSource$Limits.class",
+    "org/cropster/roastingintelligence/measurement/impl/CoffedNetworkSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/CoffedNetworkSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/CoffedSerialSourceFactory$CoffedManualVersion.class",
+    "org/cropster/roastingintelligence/measurement/impl/CoffedSerialSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/CoffedSerialGasAirflowSource$LinearValueConverter.class",
+    "org/cropster/roastingintelligence/measurement/impl/CoffedSerialGasAirflowSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/CoffedSerialSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/CoffeeTechNetworkSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/CoffeeTechNetworkSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/CoffeeTechSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/CoffeeTechSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/CoffeetoolPlcSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/CoffeetoolPlcSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/CogenPlcSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/CogenPlcSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/CogenPlcV2SourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/CogenV2Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/ColorTrackLaserSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/ColorTrackLaserSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/DefaultTimeEmitter.class",
+    "org/cropster/roastingintelligence/measurement/impl/DemoSourceImpl.class",
+    "org/cropster/roastingintelligence/measurement/impl/DemoTimeEmitter.class",
+    "org/cropster/roastingintelligence/measurement/impl/DiedrichAutoSource$ExecutePCCCService.class",
+    "org/cropster/roastingintelligence/measurement/impl/DiedrichAutoSource$ProtectedTypedLogical.class",
+    "org/cropster/roastingintelligence/measurement/impl/DiedrichAutoSource$ProtectedTypedLogicalRead.class",
+    "org/cropster/roastingintelligence/measurement/impl/DongyiSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/DiedrichAutoSource$ProtectedTypedLogicalReadFloat.class",
+    "org/cropster/roastingintelligence/measurement/impl/DiedrichAutoSource$ProtectedTypedLogicalReadInt.class",
+    "org/cropster/roastingintelligence/measurement/impl/DiedrichAutoSource$ProtectedTypedLogicalWrite.class",
+    "org/cropster/roastingintelligence/measurement/impl/DiedrichAutoSource$ProtectedTypedLogicalWriteInt.class",
+    "org/cropster/roastingintelligence/measurement/impl/DiedrichAutoSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/DiedrichAutoSourceFactory$DiedrichPLCVersion.class",
+    "org/cropster/roastingintelligence/measurement/impl/DiedrichAutoSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/DiedrichAutoZ3Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/DiedrichGasAirflowPhidget22Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/DiedrichProtosXSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/DongyiSourceFactory$DongyiVersion.class",
+    "org/cropster/roastingintelligence/measurement/impl/DongyiSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/DutchMasterSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/DutchMasterSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/FabricaRoastersSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/FabricaRoastersSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/GarantiSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/GarantiSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/GenericModbusRtuSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/GenericModbusSourceJ2mod.class",
+    "org/cropster/roastingintelligence/measurement/impl/GenericModbusTcpSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/GenericModbusRtuSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/GenericModbusTcpSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/GenericModbusUdpSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/GenericModbusUdpSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/GenericSiemensS7Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/GenericSiemensS7SourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/GiesenPlcSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/GiesenPlcSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/ImfPlcSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/ImfPlcSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/ImfPlcV2Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/ImfPlcV2SourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/IpXenakisPlcSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/IpXenakisPlcSourceFactory$IpccPlcVersion.class",
+    "org/cropster/roastingintelligence/measurement/impl/IpXenakisPlcSourceFactory$1.class",
+    "org/cropster/roastingintelligence/measurement/impl/IpXenakisPlcSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/IpccMitsubishiPlcSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/JoperNetworkSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/JoperNetworkSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/KapokSourceFactory$ControllerUnit.class",
+    "org/cropster/roastingintelligence/measurement/impl/KapokSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/KapokSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/KirschUndMausserPlcSource$KirschUndMausserVersion.class",
+    "org/cropster/roastingintelligence/measurement/impl/KirschUndMausserPlcSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/KirschUndMausserPlcSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/KraffePlcSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/KraffePlcSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/LillaPlcSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/LillaPlcSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/LoringPlcSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/LoringPlcSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/MeasurementMonitorImpl$MonitoringTimerTask$1.class",
+    "org/cropster/roastingintelligence/measurement/impl/MeasurementMonitorImpl$MonitoringTimerTask.class",
+    "org/cropster/roastingintelligence/measurement/impl/MeasurementMonitorImpl.class",
+    "org/cropster/roastingintelligence/measurement/impl/MillCitySource$1.class",
+    "org/cropster/roastingintelligence/measurement/impl/MillCitySource.class",
+    "org/cropster/roastingintelligence/measurement/impl/MillCityMcrSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/MillCityPhidget22Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/Phidget1048Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/MillCityV5Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/NordicCoffeeSourceFactory$NordicVersion.class",
+    "org/cropster/roastingintelligence/measurement/impl/NordicCoffeeSourceFactory$ModbusTarget.class",
+    "org/cropster/roastingintelligence/measurement/impl/NordicCoffeeSourceFactory$ModbusControlTarget.class",
+    "org/cropster/roastingintelligence/measurement/impl/NordicCoffeeSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/NordicCoffeeSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/NordicCoffeeV2Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/PetronciniS7DbSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/PetronciniS7MkSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/PetronciniSourceFactory$PetronciniVersion.class",
+    "org/cropster/roastingintelligence/measurement/impl/PetronciniSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/Phidget1046ManagedSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/Phidget1046Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/Phidget1048ManagedSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/Phidget1132Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/Phidget1132SourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/PhidgetTmp1100Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/PhidgetTmp1100SourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/PhidgetTmp1101Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/PhidgetTmp1101SourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/PhidgetTmp1200Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/PhidgetTmp1200SourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/PressureSensorPercentSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/PressureSensorSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/PrimoSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/PrimoSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/ProbatPlcSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/ProbatPlcSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/ProbatSampleRoasterSource$ProbatState.class",
+    "org/cropster/roastingintelligence/measurement/impl/ProbatSampleRoasterSource$ProbatIntegerState.class",
+    "org/cropster/roastingintelligence/measurement/impl/ProbatSampleRoasterSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/ProbatSampleRoasterSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/RceMitsubishiSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/RceSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/SanFranciscanEurothermSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/SantokerSource$InvalidResponseException.class",
+    "org/cropster/roastingintelligence/measurement/impl/SantokerSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/SantokerSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/SchuilenburgPlcSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/SchuilenburgPlcSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/SensorSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/SivetzClickPlcSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/SivetzPlcSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/ToperSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/ToperSourceFactory$ToperVersion.class",
+    "org/cropster/roastingintelligence/measurement/impl/ToperSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/ToperV2Source$ToperControlState.class",
+    "org/cropster/roastingintelligence/measurement/impl/ToperV2Source.class",
+    "org/cropster/roastingintelligence/measurement/impl/TyphoonSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/TyphoonSourceFactory$TyphoonVersion.class",
+    "org/cropster/roastingintelligence/measurement/impl/TyphoonSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/VoltageRatioSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/VortecsProSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/WatlowEzZoneSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/WatlowEzZoneSourceFactory$SanFranciscanVersion.class",
+    "org/cropster/roastingintelligence/measurement/impl/WatlowEzZoneSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/YangChiaSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/YoctopuceSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/YoctopuceSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/impl/simulation/DeviceSimulatorSource.class",
+    "org/cropster/roastingintelligence/measurement/impl/simulation/DeviceSimulatorSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/MeasurementSourceFactory$ConfigurationWarning.class",
+    "org/cropster/roastingintelligence/measurement/MeasurementSourceFactory.class",
+    "org/cropster/roastingintelligence/measurement/MeasurementListener.class",
+    "org/cropster/roastingintelligence/measurement/SourceParameter.class",
+    "org/cropster/roastingintelligence/measurement/MeasurementSource.class",
+    "org/cropster/roastingintelligence/measurement/MeasurementReaderWriter.class",
+    "org/cropster/roastingintelligence/measurement/ControlStateSource.class",
+    "org/cropster/roastingintelligence/measurement/MeasurementMonitor.class",
+    "org/cropster/roastingintelligence/measurement/TimeEmitter.class",
+    "org/cropster/roastingintelligence/measurement/AutoStartSource.class",
+    "org/cropster/roastingintelligence/measurement/CheckableSource.class",
+    "org/cropster/roastingintelligence/measurement/RefreshableSourceParameter.class",
+    "org/cropster/roastingintelligence/AppModel$TimerType.class",
+    "org/cropster/roastingintelligence/AppModel$Hint.class",
+    "org/cropster/roastingintelligence/AppModel$AutoStartMode.class",
+    "org/cropster/roastingintelligence/AppModel.class",
+    "org/cropster/roastingintelligence/Defaults.class",
+    "org/cropster/roastingintelligence/PreferencesStore.class",
+    "org/cropster/roastingintelligence/RoastingIntelligenceApp$1.class",
+    "org/cropster/roastingintelligence/RoastingIntelligenceApp$2.class",
+    "org/cropster/roastingintelligence/RoastingIntelligenceApp$3.class",
+    "org/cropster/roastingintelligence/RoastingIntelligenceApp.class",
+    "org/cropster/roastingintelligence/listener/MessageListener$MessageType.class",
+    "org/cropster/roastingintelligence/listener/MessageListener.class",
+    "org/cropster/roastingintelligence/listener/CsarDataListener.class",
+    "org/cropster/roastingintelligence/listener/RoastingListener.class",
+    "org/cropster/roastingintelligence/listener/SettingsListener.class",
+    "org/cropster/roastingintelligence/listener/CurveModelListener.class",
+    "org/cropster/roastingintelligence/listener/AbstractMessagePublisher.class",
+    "org/cropster/roastingintelligence/listener/ChannelConfigurationListener.class",
+    "org/cropster/roastingintelligence/listener/ConnectorConfigurationListener.class",
+    "org/cropster/roastingintelligence/ApplicationController.class",
+    "org/cropster/roastingintelligence/RoastingManager.class",
+    "org/cropster/roastingintelligence/BetweenBatchManager$1.class",
+    "org/cropster/roastingintelligence/BetweenBatchManager.class",
+    "org/cropster/roastingintelligence/remote/CsarConnection.class",
+    "org/cropster/roastingintelligence/remote/Version.class",
+    "org/cropster/roastingintelligence/remote/CsarConnectionImpl$1.class",
+    "org/cropster/roastingintelligence/remote/CsarConnectionImpl$2.class",
+    "org/cropster/roastingintelligence/remote/CsarConnectionImpl$3.class",
+    "org/cropster/roastingintelligence/remote/CsarConnectionImpl$4.class",
+    "org/cropster/roastingintelligence/remote/CsarConnectionImpl$5.class",
+    "org/cropster/roastingintelligence/remote/CsarConnectionImpl$6.class",
+    "org/cropster/roastingintelligence/remote/CsarConnectionImpl$7.class",
+    "org/cropster/roastingintelligence/remote/CsarConnectionImpl$8.class",
+    "org/cropster/roastingintelligence/remote/CsarConnectionImpl$9.class",
+    "org/cropster/roastingintelligence/remote/CsarConnectionImpl$10.class",
+    "org/cropster/roastingintelligence/remote/CsarConnectionImpl$UserAgentFilter.class",
+    "org/cropster/roastingintelligence/remote/CsarConnectionImpl$11.class",
+    "org/cropster/roastingintelligence/remote/CsarConnectionImpl$12.class",
+    "org/cropster/roastingintelligence/remote/CsarConnectionImpl.class",
+    "org/cropster/roastingintelligence/remote/ReadOnlyConnection.class",
+    "org/cropster/roastingintelligence/SyncService.class",
+    "org/cropster/roastingintelligence/MeasurementHub.class",
+    "org/cropster/roastingintelligence/RoastingModel.class",
+    "org/cropster/roastingintelligence/ui/chart/AreaAnnotation.class",
+    "org/cropster/roastingintelligence/ui/chart/CurveChart$XYSeriesFullRangeCollection.class",
+    "org/cropster/roastingintelligence/ui/chart/CurveChart.class",
+    "org/cropster/roastingintelligence/ui/chart/PredictionAnnotation.class",
+    "org/cropster/roastingintelligence/ui/chart/FirstCrackAnnotation.class",
+    "org/cropster/roastingintelligence/ui/chart/BetweenBatchAnnotation.class",
+    "org/cropster/roastingintelligence/ui/chart/DatasetTransformer.class",
+    "org/cropster/roastingintelligence/ui/chart/MovingAverageTransformer.class",
+    "org/cropster/roastingintelligence/ui/chart/MultiLineInfo.class",
+    "org/cropster/roastingintelligence/BetweenBatchModel.class",
+    "org/cropster/roastingintelligence/service/RoastPersister.class",
+    "org/cropster/roastingintelligence/service/impl/JsonReader$ColorDeserializer.class",
+    "org/cropster/roastingintelligence/service/impl/JsonReader.class",
+    "org/cropster/roastingintelligence/service/impl/JsonWriter$ColorSerializer.class",
+    "org/cropster/roastingintelligence/service/impl/JsonWriter.class",
+    "org/cropster/roastingintelligence/service/impl/FilePersister.class",
+    "org/cropster/roastingintelligence/ConfigUpdater.class",
+    "org/cropster/roastingintelligence/ConsoleController.class",
+    "org/cropster/roastingintelligence/LastStepTimeListener.class",
+    "org/cropster/roastingintelligence/VersionChecker.class",
+    "org/cropster/roastingintelligence/sensor/SensorListenerPhidget22.class",
+    "org/cropster/roastingintelligence/sensor/SensorPhidget22.class",
+    "org/cropster/roastingintelligence/sensor/SensorValueConverter.class",
+    "org/cropster/roastingintelligence/sensor/SensorListener.class",
+    "org/cropster/roastingintelligence/sensor/Sensor.class",
+    "org/cropster/roastingintelligence/sensor/impl/VoltageRatioInputSensorPhidget22.class",
+    "org/cropster/roastingintelligence/sensor/impl/AbstractAnalogPhidget22Sensor.class",
+    "org/cropster/roastingintelligence/sensor/impl/AbstractPhidget22Sensor.class",
+    "org/cropster/roastingintelligence/sensor/impl/AbstractSensor.class",
+    "org/cropster/roastingintelligence/sensor/impl/DiedrichValueConverter.class",
+    "org/cropster/roastingintelligence/sensor/impl/DiedrichVoltageValueConverter.class",
+    "org/cropster/roastingintelligence/sensor/impl/KiloPascalToPascalConverter.class",
+    "org/cropster/roastingintelligence/sensor/impl/KiloPascalToPercentConverter.class",
+    "org/cropster/roastingintelligence/sensor/impl/MilliAmpereToPercentConverter.class",
+    "org/cropster/roastingintelligence/sensor/impl/PercentageValueConverter.class",
+    "org/cropster/roastingintelligence/sensor/impl/Phidget1132ValueConverter.class",
+    "org/cropster/roastingintelligence/sensor/impl/RtdSensorPhidget22.class",
+    "org/cropster/roastingintelligence/sensor/impl/VoltageRatioToTemperatureConverter.class",
+    "org/cropster/roastingintelligence/sensor/impl/TemperatureSensorPhidget22.class",
+    "org/cropster/roastingintelligence/sensor/impl/ThermocoupleTemperatureSensorPhidget22.class",
+    "org/cropster/roastingintelligence/sensor/impl/Tmp1200SensorPhidget22.class",
+    "org/cropster/roastingintelligence/sensor/impl/VoltageInputSensorPhidget22.class",
+    "org/cropster/roastingintelligence/sensor/SensorValueConverterPhidget22.class",
+    "org/cropster/roastingintelligence/tasks/AlarmUploader.class",
+    "org/cropster/roastingintelligence/tasks/DataLoader.class",
+    "org/cropster/roastingintelligence/tasks/GroupMemberLoader.class",
+    "org/cropster/roastingintelligence/tasks/LiveGoalUploader.class",
+    "org/cropster/roastingintelligence/tasks/MachineLoader.class",
+    "org/cropster/roastingintelligence/tasks/RoastUploader.class",
+    "Messages$1.class",
+    "Messages.class",
+    "Messages_cs$1.class",
+    "Messages_cs.class",
+    "Messages_de$1.class",
+    "Messages_de.class",
+    "Messages_es$1.class",
+    "Messages_es.class",
+    "Messages_fr$1.class",
+    "Messages_fr.class",
+    "Messages_it$1.class",
+    "Messages_it.class",
+    "Messages_ja$1.class",
+    "Messages_ja.class",
+    "Messages_ko$1.class",
+    "Messages_ko.class",
+    "Messages_pt$1.class",
+    "Messages_pt.class",
+    "Messages_ru$1.class",
+    "Messages_ru.class",
+    "Messages_zh$1.class",
+    "Messages_zh.class",
+    "Messages_zh_TW$1.class",
+    "Messages_zh_TW.class"
+  ],
+  "java_files": 677,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 25,
+      "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+    },
+    {
+      "path": "META-INF/native-image/log4j-generated/com.cropster/roastingintelligence/reflect-config.json",
+      "bytes": 172,
+      "sha256": "4b7b93420fc3a72a234ab1bf32632db3372d6b32cf952cef421f9712bc8cd411"
+    },
+    {
+      "path": "META-INF/org/apache/logging/log4j/core/config/plugins/Log4j2Plugins.dat",
+      "bytes": 165,
+      "sha256": "ef373f957835a1bcc965cd0215be3dece6f9ff8d4910082a3514f8763adc894e"
+    },
+    {
+      "path": "META-INF/services/com.cropster.roastingintelligence.service.NotificationBusService",
+      "bytes": 74,
+      "sha256": "413eb44b1bfcaad9186fd3bec75402f75d749eab5f52653c9669f85f461b8eee"
+    },
+    {
+      "path": "application.properties",
+      "bytes": 238,
+      "sha256": "4ebee582b61dcffa32e2f3555aa7c3863c89b1cbe8b31931edad44ee8be31138"
+    },
+    {
+      "path": "audio/informative-01.mp3",
+      "bytes": 125305,
+      "sha256": "daecbc1913eacbd78233eabd763831b0502e8476c86d2a93d6b9f0c37649e124"
+    },
+    {
+      "path": "audio/informative-02.mp3",
+      "bytes": 184864,
+      "sha256": "030c5a9d33f43b83e8e3cb244b2630d8dc1d29220a216fa31fac03008a9b1711"
+    },
+    {
+      "path": "audio/informative-03.mp3",
+      "bytes": 126349,
+      "sha256": "c09dabd4dd1ab72222af08d384bb94b26b5d66cf6d1261d6d2a6229fa81f2671"
+    },
+    {
+      "path": "audio/informative-04.mp3",
+      "bytes": 125305,
+      "sha256": "d28d1380638c08898addbb00aa49672c5340e9181ccea87b64d9f0267afabc1d"
+    },
+    {
+      "path": "audio/informative-05.mp3",
+      "bytes": 181729,
+      "sha256": "adcf8f56ca5d9f22a627e4fe6d9d8387d4d5ccd7a9bea7260dd8426356b50da0"
+    },
+    {
+      "path": "audio/informative-06.mp3",
+      "bytes": 184864,
+      "sha256": "d06899503b2d03624ea9238454de14aff8ee1d564deb6097070ff7d984417c3f"
+    },
+    {
+      "path": "audio/legacy.mp3",
+      "bytes": 125305,
+      "sha256": "207d0dbb1a3b8422b7721c36a30a53e2215fba5cede0ac24713eb3d6722ef7db"
+    },
+    {
+      "path": "audio/warning-01.mp3",
+      "bytes": 65745,
+      "sha256": "a7a8fc16ba9a2443e6fe5137ae85518cd0b88e3f793bf4d6089a773e6c9bd7eb"
+    },
+    {
+      "path": "audio/warning-02.mp3",
+      "bytes": 125305,
+      "sha256": "91bd6d70c838a5c7c0299595e68bf102f63ce8c2a3fcf0d658b2ce90feff2c91"
+    },
+    {
+      "path": "audio/warning-03.mp3",
+      "bytes": 65745,
+      "sha256": "ecb12f75118cb9f0fcec841379cd68d6731fe0f7551c1bb42ab99debbc3bffff"
+    },
+    {
+      "path": "audio/warning-04.mp3",
+      "bytes": 303982,
+      "sha256": "25a9f9bd9363e824b859c2f2fede71fd6b99bf14b0374c2b980fb6f83d7bf9a7"
+    },
+    {
+      "path": "audio/warning-05.mp3",
+      "bytes": 125305,
+      "sha256": "ca7d60b4c4b86f7caf5ebbfd51218f4a8f52c3a6ecdc4fb40ee4230e14711c17"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/chart/MouseCoordinatesPane.fxml",
+      "bytes": 1808,
+      "sha256": "836db7e2a6546f98b938a1471a413a11b1c29d3a1a8145b0002d4d86b17efa5e"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/ActiveGoalLabel.fxml",
+      "bytes": 3744,
+      "sha256": "33a2890b7f94081655fe8c79f3c4e4a1b1edbaf67cc8e5ad82dbc5cf27c459b2"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/AlarmEditor.fxml",
+      "bytes": 10555,
+      "sha256": "da4bd68a74251abd4df4a277f3d79cf3dc637aa8580544122e29da79e9b3dbe2"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/AlarmLabel.fxml",
+      "bytes": 3107,
+      "sha256": "477b1c76ddade7ba16fc158b8276667f9001756bb1507385e31a80a85ed2ab68"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/BlendLabel.fxml",
+      "bytes": 4801,
+      "sha256": "b6102c1e9e6524dd7a2c6b45a5c9813d8541c19db21fb3d65b427252145d11a4"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/ChannelConfigurationPanel.fxml",
+      "bytes": 7484,
+      "sha256": "d72976bb53ac1b11a2f1d644779c91afce7df799515ad37de2eee51448b9cd6b"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/ChannelStatusLabel.fxml",
+      "bytes": 1572,
+      "sha256": "f0cd25a4fb7ff8c93e61266ea7abfa3f8b78b7f05e002babd0e3c4d32ca810a4"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/CommentEditor.fxml",
+      "bytes": 2381,
+      "sha256": "f66f8f9802b58f3fd79b376ad62d3cea71374f6176336346a1746f484b834411"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/CommentLabel.fxml",
+      "bytes": 1911,
+      "sha256": "0aa1253d4c93e2eedff9fcf2dcae46b33f2586ef72b51b1560e44fb8058e0ad3"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/CommentPopupContent.fxml",
+      "bytes": 2620,
+      "sha256": "49bc5307e97104f292c55aa1ea8bf542efef1081884f184a8870d8dd3e0de450"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/CommentPopupHeader.fxml",
+      "bytes": 567,
+      "sha256": "7b503fa357dac37183696dabf77a2160a228c8d58ada8fb8c994bd292bad5e3a"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/ConnectorPanel.fxml",
+      "bytes": 1316,
+      "sha256": "dfa130265c8186e1340d4b41d3a7f9385400b96c9b0347f8d2a42d177e874275"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/ControlSlider.fxml",
+      "bytes": 2860,
+      "sha256": "4bcb9174306a8b8e39ec79742e37c786fe5f81ef71ca0db07a78135874da88fb"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/ControlSliderToggleButton.fxml",
+      "bytes": 2566,
+      "sha256": "9f9627c01a3dcefc3eb39efecf228e1f8816ac67d81bc15f17945a87f1dfc62e"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/ControlStateConfigurationPanel.fxml",
+      "bytes": 5221,
+      "sha256": "ae8d6bd746f5506aeb439a77061cc4798c0afa9d4be821fecb243e1bcd42a417"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/ControlSwitch.fxml",
+      "bytes": 1310,
+      "sha256": "4758e9a4b5490a5616574251d5096d4956f5662dae1f1cceae47e840e0bc1fad"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/ControlToggleBar.fxml",
+      "bytes": 2268,
+      "sha256": "e28ca5f9166d32b1791077aa101153e3875ca00a925286b386fc5fe5c91a3dd3"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/DragAndDropLabelEditor.fxml",
+      "bytes": 6983,
+      "sha256": "06481b660cc50202477c9635609b20bfbc54b8a00d7e421a45d4c4e2e49fcb5a"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/FlickPredictionPanel.fxml",
+      "bytes": 1947,
+      "sha256": "10709740aa6a8dcf94cb78ce4f024f007e7e07d47d735df7248132d43c91fd32"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/FormComponent.fxml",
+      "bytes": 1537,
+      "sha256": "fa7540c6f0604f946bb4bbaf3e46c348741eb04c884b8d985e1d4d9d6895e34a"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/HintsFooterElement.fxml",
+      "bytes": 962,
+      "sha256": "a7b4af958a1e2e65155171e1aec564d8b6ae4f674fcec011c353e75a47f22ee4"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/InfoBox.fxml",
+      "bytes": 508,
+      "sha256": "fca2cd8675097adfa2a8fa9d554e6667985ec5374d485d75de8cd0977db47649"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/KeyCodeCombinationLabel.fxml",
+      "bytes": 778,
+      "sha256": "180fcb4e3deeb0311b92fbb03c037533b88c0f7bdbf5be56e5880a1661ac861d"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/LiveGoalLabel.fxml",
+      "bytes": 2443,
+      "sha256": "fde2a52eb60133e55786ba2578a39f7234c2ede134461eabbddf42510365e146"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/MeasureEditor.fxml",
+      "bytes": 648,
+      "sha256": "74cc9e77db355afacbdd933df510d0f67c5b7c00e7944756fd1c29c43a2074d2"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/MessageBox.fxml",
+      "bytes": 873,
+      "sha256": "7e4ac290d68e499cbcba15dbc6d823374e2b2bd1a085ec069c47a94dccb5eb98"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/PercentageLabel.fxml",
+      "bytes": 360,
+      "sha256": "6719fc743060ea33a8501494097397b64be39ced7c3440c3cf2c41071ca04e49"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/PredictionPanel.fxml",
+      "bytes": 1448,
+      "sha256": "2a47083397e115a26dbe53d823f84b0fc481d51627bee5049c88082ef1ba6b2e"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/ProductionEditor.fxml",
+      "bytes": 3203,
+      "sha256": "3d63e567ea2c4e099995bb60b781694827bbb18e8c77ba312558536c2c42fb91"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/ProductionErrorLabel.fxml",
+      "bytes": 437,
+      "sha256": "992fb0cde63fabb02729989bfc99f1d5d40437d3f195cdbe4382a45e309af99b"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/ProductionLabel.fxml",
+      "bytes": 6580,
+      "sha256": "dd1083e142cb3614985e69b4eecc020465cd0b7b83fc0557869462218d9cc1ba"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/RandomShortcutPane.fxml",
+      "bytes": 2259,
+      "sha256": "1d3ef568b83c51c21b90f6be0bf493e3521cc892e0578fd0b7c197ea9addc919"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/ReferenceInfoPanel.fxml",
+      "bytes": 1096,
+      "sha256": "3562d1a2dde562932e56cab787313fcdfda868359a494f42151806c2723d9d2f"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/RoastInfoPanel.fxml",
+      "bytes": 5554,
+      "sha256": "02e175f74161277bd3d324268a6a30fd86623777db5f3ca09fd16ab6ad15bed7"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/SliderButton.fxml",
+      "bytes": 800,
+      "sha256": "eb28d2feda94f32b516f2f9157712ed61639dbe344cf7b765cb016ae5a6c66c5"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/StatusDot.fxml",
+      "bytes": 410,
+      "sha256": "76cfb340f39d8a6d2a6944c917c684a6eb5f4097da961673ba2c125410b874c9"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/TaskEditor.fxml",
+      "bytes": 2530,
+      "sha256": "1ec9dd32fece69dea0484c90f385a9ec0caa4468c95932f36304e66c73855b23"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/TaskLabel.fxml",
+      "bytes": 5528,
+      "sha256": "8c66824d1e54f2e404d905c0699ef3a8d8c94d2e8ed55160794dfe651639c54b"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/TicketPanel.fxml",
+      "bytes": 1489,
+      "sha256": "0c07f7080b7b08608f2168a8b71870c2a17d9f15c53df47f475894686386c1cd"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/TimeEditor.fxml",
+      "bytes": 768,
+      "sha256": "a9c3aed8b03225c08ed582786e7e68075f1820e3a36406e840a4961234c125d1"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/TimerLabel.fxml",
+      "bytes": 357,
+      "sha256": "8279c4be27ee25d3a26c3fadd5a8c4dd50b7b8b2e356a319c36ce7b677041453"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/TitledValueLabel.fxml",
+      "bytes": 523,
+      "sha256": "dc1e015995ec202ad02622d8cfb4436e2958b9512e8e3f6dce0eaf02d948027c"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/ToggleSwitch.fxml",
+      "bytes": 892,
+      "sha256": "5e359a397cc1cea1dff1e131c194c202646fc857c724f2811ec38fd0e3af8d8a"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/TriggeredAlarmLabel.fxml",
+      "bytes": 3469,
+      "sha256": "d5a5b8a149aabbd0cc1aa3c201036a3d6272c153c53268e388c1936786cd0f51"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/UserPanel.fxml",
+      "bytes": 1391,
+      "sha256": "fa1caf9342a290e21372e3c6785c2a6567586c322aeb67b2a1dd098406f39cbb"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/popoverbubble-mac.css",
+      "bytes": 259,
+      "sha256": "5490f11e1232e60479af1956260d9e36bbf8aba35b7f436149cef7dc1b28769f"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/popoverbubble.css",
+      "bytes": 3101,
+      "sha256": "b39839a2e9a9495eba0cfa21cb21b8e6384dda6b24c76875236245295c8885af"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/toast-notification-mac.css",
+      "bytes": 264,
+      "sha256": "5808b22de557a7c0117a08b481d347ea48b8b6b80086931202eee71e70e7f977"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/components/toast-notification.css",
+      "bytes": 2134,
+      "sha256": "5af0d60bef4a0888cb30797ac4715c413363ea27ddb76633ecf66f30ce8341e4"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/AlarmsSidebar.fxml",
+      "bytes": 8378,
+      "sha256": "5b52d854ff05b644724b076f0c599f361cc7a21b9942cbc2d0c6dd288d37cdf6"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/BetweenBatchPanel.fxml",
+      "bytes": 1466,
+      "sha256": "3205d243bc16637475262737ab5593f63d29e7cf672a191e940a48d7a9927400"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/BlendWithProfilePanel.fxml",
+      "bytes": 7999,
+      "sha256": "73b746cfe976df1b4db296a64ad9916b6a7c696ca03feb6e752f5906f1813460"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/CommentsCustomizationTable.fxml",
+      "bytes": 3087,
+      "sha256": "ec48896aebe05216a25cee0435713d5b79428016137a9cc28451d8e9ad8f7dde"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/CommentsGrid.fxml",
+      "bytes": 1200,
+      "sha256": "ff0a515b7a8ce8619ccd09b2c3469fdc0f6fe8efcebda4c9f06a1588e0f96ad8"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/CommentsSidebar.fxml",
+      "bytes": 4107,
+      "sha256": "9ce4836363bfe3f385bfa8f1ae914bb6d441b0819fcd778a58316cea73b0b99b"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/DetachableSidebar.fxml",
+      "bytes": 1985,
+      "sha256": "bb0d5aac40d809630dd48fdfb03fe45a36aedadbbe6015b9f11922aa49528aac"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/FinishPanel.fxml",
+      "bytes": 2738,
+      "sha256": "0f5b409fb9e726037e54ce29732dbe6e3c11ba3a33325df5b64247a11d9c31cf"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/LoginWindow.fxml",
+      "bytes": 3377,
+      "sha256": "4fbb187730f510e84c270f4fdbe7a347c5460a7c6fd96730dec378b77573da70"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/MachineControlSidebar.fxml",
+      "bytes": 2173,
+      "sha256": "3a1d5a2d932b336c5cbd58e108a3c731c116c02ff463002bdceb89630fbd3f4c"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/MainPanel.fxml",
+      "bytes": 27164,
+      "sha256": "2d764f7d92cf4b3f2e7a4914aa04ba2404cb24b1f65c8531e748c5641d14f9fc"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/ManualBlendPanel.fxml",
+      "bytes": 7480,
+      "sha256": "a619de08a5e6c57b361ec6d0a41e7fe191309bcdb192c591b486ca7396744af7"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/PreparationPanel.fxml",
+      "bytes": 2428,
+      "sha256": "92af044499b83d011706052d159dfeabfc83edd0fe1dc1b2fe6ea8c49c262528"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/PrintWindow.fxml",
+      "bytes": 3338,
+      "sha256": "44ae2b92c9b539df14d8b104d4644505e8ce2aa4acea2d4214430f86f7b6f285"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/ProductionSidebar.fxml",
+      "bytes": 10517,
+      "sha256": "8f168b0edc23dc3865e5943c2cc1b78641c4a9e2a8ee3a58ab367007234c8299"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/QualityPanel.fxml",
+      "bytes": 3307,
+      "sha256": "891256e9d282766a663d69e8fa3cf3b99c16ffc486e29900c050c4d29b096b4f"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/ReferenceChartPanel.fxml",
+      "bytes": 2170,
+      "sha256": "98870090a4b33aac8d209e7ce4aca071c3471574361ee2b49d17304ef7f282b1"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/StatisticsPanel.fxml",
+      "bytes": 3759,
+      "sha256": "bf44c013e152dadeac15ac5b2963689090141c4108f29c8bcfb372228de612c4"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/SupportSidebar.fxml",
+      "bytes": 3939,
+      "sha256": "83069fb5bc2be9c11a52c97ec203a2ef76e49af1155d95dd0fc28c113df71595"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/SystemSidebar.fxml",
+      "bytes": 11609,
+      "sha256": "db4a378522e3bf1c5619c5787585af086422c898d5f7da7444062bd27b85c232"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/TasksSidebar.fxml",
+      "bytes": 5719,
+      "sha256": "2543860e8976d696b8c1255e203d65890792fcf9fbc26c0472dc9a7aacd58455"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/preferences/ChartPreferencesPage.fxml",
+      "bytes": 8294,
+      "sha256": "d9bd3b5ce62ddf43b42ed6c79186868bd439120883b85c8b4feb52ecd7fba6fd"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/preferences/ConfigurationPreferencesPage.fxml",
+      "bytes": 3410,
+      "sha256": "3aebbe79320d45ff4a3dcab1b8a70b00bfbc5715315454ba11b12138353422fd"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/preferences/ControlSliderPreferencesPage.fxml",
+      "bytes": 2488,
+      "sha256": "0782b48555b46c0e6336d3de45deccd6de19bcf0c1fc52be94ee122a7aeebbfb"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/preferences/ControlSwitchPreferencesPage.fxml",
+      "bytes": 1716,
+      "sha256": "df6991211b9ba4fd726dabaa2fff7707d54f7c40aebcb53b4df697d39aea43f0"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/preferences/GeneralPreferencesPage.fxml",
+      "bytes": 2145,
+      "sha256": "c1c2741d2f1cad4c162650de7f6c9c74bfa841e2a820f0fd541d4f488dce8034"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/preferences/InterfacePreferencesPage.fxml",
+      "bytes": 5278,
+      "sha256": "b8103c3600b20efad5768c83c388ee8cb14cceaaa781390c169733acb45c2824"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/preferences/MeasurementPreferencesPage.fxml",
+      "bytes": 2281,
+      "sha256": "d66dcb8ae2602876ea516d9292af090b754c8a4748035041d14dd489817ddf6c"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/preferences/PreferencesPanel.fxml",
+      "bytes": 10120,
+      "sha256": "439a6eb05578f367443861819f5e0fdddcb48f0ff24180ffaac02586cbc27e7f"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/preferences/PrintPreferencesPage.fxml",
+      "bytes": 3824,
+      "sha256": "ef15878750b35459922a7b2f63c9c1daa28c2853817d129558910c7189cdff84"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/preferences/RorPreferencesPage.fxml",
+      "bytes": 4403,
+      "sha256": "6991592bb877842ae1fbec563e1256c579dcd0869661d8fd8565d2b37063ae1f"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/preferences/SmartPreferencesPage.fxml",
+      "bytes": 13505,
+      "sha256": "f555344e0ccaccdc85b8dd7e548fc92e754d37915a3654dea534b77759ae41af"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/layout/preferences/UnitPreferencesPage.fxml",
+      "bytes": 3120,
+      "sha256": "33011e779a0164d87b5d41d4196a0772f4130ebbbceb16fa274a45d6a261d3e8"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/list/EmptyStateGrid.fxml",
+      "bytes": 1420,
+      "sha256": "ac69bf3536eb0f133f9d31312e0699f2d86e365058ed2a24b3b89b446636ba1e"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/list/EmptyStateList.fxml",
+      "bytes": 1240,
+      "sha256": "2e73db637eebcfac698b1f25853a7d36d9ed9a848dce3c19819de2b1e58dcf22"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/WhatsNewPane.fxml",
+      "bytes": 7482,
+      "sha256": "8d882b3e713f6151ddc8f2dcab0170b2ee1718559e1f926ecbc364d3d9d9261d"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N00_ReplaySlider.png",
+      "bytes": 19997,
+      "sha256": "7816816ea993e23f0afca7d9e524daecab7f9de133106eeab77536fd76a2799f"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N01_PreRoastLayout.png",
+      "bytes": 31831,
+      "sha256": "a3dfff822f9e4c31c8fccdf12ff3854c0cb4a4c925d28c65f31075ae248c596c"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N02_ProfileRatios.png",
+      "bytes": 38293,
+      "sha256": "522c51662075170167486d9114b3d80e9a624077e31442b2b67c56de6a783527"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N03_ReorderMeasurements.png",
+      "bytes": 83084,
+      "sha256": "f88c17cee2d0604b583b90a9d1b580966c668bd9cad436914635e3428719db5e"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N04_TrackingAssistant.png",
+      "bytes": 39641,
+      "sha256": "b2e67de6aaadc780725929e5fa870d54ecf89fab5c66d84117a1ec32dff10ba7"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N05_CurvesValues.png",
+      "bytes": 74290,
+      "sha256": "e411fb2087bb8c73b9ec483db310c213e0eb72c4a098cf7c88c179bc2f6cb9e9"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N06_DetachableSidebars.png",
+      "bytes": 76448,
+      "sha256": "04a15572d86a81d12fba0ae21fbd7462f6b57013431b7b4c07fc96be74858d41"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N07_KeyboardShortcuts_mac.gif",
+      "bytes": 354361,
+      "sha256": "764fca6e7e6af15ee6a8e84d0579a31313c7b103c2192cba8facbd69869ee371"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N07_KeyboardShortcuts_win.gif",
+      "bytes": 357100,
+      "sha256": "8435d0e8883cd0fb3d9afd47b2d30ed76f80ada398896d9503cc0acb51364c8f"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N08_CustomizableReadouts.png",
+      "bytes": 60599,
+      "sha256": "cd4443f17bdcc306495f1ea928bed839ea93a701bc959289b70618ae410eede4"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N09_ToastNotifications.png",
+      "bytes": 81258,
+      "sha256": "68e5f68ce53257053f3465456b080e9d86a102e2835da265e53e452d0ab3da78"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N10_BbpStopAndMouseCoordinates.png",
+      "bytes": 76311,
+      "sha256": "0b741764ed9889a40f23305cdbf7d4e411f8f28ecbd430097e8a1cb761abe9aa"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N11_CustomizableAlarms.png",
+      "bytes": 95303,
+      "sha256": "605de79091d3f76493f5d34666f546496c66b811c338fb76f5283b10e138130e"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N12_RightSidebarImprovements.png",
+      "bytes": 76709,
+      "sha256": "d6a839cd85ff17afae5921c1f4242c07b003217f3b360a3c5b0e3d91ed1c11c1"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N13_SliderControlImprovements.png",
+      "bytes": 68836,
+      "sha256": "f50719b2618a03d7ec5fe9adebf2c7c73f9cc58eacf55342cc91e3255d404a45"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N14_SystemSidebar.png",
+      "bytes": 82140,
+      "sha256": "c4ddf310e1f30febc7c20f77cf8809c6a9b1ef22206e4689628dd2e1ec0d56e2"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N15_SwitchControls.png",
+      "bytes": 57562,
+      "sha256": "275552987c760d11c66215780afc20817855ef215947f8913ce8febc8faa5277"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N16_SliderControlsLayout.png",
+      "bytes": 66181,
+      "sha256": "71ca504719146bfb41d3e1bbdb12c17e25137d7bdca31f21abeb0364f94851cc"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N17_Cards.png",
+      "bytes": 63290,
+      "sha256": "2fac549f885e36bcbe2b971e2a79ad87e4b015b1e9fb1d4b77e2178780076fbb"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N18_BlendCreation.png",
+      "bytes": 71225,
+      "sha256": "a2eb5e739cd77278aee8bde1a1a1133d6195412217f2376b7504ea3931861db6"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N19_FcPredictionEnhanced.png",
+      "bytes": 43477,
+      "sha256": "8bd16e836e721d91495ecbe171aeb3f75348901db0d4393ec1fa89005f2683a7"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N20_ActivityInsights.png",
+      "bytes": 88288,
+      "sha256": "8c01e9af907928e4596925fae371a509c02f5877052943548e8637afa28ee27a"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/pages/N21_SmartGoals.png",
+      "bytes": 62044,
+      "sha256": "d9b09e271a79422c15dd70aa135aa657c54f106cb578b140573f600cc8460a2f"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/whatsnewdialog-mac.css",
+      "bytes": 300,
+      "sha256": "3cbcdb3f960ca6fa0ba003ca83ce1ed17f1083294547b3de41199832f2f1bf4e"
+    },
+    {
+      "path": "com/cropster/roastingintelligence/ui/whatsnew/whatsnewdialog.css",
+      "bytes": 3138,
+      "sha256": "f172943b87349cb827fa20c50438c5d63994cf44f11d231a33bc4b8b3d362de2"
+    },
+    {
+      "path": "fonts/NotoMono-Regular.ttf",
+      "bytes": 107848,
+      "sha256": "41fd7ccc82375e2a1e47f0cc2c941c14d7c99ba2f57cf69c9f738d07fb257686"
+    },
+    {
+      "path": "fonts/SIL Open Font License.txt",
+      "bytes": 4299,
+      "sha256": "130b55d0f6564114388c1ddaa88a517a945155bcb6344439f879aaa07ba19b81"
+    },
+    {
+      "path": "icons/active.svg",
+      "bytes": 123,
+      "sha256": "f7e3abe2d0651106430c4375852ed06becf1b2bb46491f6ae3ee26bdd2fb678e"
+    },
+    {
+      "path": "icons/add.svg",
+      "bytes": 112,
+      "sha256": "eaac912841a7604dab8aea2f09101dd3a0dc24ddec0f991d21e690fe1da776fb"
+    },
+    {
+      "path": "icons/airflow-control-replay.svg",
+      "bytes": 262,
+      "sha256": "0924b1746169d1017b62243cd266a60b76f2ec7fa3ca96a32628cd2d127deead"
+    },
+    {
+      "path": "icons/airflow.svg",
+      "bytes": 238,
+      "sha256": "4e582ff2ff424ac678bca551ce4ea44a570182a9a03ed587a6e9cd1d8b90d6fe"
+    },
+    {
+      "path": "icons/alert-error.png",
+      "bytes": 1701,
+      "sha256": "581fba7a2d57547257a945ffe095b6415bdd188f4abd5746be1569e063f63d24"
+    },
+    {
+      "path": "icons/alert-error@2x.png",
+      "bytes": 3862,
+      "sha256": "19d2f4dbb1cb853e34f7c716502b77c919dc7dff28b531f36545798cc89acb4f"
+    },
+    {
+      "path": "icons/alert-info.png",
+      "bytes": 1438,
+      "sha256": "6e90b2bad2c15904389b70f6abcbef589ed236fb94da6ba5c1ec0a5f3b146976"
+    },
+    {
+      "path": "icons/alert-info@2x.png",
+      "bytes": 3312,
+      "sha256": "e911ce365c371b8ae4da9267932c54aeed7e702fafbb17c241a4038b43e6ef65"
+    },
+    {
+      "path": "icons/alert-success.png",
+      "bytes": 1323,
+      "sha256": "763eefd2cd65d712b4f79c6f1e5c256f21d772b6cbf0ca41dbd11dcd679cc1bc"
+    },
+    {
+      "path": "icons/alert-success@2x.png",
+      "bytes": 3045,
+      "sha256": "30ee1b38c07a4bb0d31c16fbe42fff23656edd0330ded5d9ceae0fe0db500692"
+    },
+    {
+      "path": "icons/alert-warning.png",
+      "bytes": 1295,
+      "sha256": "10653c303e342a7a3a33d84d693e1c17043f8b912258d18ddd096fef4d212c6e"
+    },
+    {
+      "path": "icons/alert-warning@2x.png",
+      "bytes": 3009,
+      "sha256": "095acbf3261bc3c19c4addac097dc1f620b7b288435b97ed7a5f77f065a5b572"
+    },
+    {
+      "path": "icons/alert.svg",
+      "bytes": 334,
+      "sha256": "d8dcc71a4b9860b78e98a9ae8ad2017dbfff187e6891f198756c55b6e314c994"
+    },
+    {
+      "path": "icons/arrow-down.svg",
+      "bytes": 106,
+      "sha256": "03486158cc7ced9552b0013c5a55d1797b782ed6e1b16d6f64a97f3b2cd1f8de"
+    },
+    {
+      "path": "icons/arrow-left.svg",
+      "bytes": 106,
+      "sha256": "3c0895703b2252f2bebc229df0571d463b22fd0882a3b7ff105511874e4ba8d7"
+    },
+    {
+      "path": "icons/arrow-right.svg",
+      "bytes": 106,
+      "sha256": "de3d924bb5171a65a1fcdec2638d1e2f6821a4d7e8684c6ad2a5d73ffeb31d63"
+    },
+    {
+      "path": "icons/arrow-up.svg",
+      "bytes": 106,
+      "sha256": "d7713ddf39317e8f0519ea95eb42ae97ce6460564c893a0a411ddb27102e5483"
+    },
+    {
+      "path": "icons/check-mark.svg",
+      "bytes": 163,
+      "sha256": "6a0d3ae4a15f860101e41fdcaa5c552aa56397414844f398fd292069cab127d9"
+    },
+    {
+      "path": "icons/chevron-down.svg",
+      "bytes": 112,
+      "sha256": "cf3f8a85e9bb87a23cd81206193b6148f6eb71d525964fe24624d5f083e505a9"
+    },
+    {
+      "path": "icons/chevron-left.svg",
+      "bytes": 114,
+      "sha256": "bd625bab3f9d10ac72bc114a09dd4b6bdd1034b2f08373aac743edcd21c7a5aa"
+    },
+    {
+      "path": "icons/chevron-right.svg",
+      "bytes": 112,
+      "sha256": "3f0331518578473b29548aba19c46fde6de47fb2c19cfc6ad765dce6c9e35c55"
+    },
+    {
+      "path": "icons/chevron-up.svg",
+      "bytes": 113,
+      "sha256": "bfaa00658cae01f690533633e41f507efdcc8a2c4398bca07bda980d44c1e43e"
+    },
+    {
+      "path": "icons/clean.svg",
+      "bytes": 215,
+      "sha256": "23cc7597f6db375a1bc5f1e069007aa2672e73ec4e4db016da50af4523f53086"
+    },
+    {
+      "path": "icons/close.svg",
+      "bytes": 230,
+      "sha256": "2b7622bce510c7e0e96e8042b6a3bb33aba866cf770237b64842c00febf391d8"
+    },
+    {
+      "path": "icons/coffee-bean.svg",
+      "bytes": 211,
+      "sha256": "0de20300674edadde9e52e3652b9e5faa1901037cfc6e03dc742ce60201e7777"
+    },
+    {
+      "path": "icons/comment.svg",
+      "bytes": 259,
+      "sha256": "498e6293082c6c980911ff820ba56d8598aa970be1ecb1c75fd4d24f9c2dc85d"
+    },
+    {
+      "path": "icons/control-slider-and-switch.svg",
+      "bytes": 560,
+      "sha256": "290c1e43135716df278418383d6035ed360876e5032f2f3238ef728b346cc159"
+    },
+    {
+      "path": "icons/control-slider.svg",
+      "bytes": 261,
+      "sha256": "d0ef2f48fd885f737cd90d57fd2e05704aeb03185e801c0a242acb0fe2d0ddb4"
+    },
+    {
+      "path": "icons/control-switch.svg",
+      "bytes": 340,
+      "sha256": "5181d3a3a06f5602cd7581698e20dea669ab4389e21bc604c56c66b9be425057"
+    },
+    {
+      "path": "icons/customize.svg",
+      "bytes": 340,
+      "sha256": "89b1b2298f906e29daf4436072696d7797546f0c96abaf9af376e9ebe14fbdf6"
+    },
+    {
+      "path": "icons/delete.svg",
+      "bytes": 268,
+      "sha256": "4515e035dd63afc16a605249558ee770b1b31cfba449bb5b73e86c36676ca1c1"
+    },
+    {
+      "path": "icons/density.svg",
+      "bytes": 563,
+      "sha256": "87c7e44cb652e18d07466fb7c5ff1d3099ca19db185335fa477cff2ed194a64b"
+    },
+    {
+      "path": "icons/descriptors.svg",
+      "bytes": 499,
+      "sha256": "7eceabace679c47b600d1e80fa5c80fc0742a3d55d302bbb00d6be82b12999a3"
+    },
+    {
+      "path": "icons/download.svg",
+      "bytes": 122,
+      "sha256": "49c2745e2ce1f8ea55acfa0ff9db1b86abde2f1a6a56192b9f8f315a1e2d1cc5"
+    },
+    {
+      "path": "icons/drag-and-drop.svg",
+      "bytes": 164,
+      "sha256": "37c2cc34b319e0e4993045aac689de55244e5becc29da34d8e4f216b3bfcc6df"
+    },
+    {
+      "path": "icons/drum-control-replay.svg",
+      "bytes": 220,
+      "sha256": "2765e34b15745089a81f446341d05ef676d90b079b4ac064148fdacb9eeb64f9"
+    },
+    {
+      "path": "icons/drum-speed.svg",
+      "bytes": 206,
+      "sha256": "c54bec98ba1c51a900c37bf6fee6f6cf273c283c77edfb1b1566395903693c57"
+    },
+    {
+      "path": "icons/edit-inline.svg",
+      "bytes": 147,
+      "sha256": "168c7be73fefc2abb29db128b363d9716e893cddf7fa2ec9c6bbcf55c180a86e"
+    },
+    {
+      "path": "icons/edit.svg",
+      "bytes": 131,
+      "sha256": "2b496a7e98a7097b39064f34c82720f1d8aead13d7508427b7fdca651e45d8c8"
+    },
+    {
+      "path": "icons/empty.svg",
+      "bytes": 189,
+      "sha256": "39d1215516a718c0de6e328b17d40bc9cc226fbefd93df05b2220d873dcaec94"
+    },
+    {
+      "path": "icons/error.svg",
+      "bytes": 317,
+      "sha256": "d7cad034a57b8c74656423464b92871070ca27198f530dc5533884164fc8e847"
+    },
+    {
+      "path": "icons/evaluator.svg",
+      "bytes": 245,
+      "sha256": "dbd5bdacddd120b5711f519bcd7b029d7c2db9f8bd574a4285052b218d6b2459"
+    },
+    {
+      "path": "icons/expand.svg",
+      "bytes": 231,
+      "sha256": "af6ceb15b9a3db386172e8724b8060f34fa812bc16ea1d2d59fab5f5ea293e78"
+    },
+    {
+      "path": "icons/favourite.svg",
+      "bytes": 174,
+      "sha256": "9897840fb742247344f391678991390910a771080cd7d80eb7f792076359a16a"
+    },
+    {
+      "path": "icons/feedback.svg",
+      "bytes": 337,
+      "sha256": "241c21751f6fa8e951cfd0afc70afd39d997ba9bd13ce2cd190908eaabb9a236"
+    },
+    {
+      "path": "icons/file.svg",
+      "bytes": 234,
+      "sha256": "6ae2d4ebd718f50151335981f42ecf551bd6e99de67c33c5e5937a7d10e8085a"
+    },
+    {
+      "path": "icons/force-start.svg",
+      "bytes": 130,
+      "sha256": "8011f3ee40fd3de58566d78b7fbe60f9373ec1d7f14641d2b21a6937e6fc1d0e"
+    },
+    {
+      "path": "icons/gas-control-replay.svg",
+      "bytes": 271,
+      "sha256": "e0dd12c689685c4ad67a386df54b7abbec89d02232ae102655412eef4b72e36a"
+    },
+    {
+      "path": "icons/gas.svg",
+      "bytes": 294,
+      "sha256": "95dd5d6966a01b095425ca029672ec36bedb69f07dac1d065ccd1e3b7f453bb5"
+    },
+    {
+      "path": "icons/goal.svg",
+      "bytes": 406,
+      "sha256": "54412448b997a879d5d19747e31129793d16ef21c70c47a29f9b96b8c37ae1a8"
+    },
+    {
+      "path": "icons/help.svg",
+      "bytes": 686,
+      "sha256": "cd71c7064982da23c30276f32b11cb9a098fd6ee5540d838409a21c1e182b94f"
+    },
+    {
+      "path": "icons/hide.svg",
+      "bytes": 415,
+      "sha256": "4a7f3a61233b5c39b62c0802dc491ad4f81e31a558a61fec7627c6e06766027d"
+    },
+    {
+      "path": "icons/inactive.svg",
+      "bytes": 187,
+      "sha256": "f9347d25f705a65ccb33e0a0a5eb3786543553a4ecebba875674d2c6a0edc6f9"
+    },
+    {
+      "path": "icons/info.svg",
+      "bytes": 221,
+      "sha256": "99857219ac4677e0649b6fb2bc59a92b9978fd3bd0e2302da785a0271c08f84b"
+    },
+    {
+      "path": "icons/layout.svg",
+      "bytes": 275,
+      "sha256": "b421d69513d977a65ef8c0c6c89145bd4f91b5620f830ea2ff49383de37e2ecb"
+    },
+    {
+      "path": "icons/list.svg",
+      "bytes": 204,
+      "sha256": "2d41b54a373da4b563165f0ddc006844463f52563a2a785d1de11de0d13c3161"
+    },
+    {
+      "path": "icons/live.svg",
+      "bytes": 859,
+      "sha256": "73e65328bb30324332fa760fe943b0dd0950068ce1221137b3f66717686c0e68"
+    },
+    {
+      "path": "icons/loader.svg",
+      "bytes": 247,
+      "sha256": "3d71d2edf96692a190989040f0716174f6214899b2f307be76772f2d01f2b182"
+    },
+    {
+      "path": "icons/login.svg",
+      "bytes": 122,
+      "sha256": "dbaa915bd5d8b009fe4323d8dfcb815187be16b1a0bddf64796a66ea7666d58a"
+    },
+    {
+      "path": "icons/logout.svg",
+      "bytes": 121,
+      "sha256": "3b76d475bc7cfedf5ae3c9ac86e28091e73df00de5a75abbbd202584605be858"
+    },
+    {
+      "path": "icons/merge.svg",
+      "bytes": 151,
+      "sha256": "3684250a960bde7d4bcd68229befc12b3cf2fe356bf23002c34ae530c1f0b3d0"
+    },
+    {
+      "path": "icons/moisture.svg",
+      "bytes": 356,
+      "sha256": "ca261866d1fa7977d0ed49b8d80fcdf4b441144625a56e3d6928c04cf60e8e39"
+    },
+    {
+      "path": "icons/no-visual-feedback.svg",
+      "bytes": 207,
+      "sha256": "fb9f27bbb71243a5c7dabd111ce40a37045a9420afd240ff3ae594f06673bc6f"
+    },
+    {
+      "path": "icons/offline.svg",
+      "bytes": 232,
+      "sha256": "a53f07398d481ead1ec257f5fd980e3a21fd42e2be299c87b7aa9bf4a7e9af44"
+    },
+    {
+      "path": "icons/online.svg",
+      "bytes": 164,
+      "sha256": "e33c655dfc4a23428dc504015c7b0c828cec198381aa243d4bb0b75394345fd9"
+    },
+    {
+      "path": "icons/open-out.svg",
+      "bytes": 261,
+      "sha256": "2368e3d092d0eef55921632ea8df6d727267ff1e285ef896b425b4c63b95477f"
+    },
+    {
+      "path": "icons/power.svg",
+      "bytes": 358,
+      "sha256": "18c9e1d4006b1c6784f67c250c725f6a6fa7103866bbc8dd70376e41e37deede"
+    },
+    {
+      "path": "icons/print.svg",
+      "bytes": 158,
+      "sha256": "ef15bd36cba862e5ece6a6bcb38a9897c2cc70aad878c881c63cc95ef8824a97"
+    },
+    {
+      "path": "icons/profile.svg",
+      "bytes": 447,
+      "sha256": "ffc64441f12d82e911bbb9967a78b9867b1b0f0831999e0be691bdc33717b372"
+    },
+    {
+      "path": "icons/qr-code.svg",
+      "bytes": 319,
+      "sha256": "344322698073d31231e4f612838e679b81e1b1f5adb5b0865c8e9df2117b5e63"
+    },
+    {
+      "path": "icons/redo.svg",
+      "bytes": 140,
+      "sha256": "55033fdb2379ebe68efd959f3daf2a587afc9bc0b8c2d119522c7b6c1368f5e1"
+    },
+    {
+      "path": "icons/remove.svg",
+      "bytes": 97,
+      "sha256": "6f9d1a110ed37dc00a61a7c99d2e5e2ff9b6b72ed834f631936790cbe0a60214"
+    },
+    {
+      "path": "icons/reorder.svg",
+      "bytes": 147,
+      "sha256": "f83c7c60bf4c1e4932eb85c99687414cb6001dc53620dd9ac567fcd1d9f0d7ce"
+    },
+    {
+      "path": "icons/replay.svg",
+      "bytes": 286,
+      "sha256": "8d68861c9ef67b2cf6a36ab12aed31e8e4e0cecdb1b0bfab4286a039f2ebf3cf"
+    },
+    {
+      "path": "icons/reset.svg",
+      "bytes": 157,
+      "sha256": "65e6170f38d3adb407c50e5d29d05736df0267104a8f31bdbc45138d4cacd6c7"
+    },
+    {
+      "path": "icons/roast.svg",
+      "bytes": 511,
+      "sha256": "e4a94f30ac77268537d3853dfdd9083ba4cca31f7e77a4ddad9087863ffef3c4"
+    },
+    {
+      "path": "icons/schedule-complete.svg",
+      "bytes": 267,
+      "sha256": "deb0b0e44020d3184aea05e065a45ec1b28d0c708206880ca037567bdebb9ec8"
+    },
+    {
+      "path": "icons/schedule.svg",
+      "bytes": 261,
+      "sha256": "6b97765f351b6976d195a7b2d072c56fb7381d15ee83bf6ff7cb4f35fbe30dd5"
+    },
+    {
+      "path": "icons/see-more.svg",
+      "bytes": 182,
+      "sha256": "ea707e5f840c3ee630fb907a8530c64f68eb9a5d1dd2777cfa2e37fbfaab7007"
+    },
+    {
+      "path": "icons/settings.svg",
+      "bytes": 333,
+      "sha256": "7d69300ec2977c9e9f45e9f311e73c01df65e57d858f2688a114702995b63354"
+    },
+    {
+      "path": "icons/show.svg",
+      "bytes": 240,
+      "sha256": "fd746cab959f22ec190d2e6a08c78b6b647dbba840dbf90f5e012f260c785cca"
+    },
+    {
+      "path": "icons/sidebar-detached.svg",
+      "bytes": 315,
+      "sha256": "cbae896202804801c37195f5f5ecd268a2654c3b398a70b851ea4efff4630f39"
+    },
+    {
+      "path": "icons/sidebar.svg",
+      "bytes": 221,
+      "sha256": "0acfd2b73ec1f162e0dc068206866254df7d95c531ad76ef425b2f4356c28c18"
+    },
+    {
+      "path": "icons/split.svg",
+      "bytes": 162,
+      "sha256": "0f4843196af299246be15312fb1030ddeac749cb62c9f811694c6d7a9fe63604"
+    },
+    {
+      "path": "icons/start.svg",
+      "bytes": 101,
+      "sha256": "5c9b70d4bd09f9f47fe7543b9217ba3d8f07019904731480d3d5cdb9d8097b0a"
+    },
+    {
+      "path": "icons/statistics.svg",
+      "bytes": 150,
+      "sha256": "f8c4cc7d41be4bf50cda0688fa67e7832209d55fc902f5d6b2e2d87ec1d3ebf5"
+    },
+    {
+      "path": "icons/stop.svg",
+      "bytes": 99,
+      "sha256": "a1738ca32840418db2ad9750ab728cc9190b0967f8eff91099d6219dc779cc82"
+    },
+    {
+      "path": "icons/success.svg",
+      "bytes": 245,
+      "sha256": "1d70b03dc92ca44403baf6a6105e31f34d36c5048764e02fdf85b89a3e5cb967"
+    },
+    {
+      "path": "icons/switch.svg",
+      "bytes": 145,
+      "sha256": "557808309395a8878d3e3076c28e4c426c6622114308abded73d633a89ed0118"
+    },
+    {
+      "path": "icons/sync.svg",
+      "bytes": 221,
+      "sha256": "284b72ffad8ddd329de131c3b495fd1980d9b306b64e2fe018b12d627ac2e418"
+    },
+    {
+      "path": "icons/target.svg",
+      "bytes": 422,
+      "sha256": "1757f34b37770a6eddceb0bb776d38ae7a6ce58fa7c94ef6a9b358b162458e80"
+    },
+    {
+      "path": "icons/temperature.svg",
+      "bytes": 316,
+      "sha256": "47bea6442be3836b1496bbb31abdf3b619e4f4093ca80de15d71190a1adc267d"
+    },
+    {
+      "path": "icons/time.svg",
+      "bytes": 175,
+      "sha256": "baab247922c6dea1171e4ca8d295ffc8e7f824303ceb16fd249aa79fc5801b73"
+    },
+    {
+      "path": "icons/tip.svg",
+      "bytes": 366,
+      "sha256": "702ac7b66f6ebd3d20396fb697a9d8ba5135c4b380db87edade3470b4f89c420"
+    },
+    {
+      "path": "icons/track.svg",
+      "bytes": 369,
+      "sha256": "d3d6271f71cee7d41eb1b8857ba9ba804cb0b49b00dafb5266cb5eb7250a00bc"
+    },
+    {
+      "path": "icons/undo.svg",
+      "bytes": 140,
+      "sha256": "99aba24de8b018a158527bc341877117569125b0ef405e900f61692ef42f31ee"
+    },
+    {
+      "path": "icons/unfavourite.svg",
+      "bytes": 379,
+      "sha256": "bcd5ef657816f674942fd9597d3cd6aab63ca4ada1c78ea0da0d6c59e926a993"
+    },
+    {
+      "path": "icons/upload.svg",
+      "bytes": 122,
+      "sha256": "c800bb1c5092a2624240feeece9099533bcb9c2a89bb01b8bf98cd3cd46b3140"
+    },
+    {
+      "path": "icons/user.svg",
+      "bytes": 172,
+      "sha256": "300e5431c88953cc676ce9ed7ae044ebb70b4cbbd2fdca6759ff98a0abe60307"
+    },
+    {
+      "path": "icons/volume-high.svg",
+      "bytes": 138,
+      "sha256": "917569ba6e0c5eb059ee5dfda7b25ae9d98a73468950f87f32aa70e937b3fad7"
+    },
+    {
+      "path": "icons/warning.svg",
+      "bytes": 350,
+      "sha256": "8f7aa9527be0055342f0202d308de6ce12e4459b9d21a5f1d8159c1e1831f519"
+    },
+    {
+      "path": "icons/water-activity.svg",
+      "bytes": 350,
+      "sha256": "424dc6e27912993196fcf290e289642a95553ebd830d32b2bce181d5661de3ee"
+    },
+    {
+      "path": "images/bbp-chart.svg",
+      "bytes": 5175,
+      "sha256": "537ec6a38442ad40ea54b151234cebd0bdef0dfa4eee3948e50a926377cc1c0a"
+    },
+    {
+      "path": "images/bulb.svg",
+      "bytes": 4141,
+      "sha256": "9e27088443a1804e0fd6b14b2499f3c6299a4d1ec93147d66f2487241a391c5e"
+    },
+    {
+      "path": "images/check.svg",
+      "bytes": 280,
+      "sha256": "3fae413f5894888ddc0e2b12a898e6ff0bdf64c12d26658be219b61b422238aa"
+    },
+    {
+      "path": "images/close.svg",
+      "bytes": 313,
+      "sha256": "fc739ec6ffa881bd5f51c1e4a20b0ee5d8a48bbd936af913d84ef66e32383d5c"
+    },
+    {
+      "path": "images/delete.svg",
+      "bytes": 919,
+      "sha256": "a47ef78bcf3ea50422d1f0b3d412487913dd769fc501b7b4d1d279b5e6f2e619"
+    },
+    {
+      "path": "images/descriptors.svg",
+      "bytes": 3552,
+      "sha256": "0916da42875718bec2d3725b44d87ca97c7d5de7afd9623cc67c48e18798ac9c"
+    },
+    {
+      "path": "images/edit.svg",
+      "bytes": 526,
+      "sha256": "f9fa4fe3d194f757e1acb92ea3f70a188d822d3f089b31f6f11a6bdc421e7fb8"
+    },
+    {
+      "path": "images/force-start.svg",
+      "bytes": 399,
+      "sha256": "9560dee8dac6730e60bea736db1a5ede3cd93e1e09daccb32b0ff268223b9eef"
+    },
+    {
+      "path": "images/info.svg",
+      "bytes": 380,
+      "sha256": "7acb383b0974be9ab5c660f9a0f5346368c44819ce1c71297705111f5cf9bec4"
+    },
+    {
+      "path": "images/moisture.svg",
+      "bytes": 400,
+      "sha256": "d3d99c26c3d3df0bb9dc0e6644fd9cd50ed80abccb76e352e6aef6f242525df4"
+    },
+    {
+      "path": "images/profile.svg",
+      "bytes": 1075,
+      "sha256": "7ef778e009fe0f66eedf3d6b839a4ab9dfe2fb4f11ddb0c5e3d512674645e70b"
+    },
+    {
+      "path": "images/replay.svg",
+      "bytes": 714,
+      "sha256": "6baf8b47c608399de1ded2ca449063087b07c92d4747b2d7164dd7d78a746e65"
+    },
+    {
+      "path": "images/spinner.svg",
+      "bytes": 773,
+      "sha256": "2aa60db4e1fe638402c14cdf02c4c6ea56052a2e05194a8c9737e4aeabf7c7c9"
+    },
+    {
+      "path": "images/start.svg",
+      "bytes": 329,
+      "sha256": "0435f15e5ef62d685499ebdfcd523bc348245e4a0a510c5e9ac45650c2083427"
+    },
+    {
+      "path": "images/stop.svg",
+      "bytes": 217,
+      "sha256": "9eda1d10c0e5762254a155294fda13360a3e77fa06137017fa3ede373156ecae"
+    },
+    {
+      "path": "images/success.svg",
+      "bytes": 310,
+      "sha256": "ac02a1697d44796952c26b458e4b082f484577fefadd21aebebe47cc4c3c5e0f"
+    },
+    {
+      "path": "images/switch.svg",
+      "bytes": 405,
+      "sha256": "3c02277496b787260d74e5590f3b3796ec0bb59f14595bd314acaf2c2a6e74c8"
+    },
+    {
+      "path": "images/sync.svg",
+      "bytes": 366,
+      "sha256": "7093d21589eea0d0cbecd38e1bd3473a41b18d11532f7c7632990d14facdb195"
+    },
+    {
+      "path": "images/values.svg",
+      "bytes": 861,
+      "sha256": "f7aabe478950c4d1b8b1a17e97e7cc56a9b705e4c0d7e2417f6c83a4cc0780d5"
+    },
+    {
+      "path": "images/warning.svg",
+      "bytes": 241,
+      "sha256": "9a61b26277b3ede84cbd073f862196a12a735761bc48296fa311d92cf54ea32e"
+    },
+    {
+      "path": "images/wateractivity.svg",
+      "bytes": 1076,
+      "sha256": "7cbd5f294e8234761301f8317a620a0083454a813b78a1dd5c4d96d6bbaeb5a1"
+    },
+    {
+      "path": "log4j2.component.properties",
+      "bytes": 603,
+      "sha256": "8ad103d9204ca93ef2fffa4bcd9b3a29aa2154b5f68976f5714d44e5e4d68023"
+    },
+    {
+      "path": "log4j2.yaml",
+      "bytes": 2910,
+      "sha256": "f4f01c774eebe2f92d379915affd8438ec9c4ce7a59dfeb0050f508f537bd807"
+    },
+    {
+      "path": "main-mac.css",
+      "bytes": 64,
+      "sha256": "e37fcebd443b23e0e2f7733b8cbf8164c9998a6d30e902e7976ec4e081f28515"
+    },
+    {
+      "path": "main.css",
+      "bytes": 90782,
+      "sha256": "b3fef1d0963d0d8366e8d57d2550fbfdebe3adcc12faaf860e230e965e5c6d3b"
+    },
+    {
+      "path": "com/install4j/runtime/installer/frontend/icons/component_16.png",
+      "bytes": 437,
+      "sha256": "409ab5dae743f90031a3bfc6e27260893c1801ec5a24b3fdd5202d02ecc4b29b"
+    },
+    {
+      "path": "com/install4j/runtime/installer/frontend/icons/component_16@2x.png",
+      "bytes": 870,
+      "sha256": "9d03cf15fa1491874c5841a00ebdf48d20e5f7438ddc5de0968c0d55969fa73f"
+    },
+    {
+      "path": "com/install4j/runtime/installer/frontend/icons/download_16.png",
+      "bytes": 144,
+      "sha256": "c2d6d2d4390257279ea74803952ce8ae69258bb1a4d0c197a9b49d27d87ab284"
+    },
+    {
+      "path": "com/install4j/runtime/installer/frontend/icons/download_16@2x.png",
+      "bytes": 194,
+      "sha256": "4df5e8e367c3ed331d1e155f4e5b1aa83055d0b0796f5e1970645c147fb884a7"
+    },
+    {
+      "path": "messages.properties",
+      "bytes": 154,
+      "sha256": "88c94b3ea0d12bbf8571df5354f9de699e69cf761180039f5fb9b17d07c81a63"
+    },
+    {
+      "path": "messages_de.properties",
+      "bytes": 187,
+      "sha256": "e3b5969d9204aa3c18e1ace13fab33355cfec5147c04bb8653960b7c86278a9d"
+    },
+    {
+      "path": "messages_es.properties",
+      "bytes": 155,
+      "sha256": "011de9354ddb1738b7fb68f19fe30a5030b5a3a55ea669f651fb7a7e038ae932"
+    },
+    {
+      "path": "messages_fr.properties",
+      "bytes": 183,
+      "sha256": "17d526f2d91afc41762ba4913707d1022f0ef79abda3289852fdc72b66d909d9"
+    },
+    {
+      "path": "messages_it.properties",
+      "bytes": 163,
+      "sha256": "0e6ffb875069bb0a2d510fec63bfa511fb4250131bbaad2e434a48e4c0c290e6"
+    },
+    {
+      "path": "messages_ja.properties",
+      "bytes": 206,
+      "sha256": "3de5c85465ee5d934144412692b2031ba719ecef30c4f5c50ae5bc28d9d24b72"
+    },
+    {
+      "path": "messages_ko.properties",
+      "bytes": 185,
+      "sha256": "2493f48127373298285b490e6db20d04c20249784293393fa192691b7c2d4836"
+    },
+    {
+      "path": "messages_pt.properties",
+      "bytes": 148,
+      "sha256": "8a5c5f7450f721cf3b67d6b8841b12666394494a6ff9968f08ae9beb2e8f686c"
+    },
+    {
+      "path": "messages_ru.properties",
+      "bytes": 218,
+      "sha256": "2c27015fe699f015925ef366f2ffb7d6bbd975a5d83f84f46ba18b53886a5435"
+    },
+    {
+      "path": "messages_zh_CN.properties",
+      "bytes": 127,
+      "sha256": "5f27111da1aa14adfd3a30cf92a3b5b78aa094d971fe60935ba2e01697a2db8d"
+    },
+    {
+      "path": "images/roastmane-logo.svg",
+      "bytes": 6671,
+      "sha256": "6d70e5bb11cde985641a62b76e124c5d86e73e21d3a5494d223054b76f5678ea"
+    },
+    {
+      "path": "images/roastmane-branding.png",
+      "bytes": 301,
+      "sha256": "b0595fe891b5cdba66f3f8485369218d7ddfde362b1574ba92eb722f73cb4978"
+    },
+    {
+      "path": "icons/logo-roastmane.svg",
+      "bytes": 6993,
+      "sha256": "de59beec61d8ebbfe8bdc6a01925cf12b724699393351846055a387a1e8917af"
+    },
+    {
+      "path": "icons/logo-roastmane-color.svg",
+      "bytes": 6993,
+      "sha256": "de59beec61d8ebbfe8bdc6a01925cf12b724699393351846055a387a1e8917af"
+    },
+    {
+      "path": "images/cropster-logo.svg",
+      "bytes": 6671,
+      "sha256": "6d70e5bb11cde985641a62b76e124c5d86e73e21d3a5494d223054b76f5678ea"
+    },
+    {
+      "path": "images/cropster-branding.png",
+      "bytes": 301,
+      "sha256": "b0595fe891b5cdba66f3f8485369218d7ddfde362b1574ba92eb722f73cb4978"
+    },
+    {
+      "path": "icons/logo-cropster.svg",
+      "bytes": 6993,
+      "sha256": "de59beec61d8ebbfe8bdc6a01925cf12b724699393351846055a387a1e8917af"
+    },
+    {
+      "path": "icons/logo-cropster-color.svg",
+      "bytes": 6993,
+      "sha256": "de59beec61d8ebbfe8bdc6a01925cf12b724699393351846055a387a1e8917af"
+    },
+    {
+      "path": "images/roastmane16x16.png",
+      "bytes": 179,
+      "sha256": "9b4355183a1fca840d7626813647363869883d7e0083fb8099827e5fa81fba2b"
+    },
+    {
+      "path": "images/roastmane16x16-mac.png",
+      "bytes": 179,
+      "sha256": "9b4355183a1fca840d7626813647363869883d7e0083fb8099827e5fa81fba2b"
+    },
+    {
+      "path": "images/cropster16x16.png",
+      "bytes": 179,
+      "sha256": "9b4355183a1fca840d7626813647363869883d7e0083fb8099827e5fa81fba2b"
+    },
+    {
+      "path": "images/cropster16x16-mac.png",
+      "bytes": 179,
+      "sha256": "9b4355183a1fca840d7626813647363869883d7e0083fb8099827e5fa81fba2b"
+    },
+    {
+      "path": "images/roastmane32x32.png",
+      "bytes": 308,
+      "sha256": "90a7923461645801566b6d5764f9b919a3e184c241b782a664d3b6e1a77bd505"
+    },
+    {
+      "path": "images/roastmane32x32-mac.png",
+      "bytes": 308,
+      "sha256": "90a7923461645801566b6d5764f9b919a3e184c241b782a664d3b6e1a77bd505"
+    },
+    {
+      "path": "images/cropster32x32.png",
+      "bytes": 308,
+      "sha256": "90a7923461645801566b6d5764f9b919a3e184c241b782a664d3b6e1a77bd505"
+    },
+    {
+      "path": "images/cropster32x32-mac.png",
+      "bytes": 308,
+      "sha256": "90a7923461645801566b6d5764f9b919a3e184c241b782a664d3b6e1a77bd505"
+    },
+    {
+      "path": "images/roastmane48x48.png",
+      "bytes": 536,
+      "sha256": "d0c269c5e61a1351b3213f5b5620bec066f6abb26c779695cfce6489eec7881d"
+    },
+    {
+      "path": "images/roastmane48x48-mac.png",
+      "bytes": 536,
+      "sha256": "d0c269c5e61a1351b3213f5b5620bec066f6abb26c779695cfce6489eec7881d"
+    },
+    {
+      "path": "images/cropster48x48.png",
+      "bytes": 536,
+      "sha256": "d0c269c5e61a1351b3213f5b5620bec066f6abb26c779695cfce6489eec7881d"
+    },
+    {
+      "path": "images/cropster48x48-mac.png",
+      "bytes": 536,
+      "sha256": "d0c269c5e61a1351b3213f5b5620bec066f6abb26c779695cfce6489eec7881d"
+    },
+    {
+      "path": "images/roastmane64x64.png",
+      "bytes": 799,
+      "sha256": "c46b3613542861e4518c2c08f82757bc5a36b5f49af0c9fa4c26d3cf8d44970a"
+    },
+    {
+      "path": "images/roastmane64x64-mac.png",
+      "bytes": 799,
+      "sha256": "c46b3613542861e4518c2c08f82757bc5a36b5f49af0c9fa4c26d3cf8d44970a"
+    },
+    {
+      "path": "images/cropster64x64.png",
+      "bytes": 799,
+      "sha256": "c46b3613542861e4518c2c08f82757bc5a36b5f49af0c9fa4c26d3cf8d44970a"
+    },
+    {
+      "path": "images/cropster64x64-mac.png",
+      "bytes": 799,
+      "sha256": "c46b3613542861e4518c2c08f82757bc5a36b5f49af0c9fa4c26d3cf8d44970a"
+    },
+    {
+      "path": "images/roastmane96x96.png",
+      "bytes": 1333,
+      "sha256": "75e99ef72c9e272ed3155b2be6bd1d9e2713872342502994986981c2aab5df25"
+    },
+    {
+      "path": "images/roastmane96x96-mac.png",
+      "bytes": 1333,
+      "sha256": "75e99ef72c9e272ed3155b2be6bd1d9e2713872342502994986981c2aab5df25"
+    },
+    {
+      "path": "images/cropster96x96.png",
+      "bytes": 1333,
+      "sha256": "75e99ef72c9e272ed3155b2be6bd1d9e2713872342502994986981c2aab5df25"
+    },
+    {
+      "path": "images/cropster96x96-mac.png",
+      "bytes": 1333,
+      "sha256": "75e99ef72c9e272ed3155b2be6bd1d9e2713872342502994986981c2aab5df25"
+    },
+    {
+      "path": "images/roastmane128x128.png",
+      "bytes": 2100,
+      "sha256": "4d5f8ba7e69ec76155c64b3059ca73aa2fd8d7e776c97d2f1a0c4f9a7ae9941b"
+    },
+    {
+      "path": "images/roastmane128x128-mac.png",
+      "bytes": 2100,
+      "sha256": "4d5f8ba7e69ec76155c64b3059ca73aa2fd8d7e776c97d2f1a0c4f9a7ae9941b"
+    },
+    {
+      "path": "images/cropster128x128.png",
+      "bytes": 2100,
+      "sha256": "4d5f8ba7e69ec76155c64b3059ca73aa2fd8d7e776c97d2f1a0c4f9a7ae9941b"
+    },
+    {
+      "path": "images/cropster128x128-mac.png",
+      "bytes": 2100,
+      "sha256": "4d5f8ba7e69ec76155c64b3059ca73aa2fd8d7e776c97d2f1a0c4f9a7ae9941b"
+    },
+    {
+      "path": "images/roastmane256x256.png",
+      "bytes": 5406,
+      "sha256": "159c4c7e4e03f7c936434d6690072245140eff8ba33d1d17bdf66eca48217418"
+    },
+    {
+      "path": "images/roastmane256x256-mac.png",
+      "bytes": 5406,
+      "sha256": "159c4c7e4e03f7c936434d6690072245140eff8ba33d1d17bdf66eca48217418"
+    },
+    {
+      "path": "images/cropster256x256.png",
+      "bytes": 5406,
+      "sha256": "159c4c7e4e03f7c936434d6690072245140eff8ba33d1d17bdf66eca48217418"
+    },
+    {
+      "path": "images/cropster256x256-mac.png",
+      "bytes": 5406,
+      "sha256": "159c4c7e4e03f7c936434d6690072245140eff8ba33d1d17bdf66eca48217418"
+    },
+    {
+      "path": "images/roastmane512x512.png",
+      "bytes": 16437,
+      "sha256": "b919f2a0cb9e517c7c2e837a2b228bf21f6eb00b920c2ea21ce87fa0b73d1bf9"
+    },
+    {
+      "path": "images/roastmane512x512-mac.png",
+      "bytes": 16437,
+      "sha256": "b919f2a0cb9e517c7c2e837a2b228bf21f6eb00b920c2ea21ce87fa0b73d1bf9"
+    },
+    {
+      "path": "images/cropster512x512.png",
+      "bytes": 16437,
+      "sha256": "b919f2a0cb9e517c7c2e837a2b228bf21f6eb00b920c2ea21ce87fa0b73d1bf9"
+    },
+    {
+      "path": "images/cropster512x512-mac.png",
+      "bytes": 16437,
+      "sha256": "b919f2a0cb9e517c7c2e837a2b228bf21f6eb00b920c2ea21ce87fa0b73d1bf9"
+    },
+    {
+      "path": "images/roastmane1024x1024.png",
+      "bytes": 19355,
+      "sha256": "e2288bbfbecdfbd1add6eb030d7f12e3a143d47dc6f9e75e2fe208828cca5d52"
+    },
+    {
+      "path": "images/roastmane1024x1024-mac.png",
+      "bytes": 19355,
+      "sha256": "e2288bbfbecdfbd1add6eb030d7f12e3a143d47dc6f9e75e2fe208828cca5d52"
+    },
+    {
+      "path": "images/cropster1024x1024.png",
+      "bytes": 19355,
+      "sha256": "e2288bbfbecdfbd1add6eb030d7f12e3a143d47dc6f9e75e2fe208828cca5d52"
+    },
+    {
+      "path": "images/cropster1024x1024-mac.png",
+      "bytes": 19355,
+      "sha256": "e2288bbfbecdfbd1add6eb030d7f12e3a143d47dc6f9e75e2fe208828cca5d52"
+    },
+    {
+      "path": "brand-kit/monogram_xanh.svg",
+      "bytes": 6993,
+      "sha256": "de59beec61d8ebbfe8bdc6a01925cf12b724699393351846055a387a1e8917af"
+    },
+    {
+      "path": "brand-kit/avatar_xanh_1024.png",
+      "bytes": 19355,
+      "sha256": "e2288bbfbecdfbd1add6eb030d7f12e3a143d47dc6f9e75e2fe208828cca5d52"
+    },
+    {
+      "path": "brand-kit/palette.properties",
+      "bytes": 74,
+      "sha256": "436a95bf45b4cfe45f4b661ab659450080daadf03147ec2628846843eed364a5"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

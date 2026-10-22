@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import com.cropster.roastingintelligence.ui.components.ToggleSwitch?>
+
+<fx:root type="javafx.scene.layout.BorderPane" xmlns:fx="http://javafx.com/fxml">
+    <center>
+        <GridPane fx:id="gridPane" alignment="CENTER"> 
+            <rowConstraints>
+                <RowConstraints minHeight="30" />
+                <RowConstraints minHeight="30" />
+                <RowConstraints minHeight="30" />
+                <RowConstraints minHeight="30" />
+                <RowConstraints minHeight="30" />
+                <RowConstraints minHeight="30" />
+                <RowConstraints minHeight="30" />
+                <RowConstraints minHeight="30" />
+                <RowConstraints minHeight="40" />
+            </rowConstraints>
+            <columnConstraints>
+                <ColumnConstraints minWidth="130" />
+                <ColumnConstraints minWidth="90" />
+                <ColumnConstraints minWidth="80" />
+                <ColumnConstraints minWidth="100" halignment="CENTER" />
+                <ColumnConstraints minWidth="90" />
+            </columnConstraints>
+
+            <Label text="%Reference curve" style="-fx-font-weight: bold" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+            <Label text="%Current roast" style="-fx-font-weight: bold" GridPane.rowIndex="0" GridPane.columnIndex="3" GridPane.columnSpan="2" />
+
+            <Label text="%Comments" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <Label text="%Sidebar" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+            <Label text="%Chart lines" GridPane.rowIndex="1" GridPane.columnIndex="2" />
+            <Label text="%Add comments" GridPane.rowIndex="1" GridPane.columnIndex="3" />
+            <Label GridPane.rowIndex="1" GridPane.columnIndex="4" />
+
+            <ToggleSwitch fx:id="gasPreFillToggle" text="%Pre-fill" alignment="CENTER" styleClass="toggle-switch--small" GridPane.rowIndex="2" GridPane.columnIndex="4" />
+
+            <ToggleSwitch fx:id="airflowPreFillToggle" text="%Pre-fill" alignment="CENTER" styleClass="toggle-switch--small" GridPane.rowIndex="3" GridPane.columnIndex="4" />
+
+            <Label text="Ctrl+3" GridPane.rowIndex="4" GridPane.columnIndex="4" />
+
+            <Label text="Ctrl+1" GridPane.rowIndex="5" GridPane.columnIndex="4" />
+
+            <Label text="Ctrl+2" GridPane.rowIndex="6" GridPane.columnIndex="4" />
+
+            <CheckBox selected="true" disable="true" styleClass="always-disabled" GridPane.rowIndex="7" GridPane.columnIndex="3"/>
+            <Label GridPane.rowIndex="7" GridPane.columnIndex="4" />
+        </GridPane>
+    </center>
+</fx:root>

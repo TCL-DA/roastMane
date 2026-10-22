@@ -1,0 +1,59 @@
+{
+  "jar": "enip-core-1.4.1.jar",
+  "sha256": "20fd9ad183ea41be00ac7fdb9eecabe6d5972550ff5ecec2b6dcdfe99bb37568",
+  "class_entries": 30,
+  "classes": [
+    "com/digitalpetri/enip/cpf/UnconnectedDataItemResponse.class",
+    "com/digitalpetri/enip/cpf/NullAddressItem.class",
+    "com/digitalpetri/enip/cpf/SockAddrItemO2t.class",
+    "com/digitalpetri/enip/cpf/SockAddr.class",
+    "com/digitalpetri/enip/cpf/ConnectedDataItemRequest.class",
+    "com/digitalpetri/enip/cpf/CpfItem.class",
+    "com/digitalpetri/enip/cpf/CpfPacket.class",
+    "com/digitalpetri/enip/cpf/ConnectedDataItemResponse.class",
+    "com/digitalpetri/enip/cpf/CipIdentityItem.class",
+    "com/digitalpetri/enip/cpf/SockAddrItemT2o.class",
+    "com/digitalpetri/enip/cpf/ConnectedAddressItem.class",
+    "com/digitalpetri/enip/cpf/UnconnectedDataItemRequest.class",
+    "com/digitalpetri/enip/cpf/SequencedAddressItem.class",
+    "com/digitalpetri/enip/cpf/CipSecurityItem.class",
+    "com/digitalpetri/enip/util/IntUtil.class",
+    "com/digitalpetri/enip/EnipPacket$1.class",
+    "com/digitalpetri/enip/commands/CommandCode.class",
+    "com/digitalpetri/enip/commands/SendRRData.class",
+    "com/digitalpetri/enip/commands/SendUnitData.class",
+    "com/digitalpetri/enip/commands/Command.class",
+    "com/digitalpetri/enip/commands/UnRegisterSession.class",
+    "com/digitalpetri/enip/commands/ListInterfaces.class",
+    "com/digitalpetri/enip/commands/RegisterSession.class",
+    "com/digitalpetri/enip/commands/Nop.class",
+    "com/digitalpetri/enip/commands/ListServices$ServiceInformation.class",
+    "com/digitalpetri/enip/commands/ListIdentity.class",
+    "com/digitalpetri/enip/commands/ListInterfaces$InterfaceInformation.class",
+    "com/digitalpetri/enip/commands/ListServices.class",
+    "com/digitalpetri/enip/EnipPacket.class",
+    "com/digitalpetri/enip/EnipStatus.class"
+  ],
+  "java_files": 27,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 131,
+      "sha256": "1df5b11395f036809d94e0952288429fcd2cfc4777bfcbb2b7080f78f841c08e"
+    },
+    {
+      "path": "META-INF/maven/com.digitalpetri.enip/enip-core/pom.xml",
+      "bytes": 869,
+      "sha256": "94923b02aca72545175899db0d851346817714ddc026eddb66047eb0764d87c8"
+    },
+    {
+      "path": "META-INF/maven/com.digitalpetri.enip/enip-core/pom.properties",
+      "bytes": 115,
+      "sha256": "99f908e7ba0a55ff5fc44e6f42890bf20e1ed32d4b38582d892a7f10800e4a9a"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

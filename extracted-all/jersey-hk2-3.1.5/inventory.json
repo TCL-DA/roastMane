@@ -1,0 +1,105 @@
+{
+  "jar": "jersey-hk2-3.1.5.jar",
+  "sha256": "0c9496cfc6b4f9b223c44c83b4df3edea7924ce4d52bffb55cf180e9ec4b4eeb",
+  "class_entries": 46,
+  "classes": [
+    "org/glassfish/jersey/inject/hk2/AbstractHk2InjectionManager.class",
+    "org/glassfish/jersey/inject/hk2/ContextInjectionResolverImpl$1.class",
+    "org/glassfish/jersey/inject/hk2/ContextInjectionResolverImpl$2.class",
+    "org/glassfish/jersey/inject/hk2/ContextInjectionResolverImpl$3.class",
+    "org/glassfish/jersey/inject/hk2/ContextInjectionResolverImpl$Binder$1.class",
+    "org/glassfish/jersey/inject/hk2/ContextInjectionResolverImpl$Binder$2.class",
+    "org/glassfish/jersey/inject/hk2/ContextInjectionResolverImpl$Binder.class",
+    "org/glassfish/jersey/inject/hk2/ContextInjectionResolverImpl$CacheKey.class",
+    "org/glassfish/jersey/inject/hk2/ContextInjectionResolverImpl$DescriptorOverridingInjectee.class",
+    "org/glassfish/jersey/inject/hk2/ContextInjectionResolverImpl$RequiredTypeOverridingInjectee.class",
+    "org/glassfish/jersey/inject/hk2/ContextInjectionResolverImpl.class",
+    "org/glassfish/jersey/inject/hk2/DelayedHk2InjectionManager$1.class",
+    "org/glassfish/jersey/inject/hk2/DelayedHk2InjectionManager.class",
+    "org/glassfish/jersey/inject/hk2/Hk2BootstrapBinder.class",
+    "org/glassfish/jersey/inject/hk2/Hk2Helper$1.class",
+    "org/glassfish/jersey/inject/hk2/Hk2Helper.class",
+    "org/glassfish/jersey/inject/hk2/Hk2InjectionManagerFactory$1.class",
+    "org/glassfish/jersey/inject/hk2/Hk2InjectionManagerFactory$Hk2InjectionManagerStrategy$1.class",
+    "org/glassfish/jersey/inject/hk2/Hk2InjectionManagerFactory$Hk2InjectionManagerStrategy$2.class",
+    "org/glassfish/jersey/inject/hk2/Hk2InjectionManagerFactory$Hk2InjectionManagerStrategy.class",
+    "org/glassfish/jersey/inject/hk2/Hk2InjectionManagerFactory.class",
+    "org/glassfish/jersey/inject/hk2/Hk2ReferencingFactory$1.class",
+    "org/glassfish/jersey/inject/hk2/Hk2ReferencingFactory$EmptyReferenceFactory.class",
+    "org/glassfish/jersey/inject/hk2/Hk2ReferencingFactory$InitializedReferenceFactory.class",
+    "org/glassfish/jersey/inject/hk2/Hk2ReferencingFactory.class",
+    "org/glassfish/jersey/inject/hk2/Hk2RequestScope$1.class",
+    "org/glassfish/jersey/inject/hk2/Hk2RequestScope$Instance.class",
+    "org/glassfish/jersey/inject/hk2/Hk2RequestScope.class",
+    "org/glassfish/jersey/inject/hk2/ImmediateHk2InjectionManager.class",
+    "org/glassfish/jersey/inject/hk2/InjectionResolverWrapper$1.class",
+    "org/glassfish/jersey/inject/hk2/InjectionResolverWrapper.class",
+    "org/glassfish/jersey/inject/hk2/InstanceSupplierFactoryBridge.class",
+    "org/glassfish/jersey/inject/hk2/JerseyClassAnalyzer$1.class",
+    "org/glassfish/jersey/inject/hk2/JerseyClassAnalyzer$Binder.class",
+    "org/glassfish/jersey/inject/hk2/JerseyClassAnalyzer.class",
+    "org/glassfish/jersey/inject/hk2/JerseyErrorService$1.class",
+    "org/glassfish/jersey/inject/hk2/JerseyErrorService$2.class",
+    "org/glassfish/jersey/inject/hk2/JerseyErrorService$Binder.class",
+    "org/glassfish/jersey/inject/hk2/JerseyErrorService.class",
+    "org/glassfish/jersey/inject/hk2/LocalizationMessages$1.class",
+    "org/glassfish/jersey/inject/hk2/LocalizationMessages$BundleSupplier.class",
+    "org/glassfish/jersey/inject/hk2/LocalizationMessages.class",
+    "org/glassfish/jersey/inject/hk2/RequestContext$Binder$1.class",
+    "org/glassfish/jersey/inject/hk2/RequestContext$Binder.class",
+    "org/glassfish/jersey/inject/hk2/RequestContext.class",
+    "org/glassfish/jersey/inject/hk2/SupplierFactoryBridge.class"
+  ],
+  "java_files": 16,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 2161,
+      "sha256": "ebb1d13b9b20a8aade7cb1b151dce190dd6ea4ca208e6631696e1706b5e65649"
+    },
+    {
+      "path": "META-INF/LICENSE.md",
+      "bytes": 35082,
+      "sha256": "3b6f2a5d22e00be63fbd8c241291cbd00daf803028451c50cf1bd039a9e54272"
+    },
+    {
+      "path": "META-INF/NOTICE.md",
+      "bytes": 4430,
+      "sha256": "9eccf110cb97ace5d70fc251d71796ebbf36220eb30dd96ec9b306a56bcb1507"
+    },
+    {
+      "path": "META-INF/maven/org.glassfish.jersey.inject/jersey-hk2/pom.properties",
+      "bytes": 72,
+      "sha256": "3fdd7bd580c84fe39dbe4a14a0c330a0cedc147fe35492564982352f5a460668"
+    },
+    {
+      "path": "META-INF/maven/org.glassfish.jersey.inject/jersey-hk2/pom.xml",
+      "bytes": 4939,
+      "sha256": "de3ac79b8714ee0d65529d02a7ad82e5db89e7646e9f0eecabedad35e9ef69de"
+    },
+    {
+      "path": "META-INF/native-image/org.glassfish.jersey.inject/jersey-hk2/reflect-config.json",
+      "bytes": 1955,
+      "sha256": "4eb972febd739c7363ed43ca13e46872f51fc5a2aaff44453a2c366042c3217c"
+    },
+    {
+      "path": "META-INF/native-image/org.glassfish.jersey.inject/jersey-hk2/resource-config.json",
+      "bytes": 83,
+      "sha256": "a468f19933ab8e52a5813af74f3e48c74d0de185a4dfba3d55db55698c752db8"
+    },
+    {
+      "path": "META-INF/services/org.glassfish.jersey.internal.inject.InjectionManagerFactory",
+      "bytes": 59,
+      "sha256": "6f90a4889d258818bbfa09d4a1eb09b037cc69ff7452cdad16c80da71c34943c"
+    },
+    {
+      "path": "org/glassfish/jersey/inject/hk2/localization.properties",
+      "bytes": 1322,
+      "sha256": "27bf11ebf8cc64c009aa328952c09cb241bdf622f10e94062d4ce9d2868b3338"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

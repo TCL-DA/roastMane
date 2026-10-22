@@ -1,0 +1,46 @@
+{
+  "jar": "jetty-websocket-jetty-common-12.0.3.jar",
+  "sha256": "f50867cff1f18029f4a739b7d9de577780497e47e21fc4578986395be474a246",
+  "class_entries": 12,
+  "classes": [
+    "org/eclipse/jetty/websocket/common/ExtensionConfigParser.class",
+    "org/eclipse/jetty/websocket/common/JettyExtensionConfig.class",
+    "org/eclipse/jetty/websocket/common/JettyWebSocketFrame.class",
+    "org/eclipse/jetty/websocket/common/JettyWebSocketFrameHandler$1.class",
+    "org/eclipse/jetty/websocket/common/JettyWebSocketFrameHandler.class",
+    "org/eclipse/jetty/websocket/common/JettyWebSocketFrameHandlerFactory.class",
+    "org/eclipse/jetty/websocket/common/JettyWebSocketFrameHandlerMetadata.class",
+    "org/eclipse/jetty/websocket/common/SessionTracker.class",
+    "org/eclipse/jetty/websocket/common/WebSocketSession.class",
+    "org/eclipse/jetty/websocket/common/internal/ByteBufferMessageSink.class",
+    "org/eclipse/jetty/websocket/common/internal/PartialByteBufferMessageSink.class",
+    "module-info.class"
+  ],
+  "java_files": 11,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 2286,
+      "sha256": "2de7285e3744121a3024a752cee8fa51bb05499b13b50bcd0c8c32fd31052782"
+    },
+    {
+      "path": "META-INF/services/org.eclipse.jetty.websocket.api.ExtensionConfig$Parser",
+      "bytes": 57,
+      "sha256": "0d8e44de3a36c8c7c6867085a64c9401307b07fb05ca90bd321344852a153f80"
+    },
+    {
+      "path": "META-INF/maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-common/pom.xml",
+      "bytes": 1717,
+      "sha256": "7bf057caa5434b2c7068a76dd2da7973e306efeea8b615087c15e235d6057a1f"
+    },
+    {
+      "path": "META-INF/maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-common/pom.properties",
+      "bytes": 91,
+      "sha256": "bcded0f028804139d0278852d46e946145796a0fc5719169543a081be5c4d9f6"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

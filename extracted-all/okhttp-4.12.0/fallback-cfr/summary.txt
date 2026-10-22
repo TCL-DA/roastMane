@@ -1,0 +1,2 @@
+Summary for C:\Tools\_soi\roastMane-Offline-OTL-20261022-02\app\okhttp-4.12.0.jar
+Decompiled with CFR 0.152

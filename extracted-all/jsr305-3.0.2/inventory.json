@@ -1,0 +1,64 @@
+{
+  "jar": "jsr305-3.0.2.jar",
+  "sha256": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7",
+  "class_entries": 35,
+  "classes": [
+    "javax/annotation/CheckForNull.class",
+    "javax/annotation/CheckForSigned.class",
+    "javax/annotation/CheckReturnValue.class",
+    "javax/annotation/concurrent/GuardedBy.class",
+    "javax/annotation/concurrent/Immutable.class",
+    "javax/annotation/concurrent/NotThreadSafe.class",
+    "javax/annotation/concurrent/ThreadSafe.class",
+    "javax/annotation/Detainted.class",
+    "javax/annotation/MatchesPattern$Checker.class",
+    "javax/annotation/MatchesPattern.class",
+    "javax/annotation/meta/Exclusive.class",
+    "javax/annotation/meta/Exhaustive.class",
+    "javax/annotation/meta/TypeQualifier.class",
+    "javax/annotation/meta/TypeQualifierDefault.class",
+    "javax/annotation/meta/TypeQualifierNickname.class",
+    "javax/annotation/meta/TypeQualifierValidator.class",
+    "javax/annotation/meta/When.class",
+    "javax/annotation/Nonnegative$Checker.class",
+    "javax/annotation/Nonnegative.class",
+    "javax/annotation/Nonnull$Checker.class",
+    "javax/annotation/Nonnull.class",
+    "javax/annotation/Nullable.class",
+    "javax/annotation/OverridingMethodsMustInvokeSuper.class",
+    "javax/annotation/ParametersAreNonnullByDefault.class",
+    "javax/annotation/ParametersAreNullableByDefault.class",
+    "javax/annotation/PropertyKey.class",
+    "javax/annotation/RegEx$Checker.class",
+    "javax/annotation/RegEx.class",
+    "javax/annotation/Signed.class",
+    "javax/annotation/Syntax.class",
+    "javax/annotation/Tainted.class",
+    "javax/annotation/Untainted.class",
+    "javax/annotation/WillClose.class",
+    "javax/annotation/WillCloseWhenClosed.class",
+    "javax/annotation/WillNotClose.class"
+  ],
+  "java_files": 31,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 627,
+      "sha256": "9329f6c6942e128348908339b59dbf209642c148dda83f1cf55fc8516a023092"
+    },
+    {
+      "path": "META-INF/maven/com.google.code.findbugs/jsr305/pom.xml",
+      "bytes": 4286,
+      "sha256": "19889dbdf1b254b2601a5ee645b8147a974644882297684c798afe5d63d78dfe"
+    },
+    {
+      "path": "META-INF/maven/com.google.code.findbugs/jsr305/pom.properties",
+      "bytes": 121,
+      "sha256": "a1bc40920a401d8954cb1368e63e6d36f88fb9cfd4ef1bed8534cbdcecfec127"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

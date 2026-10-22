@@ -1,0 +1,46 @@
+{
+  "jar": "jackson-module-jakarta-xmlbind-annotations-2.14.2.jar",
+  "sha256": "42ceb8345bf84b1f6a7ceda0f41c56edc75bf3bb61c6fca20423ba7b8c3663e6",
+  "class_entries": 12,
+  "classes": [
+    "com/fasterxml/jackson/module/jakarta/xmlbind/AdapterConverter.class",
+    "com/fasterxml/jackson/module/jakarta/xmlbind/JakartaXmlBindAnnotationIntrospector$1.class",
+    "com/fasterxml/jackson/module/jakarta/xmlbind/JakartaXmlBindAnnotationIntrospector.class",
+    "com/fasterxml/jackson/module/jakarta/xmlbind/JakartaXmlBindAnnotationModule$1.class",
+    "com/fasterxml/jackson/module/jakarta/xmlbind/JakartaXmlBindAnnotationModule$Priority.class",
+    "com/fasterxml/jackson/module/jakarta/xmlbind/JakartaXmlBindAnnotationModule.class",
+    "com/fasterxml/jackson/module/jakarta/xmlbind/PackageVersion.class",
+    "com/fasterxml/jackson/module/jakarta/xmlbind/deser/DataHandlerDeserializer$1.class",
+    "com/fasterxml/jackson/module/jakarta/xmlbind/deser/DataHandlerDeserializer.class",
+    "com/fasterxml/jackson/module/jakarta/xmlbind/package-info.class",
+    "com/fasterxml/jackson/module/jakarta/xmlbind/ser/DataHandlerSerializer.class",
+    "META-INF/versions/11/module-info.class"
+  ],
+  "java_files": 7,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 3294,
+      "sha256": "7869959b4fd0367e01ce93bc0e328ea9f6e9f7c21dcc7f49d5f30e2938cbf25a"
+    },
+    {
+      "path": "META-INF/maven/com.fasterxml.jackson.module/jackson-module-jakarta-xmlbind-annotations/pom.properties",
+      "bytes": 106,
+      "sha256": "a33ff93985e19b73f752b50b0f444bfce9401b035ee6f59d9f35a362410c9985"
+    },
+    {
+      "path": "META-INF/maven/com.fasterxml.jackson.module/jackson-module-jakarta-xmlbind-annotations/pom.xml",
+      "bytes": 3627,
+      "sha256": "fc05c8e4a38d2ad33cae41388805d4c2695b1a5c3a9ef8262796dd6e7a719e1d"
+    },
+    {
+      "path": "META-INF/services/com.fasterxml.jackson.databind.Module",
+      "bytes": 76,
+      "sha256": "9deabe3d5574f1f8508fbb0c6229002c82558ba5750f8674b9c1d6f8c06bdfea"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

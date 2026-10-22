@@ -1,0 +1,11 @@
+Summary for C:\Tools\_soi\roastMane-Offline-OTL-20261022-02\app\okio-jvm-3.6.0.jar
+Decompiled with CFR 0.152
+
+
+okio.ZipFileSystem
+----------------------------
+
+metadataOrNull(okio.Path )
+  Loose catch block
+source(okio.Path )
+  Loose catch block

@@ -12,3 +12,5 @@ archive/
 __pycache__/
 .DS_Store
 Thumbs.db
+build-main/
+build-offline-v06/

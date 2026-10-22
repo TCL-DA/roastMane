@@ -1,0 +1,46 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 11
+Bundle-Description: Jersey Multipart entity providers support module.
+Bundle-DocURL: https://www.eclipse.org/org/foundation/
+Bundle-License: http://www.eclipse.org/legal/epl-2.0, https://www.gnu.
+ org/software/classpath/license.html, http://www.eclipse.org/org/docum
+ ents/edl-v10.php, https://opensource.org/licenses/BSD-2-Clause, http:
+ //www.apache.org/licenses/LICENSE-2.0.html, https://creativecommons.o
+ rg/publicdomain/zero/1.0/, https://asm.ow2.io/license.html, jquery.or
+ g/license, http://www.opensource.org/licenses/mit-license.php, https:
+ //www.w3.org/Consortium/Legal/copyright-documents-19990405
+Bundle-ManifestVersion: 2
+Bundle-Name: jersey-media-multipart
+Bundle-SymbolicName: org.glassfish.jersey.media.jersey-media-multipart
+Bundle-Vendor: Eclipse Foundation
+Bundle-Version: 3.1.5
+Created-By: Apache Maven Bundle Plugin 5.1.9
+Export-Package: org.glassfish.jersey.media.multipart;uses:="jakarta.ws
+ .rs.core,jakarta.ws.rs.ext,org.glassfish.jersey.innate.spi,org.glassf
+ ish.jersey.internal.spi,org.glassfish.jersey.internal.util,org.glassf
+ ish.jersey.message,org.glassfish.jersey.message.internal,org.glassfis
+ h.jersey.server,org.glassfish.jersey.server.model,org.jvnet.mimepull"
+ ;version="3.1.5",org.glassfish.jersey.media.multipart.file;uses:="jak
+ arta.ws.rs.core,org.glassfish.jersey.media.multipart";version="3.1.5"
+Import-Package: jakarta.inject;version="[2.0,3)",jakarta.ws.rs;version
+ ="[3.1,4)",jakarta.ws.rs.core;version="[3.1,4)",jakarta.ws.rs.ext;ver
+ sion="[3.1,4)",java.io,java.lang,java.lang.annotation,java.lang.invok
+ e,java.lang.reflect,java.nio.charset,java.text,java.util,java.util.co
+ ncurrent.atomic,java.util.function,java.util.logging,java.util.regex,
+ java.util.stream,org.glassfish.jersey.innate.spi;version="[3.1,4)",or
+ g.glassfish.jersey.internal.inject;version="[3.1,4)",org.glassfish.je
+ rsey.internal.l10n;version="[3.1,4)",org.glassfish.jersey.internal.sp
+ i;version="[3.1,4)",org.glassfish.jersey.internal.util;version="[3.1,
+ 4)",org.glassfish.jersey.internal.util.collection;version="[3.1,4)",o
+ rg.glassfish.jersey.media.multipart.file,org.glassfish.jersey.message
+ ;version="[3.1,4)",org.glassfish.jersey.message.internal;version="[3.
+ 1,4)",org.glassfish.jersey.model;version="[3.1,4)",org.glassfish.jers
+ ey.server;version="[3.1,4)";resolution:=optional,org.glassfish.jersey
+ .server.internal.inject;version="[3.1,4)";resolution:=optional,org.gl
+ assfish.jersey.server.model;version="[3.1,4)";resolution:=optional,or
+ g.glassfish.jersey.server.spi.internal;version="[3.1,4)";resolution:=
+ optional,org.glassfish.jersey.uri;version="[3.1,4)",org.jvnet.mimepul
+ l;version="[1.9,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=11))"
+Tool: Bnd-6.3.1.202206071316
+

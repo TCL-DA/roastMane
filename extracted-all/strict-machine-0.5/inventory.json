@@ -1,0 +1,44 @@
+{
+  "jar": "strict-machine-0.5.jar",
+  "sha256": "46a0cebf58c8c12c364a934ab974087f9908b6c20d31f9f40c6541a981e38341",
+  "class_entries": 25,
+  "classes": [
+    "com/digitalpetri/strictmachine/FsmContext.class",
+    "com/digitalpetri/strictmachine/StrictMachine$PollAndEvaluate.class",
+    "com/digitalpetri/strictmachine/StrictMachine$1.class",
+    "com/digitalpetri/strictmachine/StrictMachine$ActionContextImpl.class",
+    "com/digitalpetri/strictmachine/FsmContext$Key.class",
+    "com/digitalpetri/strictmachine/StrictMachine$PendingEvent.class",
+    "com/digitalpetri/strictmachine/Fsm.class",
+    "com/digitalpetri/strictmachine/dsl/ActionBuilder$PredicatedTransitionAction.class",
+    "com/digitalpetri/strictmachine/dsl/ActionFromBuilder.class",
+    "com/digitalpetri/strictmachine/dsl/ActionToBuilder.class",
+    "com/digitalpetri/strictmachine/dsl/ActionContext.class",
+    "com/digitalpetri/strictmachine/dsl/PredicatedTransition.class",
+    "com/digitalpetri/strictmachine/dsl/TransitionAction.class",
+    "com/digitalpetri/strictmachine/dsl/TransitionBuilder$TransitionTo.class",
+    "com/digitalpetri/strictmachine/dsl/TransitionBuilder.class",
+    "com/digitalpetri/strictmachine/dsl/Transitions.class",
+    "com/digitalpetri/strictmachine/dsl/ViaBuilder.class",
+    "com/digitalpetri/strictmachine/dsl/ActionProxy.class",
+    "com/digitalpetri/strictmachine/dsl/ActionBuilder.class",
+    "com/digitalpetri/strictmachine/dsl/GuardBuilder.class",
+    "com/digitalpetri/strictmachine/dsl/Transition.class",
+    "com/digitalpetri/strictmachine/dsl/FsmBuilder.class",
+    "com/digitalpetri/strictmachine/dsl/Action.class",
+    "com/digitalpetri/strictmachine/StrictMachine$FsmContextImpl.class",
+    "com/digitalpetri/strictmachine/StrictMachine.class"
+  ],
+  "java_files": 17,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 80,
+      "sha256": "b1f1eeda569fece6552c4bc49bd865cc9a964c4f44c596e6ede81eecbb69e227"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

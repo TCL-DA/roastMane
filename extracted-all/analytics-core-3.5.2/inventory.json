@@ -1,0 +1,67 @@
+{
+  "jar": "analytics-core-3.5.2.jar",
+  "sha256": "b67c5544de05aa822b6f02d1b4fba7ef418a924e0887609dda7228aa9086adc4",
+  "class_entries": 38,
+  "classes": [
+    "com/segment/analytics/messages/AutoValue_Batch.class",
+    "com/segment/analytics/messages/ScreenMessage.class",
+    "com/segment/analytics/messages/AutoValue_TrackMessage.class",
+    "com/segment/analytics/messages/AutoValue_AliasMessage.class",
+    "com/segment/analytics/messages/TrackMessage$1.class",
+    "com/segment/analytics/messages/AutoValue_GroupMessage.class",
+    "com/segment/analytics/messages/PageMessage.class",
+    "com/segment/analytics/messages/IdentifyMessage.class",
+    "com/segment/analytics/messages/IdentifyMessage$Builder.class",
+    "com/segment/analytics/messages/AliasMessage$Builder.class",
+    "com/segment/analytics/messages/ImmutableMap.class",
+    "com/segment/analytics/messages/Message.class",
+    "com/segment/analytics/messages/AliasMessage$1.class",
+    "com/segment/analytics/messages/PageMessage$1.class",
+    "com/segment/analytics/messages/IdentifyMessage$1.class",
+    "com/segment/analytics/messages/GroupMessage.class",
+    "com/segment/analytics/messages/AutoValue_PageMessage.class",
+    "com/segment/analytics/messages/AutoValue_ScreenMessage.class",
+    "com/segment/analytics/messages/ScreenMessage$Builder.class",
+    "com/segment/analytics/messages/AliasMessage.class",
+    "com/segment/analytics/messages/AutoValue_IdentifyMessage.class",
+    "com/segment/analytics/messages/GroupMessage$1.class",
+    "com/segment/analytics/messages/TrackMessage.class",
+    "com/segment/analytics/messages/TrackMessage$Builder.class",
+    "com/segment/analytics/messages/PageMessage$Builder.class",
+    "com/segment/analytics/messages/Message$Type.class",
+    "com/segment/analytics/messages/ScreenMessage$1.class",
+    "com/segment/analytics/messages/GroupMessage$Builder.class",
+    "com/segment/analytics/messages/Batch.class",
+    "com/segment/analytics/messages/MessageBuilder.class",
+    "com/segment/analytics/gson/Iso8601Utils.class",
+    "com/segment/analytics/gson/ISO8601DateAdapter.class",
+    "com/segment/analytics/gson/AutoGson.class",
+    "com/segment/analytics/gson/AutoValueAdapterFactory.class",
+    "com/segment/analytics/Beta.class",
+    "com/segment/analytics/http/SegmentService.class",
+    "com/segment/analytics/http/UploadResponse.class",
+    "com/segment/analytics/http/AutoValue_UploadResponse.class"
+  ],
+  "java_files": 25,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 81,
+      "sha256": "2a185c3a3a6b39d2987b2acabd0af36555390a556370ce50072b34e97c317963"
+    },
+    {
+      "path": "META-INF/maven/com.segment.analytics.java/analytics-core/pom.xml",
+      "bytes": 2257,
+      "sha256": "a49e34e947e5be68fdf54eda4e2ab3dfa7afcb66d4f5be63870a30a22d7dfe92"
+    },
+    {
+      "path": "META-INF/maven/com.segment.analytics.java/analytics-core/pom.properties",
+      "bytes": 75,
+      "sha256": "5217435a12ad52cb1f0b8ecfe9d8dee1219a790bb8ded84ff775f1e213c9ea11"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<fx:root type="BorderPane" styleClass="form-component" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+   <top>
+      <VBox>
+         <HBox styleClass="form-component__title">
+            <Label text="*" styleClass="label--required" visible="${controller.required}" managed="${controller.required}"/>
+            <Label fx:id="titleLabel" styleClass="form-label" managed="${titleLabel.visible}" text="Title" BorderPane.alignment="CENTER_LEFT"/>
+            <Label text="- required" styleClass="label--required" visible="${controller.required}" managed="${controller.required}"/>
+            <HBox fx:id="decorations" styleClass="form-component__title-buttons" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+         </HBox>
+         <TextFlow fx:id="descriptionTextFlow" styleClass="description" managed="${descriptionTextFlow.visible}"/>
+      </VBox>
+   </top>
+   <center>
+      <HBox id="contentHBox" fx:id="contentHBox" alignment="CENTER_LEFT" BorderPane.alignment="CENTER_LEFT"/>
+   </center>
+   <bottom>
+      <TextFlow fx:id="noteTextFlow" styleClass="hint" style="-fx-padding: 0.333em 0 0 0;" managed="${noteTextFlow.visible}" BorderPane.alignment="TOP_LEFT">
+         <Text text="Note" styleClass="hint"/>
+      </TextFlow>
+   </bottom>
+</fx:root>

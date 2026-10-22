@@ -1,0 +1,32 @@
+{
+  "jar": "jetty-alpn-client-12.0.3.jar",
+  "sha256": "8456b1852ca1106b060bd8ce480f7c091fe5c22a0241e36f0b82f71620dd8d33",
+  "class_entries": 3,
+  "classes": [
+    "org/eclipse/jetty/alpn/client/ALPNClientConnection.class",
+    "org/eclipse/jetty/alpn/client/ALPNClientConnectionFactory.class",
+    "module-info.class"
+  ],
+  "java_files": 3,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 1602,
+      "sha256": "da1dd40fd87855612741a05bed1816cfa71fee339de156c07788a813a6816af7"
+    },
+    {
+      "path": "META-INF/maven/org.eclipse.jetty/jetty-alpn-client/pom.xml",
+      "bytes": 1992,
+      "sha256": "06c1c39dfef740d9f48f743c35c743ca945971f99f17008ff39a27ce03255a69"
+    },
+    {
+      "path": "META-INF/maven/org.eclipse.jetty/jetty-alpn-client/pom.properties",
+      "bytes": 70,
+      "sha256": "34b145b2f1b0c2bbe1e027161301f4754ad0aae13df0e59f228cc67f958ee682"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

@@ -1,0 +1,43 @@
+{
+  "jar": "jfreechart-fx-1.0.1-cropster.jar",
+  "sha256": "efa3a6f398b2550cb4833fa0a601c5fc4b32300f38e48d195c7b6eeaea69f320",
+  "class_entries": 14,
+  "classes": [
+    "org/jfree/chart/fx/ChartCanvas.class",
+    "org/jfree/chart/fx/interaction/ChartMouseEventFX.class",
+    "org/jfree/chart/fx/interaction/ZoomHandlerFX.class",
+    "org/jfree/chart/fx/interaction/MouseHandlerFX.class",
+    "org/jfree/chart/fx/interaction/ChartMouseListenerFX.class",
+    "org/jfree/chart/fx/interaction/AnchorHandlerFX.class",
+    "org/jfree/chart/fx/interaction/DispatchHandlerFX.class",
+    "org/jfree/chart/fx/interaction/AbstractMouseHandlerFX.class",
+    "org/jfree/chart/fx/interaction/ScrollHandlerFX.class",
+    "org/jfree/chart/fx/interaction/PanHandlerFX.class",
+    "org/jfree/chart/fx/interaction/TooltipHandlerFX.class",
+    "org/jfree/chart/fx/overlay/OverlayFX.class",
+    "org/jfree/chart/fx/overlay/CrosshairOverlayFX.class",
+    "org/jfree/chart/fx/ChartViewer.class"
+  ],
+  "java_files": 14,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 134,
+      "sha256": "5db6f8fd7cefbf253c67f4e67c8993d7c1f8b557f1d7cc735ab1e2d545513087"
+    },
+    {
+      "path": "META-INF/maven/org.jfree/jfreechart-fx/pom.xml",
+      "bytes": 8272,
+      "sha256": "81e4b40e9ec7b65f0585511620b9937bb5a5890ea82bac4886fe123521efc884"
+    },
+    {
+      "path": "META-INF/maven/org.jfree/jfreechart-fx/pom.properties",
+      "bytes": 224,
+      "sha256": "3d9828230b7dd6060f96912bcd74b0bcee6e86cc65f00243b2d4dd00cb3aed8d"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

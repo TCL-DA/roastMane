@@ -1,0 +1,18 @@
+package jakarta.json.bind.annotation;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@JsonbAnnotation
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.ANNOTATION_TYPE, ElementType.METHOD, ElementType.FIELD, ElementType.PARAMETER})
+public @interface JsonbProperty {
+   String value() default "";
+
+   @Deprecated(
+      since = "2.1"
+   )
+   boolean nillable() default false;
+}

@@ -1,0 +1,76 @@
+{
+  "jar": "jakarta.json-api-2.1.2.jar",
+  "sha256": "f2472507ad2cc12f2aef08a2f7a628cd1c3f855668a6dcb2aa9a30d9b909b998",
+  "class_entries": 37,
+  "classes": [
+    "jakarta/json/JsonObject.class",
+    "jakarta/json/JsonStructure.class",
+    "jakarta/json/JsonValue$ValueType.class",
+    "jakarta/json/JsonValue.class",
+    "jakarta/json/JsonArray.class",
+    "jakarta/json/JsonNumber.class",
+    "jakarta/json/JsonString.class",
+    "jakarta/json/JsonPatchBuilder.class",
+    "jakarta/json/JsonPatch$Operation.class",
+    "jakarta/json/JsonPatch.class",
+    "jakarta/json/JsonWriter.class",
+    "jakarta/json/Json.class",
+    "jakarta/json/stream/JsonParser$Event.class",
+    "jakarta/json/stream/JsonParser.class",
+    "jakarta/json/stream/JsonGenerator.class",
+    "jakarta/json/stream/JsonParserFactory.class",
+    "jakarta/json/stream/JsonGeneratorFactory.class",
+    "jakarta/json/stream/JsonLocation.class",
+    "jakarta/json/stream/JsonParsingException.class",
+    "jakarta/json/stream/JsonGenerationException.class",
+    "jakarta/json/stream/JsonCollectors.class",
+    "jakarta/json/JsonReader.class",
+    "jakarta/json/JsonReaderFactory.class",
+    "jakarta/json/JsonWriterFactory.class",
+    "jakarta/json/JsonArrayBuilder.class",
+    "jakarta/json/JsonObjectBuilder.class",
+    "jakarta/json/JsonPointer.class",
+    "jakarta/json/JsonMergePatch.class",
+    "jakarta/json/JsonBuilderFactory.class",
+    "jakarta/json/JsonException.class",
+    "jakarta/json/spi/JsonProvider.class",
+    "jakarta/json/EmptyArray.class",
+    "jakarta/json/JsonConfig$KeyStrategy.class",
+    "jakarta/json/JsonConfig.class",
+    "jakarta/json/EmptyObject.class",
+    "jakarta/json/JsonValueImpl.class",
+    "module-info.class"
+  ],
+  "java_files": 33,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 1015,
+      "sha256": "1fe7e2e37596a5dea4fdc7db716aa92815362c46d63143f882aceb962d0c462b"
+    },
+    {
+      "path": "META-INF/LICENSE.md",
+      "bytes": 35084,
+      "sha256": "6e1f002892b81cbe0647019b150c8a056efc1add565671a4f8af629b6cd2cc7b"
+    },
+    {
+      "path": "META-INF/NOTICE.md",
+      "bytes": 3337,
+      "sha256": "b21a471dbc5fa314854461caf574b4003088ca5f1614ec2941f4f95901c73113"
+    },
+    {
+      "path": "META-INF/maven/jakarta.json/jakarta.json-api/pom.xml",
+      "bytes": 17953,
+      "sha256": "8fd0bfd9ffd5f462678f0636b146393101137a25366dc87df0fe0ed034dfc60d"
+    },
+    {
+      "path": "META-INF/maven/jakarta.json/jakarta.json-api/pom.properties",
+      "bytes": 63,
+      "sha256": "0bafa1aadc4df5fc31f2a16f044630212b359c45df5fc22b1f4212ef02476364"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

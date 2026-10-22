@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import com.cropster.roastingintelligence.ui.components.FormComponent?>
+<?import com.cropster.roastingintelligence.ui.components.MeasureEditor?>
+<?import com.cropster.roastingintelligence.ui.components.RadioToggleButton?>
+<?import com.cropster.roastingintelligence.ui.components.TimeEditor?>
+<?import com.cropster.roastingintelligence.ui.components.Tooltip?>
+<?import com.cropster.roastingintelligence.ui.util.AutoIncIndex?>
+<fx:root type="VBox" styleClass="basic-list-cell" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <AutoIncIndex fx:id="row"/>
+        <Insets fx:id="HEADER_MARGIN" top="12" right="12" bottom="12" left="12"/>
+        <Insets fx:id="VISUAL_FEEDBACK_MARGIN" right="4"/>
+        <SVGImage fx:id="ICON_EVENT_AFTER" icon="ARROW_RIGHT" scale="0.75"/>
+        <SVGImage fx:id="ICON_EVENT_BEFORE" icon="ARROW_LEFT" scale="0.75"/>
+        <SVGImage fx:id="ICON_EVENT_BOTH" icon="SWITCH" scale="0.75"/>
+        <SVGImage fx:id="ICON_MEASURE_ABOVE" icon="ARROW_DOWN" scale="0.75"/>
+        <SVGImage fx:id="ICON_MEASURE_BELOW" icon="ARROW_UP" scale="0.75"/>
+        <SVGImage fx:id="ICON_MEASURE_BOTH" icon="REORDER" scale="0.75"/>
+        <SVGImage fx:id="ICON_NO_VISUAL_FEEDBACK" icon="NO_VISUAL_FEEDBACK"/>
+        <SVGImage fx:id="ICON_SEE_MORE" icon="SEE_MORE"/>
+        <SVGImage fx:id="ICON_START" icon="START"/>
+        <ToggleGroup fx:id="eventDirectionToggleGroup"/>
+        <ToggleGroup fx:id="measureDirectionToggleGroup"/>
+        <ToggleGroup fx:id="visualFeedbackToggleGroup"/>
+    </fx:define>
+
+    <HBox styleClass="basic-list-cell--header" VBox.margin="$HEADER_MARGIN">
+        <Label fx:id="titleLabel" maxWidth="Infinity" styleClass="header-title--bold" HBox.hgrow="ALWAYS"/>
+        <Button fx:id="cancelButton" text="%Cancel" styleClass="button--plain" minWidth="-Infinity" HBox.hgrow="NEVER"/>
+        <Button fx:id="saveButton" text="%Save" styleClass="button--primary" minWidth="-Infinity" HBox.hgrow="NEVER"/>
+    </HBox>
+
+    <Separator fx:id="headerSeparator"/>
+
+    <VBox maxWidth="Infinity" styleClass="basic-list-cell--editor-body">
+
+        <FormComponent title="%Alert for" maxWidth="Infinity" GridPane.columnSpan="2" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <ComboBox fx:id="triggerSelector" minWidth="50" onAction="#updateEditors" HBox.hgrow="ALWAYS"/>
+        </FormComponent>
+
+        <VBox fx:id="editorsBox" spacing="8.0" maxWidth="Infinity">
+
+            <FormComponent fx:id="measureForm" title="%Target" managed="${measureForm.visible}" maxWidth="Infinity">
+                <MeasureEditor fx:id="targetValue" styleClass="infinite-width"/>
+            </FormComponent>
+            <FormComponent fx:id="eventForm" title="%Target (relative)" managed="${eventForm.visible}" visible="false" maxWidth="Infinity">
+                <TimeEditor fx:id="offsetValue" styleClass="infinite-width">
+                    <left>
+                        <Label fx:id="offsetDirectionLabel" text="+" styleClass="offset-direction-label" BorderPane.alignment="CENTER"/>
+                    </left>
+                </TimeEditor>
+            </FormComponent>
+            <FormComponent fx:id="timeForm" title="%Target" managed="${timeForm.visible}" visible="false" HBox.hgrow="ALWAYS">
+                <TimeEditor fx:id="timeValue" negativeAllowed="false" styleClass="infinite-width"/>
+            </FormComponent>
+
+            <HBox fx:id="selectorBox" spacing="8.0" maxWidth="Infinity">
+                <FormComponent fx:id="measureFormButtonsBar" title="%From" managed="${measureForm.visible}" visible="${measureForm.visible}" minWidth="${selectorBox.width / 2.0}" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                    <HBox maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                        <styleClass>
+                            <String fx:value="toggle-button-group"/>
+                            <String fx:value="spacing--none"/>
+                        </styleClass>
+                        <RadioToggleButton fx:id="toggleButtonMeasureAbove" graphic="$ICON_MEASURE_ABOVE" toggleGroup="$measureDirectionToggleGroup" selected="true" focusTraversable="false" minHeight="${targetValue.height}" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                            <tooltip>
+                                <Tooltip text="%From above"/>
+                            </tooltip>
+                        </RadioToggleButton>
+                        <RadioToggleButton fx:id="toggleButtonMeasureBelow" graphic="$ICON_MEASURE_BELOW" toggleGroup="$measureDirectionToggleGroup" focusTraversable="false" minHeight="${targetValue.height}" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                            <tooltip>
+                                <Tooltip text="%From below"/>
+                            </tooltip>
+                        </RadioToggleButton>
+                        <RadioToggleButton fx:id="toggleButtonMeasureBoth" graphic="$ICON_MEASURE_BOTH" toggleGroup="$measureDirectionToggleGroup" focusTraversable="false" minHeight="${targetValue.height}" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                            <tooltip>
+                                <Tooltip text="%From above and below"/>
+                            </tooltip>
+                        </RadioToggleButton>
+                    </HBox>
+                </FormComponent>
+                <FormComponent fx:id="eventFormButtonsBar" title="%When" managed="${eventForm.visible}" visible="${eventForm.visible}" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                    <HBox maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                        <styleClass>
+                            <String fx:value="toggle-button-group"/>
+                            <String fx:value="spacing--none"/>
+                        </styleClass>
+                        <RadioToggleButton fx:id="toggleButtonEventBefore" graphic="$ICON_EVENT_BEFORE" toggleGroup="$eventDirectionToggleGroup" selected="true" focusTraversable="false" minHeight="${offsetValue.height}" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                            <tooltip>
+                                <Tooltip text="%Before"/>
+                            </tooltip>
+                        </RadioToggleButton>
+                        <RadioToggleButton fx:id="toggleButtonEventAfter" graphic="$ICON_EVENT_AFTER" toggleGroup="$eventDirectionToggleGroup" focusTraversable="false" minHeight="${offsetValue.height}" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                            <tooltip>
+                                <Tooltip text="%After"/>
+                            </tooltip>
+                        </RadioToggleButton>
+                        <RadioToggleButton fx:id="toggleButtonEventBoth" graphic="$ICON_EVENT_BOTH" toggleGroup="$eventDirectionToggleGroup" focusTraversable="false" minHeight="${offsetValue.height}" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                            <tooltip>
+                                <Tooltip text="%Before and after"/>
+                            </tooltip>
+                        </RadioToggleButton>
+                    </HBox>
+                </FormComponent>
+                <!-- Phase form is visible only for measure and time alarms. -->
+                <FormComponent fx:id="phaseForm" title="%Alert during" managed="${phaseForm.visible}" HBox.hgrow="ALWAYS">
+                    <ComboBox fx:id="phaseSelector" editable="false" minWidth="50"/>
+                </FormComponent>
+            </HBox>
+
+            <FormComponent fx:id="behaviorForm" title="%Alert feedback" maxWidth="Infinity" GridPane.columnSpan="2" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                <HBox fx:id="soundBox" maxWidth="Infinity" spacing="4.0" alignment="BOTTOM_LEFT" VBox.vgrow="ALWAYS">
+                    <!-- We need 4 more pixels on the right (VISUAL_FEEDBACK_MARGIN) to obtain 8 pixels from the combo box -->
+                    <VBox alignment="CENTER" HBox.margin="$VISUAL_FEEDBACK_MARGIN">
+                        <!-- 52 = 24 + 4 + 24 => the 2 radio buttons separated by 4 pixels -->
+                        <AnchorPane minHeight="24" minWidth="52" VBox.vgrow="NEVER">
+                            <RadioButton toggleGroup="$visualFeedbackToggleGroup" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            <Label contentDisplay="GRAPHIC_ONLY" graphic="$ICON_NO_VISUAL_FEEDBACK" mouseTransparent="true" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="2.0"/>
+                            <RadioButton fx:id="visualFeedbackEnabler" toggleGroup="$visualFeedbackToggleGroup" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                            <ColorPicker fx:id="colorPicker" managed="${colorPicker.visible}" mouseTransparent="${!visualFeedbackEnabler.selected}" disable="${!visualFeedbackEnabler.selected}" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                <styleClass>
+                                    <String fx:value="button"/>
+                                    <String fx:value="alarm--color-picker"/>
+                                </styleClass>
+                                <tooltip>
+                                    <Tooltip text="%Select color"/>
+                                </tooltip>
+                            </ColorPicker>
+                        </AnchorPane>
+                    </VBox>
+                    <ComboBox fx:id="soundSelector" maxWidth="Infinity" maxHeight="Infinity" onAction="#stopAudioFeedback" HBox.hgrow="ALWAYS">
+                        <tooltip>
+                            <Tooltip text="${soundSelector.buttonCell.text}"/>
+                        </tooltip>
+                    </ComboBox>
+                    <Button fx:id="soundTestButton" graphic="$ICON_START" onAction="#testSound" HBox.hgrow="NEVER"/>
+                </HBox>
+            </FormComponent>
+
+        </VBox>
+    </VBox>
+</fx:root>

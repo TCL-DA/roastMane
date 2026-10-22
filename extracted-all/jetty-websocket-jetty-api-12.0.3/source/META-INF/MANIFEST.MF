@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven Bundle Plugin 5.1.9
+Build-Jdk-Spec: 21
+Implementation-Vendor: Eclipse Jetty Project
+Implementation-Version: 12.0.3
+url: https://eclipse.dev/jetty/
+Bundle-Classpath: .
+Bundle-Copyright: Copyright (c) 1995 Mort Bay Consulting Pty Ltd and oth
+ ers.
+Bundle-Description: Jetty module for Core :: Websocket :: Jetty API
+Bundle-DocURL: https://eclipse.dev/jetty/
+Bundle-License: https://www.eclipse.org/legal/epl-2.0/, https://www.apac
+ he.org/licenses/LICENSE-2.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Core :: Websocket :: Jetty API
+Bundle-SymbolicName: org.eclipse.jetty.websocket.api
+Bundle-Vendor: Eclipse Jetty Project
+Bundle-Version: 12.0.3
+Export-Package: org.eclipse.jetty.websocket.api;version="12.0.3",org.ecl
+ ipse.jetty.websocket.api.annotations;version="12.0.3",org.eclipse.jetty
+ .websocket.api.exceptions;version="12.0.3",org.eclipse.jetty.websocket.
+ api.util;version="12.0.3"
+Import-Package: java.io,java.lang,java.lang.annotation,java.lang.invoke,
+ java.net,java.nio,java.security,java.time,java.util,java.util.concurren
+ t,java.util.function,org.slf4j;version="[1.7,3.0)",org.slf4j.event;vers
+ ion="[1.7,3.0)",org.slf4j.helpers;version="[1.7,3.0)",org.slf4j.spi;ver
+ sion="[1.7,3.0)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=17))"
+Tool: Bnd-6.3.1.202206071316
+

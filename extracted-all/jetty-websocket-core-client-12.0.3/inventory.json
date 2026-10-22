@@ -1,0 +1,38 @@
+{
+  "jar": "jetty-websocket-core-client-12.0.3.jar",
+  "sha256": "4fae8759e295b05396e812571a981a2b6e85cf7df1c766510ab6b24c029be83d",
+  "class_entries": 9,
+  "classes": [
+    "org/eclipse/jetty/websocket/core/client/CoreClientUpgradeRequest$1.class",
+    "org/eclipse/jetty/websocket/core/client/CoreClientUpgradeRequest.class",
+    "org/eclipse/jetty/websocket/core/client/UpgradeListener.class",
+    "org/eclipse/jetty/websocket/core/client/WebSocketCoreClient.class",
+    "org/eclipse/jetty/websocket/core/client/internal/HttpClientProvider.class",
+    "org/eclipse/jetty/websocket/core/client/internal/HttpUpgraderOverHTTP.class",
+    "org/eclipse/jetty/websocket/core/client/internal/HttpUpgraderOverHTTP2.class",
+    "org/eclipse/jetty/websocket/core/client/internal/XmlHttpClientProvider.class",
+    "module-info.class"
+  ],
+  "java_files": 8,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 2414,
+      "sha256": "f89c7d74b69ee3617523412ddc39b6b60a6433495f16a74731e9aae5019bf4ae"
+    },
+    {
+      "path": "META-INF/maven/org.eclipse.jetty.websocket/jetty-websocket-core-client/pom.xml",
+      "bytes": 1469,
+      "sha256": "9da3198de124a20b0d475c5ef14f32490a27151a28d2893a7fd10fc5b5d88b8f"
+    },
+    {
+      "path": "META-INF/maven/org.eclipse.jetty.websocket/jetty-websocket-core-client/pom.properties",
+      "bytes": 90,
+      "sha256": "831c9f14e79ca09f2c51abf9c846baa04661f5f196097a0e13a5291751e58dd8"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

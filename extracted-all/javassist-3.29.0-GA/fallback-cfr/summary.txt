@@ -1,0 +1,2 @@
+Summary for C:\Tools\_soi\roastMane-Offline-OTL-20261022-02\app\javassist-3.29.0-GA.jar
+Decompiled with CFR 0.152

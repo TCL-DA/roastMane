@@ -1,0 +1,40 @@
+{
+  "jar": "retrofit-mock-2.11.0.jar",
+  "sha256": "7826dbb13e34ecdaa6f8e42c47210abe079b7b1e8ad95ebe7d03e09010cd6388",
+  "class_entries": 16,
+  "classes": [
+    "retrofit2/mock/Calls.class",
+    "retrofit2/mock/Calls$DeferredCall.class",
+    "retrofit2/mock/BehaviorCall$2.class",
+    "retrofit2/mock/package-info.class",
+    "retrofit2/mock/NetworkBehavior.class",
+    "retrofit2/mock/MockRetrofit.class",
+    "retrofit2/mock/MockRetrofit$Builder.class",
+    "retrofit2/mock/BehaviorDelegate$CallParameterizedTypeImpl.class",
+    "retrofit2/mock/MockRetrofitIOException.class",
+    "retrofit2/mock/BehaviorCall$1$1.class",
+    "retrofit2/mock/Calls$FakeCall.class",
+    "retrofit2/mock/BehaviorCall$1.class",
+    "retrofit2/mock/BehaviorDelegate.class",
+    "retrofit2/mock/BehaviorCall.class",
+    "retrofit2/mock/BehaviorDelegate$ServiceMethodAdapterInfo.class",
+    "retrofit2/mock/KotlinExtensionsKt.class"
+  ],
+  "java_files": 8,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 64,
+      "sha256": "8c1b1f1b360527e69144c167a15be5a6c1fdc9fe0af09a403d4acca3c765e507"
+    },
+    {
+      "path": "META-INF/retrofit-mock.kotlin_module",
+      "bytes": 62,
+      "sha256": "73e12450aeb0f1e10f5ea0053a09d382092e2c889c6a75f36915a774c1ae932a"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+
+<fx:root type="javafx.scene.layout.BorderPane" styleClass="weight-input" xmlns:fx="http://javafx.com/fxml">
+    <!-- "id"s are used to allow TestFX robot and node finder to find components by id. -->
+    <center>
+        <TextField fx:id="input" id="input" styleClass="weight-input__input"/>
+    </center>
+    <right>
+        <Label fx:id="unitLabel" id="unitLabel" styleClass="weight-input__label" managed="${unitLabel.visible}" BorderPane.alignment="CENTER"/>
+    </right>
+</fx:root>

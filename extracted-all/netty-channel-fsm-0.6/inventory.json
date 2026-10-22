@@ -1,0 +1,48 @@
+{
+  "jar": "netty-channel-fsm-0.6.jar",
+  "sha256": "09ee62976f97d3545b505e38f4dad764f2fd68de14a4a2b71f00e3187f229b6e",
+  "class_entries": 29,
+  "classes": [
+    "com/digitalpetri/netty/fsm/Event$ChannelIdle.class",
+    "com/digitalpetri/netty/fsm/ChannelFsmConfigBuilder.class",
+    "com/digitalpetri/netty/fsm/ChannelFsmConfigBuilder$SharedExecutor.class",
+    "com/digitalpetri/netty/fsm/Event$Connect.class",
+    "com/digitalpetri/netty/fsm/Event.class",
+    "com/digitalpetri/netty/fsm/ChannelFsmFactory.class",
+    "com/digitalpetri/netty/fsm/util/CompletionBuilders$AsyncCompletionBuilder.class",
+    "com/digitalpetri/netty/fsm/util/CompletionBuilders$1.class",
+    "com/digitalpetri/netty/fsm/util/CompletionBuilders.class",
+    "com/digitalpetri/netty/fsm/util/CompletionBuilders$CompletionBuilder.class",
+    "com/digitalpetri/netty/fsm/Event$ChannelInactive.class",
+    "com/digitalpetri/netty/fsm/Scheduler$Cancellable.class",
+    "com/digitalpetri/netty/fsm/ChannelActions.class",
+    "com/digitalpetri/netty/fsm/State.class",
+    "com/digitalpetri/netty/fsm/ChannelFsm.class",
+    "com/digitalpetri/netty/fsm/Event$ConnectSuccess.class",
+    "com/digitalpetri/netty/fsm/Event$Disconnect.class",
+    "com/digitalpetri/netty/fsm/ChannelFsmConfigBuilder$SharedScheduler.class",
+    "com/digitalpetri/netty/fsm/Scheduler.class",
+    "com/digitalpetri/netty/fsm/Event$ConnectFailure.class",
+    "com/digitalpetri/netty/fsm/ChannelFsm$ConnectFuture.class",
+    "com/digitalpetri/netty/fsm/ChannelFsmConfigBuilder$ChannelFsmConfigImpl.class",
+    "com/digitalpetri/netty/fsm/Event$KeepAliveFailure.class",
+    "com/digitalpetri/netty/fsm/Event$GetChannel.class",
+    "com/digitalpetri/netty/fsm/Event$ReconnectDelayElapsed.class",
+    "com/digitalpetri/netty/fsm/Event$DisconnectSuccess.class",
+    "com/digitalpetri/netty/fsm/ChannelFsmConfig.class",
+    "com/digitalpetri/netty/fsm/ChannelFsmFactory$1.class",
+    "com/digitalpetri/netty/fsm/ChannelFsm$DisconnectFuture.class"
+  ],
+  "java_files": 9,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 76,
+      "sha256": "1705bb0e52007b60e8e1b01f2fa025336909f4dfce0ea171a7ab9e29adb324e0"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

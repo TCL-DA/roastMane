@@ -1,0 +1,68 @@
+{
+  "jar": "jakarta.json.bind-api-3.0.0.jar",
+  "sha256": "da50834db61a045cee742b8828cbb2c4073b65debe74db47d2855391d2ca9553",
+  "class_entries": 29,
+  "classes": [
+    "jakarta/json/bind/serializer/JsonbDeserializer.class",
+    "jakarta/json/bind/serializer/JsonbSerializer.class",
+    "jakarta/json/bind/serializer/SerializationContext.class",
+    "jakarta/json/bind/config/PropertyOrderStrategy.class",
+    "jakarta/json/bind/config/BinaryDataStrategy.class",
+    "jakarta/json/bind/JsonbException.class",
+    "jakarta/json/bind/adapter/JsonbAdapter.class",
+    "jakarta/json/bind/JsonbConfig.class",
+    "module-info.class",
+    "jakarta/json/bind/annotation/JsonbSubtype.class",
+    "jakarta/json/bind/annotation/JsonbAnnotation.class",
+    "jakarta/json/bind/annotation/JsonbProperty.class",
+    "jakarta/json/bind/annotation/JsonbDateFormat.class",
+    "jakarta/json/bind/annotation/JsonbTypeAdapter.class",
+    "jakarta/json/bind/annotation/JsonbTransient.class",
+    "jakarta/json/bind/annotation/JsonbTypeSerializer.class",
+    "jakarta/json/bind/annotation/JsonbTypeDeserializer.class",
+    "jakarta/json/bind/annotation/JsonbVisibility.class",
+    "jakarta/json/bind/annotation/JsonbCreator.class",
+    "jakarta/json/bind/annotation/JsonbTypeInfo.class",
+    "jakarta/json/bind/annotation/JsonbNumberFormat.class",
+    "jakarta/json/bind/annotation/JsonbPropertyOrder.class",
+    "jakarta/json/bind/annotation/JsonbNillable.class",
+    "jakarta/json/bind/serializer/DeserializationContext.class",
+    "jakarta/json/bind/config/PropertyNamingStrategy.class",
+    "jakarta/json/bind/config/PropertyVisibilityStrategy.class",
+    "jakarta/json/bind/Jsonb.class",
+    "jakarta/json/bind/JsonbBuilder.class",
+    "jakarta/json/bind/spi/JsonbProvider.class"
+  ],
+  "java_files": 29,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 1591,
+      "sha256": "9594b1b66c1673e01dd4df6bd22dc726037f278b7ead81bcbbec1ac17cf0a122"
+    },
+    {
+      "path": "META-INF/LICENSE.md",
+      "bytes": 35084,
+      "sha256": "6e1f002892b81cbe0647019b150c8a056efc1add565671a4f8af629b6cd2cc7b"
+    },
+    {
+      "path": "META-INF/maven/jakarta.json.bind/jakarta.json.bind-api/pom.xml",
+      "bytes": 21994,
+      "sha256": "9729fd359dcd687516a9792c75197caf7651c35205d6b2ab858729b258da4ab9"
+    },
+    {
+      "path": "META-INF/NOTICE.md",
+      "bytes": 1706,
+      "sha256": "1681092857fa5d2cc18ece3065fe480d4ecbf21b1587b298cb08cadb212e45be"
+    },
+    {
+      "path": "META-INF/maven/jakarta.json.bind/jakarta.json.bind-api/pom.properties",
+      "bytes": 104,
+      "sha256": "8d8e01d01c35e9e169aadd13d96e00365d11bbbd4f232a4c946f98c10546e215"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

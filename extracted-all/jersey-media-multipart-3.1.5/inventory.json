@@ -1,0 +1,112 @@
+{
+  "jar": "jersey-media-multipart-3.1.5.jar",
+  "sha256": "567f6db92fa8b3418f0da73dd61ebc5bd2b748608a243a6f582435c801dfffcc",
+  "class_entries": 58,
+  "classes": [
+    "org/glassfish/jersey/media/multipart/BodyPart.class",
+    "org/glassfish/jersey/media/multipart/BodyPartEntity.class",
+    "org/glassfish/jersey/media/multipart/BodyPartsList.class",
+    "org/glassfish/jersey/media/multipart/Boundary.class",
+    "org/glassfish/jersey/media/multipart/ContentDisposition$ContentDispositionBuilder.class",
+    "org/glassfish/jersey/media/multipart/ContentDisposition.class",
+    "org/glassfish/jersey/media/multipart/FormDataBodyPart.class",
+    "org/glassfish/jersey/media/multipart/FormDataContentDisposition$FormDataContentDispositionBuilder.class",
+    "org/glassfish/jersey/media/multipart/FormDataContentDisposition.class",
+    "org/glassfish/jersey/media/multipart/FormDataMultiPart.class",
+    "org/glassfish/jersey/media/multipart/FormDataParam.class",
+    "org/glassfish/jersey/media/multipart/FormDataParamException.class",
+    "org/glassfish/jersey/media/multipart/JerseyEntityPartBuilderProvider$1.class",
+    "org/glassfish/jersey/media/multipart/JerseyEntityPartBuilderProvider$EnityPartBuilder$FileMethodData.class",
+    "org/glassfish/jersey/media/multipart/JerseyEntityPartBuilderProvider$EnityPartBuilder$GenericData.class",
+    "org/glassfish/jersey/media/multipart/JerseyEntityPartBuilderProvider$EnityPartBuilder$InputStreamMethodData.class",
+    "org/glassfish/jersey/media/multipart/JerseyEntityPartBuilderProvider$EnityPartBuilder$MethodData.class",
+    "org/glassfish/jersey/media/multipart/JerseyEntityPartBuilderProvider$EnityPartBuilder.class",
+    "org/glassfish/jersey/media/multipart/JerseyEntityPartBuilderProvider.class",
+    "org/glassfish/jersey/media/multipart/MultiPart.class",
+    "org/glassfish/jersey/media/multipart/MultiPartFeature.class",
+    "org/glassfish/jersey/media/multipart/MultiPartFeatureAutodiscoverable.class",
+    "org/glassfish/jersey/media/multipart/MultiPartMediaTypes.class",
+    "org/glassfish/jersey/media/multipart/MultiPartProperties$1.class",
+    "org/glassfish/jersey/media/multipart/MultiPartProperties.class",
+    "org/glassfish/jersey/media/multipart/ParameterizedHeadersMap.class",
+    "org/glassfish/jersey/media/multipart/file/DefaultMediaTypePredictor$CommonMediaTypes.class",
+    "org/glassfish/jersey/media/multipart/file/DefaultMediaTypePredictor.class",
+    "org/glassfish/jersey/media/multipart/file/FileDataBodyPart.class",
+    "org/glassfish/jersey/media/multipart/file/MediaTypePredictor.class",
+    "org/glassfish/jersey/media/multipart/file/StreamDataBodyPart.class",
+    "org/glassfish/jersey/media/multipart/file/package-info.class",
+    "org/glassfish/jersey/media/multipart/internal/EntityPartReader.class",
+    "org/glassfish/jersey/media/multipart/internal/EntityPartWriter.class",
+    "org/glassfish/jersey/media/multipart/internal/FormDataParamInjectionFeature$1.class",
+    "org/glassfish/jersey/media/multipart/internal/FormDataParamInjectionFeature.class",
+    "org/glassfish/jersey/media/multipart/internal/FormDataParamValueParamProvider$1.class",
+    "org/glassfish/jersey/media/multipart/internal/FormDataParamValueParamProvider$EntityPartValueProvider.class",
+    "org/glassfish/jersey/media/multipart/internal/FormDataParamValueParamProvider$FileProvider.class",
+    "org/glassfish/jersey/media/multipart/internal/FormDataParamValueParamProvider$FormDataBodyPartProvider.class",
+    "org/glassfish/jersey/media/multipart/internal/FormDataParamValueParamProvider$FormDataContentDispositionProvider.class",
+    "org/glassfish/jersey/media/multipart/internal/FormDataParamValueParamProvider$FormDataMultiPartProvider.class",
+    "org/glassfish/jersey/media/multipart/internal/FormDataParamValueParamProvider$FormDataParamValueProvider.class",
+    "org/glassfish/jersey/media/multipart/internal/FormDataParamValueParamProvider$ListEntityPartValueProvider.class",
+    "org/glassfish/jersey/media/multipart/internal/FormDataParamValueParamProvider$ListFormDataBodyPartValueProvider.class",
+    "org/glassfish/jersey/media/multipart/internal/FormDataParamValueParamProvider$ListFormDataContentDispositionProvider.class",
+    "org/glassfish/jersey/media/multipart/internal/FormDataParamValueParamProvider$ValueProvider.class",
+    "org/glassfish/jersey/media/multipart/internal/FormDataParamValueParamProvider.class",
+    "org/glassfish/jersey/media/multipart/internal/LocalizationMessages$1.class",
+    "org/glassfish/jersey/media/multipart/internal/LocalizationMessages$BundleSupplier.class",
+    "org/glassfish/jersey/media/multipart/internal/LocalizationMessages.class",
+    "org/glassfish/jersey/media/multipart/internal/MultiPartReaderClientSide.class",
+    "org/glassfish/jersey/media/multipart/internal/MultiPartReaderServerSide.class",
+    "org/glassfish/jersey/media/multipart/internal/MultiPartWriter.class",
+    "org/glassfish/jersey/media/multipart/internal/SingleEntityPartReader.class",
+    "org/glassfish/jersey/media/multipart/internal/SingleEntityPartWriter.class",
+    "org/glassfish/jersey/media/multipart/internal/package-info.class",
+    "org/glassfish/jersey/media/multipart/package-info.class"
+  ],
+  "java_files": 34,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 2828,
+      "sha256": "c6724f816ac9cdd1b67a18297e31317b6b27c4a2a2652af1bed6466eb074ca80"
+    },
+    {
+      "path": "META-INF/LICENSE.md",
+      "bytes": 35082,
+      "sha256": "3b6f2a5d22e00be63fbd8c241291cbd00daf803028451c50cf1bd039a9e54272"
+    },
+    {
+      "path": "META-INF/NOTICE.md",
+      "bytes": 4430,
+      "sha256": "9eccf110cb97ace5d70fc251d71796ebbf36220eb30dd96ec9b306a56bcb1507"
+    },
+    {
+      "path": "META-INF/maven/org.glassfish.jersey.media/jersey-media-multipart/pom.properties",
+      "bytes": 83,
+      "sha256": "308a6b03d2523d8654da0d1f9995fbd9c87e11ef94bbd0c7e6dbbfb94dcfa3eb"
+    },
+    {
+      "path": "META-INF/maven/org.glassfish.jersey.media/jersey-media-multipart/pom.xml",
+      "bytes": 5003,
+      "sha256": "1e55b4a69f48196f85ed2396a539575a03ca3129af6ccfdc8431be2f0455cb16"
+    },
+    {
+      "path": "META-INF/services/org.glassfish.jersey.innate.spi.EntityPartBuilderProvider",
+      "bytes": 68,
+      "sha256": "4963016a5eba6144c42f0f1920ff8484192ca4e4b312e405723194a137ec8e0f"
+    },
+    {
+      "path": "META-INF/services/org.glassfish.jersey.internal.spi.AutoDiscoverable",
+      "bytes": 69,
+      "sha256": "bb7d9d0d9a17101630461d174299f1ce157b9404264aac60a1cdd98d2a1e6672"
+    },
+    {
+      "path": "org/glassfish/jersey/media/multipart/internal/localization.properties",
+      "bytes": 2076,
+      "sha256": "4b9215490406cf791c8bfb66bdb4c4d429b12beda9b8510af63056b6df679b17"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

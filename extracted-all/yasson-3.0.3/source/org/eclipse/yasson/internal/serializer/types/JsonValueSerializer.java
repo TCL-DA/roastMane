@@ -1,0 +1,15 @@
+package org.eclipse.yasson.internal.serializer.types;
+
+import jakarta.json.JsonValue;
+import jakarta.json.stream.JsonGenerator;
+import org.eclipse.yasson.internal.SerializationContextImpl;
+
+class JsonValueSerializer extends TypeSerializer<JsonValue> {
+   JsonValueSerializer(TypeSerializerBuilder serializerBuilder) {
+      super(serializerBuilder);
+   }
+
+   void serializeValue(JsonValue value, JsonGenerator generator, SerializationContextImpl context) {
+      generator.write(value);
+   }
+}

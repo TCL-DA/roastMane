@@ -1,0 +1,2 @@
+Summary for C:\Tools\_soi\roastMane-Offline-OTL-20261022-02\app\netty-common-4.1.70.Final.jar
+Decompiled with CFR 0.152

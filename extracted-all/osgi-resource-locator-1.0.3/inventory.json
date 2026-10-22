@@ -1,0 +1,41 @@
+{
+  "jar": "osgi-resource-locator-1.0.3.jar",
+  "sha256": "aab5d7849f7cfcda2cc7c541ba1bd365151d42276f151c825387245dfde3dd74",
+  "class_entries": 12,
+  "classes": [
+    "org/glassfish/hk2/osgiresourcelocator/ServiceLoaderImpl$1.class",
+    "org/glassfish/hk2/osgiresourcelocator/ServiceLoaderImpl$2.class",
+    "org/glassfish/hk2/osgiresourcelocator/ServiceLoaderImpl$BundleTracker.class",
+    "org/glassfish/hk2/osgiresourcelocator/ServiceLoaderImpl$ProvidersPerBundle.class",
+    "org/glassfish/hk2/osgiresourcelocator/ServiceLoaderImpl$ProvidersList.class",
+    "org/glassfish/hk2/osgiresourcelocator/ServiceLoaderImpl$DefaultFactory.class",
+    "org/glassfish/hk2/osgiresourcelocator/ServiceLoaderImpl.class",
+    "org/glassfish/hk2/osgiresourcelocator/ServiceLoader$ProviderFactory.class",
+    "org/glassfish/hk2/osgiresourcelocator/ServiceLoader.class",
+    "org/glassfish/hk2/osgiresourcelocator/ResourceFinderImpl.class",
+    "org/glassfish/hk2/osgiresourcelocator/ResourceFinder.class",
+    "org/glassfish/hk2/osgiresourcelocator/Activator.class"
+  ],
+  "java_files": 5,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 1035,
+      "sha256": "e2677709b8bf2d053d3dfaf5c6684c9cb1eaeac5496e81f483a47ac0a7be9ebc"
+    },
+    {
+      "path": "META-INF/maven/org.glassfish.hk2/osgi-resource-locator/pom.xml",
+      "bytes": 7360,
+      "sha256": "8b6622eb81e557299fbd9aa854bc5ac76d307f7ae5e770586489a58bb5338b2a"
+    },
+    {
+      "path": "META-INF/maven/org.glassfish.hk2/osgi-resource-locator/pom.properties",
+      "bytes": 123,
+      "sha256": "7cd2e6d766c5da23244f9ecd098aa0c8c8ba947c55c252212c0af697a3ef973d"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

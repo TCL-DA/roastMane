@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import com.cropster.roastingintelligence.ui.components.KeyCodeCombinationLabel?>
+
+<fx:root type="GridPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <styleClass>
+        <String fx:value="grid-pane--compact" />
+        <String fx:value="padding-top-bottom" />
+    </styleClass>
+    
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="Infinity" minWidth="10.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="NEVER"/>
+        <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="NEVER"/>
+        <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="NEVER"/>
+        <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="NEVER"/>
+        <RowConstraints maxHeight="Infinity" minHeight="0.0" vgrow="ALWAYS"/>
+    </rowConstraints>
+
+    <Label fx:id="caption" text="Increase your efficiency by learning new shortcuts:" GridPane.rowIndex="0">
+        <styleClass>
+            <String fx:value="label--for" />
+            <String fx:value="input-label--small" />
+        </styleClass>
+    </Label>
+    <Label fx:id="description" id="description" text="&lt;shortcut-description&gt;" GridPane.rowIndex="1">
+        <styleClass>
+            <String fx:value="input-label--muted" />
+            <String fx:value="input-label--small" />
+        </styleClass>
+    </Label>
+    <FlowPane alignment="CENTER" columnHalignment="CENTER" prefWrapLength="10.0" GridPane.rowIndex="2">
+        <KeyCodeCombinationLabel fx:id="shortcut" id="shortcut" text=""/>
+    </FlowPane>
+    <Button fx:id="button" id="button" mnemonicParsing="false" text="See more Keyboard Shortcuts" GridPane.rowIndex="3">
+        <styleClass>
+            <String fx:value="button--plain" />
+            <String fx:value="button--small" />
+        </styleClass>
+    </Button>
+</fx:root>

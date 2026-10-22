@@ -1,0 +1,71 @@
+{
+  "jar": "cropster-util-4.1.jar",
+  "sha256": "7e6035455b061f6e645236ff50e0e14c8332577b9b70d875f5db49a98158a0cc",
+  "class_entries": 27,
+  "classes": [
+    "com/cropster/util/Collect.class",
+    "com/cropster/util/KeyGenerator.class",
+    "com/cropster/util/LogOutputStream.class",
+    "com/cropster/util/RorUtil.class",
+    "com/cropster/util/RorPolyFitCalculator.class",
+    "com/cropster/util/SoftwareVersionParser.class",
+    "com/cropster/util/exception/DataValidationException$DataValidator.class",
+    "com/cropster/util/exception/DataValidationException.class",
+    "com/cropster/util/exception/errordetail/MissingRelationErrorDetails.class",
+    "com/cropster/util/exception/errordetail/ErrorDetails.class",
+    "com/cropster/util/exception/errordetail/InvalidPropertyErrorDetails.class",
+    "com/cropster/util/exception/errordetail/ImmutablePropertyErrorDetails.class",
+    "com/cropster/util/exception/errordetail/InvalidRelationErrorDetails.class",
+    "com/cropster/util/exception/errordetail/MissingPropertyErrorDetails.class",
+    "com/cropster/util/exception/errordetail/ForbiddenOperationErrorDetails.class",
+    "com/cropster/util/exception/errordetail/InvalidPropertyCustomMessage.class",
+    "com/cropster/util/exception/errordetail/InvalidRelationCustomMessage.class",
+    "com/cropster/util/exception/ForbiddenOperationException.class",
+    "com/cropster/util/exception/MessageIdentifyingException.class",
+    "com/cropster/util/exception/ImmutableObjectException.class",
+    "com/cropster/util/exception/ImmutablePropertyException.class",
+    "com/cropster/util/exception/InvalidPropertyException.class",
+    "com/cropster/util/exception/InvalidRelationshipException.class",
+    "com/cropster/util/model/Country.class",
+    "com/cropster/util/model/State.class",
+    "com/cropster/util/model/Unit.class",
+    "com/cropster/util/text/DurationFormat.class"
+  ],
+  "java_files": 26,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 67,
+      "sha256": "6e506c022a7865b7f4aa9c6332963d38791779ae7c4f3b33acefcfa12e0c0e5f"
+    },
+    {
+      "path": "com/cropster/util/model/Unit.properties",
+      "bytes": 6264,
+      "sha256": "1621ad64562a6ef854669ec59a5068f7c5edd99a0c46c666fe9e9837d7750d67"
+    },
+    {
+      "path": "com/cropster/util/model/Unit_de.properties",
+      "bytes": 2015,
+      "sha256": "f5ea4aba980ef8ffa039b6bca547d164a6452b5f29bfb2ae84019eb7e8d0af0d"
+    },
+    {
+      "path": "com/cropster/util/model/Unit_es.properties",
+      "bytes": 760,
+      "sha256": "ca3f37a60e0af01e7cbea415a3f0faf66080cce3cc89bd889c59a9c0d1dc3a28"
+    },
+    {
+      "path": "com/cropster/util/model/Unit_ja.properties",
+      "bytes": 1574,
+      "sha256": "bf4c32495906e194b818e455838990331e1905b2c0277fef5b580cfa4be40cf5"
+    },
+    {
+      "path": "com/cropster/util/model/Unit_ko.properties",
+      "bytes": 927,
+      "sha256": "9d6fd7df733fca88ba060218665752c24287ba36f9b1f1ff8f636fe252a50dba"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

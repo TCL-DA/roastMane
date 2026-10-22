@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven Bundle Plugin 5.1.9
+Build-Jdk-Spec: 21
+Implementation-Vendor: Eclipse Jetty Project
+Implementation-Version: 12.0.3
+url: https://eclipse.dev/jetty/
+Bundle-Classpath: .
+Bundle-Copyright: Copyright (c) 1995 Mort Bay Consulting Pty Ltd and oth
+ ers.
+Bundle-Description: Jetty module for Core :: Websocket :: Client
+Bundle-DocURL: https://eclipse.dev/jetty/
+Bundle-License: https://www.eclipse.org/legal/epl-2.0/, https://www.apac
+ he.org/licenses/LICENSE-2.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Core :: Websocket :: Client
+Bundle-SymbolicName: org.eclipse.jetty.websocket.core.client
+Bundle-Vendor: Eclipse Jetty Project
+Bundle-Version: 12.0.3
+Export-Package: org.eclipse.jetty.websocket.core.client;uses:="org.eclip
+ se.jetty.client,org.eclipse.jetty.http,org.eclipse.jetty.io,org.eclipse
+ .jetty.util,org.eclipse.jetty.util.component,org.eclipse.jetty.websocke
+ t.core";version="12.0.3",org.eclipse.jetty.websocket.core.client.intern
+ al;uses:="org.eclipse.jetty.client,org.eclipse.jetty.io,org.eclipse.jet
+ ty.util,org.eclipse.jetty.websocket.core.client";version="12.0.3"
+Import-Package: org.slf4j;version="[1.7,3.0)",java.io,java.lang,java.lan
+ g.invoke,java.net,java.nio.charset,java.util,java.util.concurrent,java.
+ util.function,java.util.stream,org.eclipse.jetty.client;version="[12.0.
+ 3,13)",org.eclipse.jetty.http;version="[12.0.3,13)",org.eclipse.jetty.i
+ o;version="[12.0.3,13)",org.eclipse.jetty.util;version="[12.0.3,13)";re
+ solution:=optional,org.eclipse.jetty.util.component;version="[12.0.3,13
+ )";resolution:=optional,org.eclipse.jetty.util.compression;version="[12
+ .0.3,13)";resolution:=optional,org.eclipse.jetty.util.resource;version=
+ "[12.0.3,13)";resolution:=optional,org.eclipse.jetty.util.thread;versio
+ n="[12.0.3,13)";resolution:=optional,org.eclipse.jetty.websocket.core;v
+ ersion="[12.0.3,13)",org.eclipse.jetty.websocket.core.client,org.eclips
+ e.jetty.websocket.core.client.internal,org.eclipse.jetty.websocket.core
+ .exception;version="[12.0.3,13)",org.eclipse.jetty.websocket.core.util;
+ version="[12.0.3,13)",org.eclipse.jetty.xml;version="[12.0.3,13)";resol
+ ution:=optional,org.slf4j.event;version="[1.7,3.0)",org.slf4j.helpers;v
+ ersion="[1.7,3.0)",org.slf4j.spi;version="[1.7,3.0)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=17))"
+Tool: Bnd-6.3.1.202206071316
+

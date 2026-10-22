@@ -1,0 +1,196 @@
+[
+  {
+    "jar": "commons-math3-3.6.1.jar",
+    "vineflower_source": "source/org/apache/commons/math3/util/FastMathLiteralArrays.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "controlsfx-11.1.2.jar",
+    "vineflower_source": "source/org/controlsfx/property/editor/DefaultPropertyEditorFactory.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "jackson-databind-2.14.2.jar",
+    "vineflower_source": "source/com/fasterxml/jackson/databind/ser/std/JsonValueSerializer.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "javassist-3.29.0-GA.jar",
+    "vineflower_source": "source/javassist/util/proxy/DefineClassHelper.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "jna-5.13.0.jar",
+    "vineflower_source": "source/com/sun/jna/NativeMappedConverter.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "netty-common-4.1.70.Final.jar",
+    "vineflower_source": "source/io/netty/util/concurrent/NonStickyEventExecutorGroup.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okhttp-4.12.0.jar",
+    "vineflower_source": "source/okhttp3/internal/cache/DiskLruCache.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okhttp-4.12.0.jar",
+    "vineflower_source": "source/okhttp3/internal/cache2/Relay.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okhttp-4.12.0.jar",
+    "vineflower_source": "source/okhttp3/internal/concurrent/TaskRunner.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okhttp-4.12.0.jar",
+    "vineflower_source": "source/okhttp3/internal/connection/ExchangeFinder.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okhttp-4.12.0.jar",
+    "vineflower_source": "source/okhttp3/internal/connection/RealCall.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okhttp-4.12.0.jar",
+    "vineflower_source": "source/okhttp3/internal/connection/RealConnection.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okhttp-4.12.0.jar",
+    "vineflower_source": "source/okhttp3/internal/connection/RealConnectionPool.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okhttp-4.12.0.jar",
+    "vineflower_source": "source/okhttp3/internal/http2/Http2Stream.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okhttp-4.12.0.jar",
+    "vineflower_source": "source/okhttp3/internal/Util.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [
+      "okhttp3/internal/Util.java"
+    ],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okhttp-4.12.0.jar",
+    "vineflower_source": "source/okhttp3/internal/ws/WebSocketReader.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okhttp-4.12.0.jar",
+    "vineflower_source": "source/okhttp3/ResponseBody.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okio-jvm-3.6.0.jar",
+    "vineflower_source": "source/okio/AsyncTimeout.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okio-jvm-3.6.0.jar",
+    "vineflower_source": "source/okio/ForwardingFileSystem.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okio-jvm-3.6.0.jar",
+    "vineflower_source": "source/okio/internal/-FileSystem.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okio-jvm-3.6.0.jar",
+    "vineflower_source": "source/okio/internal/ZipFilesKt.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okio-jvm-3.6.0.jar",
+    "vineflower_source": "source/okio/NioFileSystemWrappingFileSystem.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okio-jvm-3.6.0.jar",
+    "vineflower_source": "source/okio/Pipe.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  },
+  {
+    "jar": "okio-jvm-3.6.0.jar",
+    "vineflower_source": "source/okio/ZipFileSystem.java",
+    "cfr_exit": 0,
+    "cfr_java_files": 1,
+    "remaining_error_files": [],
+    "compilation_verified": false
+  }
+]

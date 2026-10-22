@@ -1,0 +1,12 @@
+﻿{
+    "date":  "2026-10-22",
+    "sources":  677,
+    "javac_exit":  1,
+    "errors":  65,
+    "warnings":  10,
+    "files_with_errors":  23,
+    "offline_v06_sources":  7,
+    "offline_v06_exit":  0,
+    "offline_v06_classes":  15,
+    "full_source_build_verified":  false
+}

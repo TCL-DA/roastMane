@@ -1,0 +1,63 @@
+{
+  "jar": "log4j-slf4j2-impl-2.26.0.jar",
+  "sha256": "cfc1bddbd39e684b698ae968291d8a3b3a55ee0ec2ef3d3ea5c2336a9e151598",
+  "class_entries": 14,
+  "classes": [
+    "org/apache/logging/slf4j/Log4jEventBuilder.class",
+    "org/apache/logging/slf4j/Log4jLogger.class",
+    "org/apache/logging/slf4j/Log4jLoggerFactory.class",
+    "org/apache/logging/slf4j/Log4jMDCAdapter$1.class",
+    "org/apache/logging/slf4j/Log4jMDCAdapter$ThreadLocalMapOfStacks.class",
+    "org/apache/logging/slf4j/Log4jMDCAdapter.class",
+    "org/apache/logging/slf4j/Log4jMarker.class",
+    "org/apache/logging/slf4j/Log4jMarkerFactory.class",
+    "org/apache/logging/slf4j/SLF4JLoggingException.class",
+    "org/apache/logging/slf4j/SLF4JServiceProvider.class",
+    "org/apache/logging/slf4j/message/ThrowableConsumingMessageFactory.class",
+    "org/apache/logging/slf4j/message/package-info.class",
+    "org/apache/logging/slf4j/package-info.class",
+    "module-info.class"
+  ],
+  "java_files": 12,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 2080,
+      "sha256": "84155d6d51ccb3074038e5629d14525e567abf0c5785d4bd3396988d365c1e1b"
+    },
+    {
+      "path": "META-INF/DEPENDENCIES",
+      "bytes": 883,
+      "sha256": "48bbec5cfc7fc6eda9a4fb95770647647ef9bbb08501c66b3c15cc092160f08b"
+    },
+    {
+      "path": "META-INF/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "META-INF/NOTICE",
+      "bytes": 185,
+      "sha256": "60fbe17a0161f93412d3928a281961efffac017eaf0093f4d22109896ff07684"
+    },
+    {
+      "path": "META-INF/services/org.slf4j.spi.SLF4JServiceProvider",
+      "bytes": 45,
+      "sha256": "f12edb960564e954d5c6f3c61bfe27f48a230df4ac54cdd91d51085e364e26e9"
+    },
+    {
+      "path": "META-INF/maven/org.apache.logging.log4j/log4j-slf4j2-impl/pom.xml",
+      "bytes": 5086,
+      "sha256": "13adaa5048a0717978dbde14e9f9ac58be5a2790ae78a55cd27e6344fb029d34"
+    },
+    {
+      "path": "META-INF/maven/org.apache.logging.log4j/log4j-slf4j2-impl/pom.properties",
+      "bytes": 77,
+      "sha256": "e7a920fc520141f13733a246584a2c621ecf2a284bd372d748183bdb401dbaf6"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

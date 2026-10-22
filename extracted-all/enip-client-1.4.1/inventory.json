@@ -1,0 +1,43 @@
+{
+  "jar": "enip-client-1.4.1.jar",
+  "sha256": "c28a5c843b3c34892958be61019c256882e50a5ce2c6d23aef94e41fab240c28",
+  "class_entries": 14,
+  "classes": [
+    "com/digitalpetri/enip/EtherNetIpClient$1.class",
+    "com/digitalpetri/enip/EtherNetIpClient$EnipChannelActions.class",
+    "com/digitalpetri/enip/EtherNetIpClientConfig.class",
+    "com/digitalpetri/enip/EtherNetIpClientConfig$Builder.class",
+    "com/digitalpetri/enip/EtherNetIpShared.class",
+    "com/digitalpetri/enip/EtherNetIpClient$PendingRequest.class",
+    "com/digitalpetri/enip/util/FutureUtils.class",
+    "com/digitalpetri/enip/util/FutureUtils$CompletionBuilder.class",
+    "com/digitalpetri/enip/util/FutureUtils$1.class",
+    "com/digitalpetri/enip/util/FutureUtils$AsyncCompletionBuilder.class",
+    "com/digitalpetri/enip/codec/EnipCodec.class",
+    "com/digitalpetri/enip/EtherNetIpClient$EtherNetIpClientHandler.class",
+    "com/digitalpetri/enip/EtherNetIpClient$EnipChannelActions$1.class",
+    "com/digitalpetri/enip/EtherNetIpClient.class"
+  ],
+  "java_files": 5,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 131,
+      "sha256": "1df5b11395f036809d94e0952288429fcd2cfc4777bfcbb2b7080f78f841c08e"
+    },
+    {
+      "path": "META-INF/maven/com.digitalpetri.enip/enip-client/pom.xml",
+      "bytes": 1608,
+      "sha256": "41a5e48ea88d028230d990f420451df72b1f5cd96b193d2a82b9888412472975"
+    },
+    {
+      "path": "META-INF/maven/com.digitalpetri.enip/enip-client/pom.properties",
+      "bytes": 117,
+      "sha256": "dcdbd2bf203610bc933b7fd685c9d49ef7cc1fa5c9edaab677ed1e2a0b42e317"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

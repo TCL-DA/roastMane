@@ -1,0 +1,84 @@
+{
+  "jar": "mimepull-1.9.15.jar",
+  "sha256": "b9f586bf8844b14a33e75fe7a4b94896dc80d80b732d128777e287af14c836fa",
+  "class_entries": 45,
+  "classes": [
+    "org/jvnet/mimepull/MemoryData.class",
+    "org/jvnet/mimepull/Data.class",
+    "org/jvnet/mimepull/MIMEConfig.class",
+    "org/jvnet/mimepull/DataFile.class",
+    "org/jvnet/mimepull/DataHead$ReadMultiStream.class",
+    "org/jvnet/mimepull/DataHead$ReadOnceStream.class",
+    "org/jvnet/mimepull/DataHead.class",
+    "org/jvnet/mimepull/Chunk.class",
+    "org/jvnet/mimepull/MIMEPart.class",
+    "org/jvnet/mimepull/InternetHeaders.class",
+    "org/jvnet/mimepull/MIMEMessage$1.class",
+    "org/jvnet/mimepull/MIMEMessage.class",
+    "org/jvnet/mimepull/Header.class",
+    "org/jvnet/mimepull/MIMEEvent$EVENT_TYPE.class",
+    "org/jvnet/mimepull/MIMEEvent$StartMessage.class",
+    "org/jvnet/mimepull/MIMEEvent$StartPart.class",
+    "org/jvnet/mimepull/MIMEEvent$EndPart.class",
+    "org/jvnet/mimepull/MIMEEvent$Headers.class",
+    "org/jvnet/mimepull/MIMEEvent$Content.class",
+    "org/jvnet/mimepull/MIMEEvent$EndMessage.class",
+    "org/jvnet/mimepull/MIMEEvent.class",
+    "org/jvnet/mimepull/FinalArrayList.class",
+    "org/jvnet/mimepull/Hdr.class",
+    "org/jvnet/mimepull/MIMEParser$STATE.class",
+    "org/jvnet/mimepull/MIMEParser$MIMEEventIterator.class",
+    "org/jvnet/mimepull/MIMEParser$LineInputStream.class",
+    "org/jvnet/mimepull/MIMEParser$1.class",
+    "org/jvnet/mimepull/MIMEParser.class",
+    "org/jvnet/mimepull/WeakDataFile$CleanupRunnable.class",
+    "org/jvnet/mimepull/WeakDataFile$1.class",
+    "org/jvnet/mimepull/WeakDataFile.class",
+    "org/jvnet/mimepull/MimeUtility.class",
+    "org/jvnet/mimepull/DecodingException.class",
+    "org/jvnet/mimepull/ASCIIUtility.class",
+    "org/jvnet/mimepull/CleanUpExecutorFactory.class",
+    "org/jvnet/mimepull/UUDecoderStream.class",
+    "org/jvnet/mimepull/LineInputStream.class",
+    "org/jvnet/mimepull/BASE64DecoderStream.class",
+    "org/jvnet/mimepull/FactoryFinder.class",
+    "org/jvnet/mimepull/MIMEParsingException.class",
+    "org/jvnet/mimepull/ChunkInputStream.class",
+    "org/jvnet/mimepull/QPDecoderStream.class",
+    "org/jvnet/mimepull/FileData.class",
+    "org/jvnet/mimepull/PropUtil.class",
+    "module-info.class"
+  ],
+  "java_files": 29,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 601,
+      "sha256": "112a6a6162d108146ffda488fa40dd29e0595a0041de0158a0e81fcb433192b4"
+    },
+    {
+      "path": "META-INF/LICENSE.md",
+      "bytes": 1926,
+      "sha256": "92204a38c4ae013d4620362ed11b00a5409e14b5da42bcd45edc253af0d3daae"
+    },
+    {
+      "path": "META-INF/NOTICE.md",
+      "bytes": 5690,
+      "sha256": "01bd8f93bf1b7acacc563dce509da9704139d0fbb6f911917738cf2f2c5a2aff"
+    },
+    {
+      "path": "META-INF/maven/org.jvnet.mimepull/mimepull/pom.xml",
+      "bytes": 16718,
+      "sha256": "d3fd8e8d900ea118c566f239bb3caebe8487ee91336af6848d4db9db77544539"
+    },
+    {
+      "path": "META-INF/maven/org.jvnet.mimepull/mimepull/pom.properties",
+      "bytes": 62,
+      "sha256": "53f645485a1cca3b236cd14d5156163348f7f625d6c27a469e1c4b9ccb6a50a8"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

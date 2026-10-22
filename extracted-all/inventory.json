@@ -1,0 +1,1320 @@
+[
+  {
+    "jar": "analytics-3.5.2.jar",
+    "sha256": "98b10c603c67b42b69bc5df6525e5759a823908cb26c6751e3b1f5757e389b45",
+    "class_entries": 26,
+    "java_files": 12,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "analytics-core-3.5.2.jar",
+    "sha256": "b67c5544de05aa822b6f02d1b4fba7ef418a924e0887609dda7228aa9086adc4",
+    "class_entries": 38,
+    "java_files": 25,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "annotations-13.0.jar",
+    "sha256": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478",
+    "class_entries": 32,
+    "java_files": 17,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "aopalliance-repackaged-3.0.5.jar",
+    "sha256": "433e4b8292064c96625eee2106eb2fd7fc50b839c2f0742977563331ad9d5935",
+    "class_entries": 26,
+    "java_files": 26,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "auto-value-annotations-1.10.1.jar",
+    "sha256": "a4fe0a211925e938a8510d741763ee1171a11bf931f5891ef4d4ee84fca72be2",
+    "class_entries": 9,
+    "java_files": 7,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "backo-1.0.0.jar",
+    "sha256": "f737d9319088714f7b116948f79d47058b40e3ddf25a56bb07010cc6df656f76",
+    "class_entries": 3,
+    "java_files": 1,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "cip-client-1.4.1.jar",
+    "sha256": "b7c910a6e628e46c9b6ab3dcead99ebc094eeaa58e940ae0673a7c5852f96f0c",
+    "class_entries": 8,
+    "java_files": 2,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "cip-core-1.4.1.jar",
+    "sha256": "c87be2496b3ba2b21a457ea1f52762bbead525c8ac332735b225e65174a4820e",
+    "class_entries": 51,
+    "java_files": 33,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "classgraph-4.8.161.jar",
+    "sha256": "548977dbbab5df88cbdd35668798ab1ad02a4a880b48d4372648be638d9172e3",
+    "class_entries": 263,
+    "java_files": 140,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "commons-codec-1.15.jar",
+    "sha256": "b3e9f6d63a790109bf0d056611fbed1cf69055826defeb9894a71369d246ed63",
+    "class_entries": 106,
+    "java_files": 72,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "commons-collections4-4.4.jar",
+    "sha256": "1df8b9430b5c8ed143d7815e403e33ef5371b2400aadbe9bda0883762e0846d1",
+    "class_entries": 524,
+    "java_files": 307,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "commons-io-2.11.0.jar",
+    "sha256": "961b2f6d87dbacc5d54abf45ab7a6e2495f89b75598962d8c723cea9bc210908",
+    "class_entries": 201,
+    "java_files": 180,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "commons-lang3-3.12.0.jar",
+    "sha256": "d919d904486c037f8d193412da0c92e22a9fa24230b9d67a57855c5c31c7e94e",
+    "class_entries": 345,
+    "java_files": 198,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "commons-math3-3.6.1.jar",
+    "sha256": "1e56d7b058d28b65abd256b8458e3885b674c1d588fa43cd7d1cbb9c7ef2b308",
+    "class_entries": 1301,
+    "java_files": 918,
+    "decompiler_exit": 0,
+    "error_files": [
+      "source/org/apache/commons/math3/util/FastMathLiteralArrays.java"
+    ],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "controlsfx-11.1.2.jar",
+    "sha256": "779cb5e37cc12273f2992d97d4a63408bed600259a325fe39941e78bbff00f59",
+    "class_entries": 651,
+    "java_files": 241,
+    "decompiler_exit": 0,
+    "error_files": [
+      "source/org/controlsfx/property/editor/DefaultPropertyEditorFactory.java"
+    ],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "converter-gson-2.9.0.jar",
+    "sha256": "32aa206b9a29c9df5eda93a092cfb3b0b9133e232c062baa882f0319f0e79f0e",
+    "class_entries": 4,
+    "java_files": 4,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "core-3.5.1.jar",
+    "sha256": "1ba7c0fbb6c267e2fb74e1497d855adae633ccc98edc8c75163aa64bc08e3059",
+    "class_entries": 290,
+    "java_files": 238,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "cropster-util-4.1.jar",
+    "sha256": "7e6035455b061f6e645236ff50e0e14c8332577b9b70d875f5db49a98158a0cc",
+    "class_entries": 27,
+    "java_files": 26,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "disruptor-3.4.4.jar",
+    "sha256": "1524ed31f13bcabee1b6146e67be30c6317cb94fcd0c7c2f7c7a1f3e82087c51",
+    "class_entries": 82,
+    "java_files": 74,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "enip-client-1.4.1.jar",
+    "sha256": "c28a5c843b3c34892958be61019c256882e50a5ce2c6d23aef94e41fab240c28",
+    "class_entries": 14,
+    "java_files": 5,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "enip-core-1.4.1.jar",
+    "sha256": "20fd9ad183ea41be00ac7fdb9eecabe6d5972550ff5ecec2b6dcdfe99bb37568",
+    "class_entries": 30,
+    "java_files": 27,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "fxgraphics2d-1.7.jar",
+    "sha256": "de7b922f7c8f07e0899b721d47a42af6aeea431aaa9954efbe1135c544b95a6e",
+    "class_entries": 6,
+    "java_files": 5,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "fxsvgimage-1.1.jar",
+    "sha256": "d2b11f6d79235ce5bb21460eaf64e32a80e13bb204fd2d41efbd5dcb659c4819",
+    "class_entries": 91,
+    "java_files": 66,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "gson-2.9.1.jar",
+    "sha256": "378534e339e6e6d50b1736fb3abb76f1c15d1be3f4c13cec6d536412e23da603",
+    "class_entries": 208,
+    "java_files": 78,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "hk2-api-3.0.5.jar",
+    "sha256": "0b8e548172f10381ad61ce8afaf205a1992dc4ea9a95b9008c3666de72d21b0d",
+    "class_entries": 179,
+    "java_files": 137,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "hk2-locator-3.0.5.jar",
+    "sha256": "b052277dbdcaef810f1b42b10e9416c23e7ccfa0c195b0a5344d80cc178631ec",
+    "class_entries": 97,
+    "java_files": 49,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "hk2-utils-3.0.5.jar",
+    "sha256": "af43ea4ae1e05f3860bc5f2e23202bdd2106b7947a8ecd7b1fd3994daa78babb",
+    "class_entries": 77,
+    "java_files": 39,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "j2mod-3.1.1.jar",
+    "sha256": "a5d417e24f5cb7db980337d866ee1fa6aa878fac9d192fb98a77a7d1eb3facce",
+    "class_entries": 127,
+    "java_files": 116,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jackson-annotations-2.14.2.jar",
+    "sha256": "2c6869d505cf60dc066734b7d50339f975bd3adc635e26a78abb71acb4473c0d",
+    "class_entries": 73,
+    "java_files": 47,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jackson-core-2.14.2.jar",
+    "sha256": "b5d37a77c88277b97e3593c8740925216c06df8e4172bbde058528df04ad3e7a",
+    "class_entries": 161,
+    "java_files": 138,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jackson-databind-2.14.2.jar",
+    "sha256": "501d3abce4d18dcc381058ec593c5b94477906bba6efbac14dae40a642f77424",
+    "class_entries": 770,
+    "java_files": 467,
+    "decompiler_exit": 0,
+    "error_files": [
+      "source/com/fasterxml/jackson/databind/ser/std/JsonValueSerializer.java"
+    ],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jackson-dataformat-yaml-2.14.2.jar",
+    "sha256": "5c3a0a71d0339529c80ae771497b20fdc0fa7cb67c772f99af5935927560006a",
+    "class_entries": 21,
+    "java_files": 16,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jackson-module-jakarta-xmlbind-annotations-2.14.2.jar",
+    "sha256": "42ceb8345bf84b1f6a7ceda0f41c56edc75bf3bb61c6fca20423ba7b8c3663e6",
+    "class_entries": 12,
+    "java_files": 7,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jai-imageio-core-1.4.0.jar",
+    "sha256": "8ad3c68e9efffb10ac87ff8bc589adf64b04a729c5194c079efd0643607fd72a",
+    "class_entries": 339,
+    "java_files": 149,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jakarta.activation-api-2.1.0.jar",
+    "sha256": "56e8d994095fe49c28138c60291482f66f18d12ac2b720e938697dce6a3135c7",
+    "class_entries": 43,
+    "java_files": 30,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jakarta.annotation-api-2.1.1.jar",
+    "sha256": "5f65fdaf424eee2b55e1d882ba9bb376be93fb09b37b808be6e22e8851c909fe",
+    "class_entries": 18,
+    "java_files": 17,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jakarta.inject-api-2.0.1.jar",
+    "sha256": "f7dc98062fccf14126abb751b64fab12c312566e8cbdc8483598bffcea93af7c",
+    "class_entries": 7,
+    "java_files": 7,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jakarta.json-api-2.1.2.jar",
+    "sha256": "f2472507ad2cc12f2aef08a2f7a628cd1c3f855668a6dcb2aa9a30d9b909b998",
+    "class_entries": 37,
+    "java_files": 33,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jakarta.json.bind-api-3.0.0.jar",
+    "sha256": "da50834db61a045cee742b8828cbb2c4073b65debe74db47d2855391d2ca9553",
+    "class_entries": 29,
+    "java_files": 29,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jakarta.validation-api-3.0.2.jar",
+    "sha256": "291c25e6910cc6a7ebd96d4c6baebf6d7c37676c5482c2d96146e901b62c1fc9",
+    "class_entries": 144,
+    "java_files": 89,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jakarta.ws.rs-api-3.1.0.jar",
+    "sha256": "6b3b3628b8b4aedda0d24c3354335e985497d8ef3c510b8f3028e920d5b8663d",
+    "class_entries": 150,
+    "java_files": 124,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jakarta.xml.bind-api-4.0.0.jar",
+    "sha256": "57e3796ad5753640088f5f9d3c53c183f2c250b7dad90529ea3e19a5515aa122",
+    "class_entries": 109,
+    "java_files": 91,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "javafx/javafx-base.jar",
+    "sha256": "e76de00b59e1a6d6382fcb5210c2f2bee015d3ee169e54a458cc1621cf20bfa9",
+    "class_entries": 663,
+    "java_files": 296,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "javafx/javafx-controls.jar",
+    "sha256": "a827b3390a434653772acc5b28fb57a49d6c7e439e35709b76eb1beeb9a262a5",
+    "class_entries": 1213,
+    "java_files": 286,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "javafx/javafx-fxml.jar",
+    "sha256": "d86382d823cc497d2a1b41ff63f400a68d6cf7da173356e001c76242406ae143",
+    "class_entries": 79,
+    "java_files": 27,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "javafx/javafx-graphics.jar",
+    "sha256": "490c983fdb4762b9b0370d1292db3c45a70d9593996e5eb2e65add7fcfb8b42e",
+    "class_entries": 2847,
+    "java_files": 1501,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [
+      "api-ms-win-core-console-l1-1-0.dll",
+      "api-ms-win-core-console-l1-2-0.dll",
+      "api-ms-win-core-datetime-l1-1-0.dll",
+      "api-ms-win-core-debug-l1-1-0.dll",
+      "api-ms-win-core-errorhandling-l1-1-0.dll",
+      "api-ms-win-core-file-l1-1-0.dll",
+      "api-ms-win-core-file-l1-2-0.dll",
+      "api-ms-win-core-file-l2-1-0.dll",
+      "api-ms-win-core-handle-l1-1-0.dll",
+      "api-ms-win-core-heap-l1-1-0.dll",
+      "api-ms-win-core-interlocked-l1-1-0.dll",
+      "api-ms-win-core-libraryloader-l1-1-0.dll",
+      "api-ms-win-core-localization-l1-2-0.dll",
+      "api-ms-win-core-memory-l1-1-0.dll",
+      "api-ms-win-core-namedpipe-l1-1-0.dll",
+      "api-ms-win-core-processenvironment-l1-1-0.dll",
+      "api-ms-win-core-processthreads-l1-1-0.dll",
+      "api-ms-win-core-processthreads-l1-1-1.dll",
+      "api-ms-win-core-profile-l1-1-0.dll",
+      "api-ms-win-core-rtlsupport-l1-1-0.dll",
+      "api-ms-win-core-string-l1-1-0.dll",
+      "api-ms-win-core-synch-l1-1-0.dll",
+      "api-ms-win-core-synch-l1-2-0.dll",
+      "api-ms-win-core-sysinfo-l1-1-0.dll",
+      "api-ms-win-core-timezone-l1-1-0.dll",
+      "api-ms-win-core-util-l1-1-0.dll",
+      "api-ms-win-crt-conio-l1-1-0.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "api-ms-win-crt-environment-l1-1-0.dll",
+      "api-ms-win-crt-filesystem-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-locale-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-multibyte-l1-1-0.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-process-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-time-l1-1-0.dll",
+      "api-ms-win-crt-utility-l1-1-0.dll",
+      "decora_sse.dll",
+      "glass.dll",
+      "javafx_font.dll",
+      "javafx_iio.dll",
+      "msvcp140.dll",
+      "prism_common.dll",
+      "prism_d3d.dll",
+      "prism_sw.dll",
+      "ucrtbase.dll",
+      "vcruntime140.dll",
+      "vcruntime140_1.dll"
+    ],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "javafx/javafx-media.jar",
+    "sha256": "5292ab4c76de1b13599a67e8641c1f7e1c356615b7e7ad35bc9e73dd3dfe6bb9",
+    "class_entries": 175,
+    "java_files": 84,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [
+      "fxplugins.dll",
+      "glib-lite.dll",
+      "gstreamer-lite.dll",
+      "jfxmedia.dll"
+    ],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "javafx/javafx-swing.jar",
+    "sha256": "7b52c99779c6a877bdf6fe96663b3ffc00f3ede82c64594431cbac43c0e5a975",
+    "class_entries": 52,
+    "java_files": 20,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "javafx/javafx-web.jar",
+    "sha256": "8c94027fecc327ba3d813b34c124cdc8fb1076a448c2550b6a430a67f8871c0a",
+    "class_entries": 455,
+    "java_files": 274,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [
+      "jfxwebkit.dll"
+    ],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "javase-3.5.1.jar",
+    "sha256": "a2cedfd64d7280dcd1cb5358127b81470323e30775a57b3bad3a77933f100e88",
+    "class_entries": 13,
+    "java_files": 12,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "javassist-3.29.0-GA.jar",
+    "sha256": "62d4065362e8969ce654f2b5541de1efb5b5bca6c146dbd38a595ea4df64cd31",
+    "class_entries": 426,
+    "java_files": 253,
+    "decompiler_exit": 0,
+    "error_files": [
+      "source/javassist/util/proxy/DefineClassHelper.java"
+    ],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "javax.activation-1.2.0.jar",
+    "sha256": "993302b16cd7056f21e779cc577d175a810bb4900ef73cd8fbf2b50f928ba9ce",
+    "class_entries": 42,
+    "java_files": 32,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jcip-annotations-1.0-1.jar",
+    "sha256": "4fccff8382aafc589962c4edb262f6aa595e34f1e11e61057d1c6a96e8fc7323",
+    "class_entries": 4,
+    "java_files": 4,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jcl-over-slf4j-2.0.18.jar",
+    "sha256": "ec5c36d57d2dbe100f84878f944575cb7871da32c7a115b8d7e0721277045d67",
+    "class_entries": 9,
+    "java_files": 8,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jcommander-1.82.jar",
+    "sha256": "deeac157c8de6822878d85d0c7bc8467a19cc8484d37788f7804f039dde280b1",
+    "class_entries": 73,
+    "java_files": 63,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jersey-client-3.1.5.jar",
+    "sha256": "e26b824ceb81e0ca4b73c7810448fb5566ef0c17ac871add93a92c291e505243",
+    "class_entries": 193,
+    "java_files": 92,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jersey-common-3.1.5.jar",
+    "sha256": "c7258f374433df583e50bbe5583fd6d6694393a322915024f719d21a218dc012",
+    "class_entries": 912,
+    "java_files": 356,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jersey-container-jetty-http-3.1.5.jar",
+    "sha256": "e9ade663fd7a0c1ba4cff0221ff4236d18e576c4630479e3d01362bd470637b4",
+    "class_entries": 30,
+    "java_files": 7,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jersey-entity-filtering-3.1.5.jar",
+    "sha256": "b836a2d99a7f8f91679c705abbbb151de2df3c49525efb893b26a7497193fe9b",
+    "class_entries": 61,
+    "java_files": 43,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jersey-hk2-3.1.5.jar",
+    "sha256": "0c9496cfc6b4f9b223c44c83b4df3edea7924ce4d52bffb55cf180e9ec4b4eeb",
+    "class_entries": 46,
+    "java_files": 16,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jersey-media-json-binding-3.1.5.jar",
+    "sha256": "0db317cd64f67ac3c518ee3a81875068fcb83b37b162b0cab6bd065a3a16dc4b",
+    "class_entries": 8,
+    "java_files": 5,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jersey-media-json-jackson-3.1.5.jar",
+    "sha256": "b277d7005661acb1d846cb7b59c3feeaf91bbfe5c1a97d00003335d72b3ab133",
+    "class_entries": 50,
+    "java_files": 35,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jersey-media-multipart-3.1.5.jar",
+    "sha256": "567f6db92fa8b3418f0da73dd61ebc5bd2b748608a243a6f582435c801dfffcc",
+    "class_entries": 58,
+    "java_files": 34,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jersey-server-3.1.5.jar",
+    "sha256": "a9b95e4ecc68ab0642c9c4a650482630edec995bd1a740d6223616a282b05e76",
+    "class_entries": 652,
+    "java_files": 375,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jetty-alpn-client-12.0.3.jar",
+    "sha256": "8456b1852ca1106b060bd8ce480f7c091fe5c22a0241e36f0b82f71620dd8d33",
+    "class_entries": 3,
+    "java_files": 3,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jetty-client-12.0.3.jar",
+    "sha256": "56adc28fc69e9b59547e09ed42281a5faed765f153675957f23e25ed8ae1366c",
+    "class_entries": 197,
+    "java_files": 87,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jetty-http-12.0.3.jar",
+    "sha256": "826121fe7c2ed3e850fd3f4561e6740750a07987779c308df5befd98341c7185",
+    "class_entries": 197,
+    "java_files": 81,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jetty-io-12.0.3.jar",
+    "sha256": "35a196e4f6c155f014c80eb3dbdb63a90c5cc38e642e63d7ae0c04756712b206",
+    "class_entries": 171,
+    "java_files": 68,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jetty-security-12.0.3.jar",
+    "sha256": "747d7fc40fa7b9aa8bd1c86e25c2d8e23985fe5c2830379d20b87fb34db1f703",
+    "class_entries": 90,
+    "java_files": 48,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jetty-server-12.0.3.jar",
+    "sha256": "211679fc3c3c272c26746c1290196e154383788b76541c5821813ef3a378103b",
+    "class_entries": 278,
+    "java_files": 101,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jetty-util-12.0.3.jar",
+    "sha256": "177fbbdc6b97f60f5c0527a77e4895c31d47a5a4151f90a7d01ae5c885d25636",
+    "class_entries": 356,
+    "java_files": 171,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jetty-websocket-core-client-12.0.3.jar",
+    "sha256": "4fae8759e295b05396e812571a981a2b6e85cf7df1c766510ab6b24c029be83d",
+    "class_entries": 9,
+    "java_files": 8,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jetty-websocket-core-common-12.0.3.jar",
+    "sha256": "2d3046896bd0dfd1ff3dfe61bf93c39481cf96fad734af52b9f57b41f7f9ef9b",
+    "class_entries": 102,
+    "java_files": 68,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jetty-websocket-jetty-api-12.0.3.jar",
+    "sha256": "d421eb6b21e17d3640a42117f4039807d245e3b907159bd8fd59f7b89790af77",
+    "class_entries": 37,
+    "java_files": 28,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jetty-websocket-jetty-client-12.0.3.jar",
+    "sha256": "96f7b146b78bc1cdd1f110737f090ee9e8e8c18466fd08b1717b29f5de86bb10",
+    "class_entries": 8,
+    "java_files": 7,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jetty-websocket-jetty-common-12.0.3.jar",
+    "sha256": "f50867cff1f18029f4a739b7d9de577780497e47e21fc4578986395be474a246",
+    "class_entries": 12,
+    "java_files": 11,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jfreechart-1.5.0.jar",
+    "sha256": "ae3788e0977723ed6769d3569c6f2003df8735eca6fc108c67ad10a62a15bc5e",
+    "class_entries": 661,
+    "java_files": 637,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jfreechart-fx-1.0.1-cropster.jar",
+    "sha256": "efa3a6f398b2550cb4833fa0a601c5fc4b32300f38e48d195c7b6eeaea69f320",
+    "class_entries": 14,
+    "java_files": 14,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jna-5.13.0.jar",
+    "sha256": "66d4f819a062a51a1d5627bffc23fac55d1677f0e0a1feba144aabdd670a64bb",
+    "class_entries": 125,
+    "java_files": 65,
+    "decompiler_exit": 0,
+    "error_files": [
+      "source/com/sun/jna/NativeMappedConverter.java"
+    ],
+    "omitted_binary_resources": [
+      "com/sun/jna/darwin-aarch64/libjnidispatch.jnilib",
+      "com/sun/jna/darwin-x86-64/libjnidispatch.jnilib",
+      "com/sun/jna/freebsd-x86/libjnidispatch.so",
+      "com/sun/jna/freebsd-x86-64/libjnidispatch.so",
+      "com/sun/jna/linux-aarch64/libjnidispatch.so",
+      "com/sun/jna/linux-arm/libjnidispatch.so",
+      "com/sun/jna/linux-armel/libjnidispatch.so",
+      "com/sun/jna/linux-loongarch64/libjnidispatch.so",
+      "com/sun/jna/linux-mips64el/libjnidispatch.so",
+      "com/sun/jna/linux-ppc/libjnidispatch.so",
+      "com/sun/jna/linux-ppc64le/libjnidispatch.so",
+      "com/sun/jna/linux-riscv64/libjnidispatch.so",
+      "com/sun/jna/linux-s390x/libjnidispatch.so",
+      "com/sun/jna/linux-x86/libjnidispatch.so",
+      "com/sun/jna/linux-x86-64/libjnidispatch.so",
+      "com/sun/jna/openbsd-x86/libjnidispatch.so",
+      "com/sun/jna/openbsd-x86-64/libjnidispatch.so",
+      "com/sun/jna/sunos-sparc/libjnidispatch.so",
+      "com/sun/jna/sunos-sparcv9/libjnidispatch.so",
+      "com/sun/jna/sunos-x86/libjnidispatch.so",
+      "com/sun/jna/sunos-x86-64/libjnidispatch.so",
+      "com/sun/jna/win32-aarch64/jnidispatch.dll",
+      "com/sun/jna/win32-x86/jnidispatch.dll",
+      "com/sun/jna/win32-x86-64/jnidispatch.dll"
+    ],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jSerialComm-2.9.3.jar",
+    "sha256": "04c78a70fa3e4c7ecec8d7affef46dcc9163e24369683a2463e1d4a87bbe5e6d",
+    "class_entries": 18,
+    "java_files": 12,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [
+      "Android/arm64-v8a/libjSerialComm.so",
+      "Android/armeabi-v7a/libjSerialComm.so",
+      "Android/x86/libjSerialComm.so",
+      "Android/x86_64/libjSerialComm.so",
+      "FreeBSD/arm64/libjSerialComm.so",
+      "FreeBSD/x86/libjSerialComm.so",
+      "FreeBSD/x86_64/libjSerialComm.so",
+      "Linux/armv5/libjSerialComm.so",
+      "Linux/armv6/libjSerialComm.so",
+      "Linux/armv6hf/libjSerialComm.so",
+      "Linux/armv7/libjSerialComm.so",
+      "Linux/armv7hf/libjSerialComm.so",
+      "Linux/armv8_32/libjSerialComm.so",
+      "Linux/armv8_64/libjSerialComm.so",
+      "Linux/ppc64le/libjSerialComm.so",
+      "Linux/x86/libjSerialComm.so",
+      "Linux/x86_64/libjSerialComm.so",
+      "OpenBSD/amd64/libjSerialComm.so",
+      "OpenBSD/x86/libjSerialComm.so",
+      "OSX/aarch64/libjSerialComm.jnilib",
+      "OSX/x86/libjSerialComm.jnilib",
+      "OSX/x86_64/libjSerialComm.jnilib",
+      "Solaris/sparcv8plus_32/libjSerialComm.so",
+      "Solaris/sparcv9_64/libjSerialComm.so",
+      "Solaris/x86/libjSerialComm.so",
+      "Solaris/x86_64/libjSerialComm.so",
+      "Windows/aarch64/jSerialComm.dll",
+      "Windows/armv7/jSerialComm.dll",
+      "Windows/x86/jSerialComm.dll",
+      "Windows/x86_64/jSerialComm.dll"
+    ],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "jsr305-3.0.2.jar",
+    "sha256": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7",
+    "class_entries": 35,
+    "java_files": 31,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "kotlin-stdlib-1.9.10.jar",
+    "sha256": "55e989c512b80907799f854309f3bc7782c5b3d13932442d0379d5c472711504",
+    "class_entries": 967,
+    "java_files": 665,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "kotlin-stdlib-common-1.9.10.jar",
+    "sha256": "cde3341ba18a2ba262b0b7cf6c55b20c90e8d434e42c9a13e6a3f770db965a88",
+    "class_entries": 0,
+    "java_files": 0,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "kotlin-stdlib-jdk7-1.9.10.jar",
+    "sha256": "ac6361bf9ad1ed382c2103d9712c47cdec166232b4903ed596e8876b0681c9b7",
+    "class_entries": 1,
+    "java_files": 0,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "kotlin-stdlib-jdk8-1.9.10.jar",
+    "sha256": "a4c74d94d64ce1abe53760fe0389dd941f6fc558d0dab35e47c085a11ec80f28",
+    "class_entries": 1,
+    "java_files": 0,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "libintl-0.19.2.jar",
+    "sha256": "6bce47a334732a942fa512172488d4827cb395f7b614062496eb6ba7d4b9fb7e",
+    "class_entries": 1,
+    "java_files": 1,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "log4j-api-2.26.0.jar",
+    "sha256": "820de7bbaf430eaf2e3e5ccb92f23e2085797c5ac4d4f7fc6c8b660fbefa1dbc",
+    "class_entries": 214,
+    "java_files": 151,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "log4j-core-2.26.0.jar",
+    "sha256": "406bb3132c47a5d322e5c571feb0787ca84496469f346eb51f1ef2ee45499902",
+    "class_entries": 1259,
+    "java_files": 742,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "log4j-slf4j2-impl-2.26.0.jar",
+    "sha256": "cfc1bddbd39e684b698ae968291d8a3b3a55ee0ec2ef3d3ea5c2336a9e151598",
+    "class_entries": 14,
+    "java_files": 12,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "logging-interceptor-4.10.0.jar",
+    "sha256": "273ba218636c34f7a091c059d159600543e03ea8beef2c5fc56525b47396160e",
+    "class_entries": 8,
+    "java_files": 3,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "metrics-core-3.1.0.jar",
+    "sha256": "d88845f17cd2c2d2203145e6f52e0c992cbe14d5887ddce97c9aceeae444b331",
+    "class_entries": 102,
+    "java_files": 43,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "mimepull-1.9.15.jar",
+    "sha256": "b9f586bf8844b14a33e75fe7a4b94896dc80d80b732d128777e287af14c836fa",
+    "class_entries": 45,
+    "java_files": 29,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "moka7-1.0.1.jar",
+    "sha256": "e48e33632145251d56dd6f68794be3c99caf4b02a874b1cf97b97003ad15ac9e",
+    "class_entries": 9,
+    "java_files": 9,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "netty-buffer-4.1.70.Final.jar",
+    "sha256": "30108c7bfc1dfec9ff050affa2815eb3883f1f1d24898c6b1959b36a2828339a",
+    "class_entries": 136,
+    "java_files": 78,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "netty-channel-fsm-0.6.jar",
+    "sha256": "09ee62976f97d3545b505e38f4dad764f2fd68de14a4a2b71f00e3187f229b6e",
+    "class_entries": 29,
+    "java_files": 9,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "netty-codec-4.1.70.Final.jar",
+    "sha256": "7268a42a3255a1209dc291b703092fd7b8e5c2e78a263e83991c7ecf3016388a",
+    "class_entries": 212,
+    "java_files": 142,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "netty-common-4.1.70.Final.jar",
+    "sha256": "11196ace142d8f5edc1bfbf96c7f64ac69f57a31971b8f67af957c5c701b13f5",
+    "class_entries": 488,
+    "java_files": 239,
+    "decompiler_exit": 0,
+    "error_files": [
+      "source/io/netty/util/concurrent/NonStickyEventExecutorGroup.java"
+    ],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "netty-handler-4.1.70.Final.jar",
+    "sha256": "97fcae516c2db0e8d6c7d3de369a3b2aec466b592e44c2a5a2c95176ec331b0e",
+    "class_entries": 332,
+    "java_files": 154,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "netty-resolver-4.1.70.Final.jar",
+    "sha256": "2e72b07669ebd36ea6d66c558c5fd798ba873fc5976b057f53b2417ed76ead98",
+    "class_entries": 29,
+    "java_files": 19,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "netty-transport-4.1.70.Final.jar",
+    "sha256": "cbf7d6fb9af32fa36b414c8f577e87ffafe59417a1f8d778b5bee773225eaf44",
+    "class_entries": 364,
+    "java_files": 170,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "nimbus-jose-jwt-9.37.3.jar",
+    "sha256": "12ae4a3a260095d7aeba2adea7ae396e8b9570db8b7b409e09a824c219cc0444",
+    "class_entries": 532,
+    "java_files": 344,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "oauth2-client-3.1.5.jar",
+    "sha256": "e4438908ccc9cd5103734052760133bcd70428bf2fe6c34b18bfa4e54c152367",
+    "class_entries": 31,
+    "java_files": 13,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "offline-local.jar",
+    "sha256": "93d04ede8070443c29e6b54a725f25e3b8e52dffe06dc2031b03ff1d98430adc",
+    "class_entries": 11,
+    "java_files": 5,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "okhttp-4.12.0.jar",
+    "sha256": "b1050081b14bb7a3a7e55a4d3ef01b5dcfabc453b4573a4fc019767191d5f4e0",
+    "class_entries": 317,
+    "java_files": 141,
+    "decompiler_exit": 0,
+    "error_files": [
+      "source/okhttp3/internal/cache/DiskLruCache.java",
+      "source/okhttp3/internal/cache2/Relay.java",
+      "source/okhttp3/internal/concurrent/TaskRunner.java",
+      "source/okhttp3/internal/connection/ExchangeFinder.java",
+      "source/okhttp3/internal/connection/RealCall.java",
+      "source/okhttp3/internal/connection/RealConnection.java",
+      "source/okhttp3/internal/connection/RealConnectionPool.java",
+      "source/okhttp3/internal/http2/Http2Stream.java",
+      "source/okhttp3/internal/Util.java",
+      "source/okhttp3/internal/ws/WebSocketReader.java",
+      "source/okhttp3/ResponseBody.java"
+    ],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "okio-jvm-3.6.0.jar",
+    "sha256": "67543f0736fc422ae927ed0e504b98bc5e269fda0d3500579337cb713da28412",
+    "class_entries": 107,
+    "java_files": 72,
+    "decompiler_exit": 0,
+    "error_files": [
+      "source/okio/AsyncTimeout.java",
+      "source/okio/ForwardingFileSystem.java",
+      "source/okio/internal/-FileSystem.java",
+      "source/okio/internal/ZipFilesKt.java",
+      "source/okio/NioFileSystemWrappingFileSystem.java",
+      "source/okio/Pipe.java",
+      "source/okio/ZipFileSystem.java"
+    ],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "osgi-resource-locator-1.0.3.jar",
+    "sha256": "aab5d7849f7cfcda2cc7c541ba1bd365151d42276f151c825387245dfde3dd74",
+    "class_entries": 12,
+    "java_files": 5,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "parsson-1.1.1.jar",
+    "sha256": "4d636866b010ec30afd801102eac0cd70ab33a6e4ec6d39a619ae013ea5fffd3",
+    "class_entries": 68,
+    "java_files": 31,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "phidget22-1.7.20210706.jar",
+    "sha256": "83b759a69aaba706a1366a157744e74e834f09c8ba6040a946516c31cce9c32c",
+    "class_entries": 754,
+    "java_files": 252,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "prettytime-5.0.6.Final.jar",
+    "sha256": "e27e1a0d82d1d5027327f0c7570169f43776236685636774809b59e7f741ef73",
+    "class_entries": 96,
+    "java_files": 76,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "retrofit-2.11.0.jar",
+    "sha256": "9f4fbbce70728584fbeed38d4061f36d4477e89bca74b4e2ac8aeb6819b0fe43",
+    "class_entries": 115,
+    "java_files": 54,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "retrofit-mock-2.11.0.jar",
+    "sha256": "7826dbb13e34ecdaa6f8e42c47210abe079b7b1e8ad95ebe7d03e09010cd6388",
+    "class_entries": 16,
+    "java_files": 8,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "roastingintelligence-5.13.jar",
+    "sha256": "2547b87aef9e4b4916789679b028174900921334c4ee2d91e4cf802ad67cda3a",
+    "class_entries": 957,
+    "java_files": 677,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "slf4j-api-2.0.18.jar",
+    "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55",
+    "class_entries": 56,
+    "java_files": 47,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "snakeyaml-1.33.jar",
+    "sha256": "11ff459788f0a2d781f56a4a86d7e69202cebacd0273d5269c4ae9f02f3fd8f0",
+    "class_entries": 225,
+    "java_files": 118,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "strict-machine-0.5.jar",
+    "sha256": "46a0cebf58c8c12c364a934ab974087f9908b6c20d31f9f40c6541a981e38341",
+    "class_entries": 25,
+    "java_files": 17,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "yasson-3.0.3.jar",
+    "sha256": "49b524a20feacd5452da5310bc15ba4eb7c819f4f3fe5fd87ce41d9368223365",
+    "class_entries": 261,
+    "java_files": 201,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  },
+  {
+    "jar": "yoctolib-1.10.44175.jar",
+    "sha256": "e00d6fc26945b11d38ac7ba8c73ea7b3d74ca2b94e5128635e50afcfd31ca1fb",
+    "class_entries": 311,
+    "java_files": 116,
+    "decompiler_exit": 0,
+    "error_files": [],
+    "omitted_binary_resources": [],
+    "full_source_build_verified": false
+  }
+]

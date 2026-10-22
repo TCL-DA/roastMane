@@ -1,0 +1,42 @@
+{
+  "jar": "javase-3.5.1.jar",
+  "sha256": "a2cedfd64d7280dcd1cb5358127b81470323e30775a57b3bad3a77933f100e88",
+  "class_entries": 13,
+  "classes": [
+    "com/google/zxing/client/j2se/CommandLineEncoder.class",
+    "com/google/zxing/client/j2se/GUIRunner.class",
+    "com/google/zxing/client/j2se/DecoderConfig.class",
+    "com/google/zxing/client/j2se/BufferedImageLuminanceSource.class",
+    "com/google/zxing/client/j2se/CommandLineRunner.class",
+    "com/google/zxing/client/j2se/StringsResourceTranslator.class",
+    "com/google/zxing/client/j2se/MatrixToImageConfig.class",
+    "com/google/zxing/client/j2se/GUIRunner$1.class",
+    "com/google/zxing/client/j2se/HtmlAssetTranslator.class",
+    "com/google/zxing/client/j2se/MatrixToImageWriter.class",
+    "com/google/zxing/client/j2se/ImageReader.class",
+    "com/google/zxing/client/j2se/DecodeWorker.class",
+    "com/google/zxing/client/j2se/EncoderConfig.class"
+  ],
+  "java_files": 12,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 130,
+      "sha256": "c33e57e7f8cf16e19c04f436b2c3173601efa848639ced6a7b44109f0c1d5468"
+    },
+    {
+      "path": "META-INF/maven/com.google.zxing/javase/pom.xml",
+      "bytes": 2725,
+      "sha256": "bf66bcb3e89c9d80516bff557acfe35fefb64cd3f7a07f7b720adaaf5801c21f"
+    },
+    {
+      "path": "META-INF/maven/com.google.zxing/javase/pom.properties",
+      "bytes": 57,
+      "sha256": "46c0175c359194ad72f272f05493ea51b9d1fb48024daef302444e4083aa83d7"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

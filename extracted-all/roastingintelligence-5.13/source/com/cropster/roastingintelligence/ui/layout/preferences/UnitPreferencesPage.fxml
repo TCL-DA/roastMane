@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import com.cropster.roastingintelligence.ui.components.FormComponent?>
+<?import com.cropster.roastingintelligence.ui.util.AutoIncIndex?>
+
+<fx:root type="GridPane" styleClass="grid-pane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <AutoIncIndex fx:id="row"/>
+        <ToggleGroup fx:id="weightUnitToggleGroup"/>
+        <ToggleGroup fx:id="temperatureUnitToggleGroup"/>
+        <ToggleGroup fx:id="pressureUnitToggleGroup"/>
+    </fx:define>
+    <columnConstraints>
+        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" fillWidth="true"/>
+    </columnConstraints>
+
+    <FormComponent title="%Weight" spacing="16" GridPane.rowIndex="$row.idx">
+        <RadioButton userData="KG" selected="true" toggleGroup="$weightUnitToggleGroup" styleClass="translate-userdata"/>
+        <RadioButton userData="LBS" toggleGroup="$weightUnitToggleGroup" styleClass="translate-userdata"/>
+        <RadioButton userData="G" toggleGroup="$weightUnitToggleGroup" styleClass="translate-userdata"/>
+    </FormComponent>
+
+    <Separator styleClass="preferences-separator" GridPane.rowIndex="$row.inc"/>
+
+    <FormComponent title="%Temperature" spacing="16" GridPane.rowIndex="$row.inc">
+        <RadioButton userData="CELSIUS" selected="true" toggleGroup="$temperatureUnitToggleGroup" styleClass="translate-userdata"/>
+        <RadioButton userData="FAHRENHEIT" toggleGroup="$temperatureUnitToggleGroup" styleClass="translate-userdata"/>
+    </FormComponent>
+
+    <Separator styleClass="preferences-separator" GridPane.rowIndex="$row.inc"/>
+
+    <FormComponent title="%Pressure" spacing="16" GridPane.rowIndex="$row.inc">
+        <RadioButton userData="KILOPASCAL" selected="true" toggleGroup="$pressureUnitToggleGroup" styleClass="translate-userdata"/>
+        <RadioButton userData="PASCAL" toggleGroup="$pressureUnitToggleGroup" styleClass="translate-userdata"/>
+        <RadioButton userData="MILLIBAR" toggleGroup="$pressureUnitToggleGroup" styleClass="translate-userdata"/>
+        <RadioButton userData="INCH_WC" toggleGroup="$pressureUnitToggleGroup" styleClass="translate-userdata"/>
+    </FormComponent>
+
+    <Separator styleClass="preferences-separator" GridPane.rowIndex="$row.inc"/>
+
+    <GridPane hgap="16.0" GridPane.rowIndex="$row.inc">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="50.0"/>
+            <ColumnConstraints percentWidth="50.0"/>
+        </columnConstraints>
+        <FormComponent title="%Roast value 1" maxWidth="Infinity" GridPane.columnIndex="0">
+            <ComboBox fx:id="roastValueUnitComboBox"/>
+        </FormComponent>
+        <FormComponent title="%Roast value 2" maxWidth="Infinity" GridPane.columnIndex="1">
+            <ComboBox fx:id="roastValue2UnitComboBox"/>
+        </FormComponent>
+    </GridPane>
+</fx:root>

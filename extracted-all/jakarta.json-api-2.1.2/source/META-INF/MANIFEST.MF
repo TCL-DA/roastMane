@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven Bundle Plugin 5.1.8
+Build-Jdk-Spec: 11
+Bundle-Description: Jakarta JSON Processing API 2.1
+Bundle-DocURL: https://www.eclipse.org
+Bundle-License: https://projects.eclipse.org/license/epl-2.0, https://pr
+ ojects.eclipse.org/license/secondary-gpl-2.0-cp
+Bundle-ManifestVersion: 2
+Bundle-Name: Jakarta JSON Processing API
+Bundle-SymbolicName: jakarta.json-api
+Bundle-Vendor: Eclipse Foundation
+Bundle-Version: 2.1.2
+DynamicImport-Package: *
+Export-Package: jakarta.json;uses:="jakarta.json.stream";version="2.1.2"
+ ,jakarta.json.stream;uses:="jakarta.json";version="2.1.2",jakarta.json.
+ spi;uses:="jakarta.json,jakarta.json.stream";version="2.1.2"
+Extension-Name: jakarta.json
+Implementation-Build-Id: 190d5ff
+Implementation-Version: 2.1.2
+Import-Package: jakarta.json,jakarta.json.spi,jakarta.json.stream
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Specification-Vendor: Eclipse Foundation
+Specification-Version: 2.1
+

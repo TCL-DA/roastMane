@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
+<?import com.cropster.roastingintelligence.ui.components.Tooltip?>
+
+<fx:root type="VBox" styleClass="basic-list-cell" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Insets fx:id="HEADER_MARGIN" top="8" right="8" bottom="8" left="8"/>
+        <SVGImage fx:id="ICON_DRAG" icon="DRAG_AND_DROP" scale="0.75"/>
+        <SVGImage fx:id="ICON_GOAL" icon="GOAL" scale="0.75"/>
+        <SVGImage fx:id="ICON_PROFILE" icon="PROFILE" scale="0.75"/>
+        <SVGImage fx:id="ICON_TARGET" icon="TARGET" scale="0.75"/>
+        <ToggleGroup fx:id="displayModeGroup"/>
+    </fx:define>
+    <HBox styleClass="basic-list-cell--header" VBox.margin="$HEADER_MARGIN">
+        <Label fx:id="dragLabel" graphic="$ICON_DRAG" styleClass="icon" HBox.hgrow="NEVER"/>
+        <VBox maxWidth="Infinity" maxHeight="-Infinity" HBox.hgrow="ALWAYS">
+            <TextFlow fx:id="nameTextFlow"/>
+            <Label fx:id="displayModeLabel" managed="${displayModeLabel.visible}">
+                <styleClass>
+                    <String fx:value="label--small"/>
+                    <String fx:value="label--for"/>
+                </styleClass>
+            </Label>
+        </VBox>
+        <ToggleButton fx:id="targetButton" graphic="$ICON_TARGET" styleClass="button-push--small" toggleGroup="$displayModeGroup">
+            <tooltip>
+                <Tooltip text="%Reference parameter"/>
+            </tooltip>
+        </ToggleButton>
+        <ToggleButton fx:id="meetTheReferenceButton" graphic="$ICON_PROFILE" styleClass="button-push--small" toggleGroup="$displayModeGroup" managed="${meetTheReferenceButton.visible}">
+            <tooltip>
+                <Tooltip text="%“Meet the reference” relative smart goal"/>
+            </tooltip>
+        </ToggleButton>
+        <ToggleButton fx:id="rangeButton" graphic="$ICON_GOAL" styleClass="button-push--small" toggleGroup="$displayModeGroup" managed="${rangeButton.visible}">
+            <tooltip>
+                <Tooltip text="%Absolute smart goal"/>
+            </tooltip>
+        </ToggleButton>
+    </HBox>
+</fx:root>

@@ -1,0 +1,57 @@
+{
+  "jar": "jakarta.annotation-api-2.1.1.jar",
+  "sha256": "5f65fdaf424eee2b55e1d882ba9bb376be93fb09b37b808be6e22e8851c909fe",
+  "class_entries": 18,
+  "classes": [
+    "jakarta/annotation/Nonnull.class",
+    "jakarta/annotation/security/DeclareRoles.class",
+    "jakarta/annotation/security/PermitAll.class",
+    "jakarta/annotation/security/DenyAll.class",
+    "jakarta/annotation/security/RolesAllowed.class",
+    "jakarta/annotation/security/RunAs.class",
+    "jakarta/annotation/Resource$AuthenticationType.class",
+    "jakarta/annotation/Resource.class",
+    "jakarta/annotation/sql/DataSourceDefinitions.class",
+    "jakarta/annotation/sql/DataSourceDefinition.class",
+    "jakarta/annotation/Resources.class",
+    "jakarta/annotation/PostConstruct.class",
+    "jakarta/annotation/PreDestroy.class",
+    "jakarta/annotation/Priority.class",
+    "jakarta/annotation/Generated.class",
+    "jakarta/annotation/ManagedBean.class",
+    "jakarta/annotation/Nullable.class",
+    "module-info.class"
+  ],
+  "java_files": 17,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 879,
+      "sha256": "6d69b285a4c099c99da2df71a7ebd420e1c0571ff6c3b867b3381636811027b8"
+    },
+    {
+      "path": "META-INF/LICENSE.md",
+      "bytes": 35084,
+      "sha256": "6e1f002892b81cbe0647019b150c8a056efc1add565671a4f8af629b6cd2cc7b"
+    },
+    {
+      "path": "META-INF/NOTICE.md",
+      "bytes": 1452,
+      "sha256": "3852834ebb4c2e04ecc18c9d099a05eab72cbd6edf35fb191390be6306019b4c"
+    },
+    {
+      "path": "META-INF/maven/jakarta.annotation/jakarta.annotation-api/pom.xml",
+      "bytes": 15802,
+      "sha256": "af650eca1de1b98741006acd82507e4408cffedd2fee33a0ea463d61508db7ec"
+    },
+    {
+      "path": "META-INF/maven/jakarta.annotation/jakarta.annotation-api/pom.properties",
+      "bytes": 75,
+      "sha256": "9c6945370c1c77d2e8a276e55ef8f0db2275e3068d9eef9e082ac01f3d69af54"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

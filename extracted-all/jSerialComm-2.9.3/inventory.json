@@ -1,0 +1,223 @@
+{
+  "jar": "jSerialComm-2.9.3.jar",
+  "sha256": "04c78a70fa3e4c7ecec8d7affef46dcc9163e24369683a2463e1d4a87bbe5e6d",
+  "class_entries": 18,
+  "classes": [
+    "com/fazecast/jSerialComm/SerialPort$1.class",
+    "com/fazecast/jSerialComm/SerialPort$SerialPortEventListener$1.class",
+    "com/fazecast/jSerialComm/SerialPort$SerialPortEventListener.class",
+    "com/fazecast/jSerialComm/SerialPort$SerialPortInputStream.class",
+    "com/fazecast/jSerialComm/SerialPort$SerialPortOutputStream.class",
+    "com/fazecast/jSerialComm/SerialPort.class",
+    "com/fazecast/jSerialComm/SerialPortDataListener.class",
+    "com/fazecast/jSerialComm/SerialPortDataListenerWithExceptions.class",
+    "com/fazecast/jSerialComm/SerialPortEvent.class",
+    "com/fazecast/jSerialComm/SerialPortIOException.class",
+    "com/fazecast/jSerialComm/SerialPortInvalidPortException.class",
+    "com/fazecast/jSerialComm/SerialPortMessageListener.class",
+    "com/fazecast/jSerialComm/SerialPortMessageListenerWithExceptions.class",
+    "com/fazecast/jSerialComm/SerialPortPacketListener.class",
+    "com/fazecast/jSerialComm/SerialPortThreadFactory$1.class",
+    "com/fazecast/jSerialComm/SerialPortThreadFactory.class",
+    "com/fazecast/jSerialComm/SerialPortTimeoutException.class",
+    "module-info.class"
+  ],
+  "java_files": 12,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 1080,
+      "sha256": "245faf7fa14ada4a49f826750d81f8b49d2bab80e56e41e01c78b0e1d44d13d7"
+    },
+    {
+      "path": "Android/AndroidManifest.xml",
+      "bytes": 86,
+      "sha256": "65db744e6ed0892a5d1fa569a0419c5d8877dde6e6ab86d57bd1b1ed04e868d3"
+    },
+    {
+      "path": "Android/arm64-v8a/libjSerialComm.so",
+      "bytes": 168856,
+      "sha256": "e853aa2afba7b2121c4fc3b8d8f1e1b5331812f59377437a564b3b99c00ba4cf"
+    },
+    {
+      "path": "Android/armeabi-v7a/libjSerialComm.so",
+      "bytes": 105336,
+      "sha256": "d6199f62b58f4c7abc1eab533468a262563ef77de5bb4162a8d9fd6fcac55e4a"
+    },
+    {
+      "path": "Android/x86/libjSerialComm.so",
+      "bytes": 125988,
+      "sha256": "f0f43e30bb98eb0f90c5e85634e58df529e91e77cee379778815a1d6380782bc"
+    },
+    {
+      "path": "Android/x86_64/libjSerialComm.so",
+      "bytes": 158560,
+      "sha256": "63d9f669448904778669f947d74c238ad2db9ce280780291a875eedd91c8dfa7"
+    },
+    {
+      "path": "FreeBSD/arm64/libjSerialComm.so",
+      "bytes": 40632,
+      "sha256": "fcbfb434241cd6c2f7dbb60f2d9dc69d6ce01f11aa453d1e984a74cd6a88a4c5"
+    },
+    {
+      "path": "FreeBSD/x86/libjSerialComm.so",
+      "bytes": 32744,
+      "sha256": "fe30d5f07b0d597b175978c081a4feeaf872074957945e3f358fcb9122eaabb4"
+    },
+    {
+      "path": "FreeBSD/x86_64/libjSerialComm.so",
+      "bytes": 38312,
+      "sha256": "b52453fbf625a77818d903bd96bea669517df55e943ef8f75cdaf53b63c1fde2"
+    },
+    {
+      "path": "Linux/armv5/libjSerialComm.so",
+      "bytes": 38628,
+      "sha256": "c1a91555c0c5baf2956c675a6d038d9a8ad18665d3c1132b4efe3195b64c3452"
+    },
+    {
+      "path": "Linux/armv6/libjSerialComm.so",
+      "bytes": 38632,
+      "sha256": "3a2d2f90f0f70d9b40c937814efa4903230204a0e5f45d9df2ea110abf6fc4f6"
+    },
+    {
+      "path": "Linux/armv6hf/libjSerialComm.so",
+      "bytes": 34540,
+      "sha256": "d174cbe1e8dcd47a9de5a8529fd80017a59799ed94763febe5dfe0aa52731517"
+    },
+    {
+      "path": "Linux/armv7/libjSerialComm.so",
+      "bytes": 30440,
+      "sha256": "8e47e7e963a9ee6f7cff73b04433785b65d63b6f53a2f2fb0829cc5c78b4b945"
+    },
+    {
+      "path": "Linux/armv7hf/libjSerialComm.so",
+      "bytes": 30444,
+      "sha256": "513c3cc7e1b1e3b4c3272d5cfabec8d2f40c94f7bc5b5ee0a475161ee70389e9"
+    },
+    {
+      "path": "Linux/armv8_32/libjSerialComm.so",
+      "bytes": 30444,
+      "sha256": "586db6b32d76e1e20a07d712749868bbbfcf8cb74f3b2bacc9817e0220a79431"
+    },
+    {
+      "path": "Linux/armv8_64/libjSerialComm.so",
+      "bytes": 43504,
+      "sha256": "739994aa117baf409525073822b8bc38ad1adf603bf126c6125b2e08db4cf1fe"
+    },
+    {
+      "path": "Linux/ppc64le/libjSerialComm.so",
+      "bytes": 68008,
+      "sha256": "fdc4082b8fa266c877e1300264655d30e488f52fd0ec84b89729fc27302b087f"
+    },
+    {
+      "path": "Linux/x86/libjSerialComm.so",
+      "bytes": 38476,
+      "sha256": "fe2e1bce1c1e54567c2ebb75039a9a7f7ac981efc8f4b220a3efbdf95bf31fe4"
+    },
+    {
+      "path": "Linux/x86_64/libjSerialComm.so",
+      "bytes": 40320,
+      "sha256": "ceff33248269af10a423598fb4e726d087179db089326749b86a16e92c3b8354"
+    },
+    {
+      "path": "OSX/aarch64/libjSerialComm.jnilib",
+      "bytes": 76258,
+      "sha256": "082bfc5f858556589a0ae71e08f1e4eecfadb23a0048697b65fe56d86716c787"
+    },
+    {
+      "path": "OSX/x86/libjSerialComm.jnilib",
+      "bytes": 38432,
+      "sha256": "0cda7662fcd848f8e43bc5f9ce002dc549021fbad49560d065448e64aaa0bb1e"
+    },
+    {
+      "path": "OSX/x86_64/libjSerialComm.jnilib",
+      "bytes": 38672,
+      "sha256": "8b121b5404251656b929ca112a8f65260dccee94ecadd27ab28dd9e3a984b2a0"
+    },
+    {
+      "path": "OpenBSD/amd64/libjSerialComm.so",
+      "bytes": 41472,
+      "sha256": "d750f8c214005f0ce974cf51374e8202b57c810b8ccec0df63a14e9b256a8491"
+    },
+    {
+      "path": "OpenBSD/x86/libjSerialComm.so",
+      "bytes": 33372,
+      "sha256": "5a04b5e2a1850655ec69f888c04e82ac154f08c1fbaf41742a3bc472e76394d0"
+    },
+    {
+      "path": "Solaris/sparcv8plus_32/libjSerialComm.so",
+      "bytes": 27364,
+      "sha256": "d87c7f3de994b2a06c387c16a56a55e3d27174be07c75be60b5d2cb7f90e2332"
+    },
+    {
+      "path": "Solaris/sparcv9_64/libjSerialComm.so",
+      "bytes": 32432,
+      "sha256": "8f3e60d6d6dd89b03b413dd20021d8841f5a226867a6330373b7a3250a9d8675"
+    },
+    {
+      "path": "Solaris/x86/libjSerialComm.so",
+      "bytes": 24736,
+      "sha256": "f314b4b7c122a37c3372164e53c2be5c8966c02c0d2cadefde122b10384f0c86"
+    },
+    {
+      "path": "Solaris/x86_64/libjSerialComm.so",
+      "bytes": 31840,
+      "sha256": "87c14369d8ec7f48c361c0c8f9729ac6e3c87b49e90baaf085b231ddb6156fa4"
+    },
+    {
+      "path": "Windows/aarch64/jSerialComm.dll",
+      "bytes": 192512,
+      "sha256": "605b6b756d92defc98e297db97d3bb3037322471ec13bd553d15d8baca56c47e"
+    },
+    {
+      "path": "Windows/armv7/jSerialComm.dll",
+      "bytes": 141312,
+      "sha256": "f155a243d54b74f86bdc9f8f0b021b2b75927751f6836210d942790858be1303"
+    },
+    {
+      "path": "Windows/x86/jSerialComm.dll",
+      "bytes": 157696,
+      "sha256": "5cd9dc165584b37c440d1e1eff3f481e212ce42c26603c62dd98991cd67d1d42"
+    },
+    {
+      "path": "Windows/x86_64/jSerialComm.dll",
+      "bytes": 193024,
+      "sha256": "e4b7361078f78466071839f519eb5156c6d65f117e857b2233669cb80d29e19c"
+    }
+  ],
+  "omitted_binary_resources": [
+    "Android/arm64-v8a/libjSerialComm.so",
+    "Android/armeabi-v7a/libjSerialComm.so",
+    "Android/x86/libjSerialComm.so",
+    "Android/x86_64/libjSerialComm.so",
+    "FreeBSD/arm64/libjSerialComm.so",
+    "FreeBSD/x86/libjSerialComm.so",
+    "FreeBSD/x86_64/libjSerialComm.so",
+    "Linux/armv5/libjSerialComm.so",
+    "Linux/armv6/libjSerialComm.so",
+    "Linux/armv6hf/libjSerialComm.so",
+    "Linux/armv7/libjSerialComm.so",
+    "Linux/armv7hf/libjSerialComm.so",
+    "Linux/armv8_32/libjSerialComm.so",
+    "Linux/armv8_64/libjSerialComm.so",
+    "Linux/ppc64le/libjSerialComm.so",
+    "Linux/x86/libjSerialComm.so",
+    "Linux/x86_64/libjSerialComm.so",
+    "OpenBSD/amd64/libjSerialComm.so",
+    "OpenBSD/x86/libjSerialComm.so",
+    "OSX/aarch64/libjSerialComm.jnilib",
+    "OSX/x86/libjSerialComm.jnilib",
+    "OSX/x86_64/libjSerialComm.jnilib",
+    "Solaris/sparcv8plus_32/libjSerialComm.so",
+    "Solaris/sparcv9_64/libjSerialComm.so",
+    "Solaris/x86/libjSerialComm.so",
+    "Solaris/x86_64/libjSerialComm.so",
+    "Windows/aarch64/jSerialComm.dll",
+    "Windows/armv7/jSerialComm.dll",
+    "Windows/x86/jSerialComm.dll",
+    "Windows/x86_64/jSerialComm.dll"
+  ],
+  "full_source_build_verified": false
+}

@@ -1,0 +1,53 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven Bundle Plugin 5.1.9
+Build-Jdk-Spec: 21
+Implementation-Vendor: Eclipse Jetty Project
+Implementation-Version: 12.0.3
+url: https://eclipse.dev/jetty/
+Bundle-Classpath: .
+Bundle-Copyright: Copyright (c) 1995 Mort Bay Consulting Pty Ltd and oth
+ ers.
+Bundle-Description: Jetty module for Core :: Security
+Bundle-DocURL: https://eclipse.dev/jetty/
+Bundle-License: https://www.eclipse.org/legal/epl-2.0/, https://www.apac
+ he.org/licenses/LICENSE-2.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Core :: Security
+Bundle-SymbolicName: org.eclipse.jetty.security
+Bundle-Vendor: Eclipse Jetty Project
+Bundle-Version: 12.0.3
+Export-Package: org.eclipse.jetty.security;uses:="javax.security.auth,or
+ g.eclipse.jetty.http,org.eclipse.jetty.http.pathmap,org.eclipse.jetty.s
+ ecurity.authentication,org.eclipse.jetty.server,org.eclipse.jetty.util,
+ org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.ec
+ lipse.jetty.util.security";version="12.0.3",org.eclipse.jetty.security.
+ authentication;uses:="org.eclipse.jetty.security,org.eclipse.jetty.serv
+ er,org.eclipse.jetty.util,org.eclipse.jetty.util.ssl";version="12.0.3",
+ org.eclipse.jetty.security.jaas;uses:="javax.security.auth,javax.securi
+ ty.auth.login,org.eclipse.jetty.security,org.eclipse.jetty.server,org.e
+ clipse.jetty.util.component";version="12.0.3",org.eclipse.jetty.securit
+ y.jaas.callback;uses:="javax.security.auth.callback,org.eclipse.jetty.s
+ erver";version="12.0.3",org.eclipse.jetty.security.jaas.spi;uses:="java
+ x.naming.directory,javax.security.auth,javax.security.auth.callback,jav
+ ax.security.auth.login,javax.security.auth.spi,org.eclipse.jetty.securi
+ ty";version="12.0.3"
+Import-Package: org.slf4j;version="[1.7,3.0)",java.io,java.lang,java.lan
+ g.invoke,java.lang.reflect,java.net,java.nio,java.nio.charset,java.nio.
+ file,java.security,java.security.cert,java.sql,java.time,java.time.temp
+ oral,java.util,java.util.concurrent,java.util.function,java.util.stream
+ ,javax.naming,javax.naming.directory,javax.security.auth,javax.security
+ .auth.callback,javax.security.auth.login,javax.security.auth.spi,javax.
+ sql,org.eclipse.jetty.http;version="[12.0.3,13)",org.eclipse.jetty.http
+ .pathmap;version="[12.0.3,13)",org.eclipse.jetty.security.authenticatio
+ n,org.eclipse.jetty.security.jaas,org.eclipse.jetty.security.jaas.callb
+ ack,org.eclipse.jetty.server;version="[12.0.3,13)",org.eclipse.jetty.se
+ rver.handler;version="[12.0.3,13)",org.eclipse.jetty.util;version="[12.
+ 0.3,13)",org.eclipse.jetty.util.component;version="[12.0.3,13)",org.ecl
+ ipse.jetty.util.resource;version="[12.0.3,13)",org.eclipse.jetty.util.s
+ ecurity;version="[12.0.3,13)",org.eclipse.jetty.util.ssl;version="[12.0
+ .3,13)",org.eclipse.jetty.util.thread;version="[12.0.3,13)",org.ietf.jg
+ ss,org.slf4j.event;version="[1.7,3.0)",org.slf4j.helpers;version="[1.7,
+ 3.0)",org.slf4j.spi;version="[1.7,3.0)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=17))"
+Tool: Bnd-6.3.1.202206071316
+

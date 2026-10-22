@@ -1,0 +1,68 @@
+package org.eclipse.yasson.internal;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Executable;
+import java.lang.reflect.Modifier;
+import java.lang.reflect.Parameter;
+import java.util.Arrays;
+import java.util.logging.Logger;
+import org.eclipse.yasson.internal.model.CreatorModel;
+import org.eclipse.yasson.internal.model.JsonbCreator;
+import org.eclipse.yasson.internal.properties.MessageKeys;
+import org.eclipse.yasson.internal.properties.Messages;
+
+class ConstructorPropertiesAnnotationIntrospector {
+   private static final Logger LOG = Logger.getLogger(ConstructorPropertiesAnnotationIntrospector.class.getName());
+   private final JsonbContext jsonbContext;
+   private final AnnotationFinder constructorProperties;
+
+   public static ConstructorPropertiesAnnotationIntrospector forContext(JsonbContext jsonbContext) {
+      return new ConstructorPropertiesAnnotationIntrospector(jsonbContext, AnnotationFinder.findConstructorProperties());
+   }
+
+   protected ConstructorPropertiesAnnotationIntrospector(JsonbContext context, AnnotationFinder annotationFinder) {
+      this.jsonbContext = context;
+      this.constructorProperties = annotationFinder;
+   }
+
+   public JsonbCreator getCreator(Constructor<?>[] constructors) {
+      JsonbCreator jsonbCreator = null;
+
+      for (Constructor<?> constructor : constructors) {
+         Object properties = this.constructorProperties.valueIn(constructor.getDeclaredAnnotations());
+         if (properties instanceof String[]) {
+            if (!Modifier.isPublic(constructor.getModifiers())) {
+               String declaringClass = constructor.getDeclaringClass().getName();
+               String message = "The constructor of {0} annotated with @ConstructorProperties {1} is not accessible and will be ignored.";
+               LOG.finest(String.format(message, declaringClass, Arrays.toString((Object[])((String[])properties))));
+            } else {
+               if (jsonbCreator != null) {
+                  LOG.warning(Messages.getMessage(MessageKeys.MULTIPLE_CONSTRUCTOR_PROPERTIES_CREATORS, constructor.getDeclaringClass().getName()));
+                  return null;
+               }
+
+               jsonbCreator = this.createJsonbCreator(constructor, (String[])properties);
+            }
+         }
+      }
+
+      return jsonbCreator;
+   }
+
+   private JsonbCreator createJsonbCreator(Executable executable, String[] properties) {
+      Parameter[] parameters = executable.getParameters();
+      CreatorModel[] creatorModels = new CreatorModel[parameters.length];
+
+      for (int i = 0; i < parameters.length; i++) {
+         Parameter parameter = parameters[i];
+         creatorModels[i] = new CreatorModel(properties[i], parameter, executable, this.jsonbContext);
+      }
+
+      return new JsonbCreator(executable, creatorModels);
+   }
+
+   @Override
+   public String toString() {
+      return "ConstructorPropertiesAnnotationIntrospector [jsonbContext=" + this.jsonbContext + ", constructorProperties=" + this.constructorProperties + "]";
+   }
+}

@@ -1,0 +1,86 @@
+{
+  "jar": "javax.activation-1.2.0.jar",
+  "sha256": "993302b16cd7056f21e779cc577d175a810bb4900ef73cd8fbf2b50f928ba9ce",
+  "class_entries": 42,
+  "classes": [
+    "javax/activation/FileDataSource.class",
+    "javax/activation/DataHandlerDataSource.class",
+    "javax/activation/SecuritySupport$5.class",
+    "javax/activation/ActivationDataFlavor.class",
+    "javax/activation/CommandObject.class",
+    "javax/activation/SecuritySupport$4.class",
+    "javax/activation/MimeTypeParseException.class",
+    "javax/activation/MimeType.class",
+    "javax/activation/DataHandler.class",
+    "javax/activation/MailcapCommandMap$1.class",
+    "javax/activation/ObjectDataContentHandler.class",
+    "javax/activation/DataSourceDataContentHandler.class",
+    "javax/activation/DataSource.class",
+    "javax/activation/URLDataSource.class",
+    "javax/activation/MimetypesFileTypeMap$1.class",
+    "javax/activation/DataContentHandlerFactory.class",
+    "javax/activation/MimetypesFileTypeMap.class",
+    "javax/activation/SecuritySupport$1.class",
+    "javax/activation/UnsupportedDataTypeException.class",
+    "javax/activation/MailcapCommandMap.class",
+    "javax/activation/MimeTypeParameterList.class",
+    "javax/activation/CommandMap.class",
+    "javax/activation/DataHandler$1.class",
+    "javax/activation/FileTypeMap.class",
+    "javax/activation/SecuritySupport$3.class",
+    "javax/activation/SecuritySupport.class",
+    "javax/activation/CommandInfo$Beans.class",
+    "javax/activation/SecuritySupport$2.class",
+    "javax/activation/DataContentHandler.class",
+    "javax/activation/CommandInfo$Beans$1.class",
+    "javax/activation/CommandInfo.class",
+    "com/sun/activation/viewers/ImageViewer.class",
+    "com/sun/activation/viewers/ImageViewerCanvas.class",
+    "com/sun/activation/viewers/TextViewer.class",
+    "com/sun/activation/viewers/TextEditor.class",
+    "com/sun/activation/registries/MimeTypeFile.class",
+    "com/sun/activation/registries/MailcapFile.class",
+    "com/sun/activation/registries/MailcapParseException.class",
+    "com/sun/activation/registries/LogSupport.class",
+    "com/sun/activation/registries/MimeTypeEntry.class",
+    "com/sun/activation/registries/MailcapTokenizer.class",
+    "com/sun/activation/registries/LineTokenizer.class"
+  ],
+  "java_files": 32,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 1307,
+      "sha256": "94a9382668654b2c725c2367f598d6697186208dc51814e57d74292318d102bc"
+    },
+    {
+      "path": "META-INF/LICENSE.txt",
+      "bytes": 39394,
+      "sha256": "a14851d626df4d0298a117ac41788bca73a9c24c2ecc2a12fa2a1101ee9fddc8"
+    },
+    {
+      "path": "META-INF/mimetypes.default",
+      "bytes": 581,
+      "sha256": "19e63e40440517b8383e3670649ddab6d227b4e5d17e071d760ea6d1a66f45c2"
+    },
+    {
+      "path": "META-INF/mailcap.default",
+      "bytes": 292,
+      "sha256": "fc55453719bc94f8b831c4faf43080e2d47fa4e84206e02325a56cc68864c013"
+    },
+    {
+      "path": "META-INF/maven/com.sun.activation/javax.activation/pom.xml",
+      "bytes": 6515,
+      "sha256": "f879b6e945854c6900b0dbee1c8384d7ab3de7e157fd7ac84937405c416d2a5e"
+    },
+    {
+      "path": "META-INF/maven/com.sun.activation/javax.activation/pom.properties",
+      "bytes": 119,
+      "sha256": "5233f974175773c4b0a5d56a4b3dbe242212b36da9793311462939797c16039e"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}

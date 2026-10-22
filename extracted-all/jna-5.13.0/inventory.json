@@ -1,0 +1,318 @@
+{
+  "jar": "jna-5.13.0.jar",
+  "sha256": "66d4f819a062a51a1d5627bffc23fac55d1677f0e0a1feba144aabdd670a64bb",
+  "class_entries": 125,
+  "classes": [
+    "com/sun/jna/AltCallingConvention.class",
+    "com/sun/jna/Callback$UncaughtExceptionHandler.class",
+    "com/sun/jna/Callback.class",
+    "com/sun/jna/CallbackParameterContext.class",
+    "com/sun/jna/CallbackProxy.class",
+    "com/sun/jna/CallbackReference$AttachOptions.class",
+    "com/sun/jna/CallbackReference$CallbackReferenceDisposer.class",
+    "com/sun/jna/CallbackReference$DefaultCallbackProxy.class",
+    "com/sun/jna/CallbackReference$NativeFunctionHandler.class",
+    "com/sun/jna/CallbackReference.class",
+    "com/sun/jna/CallbackResultContext.class",
+    "com/sun/jna/CallbackThreadInitializer.class",
+    "com/sun/jna/DefaultTypeMapper$Entry.class",
+    "com/sun/jna/DefaultTypeMapper.class",
+    "com/sun/jna/ELFAnalyser$1.class",
+    "com/sun/jna/ELFAnalyser$ArmAeabiAttributesTag$ParameterType.class",
+    "com/sun/jna/ELFAnalyser$ArmAeabiAttributesTag.class",
+    "com/sun/jna/ELFAnalyser$ELFSectionHeaderEntry.class",
+    "com/sun/jna/ELFAnalyser$ELFSectionHeaders.class",
+    "com/sun/jna/ELFAnalyser.class",
+    "com/sun/jna/FromNativeContext.class",
+    "com/sun/jna/FromNativeConverter.class",
+    "com/sun/jna/Function$NativeMappedArray.class",
+    "com/sun/jna/Function$PointerArray.class",
+    "com/sun/jna/Function$PostCallRead.class",
+    "com/sun/jna/Function.class",
+    "com/sun/jna/FunctionMapper.class",
+    "com/sun/jna/FunctionParameterContext.class",
+    "com/sun/jna/FunctionResultContext.class",
+    "com/sun/jna/IntegerType.class",
+    "com/sun/jna/InvocationMapper.class",
+    "com/sun/jna/JNIEnv.class",
+    "com/sun/jna/Klass.class",
+    "com/sun/jna/LastErrorException.class",
+    "com/sun/jna/Library$Handler$FunctionInfo.class",
+    "com/sun/jna/Library$Handler.class",
+    "com/sun/jna/Library.class",
+    "com/sun/jna/Memory$MemoryDisposer.class",
+    "com/sun/jna/Memory$SharedMemory.class",
+    "com/sun/jna/Memory.class",
+    "com/sun/jna/MethodParameterContext.class",
+    "com/sun/jna/MethodResultContext.class",
+    "com/sun/jna/Native$1.class",
+    "com/sun/jna/Native$2.class",
+    "com/sun/jna/Native$3.class",
+    "com/sun/jna/Native$4.class",
+    "com/sun/jna/Native$5.class",
+    "com/sun/jna/Native$6.class",
+    "com/sun/jna/Native$7.class",
+    "com/sun/jna/Native$AWT.class",
+    "com/sun/jna/Native$Buffers.class",
+    "com/sun/jna/Native$ffi_callback.class",
+    "com/sun/jna/Native.class",
+    "com/sun/jna/NativeLibrary$1.class",
+    "com/sun/jna/NativeLibrary$2.class",
+    "com/sun/jna/NativeLibrary$3.class",
+    "com/sun/jna/NativeLibrary$NativeLibraryDisposer.class",
+    "com/sun/jna/NativeLibrary.class",
+    "com/sun/jna/NativeLong.class",
+    "com/sun/jna/NativeMapped.class",
+    "com/sun/jna/NativeMappedConverter.class",
+    "com/sun/jna/NativeString$StringMemory.class",
+    "com/sun/jna/NativeString.class",
+    "com/sun/jna/Platform.class",
+    "com/sun/jna/Pointer$1.class",
+    "com/sun/jna/Pointer$Opaque.class",
+    "com/sun/jna/Pointer.class",
+    "com/sun/jna/PointerType.class",
+    "com/sun/jna/StringArray.class",
+    "com/sun/jna/Structure$1.class",
+    "com/sun/jna/Structure$2.class",
+    "com/sun/jna/Structure$3.class",
+    "com/sun/jna/Structure$AutoAllocated.class",
+    "com/sun/jna/Structure$ByReference.class",
+    "com/sun/jna/Structure$ByValue.class",
+    "com/sun/jna/Structure$FFIType$FFITypes.class",
+    "com/sun/jna/Structure$FFIType$size_t.class",
+    "com/sun/jna/Structure$FFIType.class",
+    "com/sun/jna/Structure$FieldOrder.class",
+    "com/sun/jna/Structure$LayoutInfo.class",
+    "com/sun/jna/Structure$NativeStringTracking.class",
+    "com/sun/jna/Structure$StructField.class",
+    "com/sun/jna/Structure$StructureSet.class",
+    "com/sun/jna/Structure.class",
+    "com/sun/jna/StructureReadContext.class",
+    "com/sun/jna/StructureWriteContext.class",
+    "com/sun/jna/SymbolProvider.class",
+    "com/sun/jna/ToNativeContext.class",
+    "com/sun/jna/ToNativeConverter.class",
+    "com/sun/jna/TypeConverter.class",
+    "com/sun/jna/TypeMapper.class",
+    "com/sun/jna/Union.class",
+    "com/sun/jna/VarArgsChecker$1.class",
+    "com/sun/jna/VarArgsChecker$NoVarArgsChecker.class",
+    "com/sun/jna/VarArgsChecker$RealVarArgsChecker.class",
+    "com/sun/jna/VarArgsChecker.class",
+    "com/sun/jna/Version.class",
+    "com/sun/jna/WString.class",
+    "com/sun/jna/WeakMemoryHolder.class",
+    "com/sun/jna/internal/Cleaner$1.class",
+    "com/sun/jna/internal/Cleaner$Cleanable.class",
+    "com/sun/jna/internal/Cleaner$CleanerRef.class",
+    "com/sun/jna/internal/Cleaner.class",
+    "com/sun/jna/internal/ReflectionUtils.class",
+    "com/sun/jna/ptr/ByReference.class",
+    "com/sun/jna/ptr/ByteByReference.class",
+    "com/sun/jna/ptr/DoubleByReference.class",
+    "com/sun/jna/ptr/FloatByReference.class",
+    "com/sun/jna/ptr/IntByReference.class",
+    "com/sun/jna/ptr/LongByReference.class",
+    "com/sun/jna/ptr/NativeLongByReference.class",
+    "com/sun/jna/ptr/PointerByReference.class",
+    "com/sun/jna/ptr/ShortByReference.class",
+    "com/sun/jna/win32/DLLCallback.class",
+    "com/sun/jna/win32/StdCall.class",
+    "com/sun/jna/win32/StdCallFunctionMapper.class",
+    "com/sun/jna/win32/StdCallLibrary$StdCallCallback.class",
+    "com/sun/jna/win32/StdCallLibrary.class",
+    "com/sun/jna/win32/W32APIFunctionMapper.class",
+    "com/sun/jna/win32/W32APIOptions$1.class",
+    "com/sun/jna/win32/W32APIOptions$2.class",
+    "com/sun/jna/win32/W32APIOptions.class",
+    "com/sun/jna/win32/W32APITypeMapper$1.class",
+    "com/sun/jna/win32/W32APITypeMapper$2.class",
+    "com/sun/jna/win32/W32APITypeMapper.class"
+  ],
+  "java_files": 65,
+  "decompiler_exit": 0,
+  "error_files": [
+    "source/com/sun/jna/NativeMappedConverter.java"
+  ],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 3635,
+      "sha256": "479b5770438908641d36c66baf941fdd8e4217b24f5d34a4eba5e3f8d6f97fce"
+    },
+    {
+      "path": "com/sun/jna/win32-x86/jnidispatch.dll",
+      "bytes": 211456,
+      "sha256": "1b06cba48eea2ad4881bc88a2749e40500dbc87c1a2149290eb61d473a64e4c1"
+    },
+    {
+      "path": "com/sun/jna/aix-ppc/libjnidispatch.a",
+      "bytes": 613528,
+      "sha256": "610ec1a4af9761f85991d8f44ba1458f17202a68a86cc5400943fb9aad69aae2"
+    },
+    {
+      "path": "com/sun/jna/aix-ppc64/libjnidispatch.a",
+      "bytes": 657031,
+      "sha256": "7b4edaedcacbeb2439ef43bcee365ad1e6a989156085d6ba764c8a939e7a5fb3"
+    },
+    {
+      "path": "com/sun/jna/darwin-x86-64/libjnidispatch.jnilib",
+      "bytes": 107392,
+      "sha256": "592b5a09d047bcf302e503174f4e2b2978556b24c7b7069d17f6d30f59e8bd17"
+    },
+    {
+      "path": "com/sun/jna/darwin-aarch64/libjnidispatch.jnilib",
+      "bytes": 159816,
+      "sha256": "32223f6ad4d1b3c5651bac44bf83e07207bf995987c6c6d6f839436ed75cf6ea"
+    },
+    {
+      "path": "com/sun/jna/linux-x86/libjnidispatch.so",
+      "bytes": 123384,
+      "sha256": "91211a72a4babf0d1598c69ba49e7254fb6e1d106edfcb5c414e8d9b35b64394"
+    },
+    {
+      "path": "com/sun/jna/linux-x86-64/libjnidispatch.so",
+      "bytes": 134447,
+      "sha256": "5f5b5f7a43bf5d669b9339876efd999756c887dc85406deb2d8a8ef935045b0f"
+    },
+    {
+      "path": "com/sun/jna/linux-arm/libjnidispatch.so",
+      "bytes": 130788,
+      "sha256": "60c9b98aae984da350dfc1b9ce7e868b3cf2a5adf4fbf85a756afa70602ba135"
+    },
+    {
+      "path": "com/sun/jna/linux-armel/libjnidispatch.so",
+      "bytes": 139472,
+      "sha256": "565319135f31ee227f19ddca48a831abd225e2e7a4f6f2e6fc3880cf753385b7"
+    },
+    {
+      "path": "com/sun/jna/linux-aarch64/libjnidispatch.so",
+      "bytes": 162288,
+      "sha256": "0d0a0e6ae88416651b53f711101d3f8bb8fb59d5efe8173ab4924c1151443c69"
+    },
+    {
+      "path": "com/sun/jna/linux-ppc/libjnidispatch.so",
+      "bytes": 127724,
+      "sha256": "10aa8adc5522bf215ba6d236400dad5ad2238d6f0da0b1c4595a4de6c163c200"
+    },
+    {
+      "path": "com/sun/jna/linux-ppc64le/libjnidispatch.so",
+      "bytes": 145072,
+      "sha256": "d12e08b83318e202eaefb54958b31543c894eda6673f361022e21474d62b686b"
+    },
+    {
+      "path": "com/sun/jna/linux-mips64el/libjnidispatch.so",
+      "bytes": 144056,
+      "sha256": "404c12ac3cb56c4f50e7c9df95279cdc7e728c657fb8cb8ed6943c43240c175a"
+    },
+    {
+      "path": "com/sun/jna/linux-loongarch64/libjnidispatch.so",
+      "bytes": 374632,
+      "sha256": "3566b95e0f307fd25d18a461587c644e112db0ad9ca2d9e2da05527782f48728"
+    },
+    {
+      "path": "com/sun/jna/linux-s390x/libjnidispatch.so",
+      "bytes": 136976,
+      "sha256": "941a30fbce7e3c96c3946f083d47f8064320c3785305b755fdbbbc865daffcdf"
+    },
+    {
+      "path": "com/sun/jna/linux-riscv64/libjnidispatch.so",
+      "bytes": 95984,
+      "sha256": "dfe7b9491c2ebc39e0f54a921b219a1cdb6ff4f88c1f727b7e9d642fc512f55c"
+    },
+    {
+      "path": "com/sun/jna/sunos-x86/libjnidispatch.so",
+      "bytes": 153056,
+      "sha256": "d1e83636af7ecfc426badff53bf2c1e15ff2c341bdfccb06e566a907e5c2366b"
+    },
+    {
+      "path": "com/sun/jna/sunos-x86-64/libjnidispatch.so",
+      "bytes": 169896,
+      "sha256": "6daf568a88fc44f7fd97c814ba7e2e6ce2290aafd7585055efc0d8bcabe0f099"
+    },
+    {
+      "path": "com/sun/jna/sunos-sparc/libjnidispatch.so",
+      "bytes": 230996,
+      "sha256": "c44df08b9c9406c0314bf24273cd29b1d29f38987d40c27d1ebe6dadabf87569"
+    },
+    {
+      "path": "com/sun/jna/sunos-sparcv9/libjnidispatch.so",
+      "bytes": 166976,
+      "sha256": "1cd8d358b5647bdbef37146ccb34345e9450eea918f6b4775ca038897432e926"
+    },
+    {
+      "path": "com/sun/jna/freebsd-x86/libjnidispatch.so",
+      "bytes": 109718,
+      "sha256": "431b48290cc2df7c4348e7549506dadab2ba68268f5c4b52273826f4f74a6d36"
+    },
+    {
+      "path": "com/sun/jna/freebsd-x86-64/libjnidispatch.so",
+      "bytes": 121307,
+      "sha256": "bd4290041f792c54b1f6f4e19b3fa890450b8ca0173513cbed63171bd34dc865"
+    },
+    {
+      "path": "com/sun/jna/openbsd-x86/libjnidispatch.so",
+      "bytes": 108073,
+      "sha256": "d69ea4c6b162ce696cfeaefbd7c186b2d8f33bc6dcf6229e1557abce94516c00"
+    },
+    {
+      "path": "com/sun/jna/openbsd-x86-64/libjnidispatch.so",
+      "bytes": 122942,
+      "sha256": "538e6326e1a337abea3cbb35dc83f167696cf79b030ad22c07b76dd11128e20a"
+    },
+    {
+      "path": "com/sun/jna/win32-x86-64/jnidispatch.dll",
+      "bytes": 254464,
+      "sha256": "13b2cac3f50368ab97fa2e3b0d0d2cb612f68449d5bbd6de187fc85ee4469d03"
+    },
+    {
+      "path": "com/sun/jna/win32-aarch64/jnidispatch.dll",
+      "bytes": 256512,
+      "sha256": "29fe4c6371b0b1685909c5b5f69d4976244006f81a2ffc9342a8948bbd8fa8a0"
+    },
+    {
+      "path": "META-INF/AL2.0",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "META-INF/LGPL2.1",
+      "bytes": 24389,
+      "sha256": "eea173a556abac0370461e57e12aab266894ea6be3874c2be05fd87871f75449"
+    },
+    {
+      "path": "META-INF/LICENSE",
+      "bytes": 788,
+      "sha256": "521bb271ac56e0e29a1b1b688b94af17d00d378fc8e63478d8c8b2a7c4a229d0"
+    }
+  ],
+  "omitted_binary_resources": [
+    "com/sun/jna/darwin-aarch64/libjnidispatch.jnilib",
+    "com/sun/jna/darwin-x86-64/libjnidispatch.jnilib",
+    "com/sun/jna/freebsd-x86/libjnidispatch.so",
+    "com/sun/jna/freebsd-x86-64/libjnidispatch.so",
+    "com/sun/jna/linux-aarch64/libjnidispatch.so",
+    "com/sun/jna/linux-arm/libjnidispatch.so",
+    "com/sun/jna/linux-armel/libjnidispatch.so",
+    "com/sun/jna/linux-loongarch64/libjnidispatch.so",
+    "com/sun/jna/linux-mips64el/libjnidispatch.so",
+    "com/sun/jna/linux-ppc/libjnidispatch.so",
+    "com/sun/jna/linux-ppc64le/libjnidispatch.so",
+    "com/sun/jna/linux-riscv64/libjnidispatch.so",
+    "com/sun/jna/linux-s390x/libjnidispatch.so",
+    "com/sun/jna/linux-x86/libjnidispatch.so",
+    "com/sun/jna/linux-x86-64/libjnidispatch.so",
+    "com/sun/jna/openbsd-x86/libjnidispatch.so",
+    "com/sun/jna/openbsd-x86-64/libjnidispatch.so",
+    "com/sun/jna/sunos-sparc/libjnidispatch.so",
+    "com/sun/jna/sunos-sparcv9/libjnidispatch.so",
+    "com/sun/jna/sunos-x86/libjnidispatch.so",
+    "com/sun/jna/sunos-x86-64/libjnidispatch.so",
+    "com/sun/jna/win32-aarch64/jnidispatch.dll",
+    "com/sun/jna/win32-x86/jnidispatch.dll",
+    "com/sun/jna/win32-x86-64/jnidispatch.dll",
+    "com/sun/jna/aix-ppc/libjnidispatch.a",
+    "com/sun/jna/aix-ppc64/libjnidispatch.a"
+  ],
+  "full_source_build_verified": false
+}

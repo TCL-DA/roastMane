@@ -1,0 +1,65 @@
+{
+  "jar": "aopalliance-repackaged-3.0.5.jar",
+  "sha256": "433e4b8292064c96625eee2106eb2fd7fc50b839c2f0742977563331ad9d5935",
+  "class_entries": 26,
+  "classes": [
+    "org/aopalliance/aop/Advice.class",
+    "org/aopalliance/aop/AspectException.class",
+    "org/aopalliance/instrument/Instrumentation.class",
+    "org/aopalliance/instrument/InstrumentationError.class",
+    "org/aopalliance/instrument/Instrumentor.class",
+    "org/aopalliance/instrument/UndoNotSupportedException.class",
+    "org/aopalliance/intercept/ConstructorInterceptor.class",
+    "org/aopalliance/intercept/ConstructorInvocation.class",
+    "org/aopalliance/intercept/FieldAccess.class",
+    "org/aopalliance/intercept/FieldInterceptor.class",
+    "org/aopalliance/intercept/Interceptor.class",
+    "org/aopalliance/intercept/Invocation.class",
+    "org/aopalliance/intercept/Joinpoint.class",
+    "org/aopalliance/intercept/MethodInterceptor.class",
+    "org/aopalliance/intercept/MethodInvocation.class",
+    "org/aopalliance/reflect/Class.class",
+    "org/aopalliance/reflect/ClassLocator.class",
+    "org/aopalliance/reflect/Code.class",
+    "org/aopalliance/reflect/CodeLocator.class",
+    "org/aopalliance/reflect/Field.class",
+    "org/aopalliance/reflect/Locator.class",
+    "org/aopalliance/reflect/Member.class",
+    "org/aopalliance/reflect/Metadata.class",
+    "org/aopalliance/reflect/Method.class",
+    "org/aopalliance/reflect/ProgramUnit.class",
+    "org/aopalliance/reflect/UnitLocator.class"
+  ],
+  "java_files": 26,
+  "decompiler_exit": 0,
+  "error_files": [],
+  "resources": [
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "bytes": 1054,
+      "sha256": "df24f3e4f49d6c0be9be7a5db5084ed404fca32b8a76c9adb25e5857d5f3fcd1"
+    },
+    {
+      "path": "META-INF/LICENSE.md",
+      "bytes": 35717,
+      "sha256": "8f7ae33adf6bfb459833618ae0aef4b860cc4d03888952f1d72b435334ae1f8d"
+    },
+    {
+      "path": "META-INF/NOTICE.md",
+      "bytes": 2122,
+      "sha256": "9eedd03ff6ccc7c63086dd621ede7fc970bffb0be845c28987642d9fb0e10d18"
+    },
+    {
+      "path": "META-INF/maven/org.glassfish.hk2.external/aopalliance-repackaged/pom.xml",
+      "bytes": 6056,
+      "sha256": "2887c0aeffcbec670c1c517b68325e849226921dcc7c766a064f093f3c060908"
+    },
+    {
+      "path": "META-INF/maven/org.glassfish.hk2.external/aopalliance-repackaged/pom.properties",
+      "bytes": 83,
+      "sha256": "e3d92609c4f4302c452ee957f82aaaa01f3a48ac481283a1800618da7bf45f4d"
+    }
+  ],
+  "omitted_binary_resources": [],
+  "full_source_build_verified": false
+}
