@@ -29,7 +29,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Source-built application packaging failed.' }
 # Bàn giao đủ cây source ứng dụng để có thể dựng lại, không kèm kho dịch ngược thư viện.
 $developmentRoot = Join-Path $Output 'development-source'
 New-Item -ItemType Directory -Path $developmentRoot | Out-Null
-foreach ($sourceItem in @('src', 'offline-v06', 'tools', 'tests', 'compile-recovered.ps1', 'build-from-source.ps1', 'test-recovered.ps1', 'README.md')) {
+foreach ($sourceItem in @('src', 'offline-v06', 'tools', 'tests', 'docs', 'reports', 'compile-recovered.ps1', 'build-from-source.ps1', 'test-recovered.ps1', 'README.md')) {
     Copy-Item -LiteralPath (Join-Path $repoRoot $sourceItem) -Destination $developmentRoot -Recurse
 }
 $buildInfo = [ordered]@{
