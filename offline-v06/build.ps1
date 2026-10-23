@@ -1,20 +1,24 @@
 param(
   [string]$BaseBundle = 'C:\Tools\_soi\Cropster-Offline-OTL-20261021-01',
-  [string]$Output = 'C:\Tools\_soi\roastMane-Offline-OTL-20261022-02',
+  [string]$Output = 'C:\Tools\_soi\roastMane-Offline-OTL-20261022-03',
   [switch]$Force
 )
 
 $ErrorActionPreference = 'Stop'
 $jdk = 'C:\Program Files\Eclipse Adoptium\jdk-21.0.12.101-hotspot\bin'
 $sourceRoot = $PSScriptRoot
-$work = Join-Path $env:TEMP 'roastmane-offline-build-v06'
+$work = Join-Path $env:TEMP 'roastmane-offline-build-v06-layoutfix'
 $brandKit = Join-Path $sourceRoot 'brand-kit'
 
 if (-not (Test-Path -LiteralPath (Join-Path $BaseBundle 'app\roastingintelligence-5.13.jar'))) { throw "Invalid input bundle: $BaseBundle" }
 $approvedSvg = Join-Path $brandKit 'exports\monogram_xanh.svg'
 $approvedAvatar = Join-Path $brandKit 'exports\avatar_xanh_1024.png'
+$runtimeMark = Join-Path $brandKit 'runtime\mark-16.svg'
+$runtimeWordmark = Join-Path $brandKit 'runtime\wordmark-298.svg'
 if ((Get-FileHash -Algorithm SHA256 $approvedSvg).Hash -ne 'DE59BEEC61D8EBBFE8BDC6A01925CF12B724699393351846055A387A1E8917AF') { throw 'Approved v06 SVG hash mismatch.' }
 if ((Get-FileHash -Algorithm SHA256 $approvedAvatar).Hash -ne 'E2288BBFBECDFBD1ADD6EB030D7F12E3A143D47DC6F9E75E2FE208828CCA5D52') { throw 'Approved v06 avatar hash mismatch.' }
+if ((Get-FileHash -Algorithm SHA256 $runtimeMark).Hash -ne '2C4E436ED3AA34390B43E520C711BA5EAEBD850ED3341F58689B489715031D6C') { throw 'Flattened 16x16 runtime mark hash mismatch.' }
+if ((Get-FileHash -Algorithm SHA256 $runtimeWordmark).Hash -ne '01E3F5750A3BDA7DF8DC581E512636C5146846C59B6B8A608F6A4015D0FF6B05') { throw 'Flattened 298x50 runtime wordmark hash mismatch.' }
 if (Test-Path -LiteralPath $Output) {
   if (-not $Force) { throw "Output already exists. Use -Force after verifying the exact path: $Output" }
   $resolvedOutput = [IO.Path]::GetFullPath($Output)
@@ -22,7 +26,7 @@ if (Test-Path -LiteralPath $Output) {
   Remove-Item -LiteralPath $resolvedOutput -Recurse -Force
 }
 $resolvedWork = [IO.Path]::GetFullPath($work)
-$expectedWork = [IO.Path]::GetFullPath((Join-Path $env:TEMP 'roastmane-offline-build-v06'))
+$expectedWork = [IO.Path]::GetFullPath((Join-Path $env:TEMP 'roastmane-offline-build-v06-layoutfix'))
 if (-not $resolvedWork.Equals($expectedWork, [StringComparison]::OrdinalIgnoreCase)) { throw "Unexpected work path: $resolvedWork" }
 if (Test-Path -LiteralPath $resolvedWork) { Remove-Item -LiteralPath $resolvedWork -Recurse -Force }
 New-Item -ItemType Directory -Path $work, (Join-Path $work 'input'), (Join-Path $work 'classes'), (Join-Path $work 'image') | Out-Null
@@ -46,7 +50,7 @@ Remove-Item -LiteralPath (Join-Path $work 'classes\local\BuildIcon.class') -Forc
 if ($LASTEXITCODE -ne 0) { throw 'offline-local.jar packaging failed.' }
 
 $options = @(
-  '--type','app-image','--name','roastMane','--app-version','0.2.0',
+  '--type','app-image','--name','roastMane','--app-version','0.3.0',
   '--vendor','O Tesla','--description','roastMane local offline roast logging',
   '--input',(Join-Path $work 'input'),'--dest',(Join-Path $work 'image'),
   '--main-jar','offline-local.jar','--main-class','local.Launcher','--icon',$icon,

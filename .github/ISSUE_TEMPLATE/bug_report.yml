@@ -1,0 +1,38 @@
+name: Báo lỗi
+description: Ghi nhận lỗi chạy, lỗi source hoặc vấn đề giao diện có thể tái hiện.
+title: "[Bug] "
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Khu vực
+      options:
+        - Launcher / offline / lưu dữ liệu
+        - Giao diện / nhận diện
+        - Source dịch ngược / biên dịch
+        - Kết nối thiết bị
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Cách tái hiện và kết quả thực tế
+      description: Dùng dữ liệu mô phỏng; không gửi token hoặc dữ liệu riêng.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Kết quả mong đợi
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Commit / bundle / Windows / JDK
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Log hoặc ảnh đã loại thông tin nhạy cảm

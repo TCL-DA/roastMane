@@ -1,21 +1,136 @@
-# roastMane — mã khảo sát và bản vá offline
+<p align="center">
+  <img src="docs/assets/hero.png" alt="roastMane — không gian rang cục bộ và phục hồi mã nguồn" width="100%">
+</p>
 
-Kho này lưu mã Java dịch ngược để khảo sát cùng mã vá offline và nhận diện roastMane v06. **Chưa phải bộ mã nguồn có thể biên dịch độc lập toàn bộ ứng dụng.**
+<p align="center">
+  <img alt="Java 21" src="https://img.shields.io/badge/Java-21-254C3B?style=flat-square">
+  <img alt="JavaFX desktop" src="https://img.shields.io/badge/Desktop-JavaFX-785440?style=flat-square">
+  <img alt="Local offline" src="https://img.shields.io/badge/Mode-local%20offline-254C3B?style=flat-square">
+  <img alt="Source recovery in progress" src="https://img.shields.io/badge/Source-recovery%20in%20progress-737A70?style=flat-square">
+</p>
 
-- `decompiled/`: mã dịch ngược từ JAR Roasting Intelligence 5.13 đã vá, tài nguyên, bản kiểm kê và bản vá trước đây.
-- `offline-v06/`: mã launcher, bản vá offline/nhận diện, kiểm thử, script đóng gói và bộ logo v06 đã duyệt.
-- `extracted-all/`: trích xuất đủ 117 JAR của bản roastMane v06, gồm thư viện và JavaFX, tách theo từng JAR để tránh ghi đè class/tài nguyên trùng tên. Bao gồm biến thể `META-INF/versions`, giấy phép, bản kiểm kê SHA-256 và bản đối chiếu CFR cho 24 file Vineflower báo lỗi. OkHttp/Okio có thêm source upstream đúng phiên bản trong `upstream-sources/`.
-- `tools/`: script trích xuất, xử lý biến thể theo phiên bản Java, đối chiếu CFR và kiểm toán độ phủ. Cần cung cấp đường dẫn JDK, bộ dịch ngược và bundle nền.
-- `compile-recovered.ps1` và `reports/`: phép thử biên dịch tái lập. Main có 677 source, còn 65 lỗi/10 cảnh báo trong 23 file; phần vá v06 biên dịch được 7 source thành 15 class.
-- `offline-v06/build.ps1`: dựng bản vá và đóng gói từ bundle offline nền có sẵn; không build toàn bộ mã dịch ngược. Cần Windows, JDK 21, bundle nền và các đường dẫn được mô tả trong script.
-- `offline-v06/KIEM-THU.md`: kết quả kiểm tra bản chạy v06; chưa kiểm chứng trên máy rang thật.
+<p align="center"><strong>Khám phá mã nguồn. Hiểu đường cong rang. Phát triển theo hướng riêng.</strong><br>
+A local roasting workspace, with source recovery in progress.</p>
 
-Mã dịch ngược có thể chứa lỗi hoặc cấu trúc không biên dịch được. Bước khôi phục dự án build độc lập chưa hoàn tất. Không kèm dữ liệu mẻ rang cá nhân, runtime Java hoặc bộ cài ứng dụng.
+<p align="center">
+  <a href="#roastmane-là-gì">Giới thiệu</a> ·
+  <a href="#đã-đủ-source-để-phát-triển-chưa">Trạng thái source</a> ·
+  <a href="docs/DEVELOPMENT.md">Bắt đầu phát triển</a> ·
+  <a href="docs/ARCHITECTURE.md">Kiến trúc</a> ·
+  <a href="docs/ROADMAP.md">Lộ trình</a>
+</p>
 
-Kiểm toán `extracted-all/audit.json` đối chiếu mọi class với file Java bao ngoài, không coi class lồng nhau là file nguồn riêng. Có file nguồn tương ứng không đồng nghĩa mọi phương thức đã được khôi phục chính xác. Xem `fallback-report.json` cho lỗi dịch ngược và bản đối chiếu; một đoạn `okhttp3/internal/Util` vẫn báo lỗi trong CFR nhưng có bản Kotlin upstream trong bộ nguồn bổ sung. Native DLL/SO không thể khôi phục thành Java: các tệp đó được kiểm kê và không đưa binary vào Git. `runtime` JDK và launcher EXE không phải mã nguồn Java của ứng dụng và không nằm trong phạm vi dịch ngược này.
+## roastMane là gì?
 
-## Nguồn gốc
+**roastMane** là bản desktop thử nghiệm cho công việc rang cục bộ, phát triển từ một bundle Roasting Intelligence 5.13 đã vá. Kho này tập hợp mã khảo sát, bản vá offline, bộ nhận diện v06 và công cụ phục hồi source để tiếp tục phát triển có thể kiểm chứng.
 
-Mã gốc và thư viện vẫn thuộc chủ sở hữu tương ứng. Việc dịch ngược, đổi nhận diện và lưu kho không chuyển quyền sở hữu hay cấp quyền phân phối. Giữ nguyên thông báo bản quyền/giấy phép và các định danh nội bộ cần cho tương thích. Xem `offline-v06/PROVENANCE.md` và giấy phép đi kèm tài nguyên.
+Bản chạy hiện tại sử dụng bytecode nền đã biên dịch cùng launcher và bản vá riêng. **Đây chưa phải ứng dụng được build hoàn toàn từ mã nguồn trong kho.**
 
-Kho được tạo riêng tư để lưu và tiếp tục công việc.
+| Phần việc | Trạng thái thực tế |
+|---|---|
+| Nhận diện roastMane v06 | Đã tích hợp logo giao diện, cửa sổ và icon EXE |
+| Môi trường local offline | Đã kiểm tra launcher, root dữ liệu và chặn socket trong JVM |
+| Lưu/đọc mẻ và đường cong | Đã kiểm tra bằng dữ liệu mô phỏng, gồm khởi động lại và nhánh lưu lỗi |
+| Kết nối máy rang thật | Chưa kiểm chứng; không suy ra từ smoke test |
+| Build độc lập toàn bộ ứng dụng | Chưa đạt — còn lỗi ở source dịch ngược |
+
+Xem [hồ sơ kiểm thử bản chạy](offline-v06/KIEM-THU.md) và [nguồn gốc](offline-v06/PROVENANCE.md).
+
+### Giao diện chạy thật
+
+<img src="docs/assets/app-preview.png" alt="roastMane bản -03 chạy JavaFX với catalog thử, chưa kết nối máy rang" width="100%">
+
+Ảnh từ scene JavaFX thật của bản `-03`, dùng catalog và mẻ mô phỏng trong thư mục tạm. Trạng thái chưa kết nối máy là chủ ý của phép thử; không sử dụng dữ liệu cá nhân. Bản `-03` sửa kích thước vật lý SVG trong thanh bên, giữ nguyên hình logo đã duyệt. Xem [kiểm tra bố cục SVG](docs/BRANDING-QA.md).
+
+## Đã đủ source để phát triển chưa?
+
+**Đủ để khảo sát và phát triển lớp vá hiện hành; chưa đủ để sửa tùy ý mọi phần rồi build lại toàn bộ app.**
+
+<img src="docs/assets/source-journey.png" alt="117 JAR đã trích xuất; 25.208 class đã đối chiếu; còn 65 lỗi biên dịch ứng dụng chính" width="100%">
+
+| Mốc kiểm chứng | Kết quả |
+|---|---:|
+| JAR ứng dụng, thư viện và JavaFX đã xử lý | **117 / 117** |
+| Class được kiểm kê | **25.208** |
+| File Java trích xuất, gồm biến thể theo phiên bản | **14.223** |
+| Class chưa tìm được file nguồn bao ngoài | **0** |
+| Source chính thử biên dịch | **677 file; 65 lỗi trong 23 file** |
+| Source phần vá v06 thử biên dịch | **7 file → 15 class; đạt** |
+
+Các số liệu là kết quả kiểm tra ngày **22/10/2026**, không phải huy hiệu CI tự động. Class lồng nhau được gộp vào file Java bao ngoài. Có file tương ứng không chứng minh mọi phương thức được dịch chính xác.
+
+Bạn có thể bắt đầu với **nhận diện, tài nguyên giao diện, launcher và luồng lưu offline**. Với tính năng thay đổi trực tiếp model, biểu đồ hoặc controller chính, cần phục hồi biên dịch phần liên quan và kiểm tra hành vi trước khi tích hợp. Sửa FXML/CSS vẫn cần kiểm tra controller và cách nạp tài nguyên.
+
+24 file Vineflower báo lỗi có bản đối chiếu CFR; một đoạn `okhttp3/internal/Util` vẫn báo lỗi trong CFR, được bổ sung bằng source Kotlin upstream đúng phiên bản. Native DLL/SO được kiểm kê, **chưa khôi phục mã C/C++**. Runtime JDK và launcher EXE không được coi là source ứng dụng.
+
+→ [Kiểm toán độ phủ](extracted-all/audit.json) · [Báo cáo compiler](reports/BASELINE.md) · [Bản đối chiếu](extracted-all/fallback-report.json)
+
+## Bắt đầu
+
+### 1. Lấy mã
+
+```powershell
+git clone https://github.com/TCL-DA/roastMane.git
+cd roastMane
+```
+
+Repo hiện **riêng tư**; tài khoản GitHub phải có quyền truy cập.
+
+### 2. Kiểm tra môi trường và source
+
+Cần Windows, JDK 21, các thư viện JavaFX và **bundle offline nền có sẵn trên máy**. Runtime/bộ cài không được phân phối trong repo. Script có đường dẫn mặc định của máy phát triển; truyền tham số để dùng ở máy khác.
+
+```powershell
+# Biên dịch phần vá hiện hành; chưa đóng gói ứng dụng
+.\compile-recovered.ps1 -Target OfflineV06 -Bundle 'C:\path\to\roastMane-bundle'
+
+# Tái lập lỗi của mã ứng dụng chính, không dùng main JAR để che lỗi source
+.\compile-recovered.ps1 -Target Main -Bundle 'C:\path\to\roastMane-bundle'
+```
+
+Có thể truyền `-JdkBin` để chỉ định thư mục `bin` của JDK. Lệnh `Main` hiện dự kiến thất bại với baseline nêu trên.
+
+### 3. Đóng gói bản vá
+
+```powershell
+.\offline-v06\build.ps1 `
+  -BaseBundle 'C:\path\to\offline-base' `
+  -Output 'C:\Tools\_soi\roastMane-dev'
+```
+
+Lệnh này **vá bundle nền và đóng gói bằng jpackage**, không biên dịch toàn bộ `extracted-all/`. Giữ đầu ra riêng, thử bằng dữ liệu tạm trước khi sử dụng dữ liệu thật.
+
+→ [Hướng dẫn phát triển đầy đủ](docs/DEVELOPMENT.md)
+
+## Tìm gì ở đâu?
+
+| Thư mục / tệp | Dùng khi |
+|---|---|
+| [`offline-v06/patch-src/local/`](offline-v06/patch-src/local) | Sửa launcher, persistence, môi trường offline và nhận diện |
+| [`offline-v06/brand-kit/`](offline-v06/brand-kit) | Lấy logo v06, avatar và bảng màu đã duyệt |
+| [`decompiled/`](decompiled) | Đọc baseline ứng dụng chính và source lịch sử |
+| [`extracted-all/roastingintelligence-5.13/source/`](extracted-all/roastingintelligence-5.13/source) | Đọc mã trích xuất từ bản v06 hiện hành |
+| [`extracted-all/`](extracted-all) | Tra từng thư viện, JavaFX, tài nguyên, SHA-256 và biến thể phiên bản |
+| [`tools/`](tools) | Chạy lại trích xuất, đối chiếu và kiểm toán |
+| [`reports/`](reports) | Xem lỗi compiler, baseline và số liệu kiểm chứng |
+| [`docs/`](docs) | Tìm hướng dẫn phát triển, kiến trúc và lộ trình |
+
+## Bộ nhận diện
+
+Biểu tượng v06 dùng một khối liên tục; bản desktop chủ đạo dùng **xanh lá trầm và be**, bổ sung đen, xám, nâu và trắng. Hình ảnh trong README là đồ họa giới thiệu, không phải biểu đồ đo hoặc ảnh giao diện giả.
+
+<p align="center">
+  <img src="offline-v06/brand-kit/exports/avatar_xanh_1024.png" width="120" alt="Biểu tượng roastMane xanh và be">
+  &nbsp;&nbsp;
+  <img src="offline-v06/brand-kit/exports/avatar_nau_1024.png" width="120" alt="Biểu tượng roastMane nâu và be">
+  &nbsp;&nbsp;
+  <img src="offline-v06/brand-kit/exports/avatar_den_1024.png" width="120" alt="Biểu tượng roastMane đen và be">
+</p>
+
+→ [Tài sản nhận diện](offline-v06/brand-kit) · [Hướng dẫn đóng góp](CONTRIBUTING.md) · [Báo lỗi](https://github.com/TCL-DA/roastMane/issues/new/choose)
+
+## Nguồn gốc và quyền sử dụng
+
+Mã dịch ngược không phải source gốc do nhà cung cấp phát hành. Mã gốc và thư viện thuộc chủ sở hữu tương ứng; đổi tên hoặc lưu trong repo không chuyển quyền sở hữu hay cấp quyền phân phối. Giữ thông báo bản quyền, giấy phép và định danh nội bộ cần cho tương thích.
+
+Kho không tự áp giấy phép mã nguồn mở cho toàn bộ nội dung. Đọc [PROVENANCE](offline-v06/PROVENANCE.md) và giấy phép của từng thư viện trước khi phân phối hoặc tái sử dụng. Dữ liệu cá nhân, mẻ rang thật, token và runtime không thuộc bộ bàn giao này.

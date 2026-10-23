@@ -1,40 +1,27 @@
-# Kiểm thử roastMane v06 offline — 22/10/2026
+# Kiểm thử roastMane offline — bản -03
 
-## Kết quả
+## Kiểm tra bản -03
 
-- Dựng patch Java bằng JDK 21 và đóng gói `app-image` bằng jpackage: **PASS**.
-- Khởi động JavaFX với root dữ liệu tạm, tiêu đề `roastMane — Local Offline`: **PASS**.
-- Quét chữ đang hiển thị trong scene graph, số chuỗi `Cropster` hoặc `Roasting Intelligence`: **0**.
-- Catalog và thư mục dữ liệu dùng chung một root: **PASS**.
-- Chặn socket mạng ở lớp JVM: **PASS**.
-- Lưu mẻ thử 6,0 kg với đường cong nhiệt 3 điểm rồi đọc lại: **PASS**.
-- Hồi quy lưu/sửa/khởi động lại: ID ổn định, đường cong 4 điểm còn nguyên, archive khớp outbox: **PASS**.
-- Nhánh lỗi outbox: lưu thất bại đúng cách, không tiêu thụ ID, `verifySaved` từ chối: **PASS**.
-- Tài nguyên logo cũ được thay bằng monogram v06 đã duyệt; bí danh tên cũ chỉ được giữ cho enum/tên đường dẫn động và có cùng nội dung byte với tài nguyên mới: **PASS**.
-- SVG biểu tượng và wordmark được nạp bằng chính `JavaFxUtil.loadSvg`; kích thước render lần lượt là `220,0 x 242,1` và `1223,2 x 250,3`, scene graph có đủ 2 node: **PASS**.
-- Icon EXE đa kích thước có đủ 6 lớp `16, 32, 48, 64, 128, 256 px`, dùng avatar xanh/be v06: **PASS**.
-- Monogram SVG và avatar 1024 px trong JAR khớp byte với file đã duyệt; SHA-256 lần lượt là `DE59BEEC61D8EBBFE8BDC6A01925CF12B724699393351846055A387A1E8917AF` và `E2288BBFBECDFBD1ADD6EB030D7F12E3A143D47DC6F9E75E2FE208828CCA5D52`: **PASS**.
-- `fonts/SIL Open Font License.txt` còn trong JAR: **PASS**.
+- Biên dịch lớp vá bằng JDK 21, tạo app-image bằng jpackage: **PASS**.
+- Nạp SVG bằng chính `JavaFxUtil.loadSvg`, kiểm tra bounds vật lý: mark **11,8 × 13,0**, wordmark **212,8 × 44,0**; nằm trong khung 16 × 16 và 298 × 50: **PASS**.
+- JavaFX smoke dùng root tạm: tiêu đề roastMane, không có nhận diện cũ trong chữ hiển thị, catalog/root thống nhất, socket bị chặn: **PASS**.
+- Lưu mẻ mô phỏng 6 kg, đọc lại đủ đường cong 3 điểm: **PASS**.
+- Chụp scene JavaFX thật và xem trực quan: biểu tượng thanh bên không còn phóng quá lớn; bố cục mở đủ ở cửa sổ 1600 × 1000: **PASS**.
+- Avatar/icon EXE không đổi so với bản -02. Tài nguyên SVG hiển thị dùng bản scale tọa độ trực tiếp do Illustrator xuất; các alias tương thích nhận cùng nội dung.
 
-## Giới hạn đã biết
+## Kết quả kế thừa, không chạy lại trong đợt sửa tài nguyên
 
-- Đây là bản vá JAR đã biên dịch, không phải build lại từ toàn bộ mã nguồn.
-- Package `org.cropster.*`, `com.cropster.*`, tên một số JAR, enum và bí danh tài nguyên nội bộ vẫn còn để bảo toàn tương thích nhị phân và nguồn gốc pháp lý. Chúng không còn là nhận diện hiển thị.
-- Log kỹ thuật vẫn có thể nêu class, package hoặc endpoint gốc. Kết nối socket bị chặn; UI hỗ trợ, cập nhật và đồng bộ trực tuyến đã bị vô hiệu hóa.
-- Chưa chọn cổng serial, chưa chạy với máy rang thật và không flash firmware.
-- Dữ liệu mặc định mới là `%USERPROFILE%\roastMane\otl-offline`; không tự động di chuyển dữ liệu cũ.
+Ở bản -02, kiểm thử persistence đầy đủ đã đạt: ID ổn định sau restart, đường cong 4/4 điểm, archive khớp outbox, nhánh ghi lỗi không tiêu thụ ID và `verifySaved` từ chối dữ liệu chưa ghi. Bản -03 không thay logic persistence. Icon ICO đa kích thước và giấy phép font đã được kiểm tra ở đợt trước.
 
-## Cách chạy lại
+## Lỗi bố cục đã sửa
 
-Script dựng: `source\build.ps1`. Test hồi quy: `source\tests\local\PatchedFilePersisterIntegrationTest.java`. Kiểm tra render SVG: `source\tests\local\BrandRenderProbe.java`. Smoke GUI được bật bằng `-Doffline.smoke=true` và bắt buộc dùng `-Doffline.data` trỏ vào thư mục tạm.
+Kiểm tra cũ chỉ xác nhận SVG nạp được, đã bỏ sót bounds 220 × 242 và 1223 × 250 gây logo quá lớn trong UI. Bản -03 dùng SVG có tọa độ vật lý đúng kích thước, không phụ thuộc scale của `viewBox`, và bổ sung assertion giới hạn bounds trong `BrandRenderProbe`.
 
-Kết quả smoke cuối trên bundle `roastMane-Offline-OTL-20261022-02`:
+## Giới hạn
 
-```text
-PASS title=roastMane visibleLegacyBranding=0 catalogIdentity=true rootUnified=true batchInputKg=6.0 networkBlocked=true previousBatches=0 savedId=2 points=3
-PASS mark=220.0x242.1 wordmark=1223.2x250.3 nodes=2
-PASS restartCurvePoints=4 archiveCurvePoints=4
-PASS saveFailure=true verifyRejected=true
-PASS rosterSize=1 savedOutputLotInRoster=false failedOutputLotInRoster=false
-PASS failedId=null archiveCount=1
-```
+- Đây là bản vá JAR nền, chưa phải full-source build. Main source còn 65 lỗi compiler; lớp vá biên dịch được.
+- Package và alias nội bộ cũ được giữ để tương thích và bảo toàn nguồn gốc pháp lý.
+- Không chọn cổng serial, không thử máy rang thật, không flash firmware và không dùng dữ liệu cá nhân.
+- Root mặc định vẫn là `%USERPROFILE%\roastMane\otl-offline`; các phép thử chỉ dùng thư mục tạm.
+
+Source kiểm tra: `tests/local/BrandRenderProbe.java`, `patch-src/local/SmokeProbe.java` và `tests/local/PatchedFilePersisterIntegrationTest.java`. Script dựng: `build.ps1`. Hồ sơ source build độc lập nằm trong `reports/BASELINE.md` ở gốc repository.

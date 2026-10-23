@@ -1,0 +1,23 @@
+name: Đề xuất tính năng
+description: Mô tả nhu cầu, luồng sử dụng và cách kiểm tra tính năng.
+title: "[Feature] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Bạn muốn giải quyết việc gì?
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Luồng sử dụng và hành vi mong muốn
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Điều kiện để coi là hoàn thành
+      description: Ví dụ đầu vào, đầu ra và phép kiểm tra.
+    validations:
+      required: true
