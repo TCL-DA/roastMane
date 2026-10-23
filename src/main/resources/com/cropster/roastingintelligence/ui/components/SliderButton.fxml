@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+
+<fx:root type="javafx.scene.layout.HBox" xmlns:fx="http://javafx.com/fxml">
+    <styleClass>
+        <String fx:value="control-slider__btn-wrapper" />
+    </styleClass>
+    <Button fx:id="button" mnemonicParsing="false" styleClass="control-slider__btn" />
+    <Rectangle width="12.0" height="2.0" styleClass="control-slider__dash" />
+    <Rectangle width="3.0" height="2.0">
+	    <styleClass>
+	        <String fx:value="control-slider__dash" />
+	        <String fx:value="control-slider__dash--overlap" />
+	    </styleClass>
+    </Rectangle>
+    <Circle radius="3.0" styleClass="control-slider__mark" />
+</fx:root>

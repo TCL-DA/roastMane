@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import com.cropster.roastingintelligence.ui.components.*?>
+
+<fx:root type="GridPane" xmlns:fx="http://javafx.com/fxml">
+    <styleClass>
+        <String fx:value="grid-pane--compact"/>
+        <String fx:value="comment-popup"/>
+        <String fx:value="comment-popup__button-wrapper"/>
+    </styleClass>
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="50.0" minWidth="80" maxWidth="Infinity" />
+        <ColumnConstraints hgrow="ALWAYS" percentWidth="50.0" minWidth="80" maxWidth="Infinity" />
+    </columnConstraints>
+    <MeasureEditor fx:id="gasEditor" nullable="true" managed="${gasEditor.visible}" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.vgrow="NEVER"/>
+    <Button fx:id="gasButton" managed="${gasButton.visible}" GridPane.columnIndex="1" GridPane.rowIndex="0" text="%Gas" onAction="#addGasComment" GridPane.vgrow="NEVER"/>
+    <MeasureEditor fx:id="airEditor" nullable="true" managed="${airEditor.visible}" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.vgrow="NEVER"/>
+    <Button fx:id="airButton" managed="${airButton.visible}" GridPane.columnIndex="1" GridPane.rowIndex="1" text="%Airflow" onAction="#addAirComment" GridPane.vgrow="NEVER"/>
+    <Button fx:id="colorChangeButton" managed="${colorChangeButton.visible}" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2" text="%Color change" onAction="#addColorChange" styleClass="button--primary" GridPane.vgrow="NEVER"/>
+    <Button fx:id="firstCrackButton" managed="${firstCrackButton.visible}" GridPane.columnIndex="0" GridPane.rowIndex="3" text="%First crack" onAction="#addFirstCrack" styleClass="button--primary" GridPane.vgrow="NEVER"/>
+    <Button fx:id="secondCrackButton" managed="${secondCrackButton.visible}" GridPane.columnIndex="1" GridPane.rowIndex="3" text="%Second crack" onAction="#addSecondCrack" styleClass="button--primary" GridPane.vgrow="NEVER"/>
+    <TextArea fx:id="noteInput" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="2" GridPane.vgrow="NEVER" minHeight="60" prefHeight="60"/>
+    <Button fx:id="textCommentButton" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="2" text="%Text comment" onAction="#addTextComment" GridPane.vgrow="NEVER"/>
+</fx:root>

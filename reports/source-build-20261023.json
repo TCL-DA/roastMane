@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-23",
+  "main_sources": 677,
+  "overlay_sources": 7,
+  "javac_errors": 0,
+  "javac_deprecation_warnings": 11,
+  "original_main_or_overlay_classes_on_compile_classpath": false,
+  "main_class_count": 948,
+  "source_tree_sha256": "1587922524b98b409e819d41053be2d76e4301ce3f79a3273df996fa15a150cc",
+  "main_jar_sha256": "8ff8ecd9a7fc212be1a4c93a201040390dcc500b8900eb263a7a98dd13e86c59",
+  "tests": [
+    {
+      "test": "local.PatchedFilePersisterIntegrationTest",
+      "exit": 0
+    },
+    {
+      "test": "local.BrandRenderProbe",
+      "exit": 0
+    },
+    {
+      "test": "local.RecoveredUiTest",
+      "exit": 0
+    },
+    {
+      "test": "local.GuiSmokeTest",
+      "exit": 0
+    }
+  ],
+  "hardware_tested": false,
+  "third_party_dependencies_rebuilt": false,
+  "application_and_overlay_source_sha256": "f2e86ce0cc4061ba4856e9f86476d39399b1e292841a30d84889fcc22bba96c7"
+}

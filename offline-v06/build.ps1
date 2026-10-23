@@ -1,11 +1,12 @@
 param(
   [string]$BaseBundle = 'C:\Tools\_soi\Cropster-Offline-OTL-20261021-01',
   [string]$Output = 'C:\Tools\_soi\roastMane-Offline-OTL-20261022-03',
-  [switch]$Force
+  [switch]$Force,
+  [string]$JdkBin = 'C:\Program Files\Eclipse Adoptium\jdk-21.0.12.101-hotspot\bin'
 )
 
 $ErrorActionPreference = 'Stop'
-$jdk = 'C:\Program Files\Eclipse Adoptium\jdk-21.0.12.101-hotspot\bin'
+$jdk = $JdkBin
 $sourceRoot = $PSScriptRoot
 $work = Join-Path $env:TEMP 'roastmane-offline-build-v06-layoutfix'
 $brandKit = Join-Path $sourceRoot 'brand-kit'
@@ -32,6 +33,7 @@ if (Test-Path -LiteralPath $resolvedWork) { Remove-Item -LiteralPath $resolvedWo
 New-Item -ItemType Directory -Path $work, (Join-Path $work 'input'), (Join-Path $work 'classes'), (Join-Path $work 'image') | Out-Null
 Copy-Item -Path (Join-Path $BaseBundle 'app\*') -Destination (Join-Path $work 'input') -Recurse -Force
 Remove-Item -LiteralPath (Join-Path $work 'input\Cropster-Offline-OTL.cfg') -Force -ErrorAction SilentlyContinue
+Remove-Item -LiteralPath (Join-Path $work 'input\roastMane.cfg') -Force -ErrorAction SilentlyContinue
 
 $classpath = (Join-Path $BaseBundle 'app\*') + ';' + (Join-Path $BaseBundle 'app\javafx\*') + ';' + (Join-Path $sourceRoot 'lib\asm.jar')
 & (Join-Path $jdk 'javac.exe') -proc:none -encoding UTF-8 -cp $classpath -d (Join-Path $work 'classes') (Get-ChildItem -LiteralPath (Join-Path $sourceRoot 'patch-src\local') -Filter '*.java' | ForEach-Object FullName)

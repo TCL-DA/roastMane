@@ -1,99 +1,96 @@
 # Phát triển roastMane
 
-## Trạng thái source hiện tại
+## Trạng thái hiện tại
 
-| Phần | Trạng thái đã kiểm tra |
-|---|---|
-| Bundle `roastMane-Offline-OTL-20261022-02` | Chạy JavaFX, lưu/đọc lại mẻ QA và chặn mạng: đạt |
-| Source overlay `offline-v06/patch-src/local` | 7 file Java biên dịch thành 15 class; 1 cảnh báo deprecated |
-| Main source `decompiled/` | 677 file thuộc target ứng dụng; còn 65 lỗi và 10 cảnh báo trong 23 file |
-| Toàn bộ dependency `extracted-all/` | Đã trích 117 JAR; 25.208 class entry ánh xạ về 14.223 file Java; chưa xác minh full-source build |
+Cây phát triển chính nằm tại `src/main/java/` và `src/main/resources/`. Lượt dựng đã xác minh ngày 23/10/2026 biên dịch chung **684 file Java** gồm 677 source ứng dụng và 7 source overlay, đạt **0 lỗi** và còn **11 cảnh báo deprecated/removal**. Classpath biên dịch loại cả main JAR và overlay JAR cũ, vì vậy kết quả không được che bởi class ứng dụng đã biên dịch sẵn.
 
-Bundle chạy được hiện nay được tạo bằng cách vá bytecode và tài nguyên của JAR nền. Nó **không** được build từ toàn bộ source trong `decompiled/` hay `extracted-all/`.
+Main JAR được tạo từ class vừa biên dịch cùng **291 tài nguyên**. JavaFX, thư viện bên thứ ba, native và JDK runtime vẫn là dependency nhị phân. `decompiled/` và `extracted-all/` là kho lưu trữ để đối chiếu, không phải cây source chính.
 
-## Thư mục cần biết
+Xem [SOURCE-BUILD.md](SOURCE-BUILD.md) và [báo cáo máy đọc được](../reports/source-build-20261023.json) để kiểm tra số liệu và giới hạn của lượt dựng.
 
-- `decompiled/org/cropster/roastingintelligence/`: vòng đời ứng dụng, model vận hành, quản lý rang và preferences.
-- `decompiled/com/cropster/roastingintelligence/ui/`: JavaFX controller, trạng thái cửa sổ và tiện ích UI.
-- `decompiled/com/cropster/roastingintelligence/ui/layout/`: production, preparation, preferences và các panel chính.
-- `decompiled/org/cropster/roastingintelligence/measurement/`: nguồn đo và luồng dữ liệu đo.
-- `decompiled/org/cropster/roastingintelligence/model/` và `decompiled/com/cropster/roastingintelligence/model/`: model mẻ rang, profile, lot và cấu hình liên quan.
-- `decompiled/org/cropster/roastingintelligence/service/` và `decompiled/com/cropster/roastingintelligence/service/`: persistence và service nội bộ.
-- `offline-v06/patch-src/local/`: launcher offline, bootstrap catalog cục bộ, connection/persistence, smoke probe và công cụ vá JAR.
-- `offline-v06/tests/local/`: kiểm tra persistence restart và render SVG bằng JavaFX.
-- `reports/`: log `javac`, response file, mã thoát và bảng lỗi theo file.
-- `extracted-all/<ten-jar>/source/`: source dịch ngược tách theo từng JAR để tránh ghi đè package hoặc tài nguyên trùng tên.
-
-Giữ nguyên package `org.cropster.*` và `com.cropster.*` trong giai đoạn phục hồi. Đây là định danh tương thích nhị phân và nguồn gốc, không phải nhận diện hiển thị roastMane.
-
-## Môi trường đã dùng
-
-- Windows.
-- Eclipse Adoptium JDK `21.0.12.101`.
-- Bundle dependency: `C:\Tools\_soi\roastMane-Offline-OTL-20261022-02\app`.
-- Bundle nền để vá: `C:\Tools\_soi\Cropster-Offline-OTL-20261021-01`.
-
-Các đường dẫn trên là đường dẫn đã kiểm thử trên máy phát triển hiện tại. Có thể truyền đường dẫn khác qua tham số của script.
-
-## Kiểm tra khả năng biên dịch source
-
-Lệnh sau đã chạy thực tế:
-
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass `
-  -File .\compile-recovered.ps1 -Target All
-```
-
-Kết quả baseline phải được đọc đúng:
+## Cấu trúc cần biết
 
 ```text
-javac target=main-current exit=1 errors=65 warnings=10
-javac target=offline-v06-current exit=0 errors=0 warnings=1
+src/main/java/          source ứng dụng chính
+src/main/resources/     FXML, CSS, ảnh, font, âm thanh và metadata
+offline-v06/patch-src/  overlay offline và công cụ nhận diện/đóng gói
+tests/local/            UI/FXML và launcher smoke
+offline-v06/tests/      persistence và SVG
+decompiled/             bản dịch ngược nguyên trạng để đối chiếu
+extracted-all/          bản trích xuất từng dependency để lưu trữ
+reports/                bằng chứng compiler, build và test
 ```
 
-`compile-recovered.ps1` loại `roastingintelligence-5.13.jar` khỏi classpath của main target để class đã biên dịch không che lỗi source. Nó cũng loại `decompiled/offline-patch/` khỏi target vì đó là source patch lịch sử được nhúng như tài nguyên; overlay đúng là `offline-v06/patch-src/local/`.
+Giữ nguyên namespace `org.cropster.*` và `com.cropster.*`. Chúng là định danh tương thích nhị phân và dấu vết nguồn gốc; nhận diện hiển thị của ứng dụng là roastMane.
 
-## Dựng bundle vá vào thư mục tạm
+## Yêu cầu môi trường
 
-Không ghi đè bundle phát hành khi chỉ thử build. Chọn output mới trong `%TEMP%`:
+- Windows.
+- JDK 21.
+- Python 3.
+- Một bundle nền chứa JavaFX, JAR bên thứ ba, native và runtime cần thiết.
+
+Các script có giá trị mặc định theo máy đã kiểm thử. Dùng `-JdkBin` và các tham số bundle/output để chạy ở vị trí khác.
+
+## Biên dịch source
 
 ```powershell
-$trial = Join-Path $env:TEMP 'roastmane-v06-trial'
-powershell.exe -NoProfile -ExecutionPolicy Bypass `
-  -File .\offline-v06\build.ps1 `
-  -BaseBundle 'C:\Tools\_soi\Cropster-Offline-OTL-20261021-01' `
-  -Output $trial
+.\compile-recovered.ps1 `
+  -Target Recovered `
+  -Bundle 'C:\path\to\dependency-bundle' `
+  -JdkBin 'C:\path\to\jdk-21\bin'
 ```
 
-Script này biên dịch overlay, vá JAR nền, tạo icon đa kích thước và đóng gói `app-image` bằng `jpackage`. Nó không biên dịch 677 file main source.
+Target `Recovered` biên dịch cây ứng dụng và overlay hiện hành. Kết quả đã xác minh là 684 source, 0 lỗi và 11 cảnh báo. Các báo cáo baseline 65 lỗi mô tả lịch sử phục hồi, không phải trạng thái hiện tại.
 
-## Chạy lại kiểm tra persistence
+## Dựng ứng dụng từ source
 
-Đây là quy trình đã dùng cho bundle `-02`; mọi dữ liệu được tạo trong `%TEMP%`:
+Chọn một output chưa tồn tại; script không ghi đè bundle nền:
 
 ```powershell
-$bundle = 'C:\Tools\_soi\roastMane-Offline-OTL-20261022-02'
-$app = Join-Path $bundle 'app'
-$jdk = 'C:\Program Files\Eclipse Adoptium\jdk-21.0.12.101-hotspot\bin'
-$classes = Join-Path $env:TEMP 'roastmane-persistence-test'
-New-Item -ItemType Directory -Path $classes -Force | Out-Null
-$cp = ((Get-ChildItem $app -Filter '*.jar').FullName +
-       (Get-ChildItem (Join-Path $app 'javafx') -Filter '*.jar').FullName) -join ';'
-
-& "$jdk\javac.exe" -encoding UTF-8 -proc:none -cp $cp -d $classes `
-  .\offline-v06\tests\local\PatchedFilePersisterIntegrationTest.java
-& "$jdk\java.exe" -cp "$classes;$cp" local.PatchedFilePersisterIntegrationTest
+.\build-from-source.ps1 `
+  -BaseBundle 'C:\path\to\dependency-bundle' `
+  -Output 'C:\Tools\_soi\roastMane-dev' `
+  -JdkBin 'C:\path\to\jdk-21\bin'
 ```
 
-Kết quả đã xác minh gồm ID ổn định sau restart, đường cong `4/4`, archive khớp outbox, nhánh lỗi không tiêu thụ ID và không đưa mẻ rang thành phẩm vào danh mục cà phê xanh.
+Script thực hiện tuần tự:
 
-## Quy tắc test an toàn
+1. Biên dịch main và overlay từ source.
+2. Đóng gói class mới cùng `src/main/resources/` thành main JAR và `offline-local.jar`.
+3. Chạy pipeline nhận diện v06 trên main JAR vừa tạo.
+4. Tạo app-image bằng `jpackage`.
+5. Chép cây phát triển cần thiết và ghi checksum/build metadata vào output.
 
-- GUI smoke chỉ được chạy với `-Doffline.smoke=true` **và** `-Doffline.data=<thu-muc-tam>`.
-- Không trỏ test vào `%USERPROFILE%\roastMane\otl-offline` hoặc dữ liệu thật của người dùng.
-- Không chọn cổng serial, không kết nối máy rang và không dùng kết quả này để tuyên bố đã kiểm thử phần cứng.
-- Ảnh preview phải lấy từ scene JavaFX thật với catalog QA tạm; không dựng ảnh giả giao diện.
-- Giữ giấy phép, thông báo bản quyền và provenance của thư viện/JAR khi sửa hoặc đóng gói.
-- Mỗi sửa lỗi source dịch ngược phải đối chiếu bytecode method tương ứng và chạy lại `compile-recovered.ps1`; không sửa hàng loạt bằng regex khi chưa chứng minh tương đương hành vi.
+Output đã xác minh:
 
-Chi tiết kết quả phát hành nằm trong [offline-v06/KIEM-THU.md](../offline-v06/KIEM-THU.md). Chẩn đoán source gồm [reports/BASELINE.md](../reports/BASELINE.md), [errors-by-file.csv](../reports/errors-by-file.csv) và [javac-main-current.txt](../reports/javac-main-current.txt).
+```text
+C:\Tools\_soi\roastMane-SourceBuild-20261023-01
+```
+
+## Chạy hồi quy
+
+```powershell
+.\test-recovered.ps1 `
+  -Bundle 'C:\Tools\_soi\roastMane-SourceBuild-20261023-01' `
+  -JdkBin 'C:\path\to\jdk-21\bin'
+```
+
+Script biên dịch test, tạo home/data/log tạm rồi chạy bốn chương trình:
+
+- `local.PatchedFilePersisterIntegrationTest`: lưu mới, sửa, restart, archive, lỗi ghi sửa đổi và timestamp trùng.
+- `local.BrandRenderProbe`: giới hạn vật lý của SVG mark và wordmark.
+- `local.RecoveredUiTest`: các nhánh `TaskLabel`, FXML thật và `TextFormatter` khi focus; đồng thời xác nhận CodeSource là main JAR vừa dựng.
+- `local.GuiSmokeTest`: launcher thật, tiêu đề, catalog/root tạm, chặn mạng và lưu mẻ mô phỏng.
+
+Lượt kiểm tra ngày 23/10/2026 đạt cả bốn chương trình với exit `0`. Không dùng dữ liệu người dùng, cổng serial hoặc máy rang.
+
+## Quy tắc khi sửa source phục hồi
+
+- Đối chiếu method liên quan bằng `javap` hoặc CFR trước khi sửa lỗi do decompiler.
+- Sửa hẹp theo bằng chứng; không dùng cast hoặc regex hàng loạt chỉ để compiler im lỗi.
+- Chạy lại target `Recovered`, sau đó dựng bundle mới và chạy `test-recovered.ps1` khi thay đổi ảnh hưởng runtime.
+- Giữ tài nguyên, license, thông báo bản quyền và provenance của mã gốc cùng dependency.
+- Không suy diễn compile/smoke thành tương thích mọi tính năng hoặc phần cứng.
+
+11 cảnh báo API cũ hiện chưa chặn build. Việc thay API phải được xử lý riêng với kiểm thử hành vi tương ứng.

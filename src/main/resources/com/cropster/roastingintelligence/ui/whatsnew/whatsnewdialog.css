@@ -1,0 +1,134 @@
+/*
+ * Copied from ControlFX popover.css to have a better control on:
+ *   stroke width [1.5]
+ *   border drop shadow radius [10.0]
+ *   border drop shadow offsets [2.0]
+ */
+.popover .button {
+  -fx-background-color: -fx-color-neutral-white;
+  -fx-background-insets: 0;
+  -fx-background-radius: 4;
+  -fx-border-color: -fx-color-secondary-50 -fx-color-secondary-50 -fx-color-secondary-50 -fx-color-secondary-50,transparent transparent -fx-color-secondary-70 transparent;
+  -fx-border-insets: 0 0 1 0, 0 0 0 0;
+  -fx-border-radius: 4;
+  -fx-border-width: 1;
+  -fx-font-size: 1em;
+  -fx-font-weight: bold;
+  -fx-padding: 0.666em;
+  -fx-pref-width: -1;
+  -fx-pref-height: -1;
+  -fx-text-fill: -fx-color-text;
+}
+
+.popover .button .svg-image * {
+  -fx-fill: -fx-color-secondary-70;
+}
+
+.popover .button:hover {
+  -fx-cursor: hand;
+  -fx-background-color: derive(-fx-color-neutral-white, -10%);
+}
+
+.popover .button:pressed {
+  -fx-background-color: derive(-fx-color-neutral-white, -20%);
+  -fx-border-color: none;
+  -fx-border-insets: 0;
+}
+
+.popover .button:disabled {
+  -fx-background-color: -fx-color-neutral-10;
+  -fx-fill: -fx-color-neutral-60;
+  -fx-text-fill: -fx-color-neutral-60;
+}
+
+.popover .button:disabled .svg-image * {
+  -fx-fill: -fx-color-neutral-60;
+}
+
+.popover .label {
+  -fx-font-size: 1em;
+  -fx-font-weight: normal;
+  -fx-text-fill: -fx-color-text;
+}
+
+
+.popover > .border {
+  -fx-stroke: -fx-color-secondary-30;
+  -fx-stroke-width: 1.5;
+  -fx-fill: rgba(255.0,255.0,255.0, .95);
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,.25), 18.0, 0.0, 0.0, 6.0);
+}
+
+.popover > .content {
+  -fx-background-color: -fx-color-neutral-white;
+  -fx-font-weight: normal;
+  -fx-background-insets: 4
+}
+
+#whatsNewPane{
+  -fx-background-color: -fx-color-neutral-white;
+  -fx-font-weight: normal;
+  -fx-background-insets: 3;
+}
+
+#titleLabel {
+  -fx-font-size: 1.22em;
+  -fx-font-weight: bold;
+  -fx-text-fill: -fx-color-text;
+  -fx-wrap-text: true;
+}
+
+#imageContainer {
+  -fx-background-color: -fx-color-neutral-10;
+  -fx-background-radius: 4;
+  -fx-border-color: -fx-color-neutral-80;
+  -fx-border-radius: 4px;
+  -fx-border-style: solid outside line-join round; -fx-border-width: 2.222px;
+  -fx-padding: 1;
+}
+
+#bannerTitle {
+  -fx-font-size: 1.44em;
+  -fx-font-weight: bold;
+  -fx-text-fill: -fx-color-text;
+  -fx-wrap-text: true;
+}
+
+#bannerStatus {
+  -fx-padding: 0.333em 0.555em 0.333em 0.555em;
+}
+
+#contentFlow {
+  -fx-font-size: 1em;
+  -fx-font-weight: normal;
+  -fx-text-fill: -fx-color-text;
+}
+
+#notificationLabel {
+  -fx-font-size: 0.8333em;
+  -fx-text-fill: -fx-color-text;
+}
+
+#reccomendationTextFlow {
+  -fx-font-size: 0.83333em;
+}
+
+#gotitCheckbox {
+  -fx-font-size: 1em;
+  -fx-text-fill: -fx-color-text;
+}
+
+#closeButton {
+  -fx-background-color: -fx-color-primary-40;
+  -fx-border-color: transparent transparent transparent transparent, transparent transparent -fx-color-primary-70 transparent;
+  -fx-border-insets: 0 0 1 0, 0 0 0 0;
+}
+
+#closeButton:hover {
+  -fx-background-color: derive(-fx-color-primary-40, -10%);
+}
+
+#closeButton:pressed {
+  -fx-background-color: derive(-fx-color-primary-40, -20%);
+  -fx-border-color: transparent;
+}

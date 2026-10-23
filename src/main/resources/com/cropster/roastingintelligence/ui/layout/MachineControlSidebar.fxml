@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import com.cropster.roastingintelligence.ui.components.Tooltip?>
+
+<fx:root type="BorderPane" styleClass="pane--elevated" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <SVGImage fx:id="ICON_LAYOUT" icon="LAYOUT"/>
+        <SVGImage fx:id="ICON_SIDEBAR" icon="SIDEBAR"/>
+        <SVGImage fx:id="ICON_SIDEBAR_DETACHED" icon="SIDEBAR_DETACHED"/>
+    </fx:define>
+    <top>
+        <VBox fx:id="headerBox" spacing="5" styleClass="padding-sides--small">
+            <HBox spacing="4" alignment="CENTER_LEFT">
+                <Label text="${controller.title}" maxWidth="Infinity" styleClass="heading" HBox.hgrow="ALWAYS">
+                    <tooltip>
+                        <Tooltip text="${controller.title}"/>
+                    </tooltip>
+                </Label>
+                <Button fx:id="layoutButton" graphic="$ICON_LAYOUT" managed="${layoutButton.visible}">
+                    <styleClass>
+                        <String fx:value="button--transparent"/>
+                        <String fx:value="button--sidebar"/>
+                    </styleClass>
+                </Button>
+                <Button fx:id="attachButton" graphic="$ICON_SIDEBAR" onAction="#attach" visible="false" managed="${attachButton.visible}">
+                    <styleClass>
+                        <String fx:value="button--transparent"/>
+                        <String fx:value="button--sidebar"/>
+                    </styleClass>
+                </Button>
+                <Button fx:id="detachButton" graphic="$ICON_SIDEBAR_DETACHED" onAction="#detach" managed="${detachButton.visible}">
+                    <styleClass>
+                        <String fx:value="button--transparent"/>
+                        <String fx:value="button--sidebar"/>
+                    </styleClass>
+                </Button>
+            </HBox>
+        </VBox>
+    </top>
+</fx:root>

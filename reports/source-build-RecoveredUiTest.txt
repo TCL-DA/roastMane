@@ -1,0 +1,2 @@
+2026-10-23 09:16:32.922 INFO Messages.<clinit>:165 - Loading resource bundle for en_US
+PASS RecoveredUiTest CodeSource=C:\Tools\_soi\roastMane-SourceBuild-20261023-01\app\roastingintelligence-5.13.jar

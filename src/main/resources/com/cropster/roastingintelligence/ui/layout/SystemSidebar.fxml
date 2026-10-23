@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+<?import com.cropster.roastingintelligence.ui.components.HintsButton?>
+<?import com.cropster.roastingintelligence.ui.components.HyperlinkText?>
+<?import com.cropster.roastingintelligence.ui.components.LineBreak?>
+<?import com.cropster.roastingintelligence.ui.components.MessageBox?>
+<?import com.cropster.roastingintelligence.ui.components.Tooltip?>
+
+<fx:root type="BorderPane" styleClass="pane--elevated" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Insets fx:id="SEPARATOR_MARGIN" right="-8.0" left="-8.0"/>
+        <SVGImage fx:id="ICON_EMPTY" icon="EMPTY"/>
+        <SVGImage fx:id="ICON_ERROR" icon="ERROR" styleClass="icon--error"/>
+        <SVGImage fx:id="ICON_LOGO" icon="LOGO_CROPSTER_COLOR"/>
+        <SVGImage fx:id="ICON_NOT_FOUND" icon="SYNC" styleClass="icon--info" scale="0.75"/>
+        <SVGImage fx:id="ICON_SIDEBAR" icon="SIDEBAR"/>
+        <SVGImage fx:id="ICON_SIDEBAR_DETACHED" icon="SIDEBAR_DETACHED"/>
+        <SVGImage fx:id="ICON_SUCCESS" icon="SUCCESS" styleClass="icon--success"/>
+        <SVGImage fx:id="ICON_SUSPENDED" icon="SYNC" styleClass="icon--warning" scale="0.75"/>
+        <SVGImage fx:id="ICON_WARNING" icon="WARNING" styleClass="icon--warning"/>
+        <SVGImage fx:id="ICON_USER" icon="USER"/>
+    </fx:define>
+    <top>
+        <VBox fx:id="headerBox">
+            <styleClass>
+                <String fx:value="padding-sides--small"/>
+                <String fx:value="spacing--default"/>
+            </styleClass>
+            <HBox alignment="CENTER_LEFT" styleClass="spacing--small">
+                <Label text="${controller.title}" maxWidth="Infinity" styleClass="heading" HBox.hgrow="ALWAYS">
+                    <tooltip>
+                        <Tooltip text="${controller.title}"/>
+                    </tooltip>
+                </Label>
+                <HintsButton arrowLocation="LEFT_TOP" small="true" title="%About this sidebar">
+                    <Text text="%Keep track of the system status and troubleshoot if you experience issues."/>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Text text="%Get informed about new software updates and notifications from the Cropster team."/>
+                </HintsButton>
+                <Button fx:id="attachButton" graphic="$ICON_SIDEBAR" onAction="#attach" visible="false" managed="${attachButton.visible}">
+                    <styleClass>
+                        <String fx:value="button--transparent"/>
+                        <String fx:value="button--sidebar"/>
+                    </styleClass>
+                </Button>
+                <Button fx:id="detachButton" graphic="$ICON_SIDEBAR_DETACHED" onAction="#detach" managed="${detachButton.visible}">
+                    <styleClass>
+                        <String fx:value="button--transparent"/>
+                        <String fx:value="button--sidebar"/>
+                    </styleClass>
+                </Button>
+            </HBox>
+            <Region maxHeight="0"/> <!-- Spacer -->
+            <Separator fx:id="statusSeparator">
+                <styleClass>
+                    <String fx:value="sidebar-group-separator"/>
+                    <String fx:value="padding--horizontally-extended"/>
+                </styleClass>
+            </Separator>
+        </VBox>
+    </top>
+    <center>
+        <ScrollPane hbarPolicy="NEVER" fitToWidth="true" prefWidth="360">
+            <VBox>
+                <styleClass>
+                    <String fx:value="spacing--large"/>
+                    <String fx:value="padding-top--small"/>
+                </styleClass>
+
+                <HBox spacing="4" HBox.hgrow="ALWAYS" alignment="TOP_LEFT">
+                    <Label graphic="$ICON_LOGO" styleClass="system-sidebar-group--title-icon"/>
+                    <Label fx:id="statusTitle" styleClass="system-sidebar-group--title-text"/>
+                </HBox>
+                <VBox styleClass="system-sidebar-group">
+                    <VBox styleClass="spacing--small">
+                        <Label fx:id="connectionStatus"/>
+                        <Label fx:id="ambientTemperatureStatus" graphic="$ICON_EMPTY" managed="${ambientTemperatureStatus.visible}" visible="false"/>
+                    </VBox>
+                    <Label fx:id="synchronizationStatus"/>
+                    <Label minHeight="0" maxHeight="0"/> <!-- separator -->
+                    <MessageBox fx:id="errorStatusMessage" styleClass="info-message--error" managed="${errorStatusMessage.visible}" visible="false"/>
+                    <MessageBox fx:id="warningStatusMessage" styleClass="info-message--warning" managed="${warningStatusMessage.visible}" visible="false"/>
+                </VBox>
+
+                <Separator fx:id="userSeparator" styleClass="sidebar-group-separator" VBox.margin="$SEPARATOR_MARGIN"/>
+
+                <HBox spacing="4" HBox.hgrow="ALWAYS" alignment="TOP_LEFT">
+                    <Label graphic="$ICON_USER" styleClass="system-sidebar-group--title-icon"/>
+                    <Label fx:id="performanceTitle" text="%Activity insights" styleClass="system-sidebar-group--title-text"/>
+                </HBox>
+                <VBox>
+                    <styleClass>
+                        <String fx:value="system-sidebar-group"/>
+                        <String fx:value="spacing--large"/>
+                    </styleClass>
+                    <Label fx:id="loggedInUser" styleClass="highlighted"/>
+                    <HBox spacing="4" alignment="CENTER_LEFT">
+                        <Label text="%Since last login" styleClass="highlighted"/>
+                        <Label fx:id="lastLoginDate" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                        <HintsButton arrowLocation="LEFT_TOP" small="true" title="%About these statistics">
+                            <Text text="%• Roasted batches: started, stopped and uploaded."/>
+                            <LineBreak/>
+                            <Text text="%• Aborted roasts: started, aborted and not uploaded."/>
+                            <LineBreak/>
+                            <Text text="%• Weight outliers: discrepancies between machine capacity and the roasted batch start weights."/>
+                        </HintsButton>
+                    </HBox>
+                    <GridPane styleClass="grid-pane--compact">
+                        <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"/>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"/>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints valignment="CENTER" vgrow="SOMETIMES"/>
+                            <RowConstraints valignment="CENTER" vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <Label fx:id="roastedBatches" text="0" styleClass="statistic" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                        <Label fx:id="abortedRoasts" text="0" styleClass="statistic" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                        <Label fx:id="weightOutliers" text="0" styleClass="statistic" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                        <Label fx:id="roastedBatchesCaption" styleClass="split" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                        <Label fx:id="abortedRoastsCaption" styleClass="split" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <Label fx:id="weightOutliersCaption" styleClass="split" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                    </GridPane>
+                    <TextFlow fx:id="userPerformanceNoteTextFlow"/>
+                </VBox>
+
+                <Separator fx:id="updateSeparator" styleClass="sidebar-group-separator" VBox.margin="$SEPARATOR_MARGIN"/>
+
+                <HBox spacing="4" HBox.hgrow="ALWAYS" alignment="TOP_LEFT">
+                    <Label graphic="$ICON_SUCCESS" styleClass="system-sidebar-group--title-icon"/>
+                    <Label fx:id="updateTitle" text="%Latest version installed" styleClass="system-sidebar-group--title-text"/>
+                </HBox>
+                <VBox styleClass="system-sidebar-group">
+                    <TextFlow fx:id="currentVersionTextFlow" managed="${currentVersionTextFlow.visible}"/>
+                    <TextFlow>
+                        <HyperlinkText text="%Check all versions release notes" url="https://www.cropster.com/product-updates/ri-release-notes/"/>
+                    </TextFlow>
+                    <Label fx:id="updateDescription" wrapText="true" visible="false" managed="${updateDescription.visible}"/>
+                </VBox>
+                <ProgressBar fx:id="progressBar" managed="${progressBar.visible}" visible="false" maxWidth="Infinity">
+                    <styleClass>
+                        <String fx:value="system-sidebar-progress"/>
+                        <String fx:value="padding-left-right--small"/>
+                    </styleClass>
+                </ProgressBar>
+                <VBox styleClass="system-sidebar-group">
+                    <Button fx:id="updateActionButton" visible="false" managed="${updateActionButton.visible}" maxWidth="Infinity" styleClass="button--plain"/>
+                    <HBox fx:id="updateSuspendedTag" managed="${updateSuspendedTag.visible}" visible="false" alignment="CENTER" maxWidth="Infinity">
+                        <Label text="%AUTOMATIC UPDATES DISABLED" graphic="$ICON_SUSPENDED">
+                            <styleClass>
+                                <String fx:value="tag"/>
+                                <String fx:value="tag--larger-padding"/>
+                                <String fx:value="tag--tiny-bold"/>
+                                <String fx:value="tag--warning"/>
+                                <String fx:value="text--warning"/>
+                            </styleClass>
+                        </Label>
+                    </HBox>
+                    <HBox fx:id="updateNotFoundTag" managed="${updateNotFoundTag.visible}" visible="false" alignment="CENTER" maxWidth="Infinity">
+                        <Label text="%NO UPDATES FOUND" graphic="$ICON_NOT_FOUND">
+                            <styleClass>
+                                <String fx:value="tag"/>
+                                <String fx:value="tag--larger-padding"/>
+                                <String fx:value="tag--tiny-bold"/>
+                                <String fx:value="tag--info"/>
+                                <String fx:value="text--info"/>
+                            </styleClass>
+                        </Label>
+                    </HBox>
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+</fx:root>

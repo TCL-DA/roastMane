@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root type="GridPane" prefWidth="268" styleClass="temperature-box" xmlns:fx="http://javafx.com/fxml">
+    <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" percentWidth="50.0"/>
+        <ColumnConstraints halignment="RIGHT" percentWidth="50.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints fillHeight="false" valignment="CENTER" vgrow="NEVER"/>
+    </rowConstraints>
+
+    <StackPane fx:id="rorContainer" managed="${rorContainer.visible}" styleClass="temperature-box__ror" GridPane.columnIndex="0">
+        <GridPane.margin>
+            <Insets right="8.0"/>
+        </GridPane.margin>
+        <Label fx:id="rorValueLabel" styleClass="temperature-box__ror-text"/>
+    </StackPane>
+    <VBox fx:id="valueContainer" styleClass="temperature-box__value" GridPane.columnIndex="1">
+        <Label fx:id="valueLabel" styleClass="temperature-box__temp"/>
+        <HBox VBox.vgrow="NEVER" styleClass="temperature-box__info">
+            <Label fx:id="nameLabel" styleClass="temperature-box__name"/>
+            <Label fx:id="unitLabel" styleClass="temperature-box__unit" minWidth="${unitLabel.prefWidth}" managed="${unitLabel.visible}"/>
+        </HBox>
+    </VBox>
+</fx:root>

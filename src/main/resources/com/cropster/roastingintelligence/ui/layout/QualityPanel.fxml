@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import com.cropster.roastingintelligence.ui.components.LinkToPhysicalLabel?>
+<?import com.cropster.roastingintelligence.ui.components.LinkToSensorialLabel?>
+
+<fx:root fillWidth="true" type="javafx.scene.layout.VBox" xmlns:fx="http://javafx.com/fxml">
+    <Label maxWidth="Infinity" styleClass="statistics-title" text="%Latest production cupping" />
+    <GridPane fx:id="productionCuppingPane" styleClass="statistics-panel">
+        <columnConstraints>
+            <ColumnConstraints minWidth="80" />
+            <ColumnConstraints hgrow="ALWAYS" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="20.0" valignment="CENTER" />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+        </rowConstraints>
+        <Label styleClass="statistics-separator" text="Analysis" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <LinkToSensorialLabel styleClass="statistics-separator" text="QC-1234" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="Final score" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label text="85.7" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Descriptors" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label text="Berry, Honey, Flat" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label text="Comments" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Label text="Too little development time" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    </GridPane>
+   <Label maxWidth="Infinity" styleClass="statistics-title" text="%Green grading" />
+   <GridPane fx:id="greenGradingPane" styleClass="statistics-panel">
+        <columnConstraints>
+            <ColumnConstraints minWidth="80.0" />
+            <ColumnConstraints hgrow="ALWAYS" />
+            <ColumnConstraints hgrow="ALWAYS" />
+            <ColumnConstraints hgrow="ALWAYS" />
+         <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="20.0" valignment="CENTER" />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+        <Label styleClass="statistics-separator" text="Analysis" />
+        <LinkToPhysicalLabel styleClass="statistics-separator" text="QC-4567" GridPane.columnIndex="1" GridPane.columnSpan="3" />
+        <Label text="Results" GridPane.rowIndex="1" />
+        <Label text="Moisture: 12%; Water act.: 0.6 AW" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+        <Label styleClass="statistics-separator" text="Analysis" GridPane.rowIndex="2" />
+        <Label styleClass="statistics-separator" text="QC-5678" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+        <Label text="Results" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+        <Label text="Moisture: 12%; Water act.: 0.6 AW" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+    </GridPane>
+</fx:root>

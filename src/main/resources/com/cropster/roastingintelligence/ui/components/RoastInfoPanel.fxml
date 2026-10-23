@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import com.cropster.roastingintelligence.ui.components.MeasureLabel?>
+<?import com.cropster.roastingintelligence.ui.util.AutoIncIndex?>
+
+<fx:root type="javafx.scene.layout.BorderPane" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <AutoIncIndex fx:id="tab1" />
+        <SVGImage fx:id="ICON_FAVOURITE" icon="FAVOURITE" />
+    </fx:define>
+    <center>
+        <TabPane styleClass="tab-pane-like-toggle-button">
+            <padding>
+                <Insets topRightBottomLeft="10" />
+            </padding>
+            <Tab text="%Information" closable="false">
+                <styleClass>
+                    <String fx:value="toggle-button" />
+                    <String fx:value="toggle-button-group__left" />
+                </styleClass>
+                <ScrollPane fitToWidth="true">
+                    <GridPane hgap="10" vgap="10">
+                        <padding>
+                            <Insets topRightBottomLeft="10" />
+                        </padding>
+                        <columnConstraints>
+                            <ColumnConstraints minWidth="-Infinity" halignment="RIGHT" />
+                            <ColumnConstraints />
+                            <ColumnConstraints hgrow="ALWAYS" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints valignment="TOP" />
+                            <RowConstraints valignment="TOP" />
+                            <RowConstraints valignment="TOP" />
+                            <RowConstraints valignment="TOP" />
+                            <RowConstraints valignment="TOP" />
+                            <RowConstraints valignment="TOP" />
+                            <RowConstraints valignment="TOP" vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label text="%Profile" styleClass="input-label" /> 
+                        <Label text="${controller.profile}" GridPane.columnIndex="1" />
+                        <Label text="%ID-Tag" styleClass="input-label" GridPane.rowIndex="$tab1.inc" />
+                        <VBox GridPane.rowIndex="$tab1.idx" GridPane.columnIndex="1">
+                            <Label text="${controller.idTag}" />
+                            <Label fx:id="markedAsReferenceTextLabel" graphic="$ICON_FAVOURITE">
+                                <styleClass>
+                                    <String fx:value="status-message" />
+                                </styleClass>
+                            </Label>
+                        </VBox> 
+                        <Label text="%Green lot(s)" styleClass="input-label" GridPane.rowIndex="$tab1.inc" />
+                        <Label text="${controller.lots}" GridPane.rowIndex="$tab1.idx" GridPane.columnIndex="1" />
+                        <Label text="$controller.weightLabel" styleClass="input-label" GridPane.rowIndex="$tab1.inc" />
+                        <Label fx:id="weightLabel" GridPane.rowIndex="$tab1.idx" GridPane.columnIndex="1" />
+                        <Label text="%Roast value 1" styleClass="input-label" GridPane.rowIndex="$tab1.inc" />
+                        <MeasureLabel value="${controller.roastValue1}" GridPane.rowIndex="$tab1.idx" GridPane.columnIndex="1" />
+                        <Label text="%Roast value 2" styleClass="input-label" GridPane.rowIndex="$tab1.inc" />
+                        <MeasureLabel value="${controller.roastValue2}" GridPane.rowIndex="$tab1.idx" GridPane.columnIndex="1" />
+                        <Label text="%Roast notes" styleClass="input-label" GridPane.rowIndex="$tab1.inc" />
+                        <!-- TextFlow GridPane.rowIndex="$tab1.idx" GridPane.columnIndex="1">
+                            <Text text="${controller.notes}" />
+                        </TextFlow-->
+                        <Label text="${controller.notes}" wrapText="true" GridPane.rowIndex="$tab1.idx" GridPane.columnIndex="1" />
+                    </GridPane>
+                </ScrollPane>
+            </Tab>
+            <Tab fx:id="alertTab" text="%Missed goals" closable="false">
+                <styleClass>
+                    <String fx:value="toggle-button" />
+                    <String fx:value="toggle-button-group__right" />
+                </styleClass>
+                <ScrollPane fitToWidth="true">
+                    <GridPane fx:id="alertPanel" hgap="10" vgap="10">
+                        <padding>
+                            <Insets topRightBottomLeft="10" />
+                        </padding>
+                        <columnConstraints>
+                            <ColumnConstraints halignment="RIGHT" />
+                            <ColumnConstraints hgrow="ALWAYS" />
+                        </columnConstraints>
+                        <Label text="%Missed goals" styleClass="input-label" /> 
+                    </GridPane>
+                </ScrollPane>
+            </Tab>
+        </TabPane>
+    </center>
+</fx:root>

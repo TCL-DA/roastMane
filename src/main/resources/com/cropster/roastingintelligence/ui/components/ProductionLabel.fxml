@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import com.cropster.roastingintelligence.ui.components.Tooltip?>
+
+<fx:root type="VBox" styleClass="basic-list-cell" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <GridPane fx:id="REMAINING" fx:constant="REMAINING"/>
+        <Insets fx:id="BODY_MARGIN" top="8" right="12" bottom="8" left="12"/>
+        <Insets fx:id="HEADER_MARGIN" top="12" right="12" bottom="12" left="12"/>
+        <Insets fx:id="NOTE_MARGIN" bottom="4"/>
+        <Insets fx:id="PROFILE_PADDING" top="-4"/>
+        <Insets fx:id="TABLE_MARGIN" top="4"/>
+        <Region fx:id="USE_PREF_SIZE" fx:constant="USE_PREF_SIZE" />
+        <SVGImage fx:id="ICON_EDIT" icon="EDIT"/>
+        <SVGImage fx:id="ICON_SEE_MORE" icon="SEE_MORE"/>
+    </fx:define>
+
+    <HBox styleClass="basic-list-cell--header" VBox.margin="$HEADER_MARGIN">
+        <VBox styleClass="vertical-header-container" HBox.hgrow="ALWAYS">
+            <HBox fx:id="headerTopArea" styleClass="horizontal-header-container" managed="${headerTopArea.visible}">
+                <Label fx:id="syncedBadge" text="%SYNCED" managed="${syncedBadge.visible}" visible="false">
+                    <styleClass>
+                        <String fx:value="tag"/>
+                        <String fx:value="tag--badge"/>
+                        <String fx:value="tag--success"/>
+                    </styleClass>
+                </Label>
+                <Label fx:id="syncingBadge" text="%SYNCING" managed="${syncingBadge.visible}" visible="false">
+                    <styleClass>
+                        <String fx:value="tag"/>
+                        <String fx:value="tag--badge"/>
+                        <String fx:value="tag--warning"/>
+                    </styleClass>
+                </Label>
+                <Label fx:id="unsyncedBadge" text="%UNSYNCED" managed="${unsyncedBadge.visible}" visible="false">
+                    <styleClass>
+                        <String fx:value="tag"/>
+                        <String fx:value="tag--badge"/>
+                        <String fx:value="tag--error"/>
+                    </styleClass>
+                </Label>
+                <Label fx:id="selectedBadge" text="%SELECTED" managed="${selectedBadge.visible}" visible="false">
+                    <styleClass>
+                        <String fx:value="tag"/>
+                        <String fx:value="tag--badge"/>
+                        <String fx:value="tag--info"/>
+                    </styleClass>
+                </Label>
+                <Label minWidth="0" maxWidth="Infinity" HBox.hgrow="ALWAYS"/> <!-- pusher -->
+                <HBox fx:id="buttonsBar" managed="${buttonsBar.visible}" spacing="4" alignment="CENTER_RIGHT" HBox.hgrow="NEVER">
+                    <Button fx:id="editButton" onAction="#edit" styleClass="button--transparent" graphic="$ICON_EDIT" HBox.hgrow="NEVER">
+                        <tooltip>
+                            <Tooltip text="%Edit roast"/>
+                        </tooltip>
+                    </Button>
+                    <Button fx:id="menuButton" onAction="#showMenu" styleClass="button--transparent" graphic="$ICON_SEE_MORE" HBox.hgrow="NEVER">
+                        <tooltip>
+                            <Tooltip text="%More actions"/>
+                        </tooltip>
+                    </Button>
+                </HBox>
+            </HBox>
+            <VBox spacing="0">
+                <HBox fx:id="profileBox" managed="${profileBox.visible}" visible="false" spacing="8" maxWidth="Infinity" alignment="CENTER_LEFT">
+                    <Label fx:id="profileLabel" padding="$PROFILE_PADDING" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="startWeightLabel" minWidth="$USE_PREF_SIZE" HBox.hgrow="NEVER"/>
+                </HBox>
+                <HBox spacing="8" maxWidth="Infinity" alignment="CENTER_LEFT">
+                    <Label fx:id="titleLeftLabel" text="${controller.titleLeft}" styleClass="header-title--bold" managed="${titleLeftLabel.visible}" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                        <tooltip>
+                            <Tooltip text="${controller.titleLeft}"/>
+                        </tooltip>
+                    </Label>
+                    <Label fx:id="titleRightLabel" text="${controller.titleRight}" minWidth="$USE_PREF_SIZE" styleClass="header-title--bold" HBox.hgrow="NEVER"/>
+                </HBox>
+                <HBox fx:id="residualBox" managed="${residualBox.visible}" visible="false" spacing="8" maxWidth="Infinity" alignment="BOTTOM_LEFT">
+                    <Label text="%Available for new blends" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                        <styleClass>
+                            <String fx:value="label--for"/>
+                            <String fx:value="label--small"/>
+                        </styleClass>
+                    </Label>
+                    <Label fx:id="residualWeightLabel" styleClass="header-title--bold" minWidth="$USE_PREF_SIZE" managed="${residualWeightLabel.visible}" HBox.hgrow="NEVER"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </HBox>
+
+    <Separator fx:id="headerSeparator" managed="${headerSeparator.visible}"/>
+
+    <HBox fx:id="bodyBox" styleClass="basic-list-cell--body" spacing="8" managed="${bodyBox.visible}">
+        <VBox styleClass="vertical-header-container" HBox.hgrow="ALWAYS" HBox.margin="$BODY_MARGIN">
+            <Label fx:id="notesLabel" text="${controller.notes}" wrapText="true" contentDisplay="TEXT_ONLY" styleClass="label--italic" managed="${notesLabel.visible}" VBox.margin="$NOTE_MARGIN"/>
+            <GridPane fx:id="subSection" hgap="5" styleClass="subsection" GridPane.rowIndex="2" GridPane.columnSpan="$REMAINING">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="ALWAYS" maxWidth="Infinity"/>
+                    <ColumnConstraints hgrow="NEVER" halignment="RIGHT" minWidth="$USE_PREF_SIZE"/>
+                    <ColumnConstraints hgrow="NEVER" halignment="RIGHT" minWidth="$USE_PREF_SIZE"/>
+                </columnConstraints>
+            </GridPane>
+        </VBox>
+    </HBox>
+</fx:root>

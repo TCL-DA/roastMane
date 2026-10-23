@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import com.cropster.roastingintelligence.ui.components.FormComponent?>
+<?import com.cropster.roastingintelligence.ui.components.MessageBox?>
+<?import com.cropster.roastingintelligence.ui.util.AutoIncIndex?>
+
+<fx:root type="GridPane" styleClass="grid-pane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <AutoIncIndex fx:id="row"/>
+        <SVGImage fx:id="ICON_ADD" icon="ADD"/>
+        <SVGImage fx:id="ICON_WARNING" icon="WARNING" styleClass="icon--warning"/>
+    </fx:define>
+    <columnConstraints>
+        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" fillWidth="true"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints vgrow="NEVER" valignment="TOP"/>
+        <RowConstraints vgrow="NEVER" valignment="TOP"/>
+        <RowConstraints vgrow="ALWAYS" prefHeight="240" maxHeight="Infinity"/>
+    </rowConstraints>
+
+    <VBox styleClass="spacing--large" GridPane.rowIndex="$row.idx">
+        <MessageBox fx:id="warningMessageBox" managed="${warningMessageBox.visible}" visible="false" graphic="$ICON_WARNING" styleClass="info-message--warning"/>
+        <FormComponent title="%Machine">
+            <ComboBox fx:id="machineComboBox"/>
+        </FormComponent>
+        <FormComponent title="Filter" visible="${controller.filterPossible}" managed="${controller.filterPossible}" note="%Interpolates RoR data during roasting; temperature is interpolated when syncing to reduce steps and noise.">
+            <CheckBox fx:id="filterCheckbox" text="%Smooth RoR (live) and temperature (on sync) curves"/>
+        </FormComponent>
+    </VBox>
+
+    <Separator styleClass="preferences-separator" GridPane.rowIndex="$row.inc"/>
+
+    <VBox styleClass="spacing--large" GridPane.rowIndex="$row.inc">
+        <FormComponent title="%Demo curve" visible="${controller.showDemoOptions}" managed="${controller.showDemoOptions}">
+            <CheckBox fx:id="timeLapseCheckBox" text="Show demo curve under time-lapse mode"/>
+        </FormComponent>
+
+        <Separator styleClass="preferences-separator" visible="${controller.showDemoOptions}" managed="${controller.showDemoOptions}"/>
+
+        <FormComponent title="%Connector setup">
+            <description>
+                <Text text="%Add and configure new connectors here. Assign your connectors to measurements under the “Measurements” tab."/>
+            </description>
+            <VBox styleClass="spacing--default">
+                <ListView fx:id="connectorView">
+                    <styleClass>
+                        <String fx:value="transparent-list"/>
+                        <String fx:value="alternate-list"/>
+                    </styleClass>
+                </ListView>
+                <Button fx:id="addConnectorButton" text="%Add connector" graphic="$ICON_ADD" maxWidth="Infinity"/>
+            </VBox>
+        </FormComponent>
+    </VBox>
+</fx:root>

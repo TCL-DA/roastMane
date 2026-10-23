@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import com.cropster.roastingintelligence.ui.components.ToggleSwitch?>
+<?import com.cropster.roastingintelligence.ui.components.Tooltip?>
+
+<fx:root type="VBox" styleClass="basic-list-cell" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Insets fx:id="BODY_MARGIN" top="8" right="12" bottom="8" left="12"/>
+        <Insets fx:id="HEADER_MARGIN" top="12" right="12" bottom="12" left="12"/>
+        <SVGImage fx:id="ICON_BOTH" icon="REORDER" scale="0.75"/>
+        <SVGImage fx:id="ICON_SEE_MORE" icon="SEE_MORE"/>
+        <SVGImage fx:id="ICON_SHOW" icon="SHOW" scale="0.75"/>
+        <SVGImage fx:id="ICON_VOLUME_HIGH" icon="VOLUME_HIGH" scale="0.75"/>
+    </fx:define>
+
+    <HBox styleClass="basic-list-cell--header" VBox.margin="$HEADER_MARGIN">
+        <ToggleSwitch fx:id="enabledButton" maxHeight="16.0" alignment="CENTER_LEFT">
+            <styleClass>
+                <String fx:value="toggle-switch--small"/>
+                <String fx:value="enabled-button"/>
+            </styleClass>
+        </ToggleSwitch>
+        <Label fx:id="titleLabel" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+            <styleClass>
+                <String fx:value="header-title--bold"/>
+                <String fx:value="extra-vspace"/>
+            </styleClass>
+        </Label>
+        <Button fx:id="menuButton" onAction="#showMenu" styleClass="button--transparent" graphic="$ICON_SEE_MORE" HBox.hgrow="NEVER">
+            <tooltip>
+                <Tooltip text="%More actions"/>
+            </tooltip>
+        </Button>
+    </HBox>
+
+    <Separator fx:id="headerSeparator"/>
+
+    <HBox styleClass="basic-list-cell--body">
+        <HBox styleClass="horizontal-header-container" HBox.margin="$BODY_MARGIN" HBox.hgrow="ALWAYS">
+            <Label fx:id="directionIcon" graphic="$ICON_BOTH" managed="${directionIcon.visible}" styleClass="icon" HBox.hgrow="NEVER"/>
+            <Label fx:id="audibleIcon" graphic="$ICON_VOLUME_HIGH" managed="${audibleIcon.visible}" styleClass="icon" HBox.hgrow="NEVER">
+                <tooltip>
+                    <Tooltip text="%Sound alert"/>
+                </tooltip>
+            </Label>
+            <Label fx:id="visibleIcon" graphic="$ICON_SHOW" managed="${visibleIcon.visible}" styleClass="icon" HBox.hgrow="NEVER">
+                <tooltip>
+                    <Tooltip text="%Visual alert"/>
+                </tooltip>
+            </Label>
+            <Circle fx:id="visiblePreview" styleClass="alarm-color-preview" managed="${visiblePreview.visible}" visible="${visibleIcon.visible}" radius="4" HBox.hgrow="NEVER"/>
+            <Label fx:id="phaseLabel" styleClass="phase-label" maxWidth="Infinity" alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS"/>
+        </HBox>
+    </HBox>
+</fx:root>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import com.cropster.roastingintelligence.ui.components.Tooltip?>
+
+<fx:root type="VBox" styleClass="basic-list-cell" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Insets fx:id="BODY_MARGIN" top="8" right="12" bottom="8" left="12"/>
+        <Insets fx:id="COMMENT_MARGIN" top="4"/>
+        <Insets fx:id="HEADER_MARGIN" top="12" right="12" bottom="12" left="12"/>
+        <Insets fx:id="USER_ICON_PADDING" left="2"/>
+        <SVGImage fx:id="ICON_COMMENT" icon="COMMENT"/>
+        <SVGImage fx:id="ICON_FOR_ASSIGNEE" icon="EVALUATOR"/>
+        <SVGImage fx:id="ICON_FOR_COMMENT" icon="COMMENT"/>
+        <SVGImage fx:id="ICON_SCHEDULE" icon="SCHEDULE"/>
+        <SVGImage fx:id="ICON_SEE_MORE" icon="SEE_MORE"/>
+        <SVGImage fx:id="ICON_SYNC" icon="SYNC"/>
+    </fx:define>
+
+    <HBox styleClass="basic-list-cell--header" VBox.margin="$HEADER_MARGIN">
+        <VBox styleClass="vertical-header-container" HBox.hgrow="ALWAYS">
+            <HBox styleClass="horizontal-header-container">
+                <Label fx:id="statusBadge" managed="${statusBadge.visible}" styleClass="tag">
+                    <styleClass>
+                        <String fx:value="tag"/>
+                        <String fx:value="tag--badge"/>
+                        <String fx:value="tag--transparent"/>
+                    </styleClass>
+                </Label>
+                <Label fx:id="missedBadge" text="%MISSED" managed="${missedBadge.visible}">
+                    <styleClass>
+                        <String fx:value="tag"/>
+                        <String fx:value="tag--badge"/>
+                        <String fx:value="tag--error"/>
+                    </styleClass>
+                </Label>
+                <Label fx:id="overdueBadge" text="%OVERDUE" managed="${overdueBadge.visible}">
+                    <styleClass>
+                        <String fx:value="tag"/>
+                        <String fx:value="tag--badge"/>
+                        <String fx:value="tag--warning"/>
+                    </styleClass>
+                </Label>
+                <Label minWidth="0" maxWidth="Infinity" HBox.hgrow="ALWAYS"/> <!-- pusher -->
+                <HBox fx:id="buttonsBar" managed="${buttonsBar.visible}" spacing="4" alignment="CENTER_RIGHT" HBox.hgrow="NEVER">
+                    <Button fx:id="markButton" onAction="#markWithComment" styleClass="button--transparent" graphic="$ICON_COMMENT" HBox.hgrow="NEVER">
+                        <tooltip>
+                            <Tooltip text="%Mark with a comment"/>
+                        </tooltip>
+                    </Button>
+                    <Button fx:id="menuButton" onAction="#showMenu" styleClass="button--transparent" graphic="$ICON_SEE_MORE" HBox.hgrow="NEVER">
+                        <tooltip>
+                            <Tooltip text="%More actions"/>
+                        </tooltip>
+                    </Button>
+                </HBox>
+            </HBox>
+            <Label fx:id="titleLabel" styleClass="header-title--bold" minHeight="16.0" maxWidth="Infinity"/>
+        </VBox>
+    </HBox>
+
+    <Separator fx:id="headerSeparator"/>
+
+    <HBox styleClass="basic-list-cell--body" spacing="8">
+        <VBox styleClass="vertical-header-container" HBox.hgrow="ALWAYS" HBox.margin="$BODY_MARGIN">
+            <Label fx:id="descriptionLabel" text="Bla bla bla" wrapText="true" managed="${descriptionLabel.visible}" styleClass="label--italic"/>
+            <HBox fx:id="dueStatusPane" spacing="8" alignment="CENTER_LEFT" minHeight="20">
+                <Label fx:id="frequencyLabel" styleClass="label--small" graphic="$ICON_SYNC" managed="${frequencyLabel.visible}"/>
+                <Label fx:id="dateLabel" styleClass="label--small" graphic="$ICON_SCHEDULE" managed="${dateLabel.visible}"/>
+                <Label fx:id="overdueCountLabel" managed="${overdueCountLabel.visible}" styleClass="label--small">
+                    <styleClass>
+                        <String fx:value="tag"/>
+                        <String fx:value="tag--badge-padding"/>
+                        <String fx:value="tag--warning"/>
+                        <String fx:value="label--small"/>
+                    </styleClass>
+                </Label>
+            </HBox>
+            <HBox spacing="4" alignment="CENTER_LEFT">
+                <Label graphic="$ICON_FOR_ASSIGNEE" contentDisplay="GRAPHIC_ONLY" prefWidth="${commentIcon.width}" padding="$USER_ICON_PADDING"/>
+                <Label fx:id="assigneeLabel" text="Matthias" contentDisplay="TEXT_ONLY" styleClass="label--small"/>
+            </HBox>
+            <HBox spacing="4" managed="${commentLabel.visible}" visible="${commentLabel.visible}" VBox.margin="$COMMENT_MARGIN">
+                <Label fx:id="commentIcon" graphic="$ICON_FOR_COMMENT" contentDisplay="GRAPHIC_ONLY"/>
+                <Label fx:id="commentLabel" text="Completed satifactorily" wrapText="true" contentDisplay="TEXT_ONLY">
+                    <styleClass>
+                        <String fx:value="label--small"/>
+                        <String fx:value="label--italic"/>
+                    </styleClass>
+                </Label>
+            </HBox>
+        </VBox>
+    </HBox>
+</fx:root>

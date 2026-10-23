@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import com.cropster.roastingintelligence.ui.components.LinkToRoastLabel?>
+
+<fx:root type="javafx.scene.layout.VBox" fillWidth="true" styleClass="statistics-panel" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <GridPane fx:id="REMAINING" fx:constant="REMAINING" />
+        <SVGImage fx:id="ICON_PROFILE" icon="PROFILE" />
+    </fx:define>
+    <VBox maxWidth="Infinity" fillWidth="true">
+        <Label text="%Reference roast" maxWidth="Infinity" styleClass="statistics-header" />
+        <HBox maxWidth="Infinity" alignment="CENTER">
+            <styleClass>
+                <String fx:value="statistics-content" />
+                <String fx:value="padding-right--small" />
+            </styleClass>
+            <LinkToRoastLabel fx:id="idTagLabel" styleClass="label--bold" />
+            <Label fx:id="dateLabel" maxWidth="Infinity" styleClass="label--muted" HBox.hgrow="ALWAYS" />
+            <Button fx:id="previewChartButton" text="%Chart" graphic="$ICON_PROFILE" styleClass="button--small" />
+        </HBox>    
+    </VBox>
+    <VBox fx:id="notesContainer" fillWidth="true" managed="${notesContainer.visible}">
+        <Label text="%Roast notes" maxWidth="Infinity" styleClass="statistics-header" />
+        <Label text="${controller.notes}" wrapText="true" maxWidth="Infinity" styleClass="statistics-content" />
+    </VBox>
+    <VBox fx:id="profileNotesContainer" fillWidth="true" managed="${profileNotesContainer.visible}">
+        <Label text="%Profile notes" maxWidth="Infinity" styleClass="statistics-header" />
+        <Label text="${controller.profileNotes}" wrapText="true" maxWidth="Infinity" styleClass="statistics-content" />
+    </VBox>
+    <GridPane fx:id="gridPane" managed="${gridPane.visible}">
+    	<columnConstraints>
+    	    <ColumnConstraints hgrow="ALWAYS" />
+    	    <ColumnConstraints minWidth="70" halignment="RIGHT" />
+    	    <ColumnConstraints hgrow="ALWAYS" percentWidth="30" />
+    	</columnConstraints>
+        <rowConstraints>
+            <RowConstraints valignment="BOTTOM" />
+        </rowConstraints>
+        <Label text="%Information" maxWidth="Infinity" styleClass="statistics-header" GridPane.columnIndex="0" />
+        <Label text="%Reference value" maxWidth="Infinity" styleClass="statistics-header" GridPane.columnIndex="1" />
+        <Label text="%Goals" maxWidth="Infinity" styleClass="statistics-header" GridPane.columnIndex="2" />
+        <Label text="Duration" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label text="13:50" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="13:00 - 14:30" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Label text="Start weight" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label text="15 kg" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label text="-" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    </GridPane>
+    <GridPane fx:id="gridPaneOtherGoals" managed="${gridPaneOtherGoals.visible}">
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" />
+            <ColumnConstraints percentWidth="30" />
+        </columnConstraints>
+        <Label text="%Other goals" maxWidth="Infinity" styleClass="statistics-header" />
+        <Label text="%Range" maxWidth="Infinity" styleClass="statistics-header" GridPane.columnIndex="1" />
+    </GridPane>
+</fx:root>

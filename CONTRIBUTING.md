@@ -1,6 +1,6 @@
 # Đóng góp và phát triển roastMane
 
-Bắt đầu từ [DEVELOPMENT](docs/DEVELOPMENT.md), [ARCHITECTURE](docs/ARCHITECTURE.md) và [ROADMAP](docs/ROADMAP.md). Kho đang ở giai đoạn phục hồi source, chưa có pipeline build độc lập toàn bộ ứng dụng.
+Bắt đầu từ [SOURCE-BUILD](docs/SOURCE-BUILD.md), [DEVELOPMENT](docs/DEVELOPMENT.md), [ARCHITECTURE](docs/ARCHITECTURE.md) và [ROADMAP](docs/ROADMAP.md). Pipeline ứng dụng + overlay đã đạt; thư viện bên thứ ba vẫn dùng binary. Sửa mã tại `src/main/java/` và giữ raw source đối chiếu nguyên vẹn.
 
 ## Một thay đổi có thể review được
 

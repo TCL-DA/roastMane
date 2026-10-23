@@ -1,0 +1,101 @@
+Configuration:
+  status: "WARN"
+  name: "RoastingIntelligence"
+
+  Properties:
+    Property:
+      - name: "riLogPattern"
+        value: "%d{yyyy-MM-dd HH:mm:ss.SSS} %p %C{1}.%M:%L%notEmpty{ - %m}%n%cropEx"
+
+  Appenders:
+    Console:
+      - name: "CONSOLE"
+        target: "SYSTEM_OUT"
+        PatternLayout:
+          charset: "UTF-8"
+          pattern: "${riLogPattern}"
+          alwaysWriteExceptions: false
+
+    RollingFile:
+      - name: "CORE_FILE"
+        fileName: "${sys:org.cropster.roastingintelligence.logging.path}roastingintelligence-core.0.log"
+        filePattern: "${sys:org.cropster.roastingintelligence.logging.path}roastingintelligence-core.%i.log"
+        append: true
+        PatternLayout:
+          charset: "UTF-8"
+          pattern: "${riLogPattern}"
+          alwaysWriteExceptions: false
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: "1M"
+        DefaultRolloverStrategy:
+          max: 2
+
+      - name: "FULL_FILE"
+        fileName: "${sys:org.cropster.roastingintelligence.logging.path}roastingintelligence.0.log"
+        filePattern: "${sys:org.cropster.roastingintelligence.logging.path}roastingintelligence.%i.log"
+        append: true
+        PatternLayout:
+          charset: "UTF-8"
+          pattern: "${riLogPattern}"
+          alwaysWriteExceptions: false
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: "1M"
+        DefaultRolloverStrategy:
+          max: 2
+
+  Loggers:
+    Logger:
+      # Measurement implementation logs go to FULL_FILE and CONSOLE only, never to CORE_FILE.
+      - name: "org.cropster.roastingintelligence.measurement.impl"
+        level: "INFO"
+        additivity: false
+        includeLocation: true
+        AppenderRef:
+          - ref: "FULL_FILE"
+            level: "ALL"
+          - ref: "CONSOLE"
+            level: "ALL"
+
+      # Log missing messages
+      #- name: "org.cropster.roastingintelligence"
+      #  level: "DEBUG"
+      #  additivity: true
+      #  includeLocation: true
+      #
+      #- name: "org.cropster.roastingintelligence.util"
+      #  level: "TRACE"
+      #  additivity: true
+      #  includeLocation: true
+      #
+      #- name: "com.cropster.roastingintelligence.ui.JavaFxUtil"
+      #  level: "TRACE"
+      #  additivity: true
+      #  includeLocation: true
+      #
+      #- name: "org.apache.http"
+      #  level: "DEBUG"
+      #  additivity: true
+      #  includeLocation: true
+      #
+      #- name: "org.apache.http.wire"
+      #  level: "DEBUG"
+      #  additivity: true
+      #  includeLocation: true
+      #
+      #- name: "org.apache.http.headers"
+      #  level: "DEBUG"
+      #  additivity: true
+      #  includeLocation: true
+
+    Root:
+      level: "INFO"
+      includeLocation: true
+      AppenderRef:
+        - ref: "FULL_FILE"
+          level: "INFO"
+        - ref: "CORE_FILE"
+          level: "INFO"
+        - ref: "CONSOLE"
+          level: "INFO"

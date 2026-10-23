@@ -1,5 +1,7 @@
 # Nguồn gốc và thông báo pháp lý
 
+Từ ngày 23/10/2026, repository có thêm cây ứng dụng được phục hồi tại `src/main/java/` và pipeline dựng main + overlay từ source. Đây là mã tái dựng từ bytecode, không phải source gốc do nhà cung cấp phát hành. Các thư viện bên thứ ba, JavaFX và runtime vẫn dùng binary dependency; quyền sở hữu và điều khoản dưới đây không thay đổi.
+
 `roastMane` là lớp nhận diện và launcher cục bộ đặt trên ứng dụng Java/JAR có nguồn gốc Cropster Roasting Intelligence 5.13. Bản vá không chuyển quyền sở hữu mã gốc, không xóa thông báo bản quyền/giấy phép trong JAR và không tuyên bố được Cropster bảo trợ.
 
 Các package `org.cropster.*`, `com.cropster.*`, tên một số JAR và định danh cấu hình nội bộ được giữ nguyên vì đổi chúng có thể phá vỡ liên kết nhị phân, ServiceLoader, dữ liệu JSON và cấu hình thiết bị. Chúng là dấu vết kỹ thuật về nguồn gốc, không phải nhãn hiển thị cho người dùng.

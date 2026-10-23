@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root type="javafx.scene.layout.VBox" alignment="CENTER_RIGHT" xmlns:fx="http://javafx.com/fxml">
+    <Label fx:id="textLabel" styleClass="timer__label" /> 
+    <Label fx:id="percentageLabel" text="? %" styleClass="timer__value" />
+</fx:root>

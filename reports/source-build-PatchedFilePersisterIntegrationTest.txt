@@ -1,0 +1,15 @@
+2026-10-23 09:16:28.960 INFO CsarConnectionImpl.<init>:164 - Using API https://offline.invalid/api/rest/v3
+2026-10-23 09:16:29.189 INFO Messages.<clinit>:165 - Loading resource bundle for en_US
+2026-10-23 09:16:29.561 INFO CsarConnectionImpl.<init>:164 - Using API https://offline.invalid/api/rest/v3
+2026-10-23 09:16:29.588 INFO CsarConnectionImpl.<init>:164 - Using API https://offline.invalid/api/rest/v3
+2026-10-23 09:16:29.602 INFO CsarConnectionImpl.<init>:164 - Using API https://offline.invalid/api/rest/v3
+2026-10-23 09:16:29.610 INFO CsarConnectionImpl.<init>:164 - Using API https://offline.invalid/api/rest/v3
+PASS implementation=file:/C:/Tools/_soi/roastMane-SourceBuild-20261023-01/app/roastingintelligence-5.13.jar
+PASS root=C:\Users\truon\AppData\Local\Temp\patched-file-persister-16453519744036803092
+PASS stableId=2 outboxBytes=1206
+PASS restartCurvePoints=4 archiveCurvePoints=4
+PASS failedEdit=true oldBytesPreserved=true verifyRejected=true
+PASS duplicateTimestampRejected=true duplicateId=null retryId=3
+PASS saveFailure=true verifyRejected=true
+PASS rosterSize=1 savedOutputLotInRoster=false retryOutputLotInRoster=false failedOutputLotInRoster=false
+PASS failedId=null archiveCount=2

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+
+<fx:root type="javafx.scene.layout.HBox" styleClass="info-box" xmlns:fx="http://javafx.com/fxml">
+    <SVGImage icon="INFO" />
+    <TextFlow styleClass="info-box__textflow">
+        <Text text="${controller.text}" styleClass="info-box__text" />
+    </TextFlow>
+</fx:root>

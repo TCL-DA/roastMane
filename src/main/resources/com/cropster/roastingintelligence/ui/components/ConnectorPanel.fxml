@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import com.cropster.roastingintelligence.ui.components.Tooltip?>
+
+<fx:root type="HBox" styleClass="connector-panel" prefWidth="500" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <SVGImage fx:id="ICON_DELETE" icon="DELETE"/>
+        <SVGImage fx:id="ICON_SETTINGS" icon="SETTINGS"/>
+        <Insets fx:id="BUTTON_MARGIN" bottom="4.0" left="4.0" right="4.0" top="4.0"/>
+    </fx:define>
+    <Label fx:id="connectorName"/>
+    <Label fx:id="connectorNotUsed" text="%Not used" styleClass="status-message" HBox.hgrow="ALWAYS"/>
+    <Button fx:id="configureButton" graphic="$ICON_SETTINGS" onAction="#showConnectorConfigurationDialog" styleClass="button--plain" HBox.margin="$BUTTON_MARGIN">
+        <tooltip>
+            <Tooltip text="%Configure"/>
+        </tooltip>
+    </Button>
+    <Button graphic="$ICON_DELETE" onAction="#deleteConnector" styleClass="button--plain" HBox.margin="$BUTTON_MARGIN">
+        <tooltip>
+            <Tooltip text="%Delete"/>
+        </tooltip>
+    </Button>
+</fx:root>

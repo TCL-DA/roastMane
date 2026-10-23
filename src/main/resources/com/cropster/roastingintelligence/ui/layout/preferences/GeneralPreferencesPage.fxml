@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import com.cropster.roastingintelligence.ui.components.FormComponent?>
+<?import com.cropster.roastingintelligence.ui.util.AutoIncIndex?>
+<?import org.girod.javafx.svgimage.SVGImage?>
+
+<fx:root type="GridPane" styleClass="grid-pane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <AutoIncIndex fx:id="row"/>
+        <SVGImage fx:id="ICON_RESET" icon="RESET"/>
+        <SVGImage fx:id="ICON_WARNING" icon="WARNING" styleClass="icon--warning" />
+    </fx:define>
+    <columnConstraints>
+        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" fillWidth="true"/>
+    </columnConstraints>
+
+    <FormComponent title="%Language" GridPane.rowIndex="$row.idx">
+        <VBox fillWidth="true" styleClass="vbox">
+            <ComboBox fx:id="localeComboBox" maxWidth="Infinity"/>
+            <Label fx:id="localeChangedLabel" text="%Changes to this setting only take effect after restarting the application." managed="${localeChangedLabel.visible}" visible="false" maxWidth="Infinity"
+                    graphic="$ICON_WARNING">
+                <styleClass>
+                    <String fx:value="info-message"/>
+                    <String fx:value="info-message--warning"/>
+                </styleClass>
+            </Label>
+        </VBox>
+    </FormComponent>
+
+    <Separator styleClass="preferences-separator" GridPane.rowIndex="$row.inc"/>
+
+    <FormComponent title="%Productivity and help hints" GridPane.rowIndex="$row.inc">
+        <description>
+            <Text text="%Tooltips that provide information about the usage and behaviour of certain tools."/>
+        </description>
+        <Button fx:id="resetHintsButton" graphic="$ICON_RESET" text="%Reset productivity hints"/>
+    </FormComponent>
+</fx:root>

@@ -1,0 +1,38 @@
+C:\Tools\_soi\roastMane-github\src\main\java\com\cropster\roastingintelligence\ui\JavaFxController.java:4154: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+      FileSystemConfiguration.Directories directories = this.appModel.getDirectories();
+                                                                     ^
+C:\Tools\_soi\roastMane-github\src\main\java\com\cropster\roastingintelligence\ui\MacOsFxUtil.java:20: warning: [removal] enableInputMethodEvents(boolean) in Scene has been deprecated and marked for removal
+                  scene.enableInputMethodEvents(false);
+                       ^
+C:\Tools\_soi\roastMane-github\src\main\java\com\cropster\roastingintelligence\ui\MacOsFxUtil.java:21: warning: [removal] enableInputMethodEvents(boolean) in Scene has been deprecated and marked for removal
+                  Platform.runLater(() -> scene.enableInputMethodEvents(true));
+                                               ^
+C:\Tools\_soi\roastMane-github\src\main\java\org\cropster\roastingintelligence\tasks\AlarmUploader.java:26: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+      FileSystemConfiguration.Directories directories = this.appModel.getDirectories();
+                                                                     ^
+C:\Tools\_soi\roastMane-github\src\main\java\org\cropster\roastingintelligence\tasks\AlarmUploader.java:39: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+         FileSystemConfiguration.Directories directories = this.appModel.getDirectories();
+                                                                        ^
+C:\Tools\_soi\roastMane-github\src\main\java\org\cropster\roastingintelligence\tasks\LiveGoalUploader.java:31: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+      FileSystemConfiguration.Directories directories = this.appModel.getDirectories();
+                                                                     ^
+C:\Tools\_soi\roastMane-github\src\main\java\org\cropster\roastingintelligence\tasks\LiveGoalUploader.java:46: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+         FileSystemConfiguration.Directories directories = this.appModel.getDirectories();
+                                                                        ^
+C:\Tools\_soi\roastMane-github\src\main\java\org\cropster\roastingintelligence\tasks\RoastUploader.java:51: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+         FileSystemConfiguration.Directories directories = this._appModel.getDirectories();
+                                                                         ^
+C:\Tools\_soi\roastMane-github\src\main\java\org\cropster\roastingintelligence\tasks\RoastUploader.java:65: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+         FileSystemConfiguration.Directories directories = this._appModel.getDirectories();
+                                                                         ^
+C:\Tools\_soi\roastMane-github\src\main\java\org\cropster\roastingintelligence\tasks\RoastUploader.java:74: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+      FileSystemConfiguration.Directories directories = this._appModel.getDirectories();
+                                                                      ^
+C:\Tools\_soi\roastMane-github\offline-v06\patch-src\local\SmokeProbe.java:14: warning: [removal] getDirectories() in AppModel has been deprecated and marked for removal
+  if(!model.getDirectories().dataDirectory().toPath().equals(OfflineBootstrap.root()))throw new AssertionError("Data root mismatch");
+           ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+11 warnings

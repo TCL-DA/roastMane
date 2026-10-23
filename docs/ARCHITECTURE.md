@@ -1,6 +1,6 @@
 # Kiến trúc roastMane offline
 
-## Mô hình hiện hành
+## Tổng quan runtime
 
 ```mermaid
 flowchart LR
@@ -8,43 +8,67 @@ flowchart LR
     A --> U[JavaFxController và UI layout]
     U --> B[OfflineBootstrap]
     B --> C[OfflineConnection]
-    U --> P[FilePersister đã vá]
+    U --> P[FilePersister]
     P --> OP[OfflinePersistence]
-    C --> D[(data.json / roasts / state / preferences)]
-    OP --> O[(outbox cục bộ)]
-    M[Measurement và sensor packages] --> U
-    J[Các JAR dependency và JavaFX] --> A
+    C --> D[(catalog, state và preferences cục bộ)]
+    OP --> O[(outbox và archive cục bộ)]
+    M[measurement và sensor] --> U
+    J[JavaFX, JAR bên thứ ba và native] --> A
 ```
 
-`local.Launcher` thiết lập định danh phiên offline và chặn socket mạng trong JVM trước khi gọi `org.cropster.roastingintelligence.RoastingIntelligenceApp`. `OfflineBootstrap` nạp catalog cục bộ, gắn machine/profile/lot mặc định, tắt dự đoán cần cloud và để source đo ở trạng thái chưa chọn cổng.
+`local.Launcher` thiết lập phiên offline và chặn socket mạng trong JVM trước khi gọi `org.cropster.roastingintelligence.RoastingIntelligenceApp`. `OfflineBootstrap` nạp catalog cục bộ, thiết lập machine/profile/lot mặc định, tắt các đường phụ thuộc cloud và không tự chọn cổng đo.
 
-## Các lớp chính
+## Source ứng dụng
 
-### Lớp vá offline v06
+Source có thể biên dịch nằm dưới `src/main/java/`:
+
+- `org/cropster/roastingintelligence/RoastingIntelligenceApp.java`: JavaFX application và primary stage.
+- `org/cropster/roastingintelligence/AppModel.java`: trạng thái ứng dụng, dữ liệu, preferences và persister.
+- `org/cropster/roastingintelligence/RoastingManager.java` và `RoastingModel.java`: vòng đời mẻ rang.
+- `com/cropster/roastingintelligence/ui/JavaFxController.java`: điều phối giao diện chính.
+- `com/cropster/roastingintelligence/ui/layout/`: production, preparation, main panel và preferences.
+- `org/cropster/roastingintelligence/measurement/` và `sensor/`: nguồn đo, channel và sensor.
+- `org/cropster/roastingintelligence/service/` và `com/cropster/roastingintelligence/service/`: persistence cùng service nội bộ.
+
+Tài nguyên runtime tương ứng nằm tại `src/main/resources/`. Lượt đóng gói hiện hành đưa 291 resource vào main JAR cùng class vừa biên dịch.
+
+Hai namespace `org.cropster.*` và `com.cropster.*` cùng tồn tại trong ứng dụng gốc. Không gộp hoặc đổi package nếu chưa có kế hoạch tương thích binary và migration riêng.
+
+## Overlay offline v06
 
 Source nằm tại `offline-v06/patch-src/local/`:
 
-- `Launcher.java`: entry point của bundle offline và lớp chặn kết nối mạng.
-- `OfflineBootstrap.java`: root dữ liệu, catalog cục bộ, cấu hình model và khởi động UI sau login cục bộ.
-- `OfflineConnection.java`: triển khai API cục bộ cho lot, profile, roast archive, state và preferences.
-- `OfflinePersistence.java`: lưu outbox nguyên tử, giữ ID bền vững, lưu đủ đường cong và chỉ xác nhận khi file tồn tại, khác rỗng.
-- `SmokeProbe.java`: kiểm tra scene graph, root dữ liệu, catalog, mạng và một mẻ QA mô phỏng.
-- `PatchJar.java`: vá bytecode/chuỗi/tài nguyên nhận diện trên JAR nền; giữ alias nội bộ cần cho tương thích.
-- `BuildIcon.java`: tạo icon Windows đa kích thước từ avatar v06 đã duyệt.
+- `Launcher.java`: entry point offline và chặn kết nối mạng.
+- `OfflineBootstrap.java`: root dữ liệu, catalog cục bộ và khởi tạo model.
+- `OfflineConnection.java`: API cục bộ cho lot, profile, roast archive, state và preferences.
+- `OfflinePersistence.java`: ghi outbox nguyên tử, quản lý ID, archive và xác nhận lưu.
+- `SmokeProbe.java`: kiểm tra scene graph, catalog/root, mạng và lưu mẻ mô phỏng.
+- `PatchJar.java`: áp dụng nhận diện/tài nguyên v06 lên main JAR vừa dựng.
+- `BuildIcon.java`: tạo icon Windows đa kích thước từ avatar đã duyệt.
 
-`PatchJar` và `BuildIcon` là công cụ build. Chúng không nằm trong `offline-local.jar` phát hành; JAR này chứa 5 kiểu top-level dùng ở runtime: `Launcher`, `OfflineBootstrap`, `OfflineConnection`, `OfflinePersistence`, `SmokeProbe`, cùng các class lồng nhau do compiler tạo. Lượt biên dịch đã xác minh tạo tổng cộng 15 file `.class`.
+Năm kiểu runtime đầu tiên được đóng gói vào `offline-local.jar`; `PatchJar` và `BuildIcon` chỉ chạy trong lúc build.
 
-### Main application dịch ngược
+## Pipeline dựng hiện hành
 
-- `decompiled/org/cropster/roastingintelligence/RoastingIntelligenceApp.java`: JavaFX application và primary stage.
-- `decompiled/org/cropster/roastingintelligence/AppModel.java`: trạng thái ứng dụng, dữ liệu, preferences và persister.
-- `decompiled/org/cropster/roastingintelligence/RoastingManager.java` và `RoastingModel.java`: vòng đời và trạng thái mẻ rang.
-- `decompiled/com/cropster/roastingintelligence/ui/JavaFxController.java`: điều phối UI chính.
-- `decompiled/com/cropster/roastingintelligence/ui/layout/`: production sidebar, preparation panel, main panel và cửa sổ preferences.
-- `decompiled/org/cropster/roastingintelligence/measurement/` và `sensor/`: nguồn đo, channel và sensor.
-- `decompiled/org/cropster/roastingintelligence/service/impl/FilePersister.java`: định dạng outbox JSON được lớp vá persistence chặn tại bytecode.
+```mermaid
+flowchart TB
+    MAIN[src/main/java: 677 source] --> COMPILE[javac JDK 21]
+    OVERLAY[offline-v06 overlay: 7 source] --> COMPILE
+    DEPS[Bundle dependency nhị phân] --> COMPILE
+    COMPILE --> CLASSES[Class ứng dụng và overlay mới]
+    RES[src/main/resources: 291 resource] --> JARS[Đóng gói main JAR và offline-local.jar]
+    CLASSES --> JARS
+    BRAND[brand-kit v06] --> PATCH[PatchJar và BuildIcon]
+    JARS --> PATCH
+    DEPS --> ASSEMBLE[Sao chép JavaFX, dependency và native]
+    PATCH --> ASSEMBLE
+    ASSEMBLE --> PACKAGE[jpackage app-image]
+    PACKAGE --> TESTS[Persistence, SVG, UI/FXML và launcher smoke]
+```
 
-Hai namespace `org.cropster.*` và `com.cropster.*` cùng tồn tại trong binary gốc. Không gộp hoặc đổi package trước khi có full-source build và phép thử tương thích.
+`build-from-source.ps1` điều phối pipeline này. Classpath compile loại `roastingintelligence-5.13.jar` và `offline-local.jar` cũ. Bundle nền chỉ cung cấp dependency; main class không được lấy bù từ binary cũ.
+
+Pipeline vá bytecode/JAR cũ tại `offline-v06/build.ps1` vẫn được giữ để tương thích và truy vết lịch sử. Đường dựng mặc định cho phát triển hiện nay là `build-from-source.ps1`.
 
 ## Dữ liệu cục bộ
 
@@ -54,38 +78,14 @@ Root mặc định:
 %USERPROFILE%\roastMane\otl-offline
 ```
 
-Các nhóm file do overlay quản lý dưới root gồm:
+Các nhóm dữ liệu gồm catalog, `roasts`, `state`, `preferences`, outbox và archive. Source build không tự động di chuyển dữ liệu từ root thương hiệu cũ.
 
-```text
-data.json
-roasts\<id>.json
-state\...
-preferences\...
-```
+Trong test, data, home và log đều nằm dưới `%TEMP%`. `OfflinePersistence` hủy xác nhận cũ trước lần ghi sửa đổi, chỉ xác nhận sau khi ghi hoàn tất, và từ chối timestamp trùng trước khi cấp ID hoặc ghi archive. Outbox và archive chưa phải một transaction đa file.
 
-Outbox do `FileSystemConfiguration.Directories` cung cấp cho `FilePersister`. `OfflinePersistence` ghi qua file tạm, ép dữ liệu xuống đĩa, rồi move nguyên tử khi filesystem hỗ trợ. Source catalog không tự động di chuyển dữ liệu từ thư mục thương hiệu cũ.
+## Dependency và kho lưu trữ
 
-Trong test, `offline.data`, outbox, sent và logs đều trỏ vào thư mục con của `%TEMP%`; vì vậy test không được dùng root mặc định.
+JavaFX, thư viện bên thứ ba, native và JDK runtime vẫn là binary dependency. `extracted-all/` giữ source trích xuất theo từng JAR; `decompiled/` giữ bản ứng dụng thô để đối chiếu bytecode/source. Hai cây này không tham gia source compile mặc định.
 
-## Cách tạo bundle hiện nay
+Việc dựng thành công 684 source ứng dụng không đồng nghĩa toàn bộ dependency đã được dựng lại. Giấy phép, version, checksum và provenance của dependency phải tiếp tục được giữ khi đóng gói.
 
-```mermaid
-flowchart TB
-    BASE[Bundle offline nền] --> COPY[Sao chép app và dependency]
-    SRC[offline-v06 patch source] --> COMPILE[javac JDK 21]
-    BRAND[brand-kit v06] --> PATCH[PatchJar]
-    COPY --> PATCH
-    COMPILE --> PATCH
-    PATCH --> MAIN[main JAR đã vá]
-    COMPILE --> LOCAL[offline-local.jar]
-    MAIN --> PACKAGE[jpackage app-image]
-    LOCAL --> PACKAGE
-```
-
-Pipeline này đã tạo bundle chạy được, nhưng không chứng minh `decompiled/` có thể build lại main JAR. Baseline độc lập vẫn còn 65 lỗi compiler.
-
-## Kho trích xuất dependency
-
-`extracted-all/` tách từng JAR thành một thư mục có `source/`, `inventory.json` và `decompiler.log`. `audit.json` ghi nhận 117 JAR, 25.208 class entry, 14.223 Java source và không có outer class chưa ánh xạ. Kết quả đó chỉ chứng minh độ phủ trích xuất; `full_source_build_verified` vẫn là `false`.
-
-Các binary native, runtime JDK và launcher EXE không thể chuyển thành Java source bằng decompiler và không được xem là phần source build độc lập.
+Chi tiết bằng chứng nằm trong [SOURCE-BUILD.md](SOURCE-BUILD.md) và [source-build-20261023.json](../reports/source-build-20261023.json).

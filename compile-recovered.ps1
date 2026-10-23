@@ -1,7 +1,7 @@
 param(
-    [ValidateSet('Main', 'OfflineV06', 'All')]
+    [ValidateSet('Main', 'OfflineV06', 'All', 'Recovered')]
     [string]$Target = 'All',
-    [string]$Bundle = 'C:\Tools\_soi\roastMane-Offline-OTL-20261022-02',
+    [string]$Bundle = 'C:\Tools\_soi\roastMane-Offline-OTL-20261022-03',
     [string]$JdkBin = 'C:\Program Files\Eclipse Adoptium\jdk-21.0.12.101-hotspot\bin',
     [string]$MainSource,
     [string]$OfflineSource,
@@ -16,8 +16,8 @@ $reportsDir = Join-Path $recoveryRoot 'reports'
 
 # Tự nhận dạng cả bố cục thư mục phục hồi và bố cục repository chính.
 if ([string]::IsNullOrWhiteSpace($MainSource)) {
-    $candidate = Join-Path $recoveryRoot 'decompiled'
-    $MainSource = if (Test-Path -LiteralPath $candidate) { $candidate } else { Join-Path $recoveryRoot 'src' }
+    $candidate = Join-Path $recoveryRoot 'src\main\java'
+    $MainSource = if (Test-Path -LiteralPath $candidate) { $candidate } else { Join-Path $recoveryRoot 'decompiled' }
 }
 if ([string]::IsNullOrWhiteSpace($OfflineSource)) {
     $candidate = Join-Path $recoveryRoot 'offline-v06\patch-src\local'
@@ -83,17 +83,23 @@ function Invoke-JavacResponse {
 }
 
 function Compile-Main {
+    param([switch]$IncludeOverlay)
     $sourceRoot = [IO.Path]::GetFullPath($MainSource)
-    $classesDir = Join-Path $recoveryRoot 'build\classes-main'
+    $targetName = if ($IncludeOverlay) { 'recovered-current' } else { 'main-current' }
+    $classesDir = Join-Path $recoveryRoot $(if ($IncludeOverlay) { 'build\classes-recovered' } else { 'build\classes-main' })
     $embeddedPatch = [IO.Path]::GetFullPath((Join-Path $sourceRoot 'offline-patch'))
     $sources = Get-ChildItem -LiteralPath $sourceRoot -Recurse -Filter '*.java' -File |
         Where-Object { -not $_.FullName.StartsWith($embeddedPatch, [StringComparison]::OrdinalIgnoreCase) } |
         Sort-Object FullName
+    if ($IncludeOverlay) {
+        $sources = @($sources) + @(Get-ChildItem -LiteralPath $OfflineSource -Filter '*.java' -File | Sort-Object FullName)
+    }
 
     # Main JAR bị loại khỏi classpath để javac không lấy class cũ che lỗi source.
     $dependencies = Get-ChildItem -LiteralPath $appDir -Filter '*.jar' -File |
-        Where-Object Name -ne 'roastingintelligence-5.13.jar' |
+        Where-Object { $_.Name -ne 'roastingintelligence-5.13.jar' -and (-not $IncludeOverlay -or $_.Name -ne 'offline-local.jar') } |
         ForEach-Object FullName
+    if ($IncludeOverlay) { $dependencies += [IO.Path]::GetFullPath($AsmJar) }
     $classpath = Quote-ArgFileValue -Value ($dependencies -join ';')
     $modulePath = Quote-ArgFileValue -Value (Join-Path $appDir 'javafx')
 
@@ -114,7 +120,7 @@ function Compile-Main {
     )
     $arguments += $sources | ForEach-Object { Quote-ArgFileValue -Value $_.FullName }
     Write-Host "Compiling recovered main sources: $($sources.Count) files"
-    return Invoke-JavacResponse -Name 'main-current' -Arguments $arguments -ClassesDir $classesDir
+    return Invoke-JavacResponse -Name $targetName -Arguments $arguments -ClassesDir $classesDir
 }
 
 function Compile-OfflineV06 {
@@ -137,6 +143,9 @@ function Compile-OfflineV06 {
 }
 
 $exitCodes = @()
+if ($Target -eq 'Recovered') {
+    $exitCodes += Compile-Main -IncludeOverlay
+}
 if ($Target -in @('Main', 'All')) {
     $exitCodes += Compile-Main
 }

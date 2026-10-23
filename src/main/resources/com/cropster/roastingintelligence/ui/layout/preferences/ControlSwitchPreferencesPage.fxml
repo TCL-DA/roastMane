@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import com.cropster.roastingintelligence.ui.components.FormComponent?>
+<?import com.cropster.roastingintelligence.ui.list.EmptyStateList?>
+<?import com.cropster.roastingintelligence.ui.util.AutoIncIndex?>
+
+<fx:root type="GridPane" styleClass="grid-pane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <AutoIncIndex fx:id="row"/>
+    </fx:define>
+    <columnConstraints>
+        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" fillWidth="true"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints vgrow="NEVER" fillHeight="true"/>
+        <RowConstraints vgrow="ALWAYS" fillHeight="true"/>
+    </rowConstraints>
+
+    <FormComponent title="%Switch control setup" GridPane.rowIndex="$row.idx">
+        <description>
+            <Text text="%Once switch controls are added, enable, configure, and rearrange them to your preferred order by dragging and dropping."/>
+        </description>
+    </FormComponent>
+
+    <VBox styleClass="measurements-panel" GridPane.rowIndex="$row.inc">
+
+        <EmptyStateList fx:id="switchControlStateView" emptyStateMessage="%No switch control to be displayed." showRandomShortcuts="false" maxHeight="Infinity" VBox.vgrow="ALWAYS">
+            <styleClass>
+                <String fx:value="transparent-list"/>
+                <String fx:value="toggle-switch__bold"/>
+            </styleClass>
+        </EmptyStateList>
+
+    </VBox>
+
+</fx:root>

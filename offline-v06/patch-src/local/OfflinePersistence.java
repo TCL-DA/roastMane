@@ -15,20 +15,23 @@ public final class OfflinePersistence {
    Map<Roast,File> files=(Map<Roast,File>)field(p,"_filesMap");
    if(fresh&&files.containsKey(roast))throw new IllegalArgumentException("Existing roast");
    if(!fresh&&!files.containsKey(roast))throw new IllegalArgumentException("New roast");
+   saved.remove(roast);
+   File outboxDir=(File)field(p,"_outboxDir");
+   File target=fresh?new File(outboxDir,String.format(Locale.ROOT,"%1$tY%1$tm%1$td_%1$tH%1$tM%1$tS_%1$tL.json",roast.getStartDate())):files.get(roast);
+   if(fresh&&Files.exists(target.toPath()))throw new IOException("A batch with the same timestamp already exists; refusing to overwrite it");
    // Cấp ID bền vững và giữ nguyên đường cong đầy đủ; không đánh dấu đã tải lên.
-   Path probe=Files.createTempFile(((File)field(p,"_outboxDir")).toPath(),"write-check-",".tmp");Files.delete(probe);
+   Path probe=Files.createTempFile(outboxDir.toPath(),"write-check-",".tmp");Files.delete(probe);
    OfflineConnection connection=new OfflineConnection(new Version("5.13"),java.net.URI.create("https://offline.invalid"));
    if(roast.getLot().getId()==null)connection.startRoast(roast);
-   File target=fresh?new File((File)field(p,"_outboxDir"),String.format(Locale.ROOT,"%1$tY%1$tm%1$td_%1$tH%1$tM%1$tS_%1$tL.json",roast.getStartDate(),roast.getLot().getId())):files.get(roast);
-   if(fresh&&Files.exists(target.toPath()))throw new IOException("A batch with the same timestamp already exists; refusing to overwrite it");
    Path tmp=Files.createTempFile(target.toPath().getParent(),"local-roast-",".tmp");
    try{
     try(var writer=Files.newBufferedWriter(tmp)){((JsonWriter)field(p,"_jsonWriter")).write(writer,roast);}
     try(var channel=FileChannel.open(tmp,StandardOpenOption.WRITE)){channel.force(true);}
     try{Files.move(tmp,target.toPath(),StandardCopyOption.ATOMIC_MOVE,StandardCopyOption.REPLACE_EXISTING);}catch(AtomicMoveNotSupportedException e){Files.move(tmp,target.toPath(),StandardCopyOption.REPLACE_EXISTING);}
    }finally{Files.deleteIfExists(tmp);}
-   files.put(roast,target);saved.put(roast,target.toPath());
+   files.put(roast,target);
    if(roast.getEndDate()!=null)connection.finishRoast(roast);else connection.update(roast);
+   saved.put(roast,target.toPath());
    return target;
   }catch(ReflectiveOperationException e){throw new IOException("Unable to access local persister",e);}}
  }

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.girod.javafx.svgimage.SVGImage?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root type="BorderPane" styleClass="control-switch" minHeight="24.0" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <SVGImage fx:id="ICON_POWER" icon="POWER"/>
+    </fx:define>
+    <center>
+        <HBox spacing="8" alignment="CENTER_LEFT" BorderPane.alignment="CENTER_LEFT">
+            <ToggleButton fx:id="stateSwitch" contentDisplay="GRAPHIC_ONLY" graphic="$ICON_POWER" styleClass="button-push"/>
+            <VBox alignment="CENTER_LEFT" minWidth="50" maxWidth="Infinity">
+                <Label fx:id="stateCaption" styleClass="form-label" contentDisplay="TEXT_ONLY" wrapText="true"/>
+                <Label fx:id="demoFlag" text="Demo" styleClass="control-switch--demo-source" contentDisplay="TEXT_ONLY" managed="${demoFlag.visible}" visible="false"/>
+            </VBox>
+        </HBox>
+    </center>
+    <right>
+        <Label fx:id="countdownLabel" managed="${countdownLabel.visible}" visible="false" styleClass="control-switch-countdown" BorderPane.alignment="CENTER_RIGHT"/>
+    </right>
+</fx:root>
