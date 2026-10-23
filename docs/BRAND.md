@@ -13,7 +13,8 @@ Logo v06 được duyệt và tích hợp vào bản roastMane `-02`. Bộ logo 
 
 - [Logo, avatar và vector](../offline-v06/brand-kit/exports/).
 - [Banner README](assets/hero.png): 1600 × 760 px.
-- [Hình minh họa quá trình phục hồi](assets/source-journey.png): 1600 × 560 px.
+- [Thẻ trạng thái thực tế](assets/status.png): 1600 × 606 px, thay bảng "Phần việc" trong README (bảng chữ giữ trong mục gập).
+- [Bốn mốc phục hồi source](assets/source-journey.png): 1600 × 580 px, thay bảng "Mốc kiểm chứng".
 - [Ảnh chia sẻ liên kết](assets/social-preview.png): 1280 × 640 px. File đã sẵn sàng; việc gắn vào mục **Settings → Social preview** chưa được thực hiện vì phiên trình duyệt không đăng nhập GitHub.
 
 ## Phong cách trình bày: Steep, đổi theo v06 (từ 23/10/2026)
@@ -29,9 +30,9 @@ Hình GitHub theo kiểu [Steep — serif analytics on warm paper](https://style
 | Thẻ nhấn (tối đa một thẻ mỗi hình) | `#fbe1d1` | be `#EAE2D2` |
 | Chữ trên thẻ nhấn, nút chính | `#5d2a1a` / `#17191c` | xanh `#254C3B` |
 | Nét cong minh họa | `#5d2a1a` | nâu `#785440`, độ mờ 55 % |
-| Chữ | Signifier + Söhne | Georgia + Segoe UI |
+| Chữ | Signifier + Söhne | Noto Serif + Segoe UI (Georgia vỡ dấu tiếng Việt) |
 
-Khác Steep có chủ ý: **không đổ bóng** (thẻ nổi dùng viền mảnh `#E6E3DC`), không gradient, không mảng đen. Số liệu trên hình lấy nguyên từ README; nét cong chỉ là minh họa, không phải dữ liệu mẻ rang.
+Khác Steep có chủ ý: **không đổ bóng** (thẻ nổi dùng viền mảnh `#E6E3DC`), không gradient, không mảng đen. Ảnh README có góc bo trong suốt để không thành tảng vuông trên giao diện tối của GitHub. Số liệu trên hình lấy nguyên từ README; nét cong chỉ là minh họa, không phải dữ liệu mẻ rang. Đổi số liệu thì sửa `make_steep.py`, dựng lại rồi cập nhật cả bảng trong mục gập của README.
 
 Script dựng (`make_steep.py`, HTML → PNG bằng Chrome) lưu tại `F:\Kho-anh\99_Xuat-Photoshop\261023_roastMane_GitHub-Steep`. Bộ cũ nền xanh tối (Illustrator) giữ tại `F:\Kho-anh\99_Xuat-Photoshop\261022_roastMane_GitHub`. Repo chỉ giữ PNG nhỏ cần cho tài liệu; các bản PNG cũng có trong thư mục tập hợp ảnh xuất của kho.
 

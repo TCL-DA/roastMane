@@ -10,7 +10,7 @@
 </p>
 
 <p align="center"><strong>Khám phá mã nguồn. Hiểu đường cong rang. Phát triển theo hướng riêng.</strong><br>
-A local roasting workspace, with source recovery in progress.</p>
+A local roasting workspace, rebuilt from recovered source.</p>
 
 <p align="center">
   <a href="#roastmane-là-gì">Giới thiệu</a> ·
@@ -26,6 +26,11 @@ A local roasting workspace, with source recovery in progress.</p>
 
 Bản dựng thử nghiệm mới **biên dịch toàn bộ 677 source ứng dụng và 7 source lớp vá trong kho**, không dùng class ứng dụng cũ trên compile classpath. Các thư viện bên thứ ba, JavaFX và runtime vẫn dùng binary dependency như một dự án Java thông thường. Source trích xuất nguyên bản được giữ riêng để đối chiếu.
 
+<img src="docs/assets/status.png" alt="Trạng thái thực tế: nhận diện v06, local offline, lưu/đọc mẻ và build từ source (684 file, 0 lỗi) đã kiểm; máy rang thật chưa kiểm chứng" width="100%">
+
+<details>
+<summary>Xem dạng bảng</summary>
+
 | Phần việc | Trạng thái thực tế |
 |---|---|
 | Nhận diện roastMane v06 | Đã tích hợp logo giao diện, cửa sổ và icon EXE |
@@ -33,6 +38,8 @@ Bản dựng thử nghiệm mới **biên dịch toàn bộ 677 source ứng d�
 | Lưu/đọc mẻ và đường cong | Đã kiểm tra bằng dữ liệu mô phỏng, gồm khởi động lại và nhánh lưu lỗi |
 | Kết nối máy rang thật | Chưa kiểm chứng; không suy ra từ smoke test |
 | Build ứng dụng và lớp vá từ source | Đạt: 684 file, 0 lỗi; dependency bên thứ ba vẫn dùng binary |
+
+</details>
 
 Xem [hồ sơ kiểm thử bản chạy](offline-v06/KIEM-THU.md).
 
@@ -48,6 +55,11 @@ Xem [hồ sơ kiểm thử bản chạy](offline-v06/KIEM-THU.md).
 
 Lượt phục hồi ngày 23/10/2026 đã sửa 65 lỗi baseline và 8 lỗi điều khiển `switch` chỉ xuất hiện ở giai đoạn biên dịch tiếp theo. [Báo cáo sửa lỗi và kiểm thử](docs/SOURCE-BUILD.md).
 
+<img src="docs/assets/source-journey.png" alt="Từ bytecode đến cây source build được: 117/117 JAR, 25.208 class, biên dịch 0 lỗi trên 677 + 7 file, kiểm thử 4/4 đạt" width="100%">
+
+<details>
+<summary>Xem dạng bảng</summary>
+
 | Mốc kiểm chứng | Kết quả |
 |---|---:|
 | JAR ứng dụng, thư viện và JavaFX đã xử lý | **117 / 117** |
@@ -56,6 +68,8 @@ Lượt phục hồi ngày 23/10/2026 đã sửa 65 lỗi baseline và 8 lỗi �
 | Class chưa tìm được file nguồn bao ngoài | **0** |
 | Source chính và lớp vá biên dịch cùng nhau | **677 + 7 file; 0 lỗi, 11 cảnh báo deprecated** |
 | Kiểm thử trên bundle dựng từ source | **Persistence, SVG, UI/FXML và launcher smoke: 4/4 đạt** |
+
+</details>
 
 Kiểm kê JAR được thực hiện ngày **22/10/2026**; source build và hồi quy đạt ngày **23/10/2026**, không phải huy hiệu CI tự động. Class lồng nhau được gộp vào file Java bao ngoài. Các thư viện trích xuất chưa được biên dịch lại toàn bộ.
 
