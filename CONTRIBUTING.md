@@ -15,7 +15,6 @@ Bắt đầu từ [SOURCE-BUILD](docs/SOURCE-BUILD.md), [DEVELOPMENT](docs/DEVEL
 - Tài liệu và chú thích mới dùng tiếng Việt có dấu, UTF-8; identifier và chuỗi log kỹ thuật giữ tiếng Anh.
 - Không đổi package hoặc tên tài nguyên nội bộ hàng loạt: chúng có thể liên quan enum, reflection và ServiceLoader.
 - Không commit dữ liệu mẻ thật, token, thông tin đăng nhập, runtime hay binary phát hành vào source.
-- Giữ thông báo bản quyền và giấy phép. Bộ nguồn không được tự động coi là mã nguồn mở có thể phân phối lại.
 - Không mở kết nối phần cứng trong kiểm thử tự động khi chưa được giao rõ.
 
 ## Báo lỗi hoặc đề xuất

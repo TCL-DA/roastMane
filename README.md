@@ -22,7 +22,7 @@ A local roasting workspace, with source recovery in progress.</p>
 
 ## roastMane là gì?
 
-**roastMane** là bản desktop thử nghiệm cho công việc rang cục bộ, phát triển từ một bundle Roasting Intelligence 5.13 đã vá. Kho này tập hợp mã khảo sát, bản vá offline, bộ nhận diện v06 và công cụ phục hồi source để tiếp tục phát triển có thể kiểm chứng.
+**roastMane** là bản desktop thử nghiệm cho công việc rang cục bộ, với nhận diện v06 và môi trường offline. Kho này tập hợp mã khảo sát, bản vá offline, bộ nhận diện v06 và công cụ phục hồi source để tiếp tục phát triển có thể kiểm chứng.
 
 Bản dựng thử nghiệm mới **biên dịch toàn bộ 677 source ứng dụng và 7 source lớp vá trong kho**, không dùng class ứng dụng cũ trên compile classpath. Các thư viện bên thứ ba, JavaFX và runtime vẫn dùng binary dependency như một dự án Java thông thường. Source trích xuất nguyên bản được giữ riêng để đối chiếu.
 
@@ -34,7 +34,7 @@ Bản dựng thử nghiệm mới **biên dịch toàn bộ 677 source ứng d�
 | Kết nối máy rang thật | Chưa kiểm chứng; không suy ra từ smoke test |
 | Build ứng dụng và lớp vá từ source | Đạt: 684 file, 0 lỗi; dependency bên thứ ba vẫn dùng binary |
 
-Xem [hồ sơ kiểm thử bản chạy](offline-v06/KIEM-THU.md) và [nguồn gốc](offline-v06/PROVENANCE.md).
+Xem [hồ sơ kiểm thử bản chạy](offline-v06/KIEM-THU.md).
 
 ### Giao diện chạy thật
 
@@ -130,9 +130,3 @@ Biểu tượng v06 dùng một khối liên tục; bản desktop chủ đạo d
 </p>
 
 → [Tài sản nhận diện](offline-v06/brand-kit) · [Hướng dẫn đóng góp](CONTRIBUTING.md) · [Báo lỗi](https://github.com/TCL-DA/roastMane/issues/new/choose)
-
-## Nguồn gốc và quyền sử dụng
-
-Mã dịch ngược không phải source gốc do nhà cung cấp phát hành. Mã gốc và thư viện thuộc chủ sở hữu tương ứng; đổi tên hoặc lưu trong repo không chuyển quyền sở hữu hay cấp quyền phân phối. Giữ thông báo bản quyền, giấy phép và định danh nội bộ cần cho tương thích.
-
-Kho không tự áp giấy phép mã nguồn mở cho toàn bộ nội dung. Đọc [PROVENANCE](offline-v06/PROVENANCE.md) và giấy phép của từng thư viện trước khi phân phối hoặc tái sử dụng. Dữ liệu cá nhân, mẻ rang thật, token và runtime không thuộc bộ bàn giao này.

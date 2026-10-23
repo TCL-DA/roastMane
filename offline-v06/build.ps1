@@ -81,7 +81,6 @@ Copy-Item -LiteralPath (Join-Path $sourceRoot 'tests') -Destination (Join-Path $
 Copy-Item -LiteralPath (Join-Path $sourceRoot 'brand-kit') -Destination (Join-Path $Output 'source\brand-kit') -Recurse
 Copy-Item -LiteralPath (Join-Path $sourceRoot 'build.ps1') -Destination (Join-Path $Output 'source\build.ps1')
 Copy-Item -LiteralPath (Join-Path $sourceRoot 'README.md') -Destination (Join-Path $Output 'README.md')
-Copy-Item -LiteralPath (Join-Path $sourceRoot 'PROVENANCE.md') -Destination (Join-Path $Output 'PROVENANCE.md')
 Copy-Item -LiteralPath (Join-Path $sourceRoot 'KIEM-THU.md') -Destination (Join-Path $Output 'KIEM-THU.md')
 Get-ChildItem -LiteralPath (Join-Path $Output 'source\brand-kit') -Recurse -File | Get-FileHash -Algorithm SHA256 | ForEach-Object { "$($_.Hash)  $($_.Path.Substring((Join-Path $Output 'source\brand-kit').Length + 1))" } | Set-Content -LiteralPath (Join-Path $Output 'source\brand-kit\SHA256SUMS.txt') -Encoding UTF8
 Get-ChildItem -LiteralPath $Output -Recurse -File | Get-FileHash -Algorithm SHA256 | ForEach-Object { "$($_.Hash)  $($_.Path.Substring($Output.Length + 1))" } | Set-Content -LiteralPath (Join-Path $Output 'SHA256SUMS.txt') -Encoding UTF8

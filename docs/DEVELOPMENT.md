@@ -21,7 +21,7 @@ extracted-all/          bản trích xuất từng dependency để lưu trữ
 reports/                bằng chứng compiler, build và test
 ```
 
-Giữ nguyên namespace `org.cropster.*` và `com.cropster.*`. Chúng là định danh tương thích nhị phân và dấu vết nguồn gốc; nhận diện hiển thị của ứng dụng là roastMane.
+Giữ nguyên namespace `org.cropster.*` và `com.cropster.*`. Chúng là định danh tương thích nhị phân; nhận diện hiển thị của ứng dụng là roastMane.
 
 ## Yêu cầu môi trường
 
@@ -90,7 +90,6 @@ Lượt kiểm tra ngày 23/10/2026 đạt cả bốn chương trình với exit
 - Đối chiếu method liên quan bằng `javap` hoặc CFR trước khi sửa lỗi do decompiler.
 - Sửa hẹp theo bằng chứng; không dùng cast hoặc regex hàng loạt chỉ để compiler im lỗi.
 - Chạy lại target `Recovered`, sau đó dựng bundle mới và chạy `test-recovered.ps1` khi thay đổi ảnh hưởng runtime.
-- Giữ tài nguyên, license, thông báo bản quyền và provenance của mã gốc cùng dependency.
 - Không suy diễn compile/smoke thành tương thích mọi tính năng hoặc phần cứng.
 
 11 cảnh báo API cũ hiện chưa chặn build. Việc thay API phải được xử lý riêng với kiểm thử hành vi tương ứng.

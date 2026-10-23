@@ -20,7 +20,7 @@ Kiểm tra cũ chỉ xác nhận SVG nạp được, đã bỏ sót bounds 220 �
 ## Giới hạn
 
 - Đây là bản vá JAR nền, chưa phải full-source build. Main source còn 65 lỗi compiler; lớp vá biên dịch được.
-- Package và alias nội bộ cũ được giữ để tương thích và bảo toàn nguồn gốc pháp lý.
+- Package và alias nội bộ cũ được giữ để tương thích.
 - Không chọn cổng serial, không thử máy rang thật, không flash firmware và không dùng dữ liệu cá nhân.
 - Root mặc định vẫn là `%USERPROFILE%\roastMane\otl-offline`; các phép thử chỉ dùng thư mục tạm.
 

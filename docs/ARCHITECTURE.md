@@ -86,6 +86,6 @@ Trong test, data, home và log đều nằm dưới `%TEMP%`. `OfflinePersistenc
 
 JavaFX, thư viện bên thứ ba, native và JDK runtime vẫn là binary dependency. `extracted-all/` giữ source trích xuất theo từng JAR; `decompiled/` giữ bản ứng dụng thô để đối chiếu bytecode/source. Hai cây này không tham gia source compile mặc định.
 
-Việc dựng thành công 684 source ứng dụng không đồng nghĩa toàn bộ dependency đã được dựng lại. Giấy phép, version, checksum và provenance của dependency phải tiếp tục được giữ khi đóng gói.
+Build ứng dụng không biên dịch lại dependency. Version và checksum được dùng để đối chiếu gói phụ thuộc.
 
 Chi tiết bằng chứng nằm trong [SOURCE-BUILD.md](SOURCE-BUILD.md) và [source-build-20261023.json](../reports/source-build-20261023.json).

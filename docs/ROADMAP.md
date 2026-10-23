@@ -71,7 +71,7 @@ Hiện chưa có kiểm thử phần cứng. Kết quả compile, package và sm
 
 - Dùng `compile-recovered.ps1 -Target Recovered`, `build-from-source.ps1` và `test-recovered.ps1` làm đường kiểm tra mặc định.
 - Giữ sửa đổi source hẹp và có bằng chứng bytecode khi nguyên nhân đến từ decompiler.
-- Giữ nguyên package tương thích, license, bản quyền và provenance.
+Giữ nguyên package và định danh nội bộ để bảo toàn tương thích.
 - Không refactor diện rộng hoặc đổi định dạng dữ liệu trong cùng thay đổi với sửa lỗi phục hồi.
 - Không kết luận “full source” cho toàn bộ hệ dependency khi các dependency nhị phân chưa được dựng lại.
 

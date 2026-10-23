@@ -56,4 +56,3 @@ Các test dùng root và log tạm; UI test xác nhận CodeSource đúng JAR đ
 - 11 cảnh báo API deprecated/removal của ứng dụng cũ vẫn còn; runtime đang dùng JDK 21.
 - Outbox và archive chưa phải một transaction đa file. Lỗi xảy ra sau khi đã bắt đầu cấp ID vẫn có thể để ID bị bỏ trống; lỗi archive sau khi ghi outbox khiến phép lưu bị từ chối xác nhận. Chưa áp migration hay đổi định dạng dữ liệu.
 - Chưa kiểm thử máy rang, serial hoặc mọi cửa sổ/tính năng. Không suy ra tính đúng đắn toàn bộ ứng dụng từ compile và smoke test.
-- Giữ nguyên giấy phép và quyền sở hữu của mã gốc/thư viện; source build không tự cấp quyền phân phối.

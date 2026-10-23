@@ -10,4 +10,4 @@ Mã patch, script dựng lại và bộ nhận diện v06 nằm trong `source`. 
 
 Biểu tượng cửa sổ và EXE dùng avatar xanh/be 1024 px đã duyệt. Logo trong giao diện dùng đúng hình học `monogram_xanh.svg`, ghép với chữ roastMane. Bộ `source\brand-kit` giữ đủ sáu màu SVG/PNG/AI/PDF, ba avatar và hình học nguồn để dựng lại có thể kiểm tra được.
 
-Package Java và một số tên file thư viện nội bộ vẫn giữ tên kỹ thuật cũ để bảo toàn liên kết nhị phân. Xem `PROVENANCE.md` để biết nguồn gốc và giới hạn pháp lý.
+Package Java và một số tên file thư viện nội bộ vẫn giữ tên kỹ thuật cũ để bảo toàn liên kết nhị phân.
